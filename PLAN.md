@@ -55,26 +55,24 @@ PHP 8.6 tested: 8.6.0 (stable)
 | 49 | diablomedia/zendframework1-controller-action-helper-ajaxcontext | pending | pending | pending | pending | pending | pending | pending | pending | pending |  |
 | 50 | diablomedia/zendframework1-log-writer-mail | pending | pending | pending | pending | pending | pending | pending | pending | pending |  |
 | 51 | diablomedia/zendframework1-navigation | pending | pending | pending | pending | pending | pending | pending | pending | pending |  |
-| 52 | diablomedia/zendframework1-openid | pending | pending | pending | pending | pending | pending | pending | pending | pending |  |
-| 53 | diablomedia/zendframework1-auth-adapter-openid | pending | pending | pending | pending | pending | pending | pending | pending | pending |  |
-| 54 | diablomedia/zendframework1-paginator | pending | pending | pending | pending | pending | pending | pending | pending | pending |  |
-| 55 | diablomedia/zendframework1-rest | pending | pending | pending | pending | pending | pending | pending | pending | pending |  |
-| 56 | diablomedia/zendframework1-view-helper-action | pending | pending | pending | pending | pending | pending | pending | pending | pending |  |
-| 57 | diablomedia/zendframework1-view-helper-baseurl | pending | pending | pending | pending | pending | pending | pending | pending | pending |  |
-| 58 | diablomedia/zendframework1-view-helper-json | pending | pending | pending | pending | pending | pending | pending | pending | pending |  |
-| 59 | diablomedia/zendframework1-controller-action-helper-json | pending | pending | pending | pending | pending | pending | pending | pending | pending |  |
-| 60 | diablomedia/zendframework1-view-helper-layout | pending | pending | pending | pending | pending | pending | pending | pending | pending |  |
-| 61 | diablomedia/zendframework1-view-helper-partial | pending | pending | pending | pending | pending | pending | pending | pending | pending |  |
-| 62 | diablomedia/zendframework1-form | pending | pending | pending | pending | pending | pending | pending | pending | pending |  |
-| 63 | diablomedia/zendframework1-captcha | pending | pending | pending | pending | pending | pending | pending | pending | pending |  |
-| 64 | diablomedia/zendframework1-dojo | pending | pending | pending | pending | pending | pending | pending | pending | pending |  |
-| 65 | diablomedia/zendframework1-controller-action-helper-autocomplete | pending | pending | pending | pending | pending | pending | pending | pending | pending |  |
-| 66 | diablomedia/zendframework1-view-helper-paginationcontrol | pending | pending | pending | pending | pending | pending | pending | pending | pending |  |
-| 67 | diablomedia/zendframework1-view-helper-url | pending | pending | pending | pending | pending | pending | pending | pending | pending |  |
-| 68 | diablomedia/zendframework1-view-helper-navigation | pending | pending | pending | pending | pending | pending | pending | pending | pending |  |
-| 69 | diablomedia/zendframework1-application | pending | pending | pending | pending | pending | pending | pending | pending | pending |  |
-| 70 | diablomedia/zendframework1-test | pending | pending | pending | pending | pending | pending | pending | pending | pending |  |
-| 71 | diablomedia/zendframework1 | pending | pending | pending | pending | pending | pending | pending | pending | pending | Main_Repository, requires every Active_Package |
+| 52 | diablomedia/zendframework1-paginator | pending | pending | pending | pending | pending | pending | pending | pending | pending |  |
+| 53 | diablomedia/zendframework1-rest | pending | pending | pending | pending | pending | pending | pending | pending | pending |  |
+| 54 | diablomedia/zendframework1-view-helper-action | pending | pending | pending | pending | pending | pending | pending | pending | pending |  |
+| 55 | diablomedia/zendframework1-view-helper-baseurl | pending | pending | pending | pending | pending | pending | pending | pending | pending |  |
+| 56 | diablomedia/zendframework1-view-helper-json | pending | pending | pending | pending | pending | pending | pending | pending | pending |  |
+| 57 | diablomedia/zendframework1-controller-action-helper-json | pending | pending | pending | pending | pending | pending | pending | pending | pending |  |
+| 58 | diablomedia/zendframework1-view-helper-layout | pending | pending | pending | pending | pending | pending | pending | pending | pending |  |
+| 59 | diablomedia/zendframework1-view-helper-partial | pending | pending | pending | pending | pending | pending | pending | pending | pending |  |
+| 60 | diablomedia/zendframework1-form | pending | pending | pending | pending | pending | pending | pending | pending | pending |  |
+| 61 | diablomedia/zendframework1-captcha | pending | pending | pending | pending | pending | pending | pending | pending | pending |  |
+| 62 | diablomedia/zendframework1-dojo | pending | pending | pending | pending | pending | pending | pending | pending | pending |  |
+| 63 | diablomedia/zendframework1-controller-action-helper-autocomplete | pending | pending | pending | pending | pending | pending | pending | pending | pending |  |
+| 64 | diablomedia/zendframework1-view-helper-paginationcontrol | pending | pending | pending | pending | pending | pending | pending | pending | pending |  |
+| 65 | diablomedia/zendframework1-view-helper-url | pending | pending | pending | pending | pending | pending | pending | pending | pending |  |
+| 66 | diablomedia/zendframework1-view-helper-navigation | pending | pending | pending | pending | pending | pending | pending | pending | pending |  |
+| 67 | diablomedia/zendframework1-application | pending | pending | pending | pending | pending | pending | pending | pending | pending |  |
+| 68 | diablomedia/zendframework1-test | pending | pending | pending | pending | pending | pending | pending | pending | pending |  |
+| 69 | diablomedia/zendframework1 | pending | pending | pending | pending | pending | pending | pending | pending | pending | Main_Repository, requires every Active_Package |
 
 ## Package and repository map
 
@@ -133,33 +131,31 @@ Upstream package `diablomedia/zendframework1-X` lives in repository `diablomedia
 | 49 | diablomedia/zendframework1-controller-action-helper-ajaxcontext | gizmocraft/zendframework1-controller-action-helper-ajaxcontext | gizmocraftcom/zf1-controller-action-helper-ajaxcontext |
 | 50 | diablomedia/zendframework1-log-writer-mail | gizmocraft/zendframework1-log-writer-mail | gizmocraftcom/zf1-log-writer-mail |
 | 51 | diablomedia/zendframework1-navigation | gizmocraft/zendframework1-navigation | gizmocraftcom/zf1-navigation |
-| 52 | diablomedia/zendframework1-openid | gizmocraft/zendframework1-openid | gizmocraftcom/zf1-openid |
-| 53 | diablomedia/zendframework1-auth-adapter-openid | gizmocraft/zendframework1-auth-adapter-openid | gizmocraftcom/zf1-auth-adapter-openid |
-| 54 | diablomedia/zendframework1-paginator | gizmocraft/zendframework1-paginator | gizmocraftcom/zf1-paginator |
-| 55 | diablomedia/zendframework1-rest | gizmocraft/zendframework1-rest | gizmocraftcom/zf1-rest |
-| 56 | diablomedia/zendframework1-view-helper-action | gizmocraft/zendframework1-view-helper-action | gizmocraftcom/zf1-view-helper-action |
-| 57 | diablomedia/zendframework1-view-helper-baseurl | gizmocraft/zendframework1-view-helper-baseurl | gizmocraftcom/zf1-view-helper-baseurl |
-| 58 | diablomedia/zendframework1-view-helper-json | gizmocraft/zendframework1-view-helper-json | gizmocraftcom/zf1-view-helper-json |
-| 59 | diablomedia/zendframework1-controller-action-helper-json | gizmocraft/zendframework1-controller-action-helper-json | gizmocraftcom/zf1-controller-action-helper-json |
-| 60 | diablomedia/zendframework1-view-helper-layout | gizmocraft/zendframework1-view-helper-layout | gizmocraftcom/zf1-view-helper-layout |
-| 61 | diablomedia/zendframework1-view-helper-partial | gizmocraft/zendframework1-view-helper-partial | gizmocraftcom/zf1-view-helper-partial |
-| 62 | diablomedia/zendframework1-form | gizmocraft/zendframework1-form | gizmocraftcom/zf1-form |
-| 63 | diablomedia/zendframework1-captcha | gizmocraft/zendframework1-captcha | gizmocraftcom/zf1-captcha |
-| 64 | diablomedia/zendframework1-dojo | gizmocraft/zendframework1-dojo | gizmocraftcom/zf1-dojo |
-| 65 | diablomedia/zendframework1-controller-action-helper-autocomplete | gizmocraft/zendframework1-controller-action-helper-autocomplete | gizmocraftcom/zf1-controller-action-helper-autocomplete |
-| 66 | diablomedia/zendframework1-view-helper-paginationcontrol | gizmocraft/zendframework1-view-helper-paginationcontrol | gizmocraftcom/zf1-view-helper-paginationcontrol |
-| 67 | diablomedia/zendframework1-view-helper-url | gizmocraft/zendframework1-view-helper-url | gizmocraftcom/zf1-view-helper-url |
-| 68 | diablomedia/zendframework1-view-helper-navigation | gizmocraft/zendframework1-view-helper-navigation | gizmocraftcom/zf1-view-helper-navigation |
-| 69 | diablomedia/zendframework1-application | gizmocraft/zendframework1-application | gizmocraftcom/zf1-application |
-| 70 | diablomedia/zendframework1-test | gizmocraft/zendframework1-test | gizmocraftcom/zf1-test |
-| 71 | diablomedia/zendframework1 | gizmocraft/zendframework1 | gizmocraftcom/zf1 |
+| 52 | diablomedia/zendframework1-paginator | gizmocraft/zendframework1-paginator | gizmocraftcom/zf1-paginator |
+| 53 | diablomedia/zendframework1-rest | gizmocraft/zendframework1-rest | gizmocraftcom/zf1-rest |
+| 54 | diablomedia/zendframework1-view-helper-action | gizmocraft/zendframework1-view-helper-action | gizmocraftcom/zf1-view-helper-action |
+| 55 | diablomedia/zendframework1-view-helper-baseurl | gizmocraft/zendframework1-view-helper-baseurl | gizmocraftcom/zf1-view-helper-baseurl |
+| 56 | diablomedia/zendframework1-view-helper-json | gizmocraft/zendframework1-view-helper-json | gizmocraftcom/zf1-view-helper-json |
+| 57 | diablomedia/zendframework1-controller-action-helper-json | gizmocraft/zendframework1-controller-action-helper-json | gizmocraftcom/zf1-controller-action-helper-json |
+| 58 | diablomedia/zendframework1-view-helper-layout | gizmocraft/zendframework1-view-helper-layout | gizmocraftcom/zf1-view-helper-layout |
+| 59 | diablomedia/zendframework1-view-helper-partial | gizmocraft/zendframework1-view-helper-partial | gizmocraftcom/zf1-view-helper-partial |
+| 60 | diablomedia/zendframework1-form | gizmocraft/zendframework1-form | gizmocraftcom/zf1-form |
+| 61 | diablomedia/zendframework1-captcha | gizmocraft/zendframework1-captcha | gizmocraftcom/zf1-captcha |
+| 62 | diablomedia/zendframework1-dojo | gizmocraft/zendframework1-dojo | gizmocraftcom/zf1-dojo |
+| 63 | diablomedia/zendframework1-controller-action-helper-autocomplete | gizmocraft/zendframework1-controller-action-helper-autocomplete | gizmocraftcom/zf1-controller-action-helper-autocomplete |
+| 64 | diablomedia/zendframework1-view-helper-paginationcontrol | gizmocraft/zendframework1-view-helper-paginationcontrol | gizmocraftcom/zf1-view-helper-paginationcontrol |
+| 65 | diablomedia/zendframework1-view-helper-url | gizmocraft/zendframework1-view-helper-url | gizmocraftcom/zf1-view-helper-url |
+| 66 | diablomedia/zendframework1-view-helper-navigation | gizmocraft/zendframework1-view-helper-navigation | gizmocraftcom/zf1-view-helper-navigation |
+| 67 | diablomedia/zendframework1-application | gizmocraft/zendframework1-application | gizmocraftcom/zf1-application |
+| 68 | diablomedia/zendframework1-test | gizmocraft/zendframework1-test | gizmocraftcom/zf1-test |
+| 69 | diablomedia/zendframework1 | gizmocraft/zendframework1 | gizmocraftcom/zf1 |
 
 ## Notes
 
-- Active packages: 70, plus the Main_Repository as the last row.
-- Obsolete API packages (excluded, see EXCLUDED_PACKAGES.md): diablomedia/zendframework1-log-writer-firebug, diablomedia/zendframework1-service-recaptcha.
-- Pending the user's decision (not in the plan, not excluded): diablomedia/zendframework1-service-amazon, diablomedia/zendframework1-wildfire. They stay under "Needs decision" in EXCLUDED_PACKAGES.md.
-- Provisional: captcha drops its dependency on service-recaptcha (listed under "Dependencies on excluded packages").
-- Open: `diablomedia/zendframework1-db` requires `diablomedia/zendframework1-wildfire`. If wildfire is excluded, db drops that dependency. If wildfire is kept, it must be added to the plan before db.
+- Active packages: 68, plus the Main_Repository as the last row.
+- Obsolete API packages (excluded, see EXCLUDED_PACKAGES.md): diablomedia/zendframework1-auth-adapter-openid, diablomedia/zendframework1-log-writer-firebug, diablomedia/zendframework1-openid, diablomedia/zendframework1-service-amazon, diablomedia/zendframework1-service-recaptcha, diablomedia/zendframework1-wildfire.
+- Excluded by user decision in task 9: service-amazon, wildfire, openid, auth-adapter-openid. The Needs decision section is empty.
+- Dependencies dropped: captcha -> service-recaptcha, db -> wildfire (Zend_Db_Profiler_Firebug becomes unusable).
+- Task 11 removes dead classes from the main repository library/ (Zend_Gdata, Zend_Service_Yahoo/Delicious/SlideShare/Ebay_Finding/Twitter/LiveDocx/StrikeIron, Zend_Mobile_Push). See EXCLUDED_PACKAGES.md, section "Removed classes in the main repository". Zend_Service_Rackspace is kept and listed as needs follow-up.
 - Missing PHP extensions: no required extension is missing on PHP 8.5 or 8.6. Optional extensions that are not bundled are listed in EXCLUDED_PACKAGES.md (mcrypt, oci8, pdo_oci, sqlsrv, ibm_db2, apc, xcache, wincache, memcache, memcached, rar, lzf, big_int).
 - PHP versions: 8.5 = 8.5.13 (latest stable), 8.6 = 8.6.0 (latest stable, released). Source: https://www.php.net/releases/index.php?json&max=50&version=8

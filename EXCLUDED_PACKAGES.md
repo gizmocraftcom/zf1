@@ -3,13 +3,18 @@
 ## Obsolete API
 | Package | Reason | Evidence |
 |---|---|---|
+| diablomedia/zendframework1-auth-adapter-openid | User decision (task 9): excluded together with openid, which it wraps. | https://openid.net/developers/specs/ |
 | diablomedia/zendframework1-log-writer-firebug | Zend_Log_Writer_Firebug only emits Wildfire/FirePHP headers for the Firebug + FirePHP browser extension. Firebug reached end of life with Firefox 57 (2017) and the FirePHP extension repositories are marked DEPRECATED, so no supported client reads the output. The Wildfire headers are not understood by current Firefox/Chrome DevTools. | https://github.com/firebug/firebug/issues/8093 |
+| diablomedia/zendframework1-openid | User decision (task 9): excluded. Zend_OpenId implements OpenID 2.0, superseded by OpenID Connect and dropped by nearly all providers; not maintained for PHP 8.6. | https://openid.net/developers/specs/ |
+| diablomedia/zendframework1-service-amazon | User decision (task 9): excluded. Product Advertising API 4 was shut down on 2020-03-09; S3/SQS/EC2/SimpleDb classes target 2006/2009 API versions with SigV2 signing. | https://affiliate-program.amazon.com/help/node/topic/GUVFJTV7MGMMNY94 |
 | diablomedia/zendframework1-service-recaptcha | Zend_Service_ReCaptcha implements reCAPTCHA v1 (VERIFY_SERVER http://www.google.com/recaptcha/api/verify, challenge/recaptcha_challenge_field). Google shut down reCAPTCHA v1 on 2018-03-31, so verify() can never succeed. MailHide additionally needs the mcrypt extension, which PHP removed in 7.2. | https://developers.google.com/recaptcha/docs/changelog |
+| diablomedia/zendframework1-wildfire | User decision (task 9): excluded. The Wildfire/FirePHP protocol has no maintained client. Consequence: Zend_Db_Profiler_Firebug becomes unusable. | https://github.com/firephp/firephp-extension |
 
 ## Dependencies on excluded packages
 | Active package | Excluded dependency | Resolution (dropped / reclassified) |
 |---|---|---|
 | diablomedia/zendframework1-captcha | diablomedia/zendframework1-service-recaptcha | dropped |
+| diablomedia/zendframework1-db | diablomedia/zendframework1-wildfire | dropped |
 
 ## Missing PHP extensions
 | Extension | Affected classes | Package |
@@ -32,13 +37,44 @@
 ## Needs decision
 | Package | Open question |
 |---|---|
-| diablomedia/zendframework1-service-amazon | Mixed package. The main Zend_Service_Amazon/Query/Item classes call the Product Advertising API 4 (AWSECommerceService 2011-08-01), which Amazon shut down on 2020-03-09 (PA-API 5 is itself deprecated in favour of the Creators API). The S3, SQS, EC2 and SimpleDb classes target 2006/2009 API versions and S3 SigV2 signing, which AWS has turned off for newer regions/buckets. Whether any of these classes is still useful needs a human call. Recommendation: OBSOLETE. |
-| diablomedia/zendframework1-wildfire | Wildfire/FirePHP protocol has no maintained client (see log-writer-firebug), but it is required by zendframework1-db (Zend_Db_Profiler_Firebug) and zendframework1-log-writer-firebug. Marking it OBSOLETE forces every package depending on db to drop or reclassify the dependency. Recommendation: OBSOLETE and drop the dependency from db. |
+
+## Removed classes in the main repository
+
+These classes are not separate packages. They live in `library/` of the main repository and are removed from the `gizmocraft/zf1` fork in task 11 (nothing is removed yet).
+
+| Class | Reason | Evidence |
+|---|---|---|
+| Zend_Gdata (library/Zend/Gdata/, library/Zend/Gdata.php) | Google Data APIs (ClientLogin, AuthSub, Calendar/Docs/Spreadsheets/Picasa/Books/Analytics GData endpoints) were shut down or replaced by REST APIs with OAuth 2. | https://developers.google.com/gdata/docs/auth/clientlogin ; https://workspaceupdates.googleblog.com/2014/06/calendar-gdata-api-google-calendar.html |
+| Zend_Service_Yahoo | Yahoo BOSS search service was closed. | https://searchengineland.com/yahoo-to-close-boss-build-your-own-search-service-next-month-242046 |
+| Zend_Service_Delicious | Delicious was bought by Pinboard and closed. | https://betanews.com/article/pinboard-buys-delicious-closes-it/ |
+| Zend_Service_SlideShare | The public SlideShare API has been retired. | https://support.scribd.com/hc/en-us/articles/53231623793684-Slideshare-API-errors-the-public-API-has-been-retired |
+| Zend_Service_Ebay_Finding (library/Zend/Service/Ebay/Finding.php, Finding/) | eBay Finding API decommissioned in Feb 2025. Only the Finding classes are removed; other Zend_Service_Ebay classes stay. | https://developer.ebay.com/api-docs/user-guides/static/trading-user-guide/compatible-parts-api-support.html |
+| Zend_Mobile_Push (Apns, Gcm, Mpns, C2dm; library/Zend/Mobile/) | Apple retired the legacy binary APNs protocol in 2021. C2DM and legacy GCM were replaced by FCM, and MPNS (Windows Phone) is discontinued. Evidence link covers APNs only; the other three are stated from the vendors' public deprecations. | https://developer.apple.com/news/?id=c88acm2b |
+| Zend_Service_Twitter | Implements the retired Twitter API v1.1. The current X API requires different endpoints and authentication. | https://docs.x.com/x-api/posts/manage-tweets/migrate/overview |
+| Zend_Service_LiveDocx | User decision. No shutdown notice was found, so this is not backed by vendor evidence. | none (user decision) |
+| Zend_Service_StrikeIron | User decision. No shutdown notice was found, so this is not backed by vendor evidence. | none (user decision) |
+
+### Kept
+
+Flickr, Akismet, Audioscrobbler, ShortUrl, WindowsAzure, SqlAzure, Cloud, Service_Console and all Zend_Service_Ebay classes except Finding.
+
+### Needs follow-up: Zend_Service_Rackspace
+
+Kept for now. `Zend_Service_Rackspace_Abstract` uses the Rackspace v1.0 auth API (`auth.api.rackspacecloud.com`, `X-Auth-User`/`X-Auth-Key`), and `Zend_Service_Rackspace_Servers` is the first-generation Cloud Servers API. The classes are not clearly separable: Abstract, Files and Servers share one auth base, and `Zend_Cloud_StorageService_Adapter_Rackspace` and `Zend_Cloud_Infrastructure_Adapter_Rackspace` (Zend_Cloud is kept) depend on them. Evidence that the first-generation API is retired: https://docs-ospc.rackspace.com/cloud-servers/v2/release-notes/index.html. Decide later whether to remove the whole Rackspace set together with the two Cloud adapters.
+
+### Directories and files that task 11 must also remove or edit
+
+- Library: `library/Zend/Gdata/`, `library/Zend/Gdata.php`, `library/Zend/Mobile/`, `library/Zend/Service/{Twitter,Yahoo,Delicious,SlideShare,LiveDocx,StrikeIron}/` with the matching `.php` files, `library/Zend/Service/Ebay/Finding/`, `library/Zend/Service/Ebay/Finding.php`. Two `@throws Zend_Service_Ebay_Finding_Exception` doc comments in `library/Zend/Service/Ebay/Abstract.php` need adjusting.
+- Tests: `tests/Zend/Gdata/` (including `TestUtility/MockHttpClient.php`), `tests/Zend/Mobile/`, `tests/Zend/Service/{Twitter,Yahoo,Delicious,SlideShare,LiveDocx,StrikeIron}/`, `tests/Zend/Service/SlideShareTest.php`, `tests/Zend/Service/Ebay/Finding/`. Edit the matching suites in `tests/phpunit.xml` and entries in `tests/TestConfiguration.php.dist`.
+- Demos: `demos/Zend/Gdata/`, `demos/Zend/Mobile/`, `demos/Zend/Service/LiveDocx/`, `demos/Zend/WebServices/Yahoo/`.
+- Documentation (all languages under `documentation/manual/<lang>/`): `module_specs/Zend_Gdata*.xml`, `Zend_Mobile_Push-*.xml`, `Zend_Service_{Twitter,Twitter_Search,Yahoo,Delicious,SlideShare,LiveDocx,StrikeIron-*,Ebay_Finding}.xml`, plus references in `manual.xml.in`, `manual-print1.xml.in`, `manual-print2.xml.in` and `ref/requirements*.xml`. Remove `Zend_Gdata_` and `Zend_Mobile_` from the `psr-0` autoload, `library/Zend/Gdata.php` from the classmap, and `tests/Zend/Gdata/TestUtility/MockHttpClient.php` from `autoload-dev` in `composer.json`. Regenerate `phpstan-baseline.php` (about 2600 entries mention these classes) and fix `phpstan-php83.php`.
 
 ## Notes
 
-- The resolution `dropped` for captcha -> service-recaptcha is provisional and awaits the user's confirmation.
-- Packages in "Needs decision" (diablomedia/zendframework1-service-amazon, diablomedia/zendframework1-wildfire) are neither forked nor excluded until the user decides.
-- `diablomedia/zendframework1-db` requires `diablomedia/zendframework1-wildfire`. Its handling depends on the decision for wildfire.
+- User decisions (task 9): service-amazon, wildfire, openid and auth-adapter-openid are excluded and not forked. They are removed from the main require/replace.
+- `diablomedia/zendframework1-db` drops its wildfire dependency. `Zend_Db_Profiler_Firebug` becomes unusable.
+- `captcha` drops service-recaptcha. `log-writer-firebug` (obsolete) and `auth-adapter-openid` (excluded) are not forked, so they need no dependency record.
+- The main package `diablomedia/zendframework1` also requires openid, auth-adapter-openid, service-amazon and wildfire. Those entries are removed from its require/replace in task 11.
+- The "Needs decision" table is empty: every open question has been decided.
 - Required extensions of the active packages (dom, libxml, SimpleXML, iconv, ctype, session, hash, fileinfo, tokenizer) are all bundled with PHP 8.5. No required extension is missing.
 - The "Missing PHP extensions" table lists optional or conditional extensions (suggested, or probed at runtime) that are not bundled with PHP 8.5 or 8.6.
