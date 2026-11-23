@@ -4,7 +4,7 @@ PHP 8.6 tested: 8.6.0 (stable)
 
 | Order | Package | fork | clone | rename | php85-fixes | dev-deps-upgrade | test-migration | static-analysis | style-check | tag | Notes |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| 1 | diablomedia/zendframework1-exception | pending | pending | pending | pending | pending | pending | pending | pending | pending |  |
+| 1 | diablomedia/zendframework1-exception | done | done | done | done | done | done | done | done | done | Tagged 2.0.0. Tested on PHP 8.5.13 and 8.6.0. origin has 7 extra branches from the fork copy (php84 and 6 dependabot), not deleted. |
 | 2 | diablomedia/zendframework1-acl | pending | pending | pending | pending | pending | pending | pending | pending | pending |  |
 | 3 | diablomedia/zendframework1-crypt | pending | pending | pending | pending | pending | pending | pending | pending | pending |  |
 | 4 | diablomedia/zendframework1-mime | pending | pending | pending | pending | pending | pending | pending | pending | pending |  |
