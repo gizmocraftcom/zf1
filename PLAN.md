@@ -4,8 +4,8 @@ PHP 8.6 tested: 8.6.0 (stable)
 
 | Order | Package | fork | clone | rename | php85-fixes | dev-deps-upgrade | test-migration | static-analysis | style-check | tag | Notes |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| 1 | diablomedia/zendframework1-exception | done | done | done | done | done | done | done | done | done | Tagged 2.0.0. Tested on PHP 8.5.13 and 8.6.0. origin has 7 extra branches from the fork copy (php84 and 6 dependabot), not deleted. |
-| 2 | diablomedia/zendframework1-acl | pending | pending | pending | pending | pending | pending | pending | pending | pending |  |
+| 1 | diablomedia/zendframework1-exception | done | done | done | done | done | done | done | done | done | Tagged 2.0.0. Tested on PHP 8.5.13 and 8.6.0. The 7 extra branches copied from the fork (php84 and 6 dependabot) were deleted from origin; only master and tag 2.0.0 (plus upstream tags) remain. |
+| 2 | diablomedia/zendframework1-acl | done | done | done | done | done | done | done | done | done | Tagged 2.0.0. Tested on PHP 8.5.13 and 8.6.0. Requires gizmocraft/zendframework1-exception ^2.0.0 via a vcs repository entry until Packagist exists. Dropped composer-require-checker. No public signature changes. Extra fork branches deleted. |
 | 3 | diablomedia/zendframework1-crypt | pending | pending | pending | pending | pending | pending | pending | pending | pending |  |
 | 4 | diablomedia/zendframework1-mime | pending | pending | pending | pending | pending | pending | pending | pending | pending |  |
 | 5 | diablomedia/zendframework1-server | pending | pending | pending | pending | pending | pending | pending | pending | pending |  |
@@ -72,7 +72,7 @@ PHP 8.6 tested: 8.6.0 (stable)
 | 66 | diablomedia/zendframework1-view-helper-navigation | pending | pending | pending | pending | pending | pending | pending | pending | pending |  |
 | 67 | diablomedia/zendframework1-application | pending | pending | pending | pending | pending | pending | pending | pending | pending |  |
 | 68 | diablomedia/zendframework1-test | pending | pending | pending | pending | pending | pending | pending | pending | pending |  |
-| 69 | diablomedia/zendframework1 | pending | pending | pending | pending | pending | pending | pending | pending | pending | Main_Repository, requires every Active_Package |
+| 69 | diablomedia/zendframework1 | pending | pending | pending | pending | pending | pending | pending | pending | pending | Main_Repository, requires every Active_Package. The 9 extra non-default branches copied into gizmocraftcom/zf1 (php-82, php-84, 7 dependabot) were deleted after verifying they exist upstream; only master remains. |
 
 ## Package and repository map
 
