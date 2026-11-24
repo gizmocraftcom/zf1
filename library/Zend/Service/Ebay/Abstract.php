@@ -107,7 +107,7 @@ abstract class Zend_Service_Ebay_Abstract
 
     /**
      * @param  Zend_Config|array $options
-     * @throws Zend_Service_Ebay_Finding_Exception When $options is not an array neither a Zend_Config object
+     * @throws Zend_Service_Ebay_Exception When $options is not an array neither a Zend_Config object
      * @return array
      */
     public static function optionsToArray($options)
@@ -265,7 +265,7 @@ abstract class Zend_Service_Ebay_Abstract
      *
      * @param  string $value
      * @param  string $type
-     * @throws Zend_Service_Ebay_Finding_Exception When $type is not valid
+     * @throws Zend_Service_Ebay_Exception When $type is not valid
      * @return mixed
      */
     public static function toPhpValue($value, $type)
