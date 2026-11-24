@@ -896,7 +896,6 @@
       <file>./Zend/Service/Audioscrobbler/TrackDataTest.php</file>
       <file>./Zend/Service/Audioscrobbler/TagDataTest.php</file>
       <file>./Zend/Service/Audioscrobbler/GroupTest.php</file>
-      <file>./Zend/Service/Ebay/AbstractTest.php</file>
       <file>./Zend/Service/Flickr/OfflineTest.php</file>
       <file>./Zend/Service/Flickr/OnlineTest.php</file>
       <file>./Zend/Service/Rackspace/Files/OfflineTest.php</file>

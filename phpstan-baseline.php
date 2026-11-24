@@ -13700,12 +13700,6 @@ $ignoreErrors[] = [
 	'path' => __DIR__ . '/library/Zend/Service/Console/Command/ParameterSource/StdIn.php',
 ];
 $ignoreErrors[] = [
-	'message' => '#^Parameter \\#1 \\$options of static method Zend_Service_Ebay_Abstract\\:\\:optionsToArray\\(\\) expects array\\|Zend_Config, array\\|Zend_Config\\|null given\\.$#',
-	'identifier' => 'argument.type',
-	'count' => 1,
-	'path' => __DIR__ . '/library/Zend/Service/Ebay/Abstract.php',
-];
-$ignoreErrors[] = [
 	'message' => '#^Argument of an invalid type DOMNodeList\\<DOMNameSpaceNode\\|DOMNode\\>\\|false supplied for foreach, only iterables are supported\\.$#',
 	'identifier' => 'foreach.nonIterable',
 	'count' => 1,
