@@ -42,7 +42,7 @@
 
 These classes are not separate packages. They live in `library/` of the main repository and are removed from the `gizmocraft/zf1` fork in task 11.7.
 
-**Status: DONE** in the main clone (commits 92c7b7ef8 library, f65cd380d tests, c16276a4f demos, 12cccd804 documentation, 7240ff730 composer/phpstan; see `CHANGELOG.md`, Breaking changes). Remaining follow-up: `Zend_Service_Rackspace` (see below).
+**Status: DONE** in the main clone (commits 92c7b7ef8 library, f65cd380d tests, c16276a4f demos, 12cccd804 documentation, 7240ff730 composer/phpstan; see `CHANGELOG.md`, Breaking changes). Zend_Service_Ebay remnant (Abstract, Exception) removed in e6fcb27fa; demos, tests config and docs of the excluded packages removed in 3abfc907c, f866bd4e5, 29091003b. Remaining follow-up: `Zend_Service_Rackspace` (see below) and leftover mentions listed under "Leftovers".
 
 | Class | Reason | Evidence |
 |---|---|---|
@@ -50,7 +50,7 @@ These classes are not separate packages. They live in `library/` of the main rep
 | Zend_Service_Yahoo | Yahoo BOSS search service was closed. | https://searchengineland.com/yahoo-to-close-boss-build-your-own-search-service-next-month-242046 |
 | Zend_Service_Delicious | Delicious was bought by Pinboard and closed. | https://betanews.com/article/pinboard-buys-delicious-closes-it/ |
 | Zend_Service_SlideShare | The public SlideShare API has been retired. | https://support.scribd.com/hc/en-us/articles/53231623793684-Slideshare-API-errors-the-public-API-has-been-retired |
-| Zend_Service_Ebay_Finding (library/Zend/Service/Ebay/Finding.php, Finding/) | eBay Finding API decommissioned in Feb 2025. Only the Finding classes are removed; other Zend_Service_Ebay classes stay. | https://developer.ebay.com/api-docs/user-guides/static/trading-user-guide/compatible-parts-api-support.html |
+| Zend_Service_Ebay_* (library/Zend/Service/Ebay/, formerly incl. Finding.php, Finding/) | eBay Finding API decommissioned in Feb 2025. It was the only eBay API implemented; Abstract and Exception were the only remaining classes, so Zend_Service_Ebay_* is now fully removed. | https://developer.ebay.com/api-docs/user-guides/static/trading-user-guide/compatible-parts-api-support.html |
 | Zend_Mobile_Push (Apns, Gcm, Mpns, C2dm; library/Zend/Mobile/) | Apple retired the legacy binary APNs protocol in 2021. C2DM and legacy GCM were replaced by FCM, and MPNS (Windows Phone) is discontinued. Evidence link covers APNs only; the other three are stated from the vendors' public deprecations. | https://developer.apple.com/news/?id=c88acm2b |
 | Zend_Service_Twitter | Implements the retired Twitter API v1.1. The current X API requires different endpoints and authentication. | https://docs.x.com/x-api/posts/manage-tweets/migrate/overview |
 | Zend_Service_LiveDocx | User decision. No shutdown notice was found, so this is not backed by vendor evidence. | none (user decision) |
@@ -58,11 +58,16 @@ These classes are not separate packages. They live in `library/` of the main rep
 
 ### Kept
 
-Flickr, Akismet, Audioscrobbler, ShortUrl, WindowsAzure, SqlAzure, Cloud, Service_Console and all Zend_Service_Ebay classes except Finding.
+Flickr, Akismet, Audioscrobbler, ShortUrl, WindowsAzure, SqlAzure, Cloud and Service_Console.
 
 ### Needs follow-up: Zend_Service_Rackspace
 
 Kept for now. `Zend_Service_Rackspace_Abstract` uses the Rackspace v1.0 auth API (`auth.api.rackspacecloud.com`, `X-Auth-User`/`X-Auth-Key`), and `Zend_Service_Rackspace_Servers` is the first-generation Cloud Servers API. The classes are not clearly separable: Abstract, Files and Servers share one auth base, and `Zend_Cloud_StorageService_Adapter_Rackspace` and `Zend_Cloud_Infrastructure_Adapter_Rackspace` (Zend_Cloud is kept) depend on them. Evidence that the first-generation API is retired: https://docs-ospc.rackspace.com/cloud-servers/v2/release-notes/index.html. Decide later whether to remove the whole Rackspace set together with the two Cloud adapters.
+
+### Leftovers (not removed, need a decision)
+- `Zend_Cloud_{StorageService,DocumentService,QueueService,Infrastructure}_Adapter_{S3,SimpleDb,Sqs,Ec2}` (library, tests, docs `Zend_Cloud_*.xml`) depend on the excluded `Zend_Service_Amazon`; they cannot work without it. Their tests still read the removed `TESTS_ZEND_SERVICE_AMAZON_*` constants (guarded by `defined()`, so they skip).
+- `Zend_Captcha_ReCaptcha` and `Zend_Form_Decorator_ReCaptcha` tests/docs (package captcha) and prose in `Zend_Captcha-Adapters.xml` still mention `Zend_Service_ReCaptcha` (now plain `classname`).
+- `Zend_Log_Formatter_Firebug`, `Zend_Db_Profiler_Firebug` and their tests live in the active log/db packages; the Zend_Db_Profiler/Log-Writers docs still mention Firebug.
 
 ### Directories and files that task 11 must also remove or edit
 
