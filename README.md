@@ -6,7 +6,7 @@
 
 This is a fork of Zend Framework 1 that keeps it working on current versions of PHP. It requires PHP 8.5 or newer and is tested on PHP 8.5 and 8.6.
 
-This fork is based on the final release of the original project (version 1.12.20) and on the maintained fork at https://github.com/diablomedia/zf1 (upstream, archived). Releases follow [semantic versioning](https://semver.org/).
+This fork is based on the final release of the original project (version 1.12.20). It was originally forked from https://github.com/diablomedia/zf1, which is itself a fork of Zend Framework 1. Releases follow [semantic versioning](https://semver.org/).
 
 Installation via composer is the suggested way to install this fork:
 
@@ -16,6 +16,26 @@ The components are separate packages (`gizmocraft/zendframework1-*`) that this p
 
 Some components were not carried over because the services they talk to no longer exist or the extensions they need are gone. See [EXCLUDED_PACKAGES.md](EXCLUDED_PACKAGES.md) for the list, the reasons and the evidence.
 
+## Installing before the packages are on Packagist
+Until the `gizmocraft/zendframework1*` packages are on Packagist, Composer finds them through VCS repositories on GitHub (`https://github.com/gizmocraftcom/zf1-*`). Composer does not read the `repositories` entries of a dependency's `composer.json`, so your project must list them itself. Either:
+-   copy the `repositories` block from [composer-repositories.json](composer-repositories.json) (68 entries, one per package) into the `composer.json` of your project, then run `composer require gizmocraft/zendframework1`, or
+-   wait until the packages are on Packagist, when no `repositories` entries are needed.
+A single entry looks like this:
+```json
+{
+    "repositories": [
+        { "type": "vcs", "url": "https://github.com/gizmocraftcom/zf1-acl" }
+    ]
+}
+```
+`composer-repositories.json` is generated from the `repositories` section of this repository's `composer.json`. Regenerate it whenever that section changes.
+## Not carried over
+Six packages are not part of this fork: `zendframework1-openid`, `zendframework1-auth-adapter-openid`, `zendframework1-service-amazon`, `zendframework1-service-recaptcha`, `zendframework1-log-writer-firebug` and `zendframework1-wildfire`. These classes were removed from `library/` of this repository: `Zend_Gdata`, `Zend_Mobile` (push), `Zend_Service_Yahoo`, `Zend_Service_Delicious`, `Zend_Service_SlideShare`, `Zend_Service_Ebay`, `Zend_Service_Twitter`, `Zend_Service_LiveDocx`, `Zend_Service_StrikeIron`, and the Amazon adapters of `Zend_Cloud` (S3, SimpleDb, Sqs, Ec2). The reasons and evidence are in [EXCLUDED_PACKAGES.md](EXCLUDED_PACKAGES.md). Other breaking changes are in [CHANGELOG.md](CHANGELOG.md).
+## Maintenance
+-   PHP: minimum 8.5. Tested on PHP 8.5.13 and 8.6.0 (CI runs 8.5 and 8.6).
+-   Tests: run `composer install`, then `cd tests && php runalltests.php`. The `Zend_Queue_Adapter_Db` tests need MySQL (see `.github/workflows/build.yml`).
+-   Static analysis: `composer phpstan`. Code style: `composer style-check`.
+-   Each component package (`gizmocraft/zendframework1-*`) has its own repository and runs its own tests.
 ## Release Highlights
 ### Unreleased
 -   Renamed to `gizmocraft/zendframework1` and raised the minimum PHP version to 8.5 (CI runs 8.5 and 8.6). See `CHANGELOG.md` for all changes.
