@@ -105,7 +105,6 @@
       <file>../vendor/diablomedia/zendframework1-captcha/tests/Zend/Captcha/DumbTest.php</file>
       <file>../vendor/diablomedia/zendframework1-captcha/tests/Zend/Captcha/FigletTest.php</file>
       <file>../vendor/diablomedia/zendframework1-captcha/tests/Zend/Captcha/ImageTest.php</file>
-      <file>../vendor/diablomedia/zendframework1-captcha/tests/Zend/Captcha/ReCaptchaTest.php</file>
     </testsuite>
     <testsuite name="ZFTest_Zend_Cloud">
       <file>./Zend/Cloud/DocumentService/FactoryTest.php</file>
@@ -493,7 +492,6 @@
       <file>../vendor/diablomedia/zendframework1-form/tests/Zend/Form/Decorator/ImageTest.php</file>
       <file>../vendor/diablomedia/zendframework1-form/tests/Zend/Form/Decorator/LabelTest.php</file>
       <file>../vendor/diablomedia/zendframework1-form/tests/Zend/Form/Decorator/PrepareElementsTest.php</file>
-      <file>../vendor/diablomedia/zendframework1-captcha/tests/Zend/Form/Decorator/ReCaptchaTest.php</file>
       <file>../vendor/diablomedia/zendframework1-form/tests/Zend/Form/Decorator/ViewHelperTest.php</file>
       <file>../vendor/diablomedia/zendframework1-form/tests/Zend/Form/Decorator/ViewScriptTest.php</file>
       <file>../vendor/diablomedia/zendframework1-form/tests/Zend/Form/DisplayGroupTest.php</file>

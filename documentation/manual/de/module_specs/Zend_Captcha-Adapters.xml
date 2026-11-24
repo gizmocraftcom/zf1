@@ -274,45 +274,4 @@
             "suffix", "height", "imgUrl", usw.
         </para>
     </sect2>
-
-    <sect2 id="zend.captcha.adapters.recaptcha">
-        <title>Zend_Captcha_ReCaptcha</title>
-
-        <para>
-            Der <classname>Zend_Captcha_ReCaptcha</classname> Adapter verwendet
-            <classname>Zend_Service_ReCaptcha</classname> um
-            <acronym>CAPTCHA</acronym>s zu erzeugen und zu prüfen. Es bietet die folgenden Methoden
-            an:
-        </para>
-
-        <itemizedlist>
-            <listitem>
-                <para>
-                    <methodname>setPrivKey($key)</methodname> und
-                    <methodname>getPrivKey()</methodname> erlauben es den privaten Schlüssel zu
-                    spezifizieren der für den ReCaptcha Service verwendet werden soll. Er muß während
-                    der Erstellung spezifiziert werden, auch wenn er jederzeit überschrieben werden
-                    kann.
-                </para>
-            </listitem>
-
-            <listitem>
-                <para>
-                    <methodname>setPubKey($key)</methodname> und
-                    <methodname>getPubKey()</methodname> erlauben es den öffentlichen Schlüssel zu
-                    spezifizieren der mit dem ReCaptcha Service verwendet werden soll. Er muß während
-                    der Erstellung spezifiziert werden, auch wenn er jederzeit überschrieben werden
-                    kann.
-                </para>
-            </listitem>
-
-            <listitem>
-                <para>
-                    <methodname>setService(Zend_Service_ReCaptcha $service)</methodname> und
-                    <methodname>getService()</methodname> erlauben es das ReCaptcha Serviceobjekt zu
-                    setzen und erhalten.
-                </para>
-            </listitem>
-        </itemizedlist>
-    </sect2>
 </sect1>

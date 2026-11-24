@@ -164,32 +164,6 @@
             把首字母变成小写：如 "suffix"、 "height"、"imgUrl"  等。
         </para>
     </sect2>
-
-    <sect2 id="zend.captcha.adapters.recaptcha">
-        <title>Zend_Captcha_ReCaptcha</title>
-
-        <para>
-            ReCaptcha 适配器利用 <classname>Zend_Service_ReCaptcha</classname>
-            来生成校验 captchas。它有下列方法：
-        </para>
-
-        <itemizedlist>
-            <listitem><para>
-                <code>setPrivKey($key)</code> 和 <code>getPrivKey()</code>
-                让你指定和 ReCaptcha 服务一起使用的私钥。这必需在构造期间指定，尽管任何时候它都可以被覆盖。
-            </para></listitem>
-
-            <listitem><para>
-                <code>setPubKey($key)</code> 和 <code>getPubKey()</code>
-                让你指定和 ReCaptcha 服务一起使用的公钥。这必需在构造期间指定，尽管任何时候它都可以被覆盖。
-            </para></listitem>
-
-            <listitem><para>
-                <code>setService(Zend_Service_ReCaptcha $service)</code> 和
-                <code>getService()</code> 让你指定并和 ReCaptcha 服务对象交互使用。
-            </para></listitem>
-        </itemizedlist>
-    </sect2>
 </sect1>
 <!--
 vim:se ts=4 sw=4 et:
