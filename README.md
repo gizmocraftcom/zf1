@@ -1,24 +1,26 @@
 # Zend Framework 1
+[![Build](https://github.com/gizmocraftcom/zf1/workflows/Build/badge.svg?event=push)](https://github.com/gizmocraftcom/zf1/actions?query=workflow%3ABuild+event%3Apush)
+[![Latest Stable Version](https://poser.pugx.org/gizmocraft/zendframework1/v/stable)](https://packagist.org/packages/gizmocraft/zendframework1)
+[![Total Downloads](https://poser.pugx.org/gizmocraft/zendframework1/downloads)](https://packagist.org/packages/gizmocraft/zendframework1)
+[![License](https://poser.pugx.org/gizmocraft/zendframework1/license)](https://packagist.org/packages/gizmocraft/zendframework1)
 
-[![Build](https://github.com/diablomedia/zf1/workflows/Build/badge.svg?event=push)](https://github.com/diablomedia/zf1/actions?query=workflow%3ABuild+event%3Apush)
-[![codecov](https://codecov.io/gh/diablomedia/zf1/branch/master/graph/badge.svg)](https://codecov.io/gh/diablomedia/zf1)
-[![Latest Stable Version](https://poser.pugx.org/diablomedia/zendframework1/v/stable)](https://packagist.org/packages/diablomedia/zendframework1)
-[![Total Downloads](https://poser.pugx.org/diablomedia/zendframework1/downloads)](https://packagist.org/packages/diablomedia/zendframework1)
-[![License](https://poser.pugx.org/diablomedia/zendframework1/license)](https://packagist.org/packages/diablomedia/zendframework1)
+This is a fork of Zend Framework 1 that keeps it working on current versions of PHP. It requires PHP 8.5 or newer and is tested on PHP 8.5 and 8.6.
 
-> [!WARNING]  
-> We've archived this repo (and dependent Zend Framework 1 repos) as we're no longer using or maintaining Zend Framework 1
-
-This is a fork of Zend Framework 1 that we'll maintain as long as we're using it, mainly just to keep it working on new versions of PHP as they're released.
-
-This fork is based on the final release of the original project (version 1.12.20), and releases will follow [semantic versioning](https://semver.org/). The first release of this fork is version 2.0.0.
+This fork is based on the final release of the original project (version 1.12.20) and on the maintained fork at https://github.com/diablomedia/zf1 (upstream, archived). Releases follow [semantic versioning](https://semver.org/).
 
 Installation via composer is the suggested way to install this fork:
 
-`composer require diablomedia/zendframework1`
+`composer require gizmocraft/zendframework1`
+
+The components are separate packages (`gizmocraft/zendframework1-*`) that this package requires. Install only the ones you need if you do not want the whole framework.
+
+Some components were not carried over because the services they talk to no longer exist or the extensions they need are gone. See [EXCLUDED_PACKAGES.md](EXCLUDED_PACKAGES.md) for the list, the reasons and the evidence.
 
 ## Release Highlights
-
+### Unreleased
+-   Renamed to `gizmocraft/zendframework1` and raised the minimum PHP version to 8.5 (CI runs 8.5 and 8.6). See `CHANGELOG.md` for all changes.
+-   Dev dependencies upgraded to PHPUnit 13, PHPStan 2 and php-cs-fixer 3.
+-   Dropped dead services and APIs (Zend_Gdata, Zend_Service_Yahoo, Twitter and others, see `EXCLUDED_PACKAGES.md`).
 ### 5.0.0
 
 -   Removed phpunit/dbunit from Zend_Test component, as this has been abandoned and made it difficult to upgrade to newer versions of phpunit (which makes it difficult to test against newer versions of PHP)
@@ -33,7 +35,7 @@ Installation via composer is the suggested way to install this fork:
 ### 4.0.0
 
 -   Moved a majority of components to their own separate composer package. This package can still be used like before (if being installed with composer, if not, you'll need to stick to the 3.x line), as it pulls in all of the separate components via composer, but it's recommended to just use the components you need. View this project's `composer.json` to see which components are available as a separate package.
--   Removed sqlite cache classes from Zend_Cache (in the `diablomedia/zendframework1-cache` package) since they're not compatible with PHP 7.0+
+-   Removed sqlite cache classes from Zend_Cache (in the `gizmocraft/zendframework1-cache` package) since they're not compatible with PHP 7.0+
 -   Autoloading namespaces changed to be more specific, which should speed up non-optimized autoloaders a bit.
 
 ### 3.0.0
