@@ -11,6 +11,9 @@
 -   `Zend_Cloud_StorageService_Adapter_WindowsAzure::storeItem()` and `Zend_Service_WindowsAzure_Management_Client`: strings with NUL bytes (binary data, PFX certificates) are no longer passed to `file_exists()`, which throws a `ValueError` for them on PHP 8.6.
 -   No public method signature changed. The only added method is the protected `Zend_Service_WindowsAzure_Management_Client::_utf8Decode()`.
 -   `Zend_Version::VERSION` stays at the upstream value `1.12.21dev` on purpose (see the class docblock): code that compares against 1.12.x keeps working. The fork release number is the Composer package version.
+### Static analysis
+-   `Zend_Search_Lucene_Proxy::getSegmentFileName()` now returns the file name. It computed the value and dropped it, so it always returned `null` (behaviour fix found by PHPStan).
+-   PHPStan 2.3, level 8, zero errors on PHP 8.5 and 8.6. The baseline is now `phpstan-baseline.neon` (3572 entries, one `# reason:` line each). The old PHP baseline and the PHP-version specific baseline files were merged into it, because the minimum PHP version is 8.5.
 ### Dev dependencies and tests
 -   `require-dev`: PHPUnit ^13.4.8, phpunit/phpcov ^13.2.1, PHPStan ^2.3.7, php-cs-fixer ^3.95.32.
 -   The test suite is migrated to PHPUnit 13 (attributes, static data providers, `failOnDeprecation`/`failOnNotice`/`failOnWarning`/`failOnRisky`, no removed APIs). `tests/phpunit.xml` now contains only the suites for code that lives in this repository; the suites for the `gizmocraft/zendframework1-*` packages were dropped because each package runs its own tests. The `Zend_Queue_Adapter_Db` tests run against MySQL in CI.

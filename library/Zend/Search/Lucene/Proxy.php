@@ -85,7 +85,7 @@ class Zend_Search_Lucene_Proxy implements Zend_Search_Lucene_Interface
      */
     public static function getSegmentFileName($generation)
     {
-        Zend_Search_Lucene::getSegmentFileName($generation);
+        return Zend_Search_Lucene::getSegmentFileName($generation);
     }
 
     /**
