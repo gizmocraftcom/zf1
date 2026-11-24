@@ -19,6 +19,7 @@
  * @license    http://framework.zend.com/license/new-bsd     New BSD License
  * @version    $Id$
  */
+use PHPUnit\Framework\Attributes\Group;
 
 /**
  * Zend_Search_Lucene
@@ -56,8 +57,8 @@ require_once 'Zend/Search/Lucene/Document/Html.php';
  * @subpackage UnitTests
  * @copyright  Copyright (c) 2005-2015 Zend Technologies USA Inc. (http://www.zend.com)
  * @license    http://framework.zend.com/license/new-bsd     New BSD License
- * @group      Zend_Search_Lucene
  */
+#[Group('Zend_Search_Lucene')]
 class Zend_Search_Lucene_DocumentTest extends PHPUnit\Framework\TestCase
 {
 
@@ -194,9 +195,7 @@ class Zend_Search_Lucene_DocumentTest extends PHPUnit\Framework\TestCase
     }
 
 
-    /**
-     * @group ZF-4252
-     */
+    #[Group('ZF-4252')]
     public function testHtmlInlineTagsIndexing()
     {
         $index = Zend_Search_Lucene::create(dirname(__FILE__) . '/_index/_files');
@@ -219,9 +218,7 @@ class Zend_Search_Lucene_DocumentTest extends PHPUnit\Framework\TestCase
         $this->_clearDirectory(dirname(__FILE__) . '/_index/_files');
     }
 
-    /**
-     * @group ZF-8740
-     */
+    #[Group('ZF-8740')]
     public function testHtmlAreaTags()
     {
         $html = '<HTML>'
@@ -325,9 +322,7 @@ class Zend_Search_Lucene_DocumentTest extends PHPUnit\Framework\TestCase
         $this->assertTrue( strpos($xlsxDocument->getFieldValue('body'), 'ipsum') !== false );
     }
 
-    /**
-     * @group ZF-10686
-     */
+    #[Group('ZF-10686')]
     public function testLoadHtmlWithAttributesInTagHTML()
     {
         $doc = Zend_Search_Lucene_Document_Html::loadHTML('<HTML lang="en_US"><HEAD><TITLE>Page title</TITLE></HEAD><BODY>Document body.</BODY></HTML>');

@@ -19,6 +19,7 @@
  * @license    http://framework.zend.com/license/new-bsd     New BSD License
  * @version    $Id$
  */
+use PHPUnit\Framework\Attributes\Group;
 
 require_once 'Zend/Feed/Reader.php';
 
@@ -28,9 +29,9 @@ require_once 'Zend/Feed/Reader.php';
  * @subpackage UnitTests
  * @copyright  Copyright (c) 2005-2015 Zend Technologies USA Inc. (http://www.zend.com)
  * @license    http://framework.zend.com/license/new-bsd     New BSD License
- * @group      Zend_Feed
- * @group      Zend_Feed_Reader
  */
+#[Group('Zend_Feed')]
+#[Group('Zend_Feed_Reader')]
 class Zend_Feed_Reader_Feed_CommonTest extends PHPUnit\Framework\TestCase
 {
     protected $_feedSamplePath = null;
@@ -104,9 +105,7 @@ class Zend_Feed_Reader_Feed_CommonTest extends PHPUnit\Framework\TestCase
         $this->assertEquals(null, $feed->getExtension('Foo'));
     }
 
-    /**
-     * @group ZF-8213
-     */
+    #[Group('ZF-8213')]
     public function testReturnsEncodingOfFeed()
     {
         $feed = Zend_Feed_Reader::importString(
@@ -115,9 +114,7 @@ class Zend_Feed_Reader_Feed_CommonTest extends PHPUnit\Framework\TestCase
         $this->assertEquals('UTF-8', $feed->getEncoding());
     }
 
-    /**
-     * @group ZF-8213
-     */
+    #[Group('ZF-8213')]
     public function testReturnsEncodingOfFeedAsUtf8IfUndefined()
     {
         $feed = Zend_Feed_Reader::importString(

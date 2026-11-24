@@ -19,6 +19,8 @@
  * @license    http://framework.zend.com/license/new-bsd     New BSD License
  * @version    $Id$
  */
+use PHPUnit\Framework\Attributes\DoesNotPerformAssertions;
+use PHPUnit\Framework\Attributes\Group;
 
 
 /**
@@ -32,8 +34,8 @@ require_once 'Zend/Measure/Length.php';
  * @subpackage UnitTests
  * @copyright  Copyright (c) 2005-2015 Zend Technologies USA Inc. (http://www.zend.com)
  * @license    http://framework.zend.com/license/new-bsd     New BSD License
- * @group      Zend_Measure
  */
+#[Group('Zend_Measure')]
 class Zend_Measure_LengthTest extends PHPUnit\Framework\TestCase
 {
     /**
@@ -57,7 +59,7 @@ class Zend_Measure_LengthTest extends PHPUnit\Framework\TestCase
             $value = new Zend_Measure_Length('100','Length::UNKNOWN','de');
             $this->fail('Exception expected because of unknown type');
         } catch (Exception $e) {
-            return true; // Test OK
+            $this->assertInstanceOf(Exception::class, $e);
         }
     }
 
@@ -72,7 +74,7 @@ class Zend_Measure_LengthTest extends PHPUnit\Framework\TestCase
             $value = new Zend_Measure_Length('novalue',Zend_Measure_Length::STANDARD,'de');
             $this->fail('Exception expected because of empty value');
         } catch (Exception $e) {
-            return true; // Test OK
+            $this->assertInstanceOf(Exception::class, $e);
         }
     }
 
@@ -87,7 +89,7 @@ class Zend_Measure_LengthTest extends PHPUnit\Framework\TestCase
             $value = new Zend_Measure_Length('100',Zend_Measure_Length::STANDARD,'nolocale');
             $this->fail('Exception expected because of unknown locale');
         } catch (Exception $e) {
-            return true; // Test OK
+            $this->assertInstanceOf(Exception::class, $e);
         }
     }
 
@@ -253,7 +255,7 @@ class Zend_Measure_LengthTest extends PHPUnit\Framework\TestCase
             $value->setValue('-200.200,200','Length::UNKNOWN','de');
             $this->fail('Exception expected because of unknown type');
         } catch (Exception $e) {
-            return true; // Test OK
+            $this->assertInstanceOf(Exception::class, $e);
         }
     }
 
@@ -262,6 +264,7 @@ class Zend_Measure_LengthTest extends PHPUnit\Framework\TestCase
      * test for exception unknown value
      * expected exception
      */
+    #[DoesNotPerformAssertions]
     public function testLengthSetUnknownValue()
     {
         try {
@@ -285,7 +288,7 @@ class Zend_Measure_LengthTest extends PHPUnit\Framework\TestCase
             $value->setValue('200',Zend_Measure_Length::STANDARD,'nolocale');
             $this->fail('Exception expected because of unknown locale');
         } catch (Exception $e) {
-            return true; // Test OK
+            $this->assertInstanceOf(Exception::class, $e);
         }
     }
 
@@ -344,13 +347,9 @@ class Zend_Measure_LengthTest extends PHPUnit\Framework\TestCase
      */
     public function testLengthSetTypeFailed()
     {
-        try {
-            $value = new Zend_Measure_Length('-100',Zend_Measure_Length::STANDARD,'de');
-            $value->setType('Length::UNKNOWN');
-            $this->fail('Exception expected because of unknown type');
-        } catch (Zend_Measure_Exception $e) {
-            // success
-        }
+        $this->expectException(Zend_Measure_Exception::class);
+        $value = new Zend_Measure_Length('-100',Zend_Measure_Length::STANDARD,'de');
+        $value->setType('Length::UNKNOWN');
     }
 
 

@@ -19,6 +19,7 @@
  * @license    http://framework.zend.com/license/new-bsd     New BSD License
  * @version    $Id$
  */
+use PHPUnit\Framework\Attributes\Group;
 
 /**
  * @see Zend_Amf_Adobe_Introspector
@@ -31,8 +32,8 @@ require_once 'Zend/Amf/Adobe/Introspector.php';
  * @subpackage UnitTests
  * @copyright  Copyright (c) 2005-2015 Zend Technologies USA Inc. (http://www.zend.com)
  * @license    http://framework.zend.com/license/new-bsd     New BSD License
- * @group      Zend_Amf
  */
+#[Group('Zend_Amf')]
 class Zend_Amf_Adobe_IntrospectorTest extends PHPUnit\Framework\TestCase
 {
     protected $introspector;
@@ -121,9 +122,7 @@ class Zend_Amf_Adobe_IntrospectorTest extends PHPUnit\Framework\TestCase
         $this->assertMatchesRegularExpression('/<type[^>]*(name="explicit")/', $xml, $xml);
     }
 
-    /**
-     * @group ZF-10365
-     */
+    #[Group('ZF-10365')]
     public function testArgumentsWithArrayTypeHintsReflectedInReturnedXml()
     {
         require_once dirname(__FILE__) . '/TestAsset/ParameterHints.php';

@@ -19,6 +19,8 @@
  * @license    http://framework.zend.com/license/new-bsd     New BSD License
  * @version    $Id$
  */
+use PHPUnit\Framework\Attributes\DoesNotPerformAssertions;
+use PHPUnit\Framework\Attributes\Group;
 
 require_once 'Zend/Tag/Cloud.php';
 require_once 'Zend/Tag/ItemList.php';
@@ -31,9 +33,9 @@ require_once dirname(__FILE__) . '/_classes/TagDummy.php';
  * @subpackage UnitTests
  * @copyright  Copyright (c) 2005-2015 Zend Technologies USA Inc. (http://www.zend.com)
  * @license    http://framework.zend.com/license/new-bsd     New BSD License
- * @group      Zend_Tag
- * @group      Zend_Tag_Cloud
  */
+#[Group('Zend_Tag')]
+#[Group('Zend_Tag_Cloud')]
 class Zend_Tag_Cloud_CloudTest extends PHPUnit\Framework\TestCase
 {
     public function testGetAndSetItemList()
@@ -282,6 +284,7 @@ class Zend_Tag_Cloud_CloudTest extends PHPUnit\Framework\TestCase
         $this->assertEquals('foo', $list[0]->getTitle());
     }
 
+    #[DoesNotPerformAssertions]
     public function testSkipOptions()
     {
         $cloud = $this->_getCloud(array('options' => 'foobar'));

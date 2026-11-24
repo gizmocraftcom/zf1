@@ -19,6 +19,7 @@
  * @license    http://framework.zend.com/license/new-bsd     New BSD License
  * @version    $Id$
  */
+use PHPUnit\Framework\Attributes\Group;
 
 /**
  * Test Class for returning the name of the php class to flex.
@@ -28,8 +29,8 @@
  * @subpackage UnitTests
  * @copyright  Copyright (c) 2005-2015 Zend Technologies USA Inc. (http://www.zend.com)
  * @license    http://framework.zend.com/license/new-bsd     New BSD License
- * @group ZF-6130
  */
+#[Group('ZF-6130')]
 class ContactVO
 {
   public $id = 0;

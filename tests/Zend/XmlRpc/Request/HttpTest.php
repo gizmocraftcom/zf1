@@ -19,6 +19,8 @@
  * @license    http://framework.zend.com/license/new-bsd     New BSD License
  * @version $Id$
  */
+use PHPUnit\Framework\Attributes\DoesNotPerformAssertions;
+use PHPUnit\Framework\Attributes\Group;
 
 require_once 'Zend/AllTests/StreamWrapper/PhpInput.php';
 require_once 'Zend/XmlRpc/Request/Http.php';
@@ -31,8 +33,8 @@ require_once 'Zend/XmlRpc/Request/Http.php';
  * @subpackage UnitTests
  * @copyright  Copyright (c) 2005-2015 Zend Technologies USA Inc. (http://www.zend.com)
  * @license    http://framework.zend.com/license/new-bsd     New BSD License
- * @group      Zend_XmlRpc
  */
+#[Group('Zend_XmlRpc')]
 class Zend_XmlRpc_Request_HttpTest extends PHPUnit\Framework\TestCase
 {
     protected $xml;
@@ -131,6 +133,7 @@ EOT;
         $this->assertEquals($expected, $this->request->getFullRequest());
     }
 
+    #[DoesNotPerformAssertions]
     public function testCanPassInMethodAndParams()
     {
         try {

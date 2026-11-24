@@ -19,6 +19,9 @@
  * @license    http://framework.zend.com/license/new-bsd     New BSD License
  * @version $Id: ValueTest.php 23550 2010-12-18 13:18:38Z ramon $
  */
+use PHPUnit\Framework\Attributes\DoesNotPerformAssertions;
+use PHPUnit\Framework\Attributes\DataProviderExternal;
+use PHPUnit\Framework\Attributes\Group;
 
 require_once 'Zend/XmlRpc/Value.php';
 require_once 'Zend/XmlRpc/Value/Scalar.php';
@@ -43,8 +46,8 @@ require_once 'Zend/XmlRpc/TestProvider.php';
  * @subpackage UnitTests
  * @copyright  Copyright (c) 2005-2015 Zend Technologies USA Inc. (http://www.zend.com)
  * @license    http://framework.zend.com/license/new-bsd     New BSD License
- * @group      Zend_XmlRpc
  */
+#[Group('Zend_XmlRpc')]
 class Zend_XmlRpc_BigIntegerValueTest extends PHPUnit\Framework\TestCase
 {
     public function setUp(): void
@@ -58,10 +61,8 @@ class Zend_XmlRpc_BigIntegerValueTest extends PHPUnit\Framework\TestCase
 
     // BigInteger
 
-    /**
-     * @group ZF-6445
-     * @group ZF-8623
-     */
+    #[Group('ZF-6445')]
+    #[Group('ZF-8623')]
     public function testBigIntegerGetValue()
     {
         $bigIntegerValue = (string)(PHP_INT_MAX + 42);
@@ -69,9 +70,7 @@ class Zend_XmlRpc_BigIntegerValueTest extends PHPUnit\Framework\TestCase
         $this->assertSame($bigIntegerValue, $bigInteger->getValue());
     }
 
-    /**
-     * @group ZF-6445
-     */
+    #[Group('ZF-6445')]
     public function testBigIntegerGetType()
     {
         $bigIntegerValue = (string)(PHP_INT_MAX + 42);
@@ -79,9 +78,7 @@ class Zend_XmlRpc_BigIntegerValueTest extends PHPUnit\Framework\TestCase
         $this->assertSame(Zend_XmlRpc_Value::XMLRPC_TYPE_I8, $bigInteger->getType());
     }
 
-    /**
-     * @group ZF-6445
-     */
+    #[Group('ZF-6445')]
     public function testBigIntegerGeneratedXml()
     {
         $bigIntegerValue = (string)(PHP_INT_MAX + 42);
@@ -93,10 +90,8 @@ class Zend_XmlRpc_BigIntegerValueTest extends PHPUnit\Framework\TestCase
         );
     }
 
-    /**
-     * @group ZF-6445
-     * @dataProvider Zend_XmlRpc_TestProvider::provideGenerators
-     */
+    #[Group('ZF-6445')]
+    #[DataProviderExternal(Zend_XmlRpc_TestProvider::class, 'provideGenerators')]
     public function testMarschalBigIntegerFromXmlRpc(Zend_XmlRpc_Generator_GeneratorAbstract $generator)
     {
         Zend_XmlRpc_Value::setGenerator($generator);
@@ -115,10 +110,8 @@ class Zend_XmlRpc_BigIntegerValueTest extends PHPUnit\Framework\TestCase
         $this->assertEquals($this->wrapXml($bigIntegerXml), $value->saveXml());
     }
 
-    /**
-     * @group ZF-6445
-     * @dataProvider Zend_XmlRpc_TestProvider::provideGenerators
-     */
+    #[Group('ZF-6445')]
+    #[DataProviderExternal(Zend_XmlRpc_TestProvider::class, 'provideGenerators')]
     public function testMarschalBigIntegerFromApacheXmlRpc(Zend_XmlRpc_Generator_GeneratorAbstract $generator)
     {
         Zend_XmlRpc_Value::setGenerator($generator);
@@ -137,9 +130,7 @@ class Zend_XmlRpc_BigIntegerValueTest extends PHPUnit\Framework\TestCase
         $this->assertEquals($this->wrapXml($bigIntegerXml), $value->saveXml());
     }
 
-    /**
-     * @group ZF-6445
-     */
+    #[Group('ZF-6445')]
     public function testMarshalBigIntegerFromNative()
     {
         $bigIntegerValue = (string)(PHP_INT_MAX + 42);
@@ -153,9 +144,8 @@ class Zend_XmlRpc_BigIntegerValueTest extends PHPUnit\Framework\TestCase
         $this->assertSame($bigIntegerValue, $value->getValue());
     }
 
-    /**
-     * @group ZF-6445
-     */
+    #[Group('ZF-6445')]
+    #[DoesNotPerformAssertions]
     public function testMarschalBigIntegerFromCryptObjectThrowsException()
     {
         try {

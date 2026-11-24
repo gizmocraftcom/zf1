@@ -19,6 +19,7 @@
  * @license    http://framework.zend.com/license/new-bsd     New BSD License
  * @version    $Id$
  */
+use PHPUnit\Framework\Attributes\Group;
 
 require_once 'Zend/Tool/Project/Context/Repository.php';
 
@@ -30,10 +31,9 @@ require_once 'Zend/Debug.php';
  * @subpackage UnitTests
  * @copyright  Copyright (c) 2005-2015 Zend Technologies USA Inc. (http://www.zend.com)
  * @license    http://framework.zend.com/license/new-bsd     New BSD License
- *
- * @group Zend_Tool
- * @group Zend_Tool_Project
  */
+#[Group('Zend_Tool')]
+#[Group('Zend_Tool_Project')]
 class Zend_Tool_Project_Context_RepositoryTest extends PHPUnit\Framework\TestCase
 {
 

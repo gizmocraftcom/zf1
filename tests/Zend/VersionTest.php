@@ -19,6 +19,7 @@
  * @license    http://framework.zend.com/license/new-bsd     New BSD License
  * @version    $Id$
  */
+use PHPUnit\Framework\Attributes\Group;
 
 /**
  * @see Zend_Version
@@ -31,8 +32,8 @@ require_once 'Zend/Version.php';
  * @subpackage UnitTests
  * @copyright  Copyright (c) 2005-2015 Zend Technologies USA Inc. (http://www.zend.com)
  * @license    http://framework.zend.com/license/new-bsd     New BSD License
- * @group      Zend_Version
  */
+#[Group('Zend_Version')]
 class Zend_VersionTest extends PHPUnit\Framework\TestCase
 {
     /**
@@ -74,9 +75,7 @@ class Zend_VersionTest extends PHPUnit\Framework\TestCase
         }
     }
 
-    /**
-     * @group ZF-10363
-     */
+    #[Group('ZF-10363')]
     public function testFetchLatestVersion()
     {
         if (!defined('TESTS_ZEND_VERSION_ONLINE_ENABLED')

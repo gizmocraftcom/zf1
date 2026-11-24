@@ -19,6 +19,7 @@
  * @license    http://framework.zend.com/license/new-bsd     New BSD License
  * @version    $Id $
  */
+use PHPUnit\Framework\Attributes\Group;
 
 /** requires here */
 require_once 'Zend/CodeGenerator/Php/File.php';
@@ -30,11 +31,10 @@ require_once 'Zend/Reflection/File.php';
  * @subpackage UnitTests
  * @copyright  Copyright (c) 2005-2015 Zend Technologies USA Inc. (http://www.zend.com)
  * @license    http://framework.zend.com/license/new-bsd     New BSD License
- *
- * @group Zend_CodeGenerator
- * @group Zend_CodeGenerator_Php
- * @group Zend_CodeGenerator_Php_File
  */
+#[Group('Zend_CodeGenerator')]
+#[Group('Zend_CodeGenerator_Php')]
+#[Group('Zend_CodeGenerator_Php_File')]
 class Zend_CodeGenerator_Php_FileTest extends PHPUnit\Framework\TestCase
 {
 
@@ -165,10 +165,8 @@ EOS;
 
     }
 
-    /**
-     * @group ZF-7369
-     * @group ZF-6982
-     */
+    #[Group('ZF-7369')]
+    #[Group('ZF-6982')]
     public function testFromReflectionFileKeepsIndents()
     {
         $file = dirname(__FILE__) . '/_files/TestClassWithCodeInMethod.php';
@@ -213,10 +211,8 @@ EOS;
         $this->assertEquals($expectedOutput, $codeGenFileFromDisk->generate());
     }
 
-    /**
-     * @group ZF-7369
-     * @group ZF-6982
-     */
+    #[Group('ZF-7369')]
+    #[Group('ZF-6982')]
     public function testFromReflectionFilePreservesIndentsWhenAdditionalMethodAdded()
     {
         $file = dirname(__FILE__) . '/_files/TestClassWithCodeInMethod.php';
@@ -290,9 +286,7 @@ EOS;
         $this->assertEquals(';', $lines[2][$targetLength-1]);
     }
 
-    /**
-    * @group ZF-11703
-    */
+    #[Group('ZF-11703')]
     public function testNewMethodKeepDocBlock(){
         $codeGenFile = Zend_CodeGenerator_Php_File::fromReflectedFileName(dirname(__FILE__).'/_files/zf-11703.php', true, true);
         $target = <<<EOS
@@ -328,9 +322,7 @@ EOS;
         $this->assertEquals($target, $codeGenFile->generate());
     }
 
-    /**
-    * @group ZF-11703
-    */
+    #[Group('ZF-11703')]
     public function testNewMethodKeepTwoDocBlock(){
         $codeGenFile = Zend_CodeGenerator_Php_File::fromReflectedFileName(dirname(__FILE__).'/_files/zf-11703_1.php', true, true);
         $target = <<<EOS

@@ -19,6 +19,7 @@
  * @license    http://framework.zend.com/license/new-bsd     New BSD License
  * @version    $Id$
  */
+use PHPUnit\Framework\Attributes\Group;
 
 require_once 'Zend/Feed/Writer/Deleted.php';
 
@@ -26,11 +27,11 @@ require_once 'Zend/Feed/Writer/Deleted.php';
  * @category   Zend
  * @package    Zend_Exception
  * @subpackage UnitTests
- * @group      Zend_Feed
- * @group      Zend_Feed_Writer
  * @copyright  Copyright (c) 2005-2015 Zend Technologies USA Inc. (http://www.zend.com)
  * @license    http://framework.zend.com/license/new-bsd     New BSD License
  */
+#[Group('Zend_Feed')]
+#[Group('Zend_Feed_Writer')]
 class Zend_Feed_Writer_DeletedTest extends PHPUnit\Framework\TestCase
 {
 
@@ -44,11 +45,8 @@ class Zend_Feed_Writer_DeletedTest extends PHPUnit\Framework\TestCase
     public function testSetReferenceThrowsExceptionOnInvalidParameter()
     {
         $entry = new Zend_Feed_Writer_Deleted;
-        try {
-            $entry->setReference('');
-            $this->fail();
-        } catch (Zend_Feed_Exception $e) {
-        }
+        $this->expectException(Zend_Feed_Exception::class);
+        $entry->setReference('');
     }
 
     public function testGetReferenceReturnsNullIfNotSet()
@@ -73,9 +71,7 @@ class Zend_Feed_Writer_DeletedTest extends PHPUnit\Framework\TestCase
         $this->assertTrue($myDate->equals($entry->getWhen()));
     }
  
-    /**
-     * @group ZF-12070
-     */
+    #[Group('ZF-12070')]
     public function testSetWhenUsesGivenUnixTimestampWhenItIsLessThanTenDigits()
     {
         $entry = new Zend_Feed_Writer_Deleted;
@@ -84,9 +80,7 @@ class Zend_Feed_Writer_DeletedTest extends PHPUnit\Framework\TestCase
         $this->assertTrue($myDate->equals($entry->getWhen()));
     }
  
-    /**
-     * @group ZF-11610
-     */
+    #[Group('ZF-11610')]
     public function testSetWhenUsesGivenUnixTimestampWhenItIsAVerySmallInteger()
     {
         $entry = new Zend_Feed_Writer_Deleted;
@@ -106,11 +100,8 @@ class Zend_Feed_Writer_DeletedTest extends PHPUnit\Framework\TestCase
     public function testSetWhenThrowsExceptionOnInvalidParameter()
     {
         $entry = new Zend_Feed_Writer_Deleted;
-        try {
-            $entry->setWhen('abc');
-            $this->fail();
-        } catch (Zend_Feed_Exception $e) {
-        }
+        $this->expectException(Zend_Feed_Exception::class);
+        $entry->setWhen('abc');
     }
 
     public function testGetWhenReturnsNullIfDateNotSet()
@@ -143,41 +134,29 @@ class Zend_Feed_Writer_DeletedTest extends PHPUnit\Framework\TestCase
     public function testAddByThrowsExceptionOnInvalidNameFromArray()
     {
         $entry = new Zend_Feed_Writer_Deleted;
-        try {
-            $entry->setBy(array('name'=>''));
-            $this->fail();
-        } catch (Zend_Feed_Exception $e) {
-        }
+        $this->expectException(Zend_Feed_Exception::class);
+        $entry->setBy(array('name'=>''));
     }
 
     public function testAddByThrowsExceptionOnInvalidEmailFromArray()
     {
         $entry = new Zend_Feed_Writer_Deleted;
-        try {
-            $entry->setBy(array('name'=>'Joe','email'=>''));
-            $this->fail();
-        } catch (Zend_Feed_Exception $e) {
-        }
+        $this->expectException(Zend_Feed_Exception::class);
+        $entry->setBy(array('name'=>'Joe','email'=>''));
     }
 
     public function testAddByThrowsExceptionOnInvalidUriFromArray()
     {
         $entry = new Zend_Feed_Writer_Deleted;
-        try {
-            $entry->setBy(array('name'=>'Joe','uri'=>'notauri'));
-            $this->fail();
-        } catch (Zend_Feed_Exception $e) {
-        }
+        $this->expectException(Zend_Feed_Exception::class);
+        $entry->setBy(array('name'=>'Joe','uri'=>'notauri'));
     }
 
     public function testAddByThrowsExceptionIfNameOmittedFromArray()
     {
         $entry = new Zend_Feed_Writer_Deleted;
-        try {
-            $entry->setBy(array('uri'=>'notauri'));
-            $this->fail();
-        } catch (Zend_Feed_Exception $e) {
-        }
+        $this->expectException(Zend_Feed_Exception::class);
+        $entry->setBy(array('uri'=>'notauri'));
     }
 
 }

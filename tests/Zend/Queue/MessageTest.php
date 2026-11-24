@@ -19,6 +19,7 @@
  * @license    http://framework.zend.com/license/new-bsd     New BSD License
  * @version    $Id$
  */
+use PHPUnit\Framework\Attributes\Group;
 
 /*
  * The adapter test class provides a universal test class for all of the
@@ -45,8 +46,8 @@ require_once 'Zend/Queue/Adapter/Null.php';
  * @subpackage UnitTests
  * @copyright  Copyright (c) 2005-2015 Zend Technologies USA Inc. (http://www.zend.com)
  * @license    http://framework.zend.com/license/new-bsd     New BSD License
- * @group      Zend_Queue
  */
+#[Group('Zend_Queue')]
 class Zend_Queue_MessageTest extends PHPUnit\Framework\TestCase
 {
     protected $queue;

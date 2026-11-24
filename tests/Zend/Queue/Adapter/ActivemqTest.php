@@ -19,6 +19,7 @@
  * @license    http://framework.zend.com/license/new-bsd     New BSD License
  * @version    $Id$
  */
+use PHPUnit\Framework\Attributes\Group;
 
 /*
  * The adapter test class provides a universal test class for all of the
@@ -36,8 +37,8 @@ require_once 'Zend/Queue/Adapter/AdapterTest.php';
  * @subpackage UnitTests
  * @copyright  Copyright (c) 2005-2015 Zend Technologies USA Inc. (http://www.zend.com)
  * @license    http://framework.zend.com/license/new-bsd     New BSD License
- * @group      Zend_Queue
  */
+#[Group('Zend_Queue')]
 class Zend_Queue_Adapter_ActivemqTest extends Zend_Queue_Adapter_AdapterTest
 {
     /**
@@ -99,9 +100,7 @@ class Zend_Queue_Adapter_ActivemqTest extends Zend_Queue_Adapter_AdapterTest
         $this->assertIsInt(Zend_Queue_Adapter_Activemq::DEFAULT_PORT);
     }
 
-    /**
-     * @group ZF-7650
-     */
+    #[Group('ZF-7650')]
     public function testReceiveWillRetrieveZeroItems()
     {
         $options = array('driverOptions' => $this->getTestConfig());

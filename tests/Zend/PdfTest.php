@@ -20,6 +20,7 @@
  * @license    http://framework.zend.com/license/new-bsd     New BSD License
  * @version    $Id$
  */
+use PHPUnit\Framework\Attributes\Group;
 /**
  * @see Zend_Pdf
  */
@@ -35,8 +36,8 @@ require_once 'Zend/Pdf/Exception.php';
  * @subpackage UnitTests
  * @copyright  Copyright (c) 2005-2015 Zend Technologies USA Inc. (http://www.zend.com)
  * @license    http://framework.zend.com/license/new-bsd     New BSD License
- * @group      Zend_Pdf
  */
+#[Group('Zend_Pdf')]
 class Zend_PdfTest extends PHPUnit\Framework\TestCase
 {
     /**

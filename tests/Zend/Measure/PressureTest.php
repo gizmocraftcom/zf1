@@ -19,6 +19,7 @@
  * @license    http://framework.zend.com/license/new-bsd     New BSD License
  * @version    $Id$
  */
+use PHPUnit\Framework\Attributes\Group;
 
 
 /**
@@ -32,8 +33,8 @@ require_once 'Zend/Measure/Pressure.php';
  * @subpackage UnitTests
  * @copyright  Copyright (c) 2005-2015 Zend Technologies USA Inc. (http://www.zend.com)
  * @license    http://framework.zend.com/license/new-bsd     New BSD License
- * @group      Zend_Measure
  */
+#[Group('Zend_Measure')]
 class Zend_Measure_PressureTest extends PHPUnit\Framework\TestCase
 {
     /**
@@ -53,12 +54,8 @@ class Zend_Measure_PressureTest extends PHPUnit\Framework\TestCase
      */
     public function testPressureUnknownType()
     {
-        try {
-            $value = new Zend_Measure_Pressure('100','Pressure::UNKNOWN','de');
-            $this->fail('Exception expected because of unknown type');
-        } catch (Zend_Measure_Exception $e) {
-            // success
-        }
+        $this->expectException(Zend_Measure_Exception::class);
+        $value = new Zend_Measure_Pressure('100','Pressure::UNKNOWN','de');
     }
 
 
@@ -68,12 +65,8 @@ class Zend_Measure_PressureTest extends PHPUnit\Framework\TestCase
      */
     public function testPressureUnknownValue()
     {
-        try {
-            $value = new Zend_Measure_Pressure('novalue',Zend_Measure_Pressure::STANDARD,'de');
-            $this->fail('Exception expected because of empty value');
-        } catch (Zend_Measure_Exception $e) {
-            // success
-        }
+        $this->expectException(Zend_Measure_Exception::class);
+        $value = new Zend_Measure_Pressure('novalue',Zend_Measure_Pressure::STANDARD,'de');
     }
 
 
@@ -83,12 +76,8 @@ class Zend_Measure_PressureTest extends PHPUnit\Framework\TestCase
      */
     public function testPressureUnknownLocale()
     {
-        try {
-            $value = new Zend_Measure_Pressure('100',Zend_Measure_Pressure::STANDARD,'nolocale');
-            $this->fail('Exception expected because of unknown locale');
-        } catch (Zend_Measure_Exception $e) {
-            // success
-        }
+        $this->expectException(Zend_Measure_Exception::class);
+        $value = new Zend_Measure_Pressure('100',Zend_Measure_Pressure::STANDARD,'nolocale');
     }
 
 
@@ -248,13 +237,9 @@ class Zend_Measure_PressureTest extends PHPUnit\Framework\TestCase
      */
     public function testPressureSetUnknownType()
     {
-        try {
-            $value = new Zend_Measure_Pressure('100',Zend_Measure_Pressure::STANDARD,'de');
-            $value->setValue('-200.200,200','Pressure::UNKNOWN','de');
-            $this->fail('Exception expected because of unknown type');
-        } catch (Zend_Measure_Exception $e) {
-            // success
-        }
+        $this->expectException(Zend_Measure_Exception::class);
+        $value = new Zend_Measure_Pressure('100',Zend_Measure_Pressure::STANDARD,'de');
+        $value->setValue('-200.200,200','Pressure::UNKNOWN','de');
     }
 
 
@@ -264,13 +249,9 @@ class Zend_Measure_PressureTest extends PHPUnit\Framework\TestCase
      */
     public function testPressureSetUnknownValue()
     {
-        try {
-            $value = new Zend_Measure_Pressure('100',Zend_Measure_Pressure::STANDARD,'de');
-            $value->setValue('novalue',Zend_Measure_Pressure::STANDARD,'de');
-            $this->fail('Exception expected because of empty value');
-        } catch (Zend_Measure_Exception $e) {
-            // success
-        }
+        $this->expectException(Zend_Measure_Exception::class);
+        $value = new Zend_Measure_Pressure('100',Zend_Measure_Pressure::STANDARD,'de');
+        $value->setValue('novalue',Zend_Measure_Pressure::STANDARD,'de');
     }
 
 
@@ -280,13 +261,9 @@ class Zend_Measure_PressureTest extends PHPUnit\Framework\TestCase
      */
     public function testPressureSetUnknownLocale()
     {
-        try {
-            $value = new Zend_Measure_Pressure('100',Zend_Measure_Pressure::STANDARD,'de');
-            $value->setValue('200',Zend_Measure_Pressure::STANDARD,'nolocale');
-            $this->fail('Exception expected because of unknown locale');
-        } catch (Zend_Measure_Exception $e) {
-            // success
-        }
+        $this->expectException(Zend_Measure_Exception::class);
+        $value = new Zend_Measure_Pressure('100',Zend_Measure_Pressure::STANDARD,'de');
+        $value->setValue('200',Zend_Measure_Pressure::STANDARD,'nolocale');
     }
 
 
@@ -356,13 +333,9 @@ class Zend_Measure_PressureTest extends PHPUnit\Framework\TestCase
      */
     public function testPressureSetTypeFailed()
     {
-        try {
-            $value = new Zend_Measure_Pressure('-100',Zend_Measure_Pressure::STANDARD,'de');
-            $value->setType('Pressure::UNKNOWN');
-            $this->fail('Exception expected because of unknown type');
-        } catch (Zend_Measure_Exception $e) {
-            // success
-        }
+        $this->expectException(Zend_Measure_Exception::class);
+        $value = new Zend_Measure_Pressure('-100',Zend_Measure_Pressure::STANDARD,'de');
+        $value->setType('Pressure::UNKNOWN');
     }
 
 

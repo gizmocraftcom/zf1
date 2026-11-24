@@ -19,6 +19,7 @@
  * @license    http://framework.zend.com/license/new-bsd     New BSD License
  * @version    $Id$
  */
+use PHPUnit\Framework\Attributes\Group;
 
 /**
  * @category   Zend
@@ -26,9 +27,9 @@
  * @subpackage UnitTests
  * @copyright  Copyright (c) 2005-2015 Zend Technologies USA Inc. (http://www.zend.com)
  * @license    http://framework.zend.com/license/new-bsd     New BSD License
- * @group      Zend_Service
- * @group      Zend_Service_Flickr
  */
+#[Group('Zend_Service')]
+#[Group('Zend_Service_Flickr')]
 class Zend_Service_Flickr_OnlineTest extends PHPUnit\Framework\TestCase
 {
     /**

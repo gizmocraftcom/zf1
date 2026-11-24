@@ -19,6 +19,7 @@
  * @license    http://framework.zend.com/license/new-bsd     New BSD License
  * @version    $Id$
  */
+use PHPUnit\Framework\Attributes\Group;
 
 require_once 'Zend/Amf/Server.php';
 require_once 'Zend/Amf/Request.php';
@@ -35,8 +36,8 @@ require_once 'ServiceB.php';
  * @subpackage UnitTests
  * @copyright  Copyright (c) 2005-2015 Zend Technologies USA Inc. (http://www.zend.com)
  * @license    http://framework.zend.com/license/new-bsd     New BSD License
- * @group      Zend_Amf
  */
+#[Group('Zend_Amf')]
 class Zend_Amf_ServerTest extends PHPUnit\Framework\TestCase
 {
     protected $_server;
@@ -237,9 +238,8 @@ class Zend_Amf_ServerTest extends PHPUnit\Framework\TestCase
      * Test to make sure that AMF3 basic requests are handled for loading
      * a class.
      * This type of call is sent from NetConnection rather than RemoteObject
-     *
-     * @group ZF-4680
      */
+    #[Group('ZF-4680')]
     public function testHandleLoadedClassAmf3NetConnection()
     {
         // serialize the data to an AMF output stream
@@ -261,9 +261,8 @@ class Zend_Amf_ServerTest extends PHPUnit\Framework\TestCase
     /**
      * Test to make sure that AMF3 basic requests are handled for function calls.
      * This type of call is sent from net connection rather than RemoteObject
-     *
-     * @group ZF-4680
      */
+    #[Group('ZF-4680')]
     public function testShouldAllowHandlingFunctionCallsViaAmf3NetConnection()
     {
         // serialize the data to an AMF output stream
@@ -320,9 +319,8 @@ class Zend_Amf_ServerTest extends PHPUnit\Framework\TestCase
 
     /**
      * Test to make sure that you can have the same method name in two different classes.
-     *
-     * @group ZF-5040
      */
+    #[Group('ZF-5040')]
     public function testSameMethodNameInTwoServices()
     {
         $this->_server->setClass('ServiceA');
@@ -817,9 +815,9 @@ class Zend_Amf_ServerTest extends PHPUnit\Framework\TestCase
     }
 
     /**
-      * @group ZF-5388
       * Issue if only one parameter of type array is passed it is nested into another array.
-      */
+     */
+    #[Group('ZF-5388')]
     public function testSingleArrayParamaterAMF3()
     {
         // serialize the data to an AMF output stream
@@ -851,9 +849,9 @@ class Zend_Amf_ServerTest extends PHPUnit\Framework\TestCase
     }
 
     /**
-    * @group ZF-5388
     * Issue if only one parameter of type array is passed it is nested into another array.
-    */
+     */
+    #[Group('ZF-5388')]
     public function testSingleArrayParamaterAMF0()
     {
         $data[] = array('item1', 'item2');
@@ -872,9 +870,9 @@ class Zend_Amf_ServerTest extends PHPUnit\Framework\TestCase
     }
 
     /**
-     * @group ZF-5388
      * Issue if only one parameter of type array is passed it is nested into another array.
      */
+    #[Group('ZF-5388')]
     public function testMutiArrayParamaterAMF3()
     {
         // serialize the data to an AMF output stream
@@ -907,9 +905,9 @@ class Zend_Amf_ServerTest extends PHPUnit\Framework\TestCase
     }
 
     /**
-    * @group ZF-5388
     * Issue if multipol parameters are sent and one is of type array is passed.
-    */
+     */
+    #[Group('ZF-5388')]
     public function testMutiArrayParamaterAMF0()
     {
         $data[] = array('item1', 'item2');
@@ -928,9 +926,7 @@ class Zend_Amf_ServerTest extends PHPUnit\Framework\TestCase
         $this->assertCount(4, $responseBody[0]->getData(), var_export($responseBody, 1));
     }
 
-    /**
-     * @group ZF-5346
-     */
+    #[Group('ZF-5346')]
     public function testSingleObjectParamaterAMF3()
     {
         // serialize the data to an AMF output stream
@@ -966,8 +962,8 @@ class Zend_Amf_ServerTest extends PHPUnit\Framework\TestCase
 
     /**
      * Check that when using server->setSession you get an amf header that has an append to gateway sessionID
-     * @group ZF-5381
      */
+    #[Group('ZF-5381')]
     public function testSessionAmf3()
     {
         Zend_Session::$_unitTestEnabled = true;
@@ -1108,7 +1104,7 @@ class Zend_Amf_ServerTest extends PHPUnit\Framework\TestCase
     }
 
 
-    /** @group ZF-11529 */
+    #[Group('ZF-11529')]
     public function testSettingAuthAdapterWithAclSetsServerAcl()
     {
         $aclFile     = dirname(__FILE__) . '/_files/acl.xml';
@@ -1117,7 +1113,7 @@ class Zend_Amf_ServerTest extends PHPUnit\Framework\TestCase
         $this->assertSame($authAdapter->getAcl(), $this->_server->getAcl());
     }
 
-    /** @group ZF-11529 */
+    #[Group('ZF-11529')]
     public function testSettingAuthAdapterWithAclWhenServerAclAlreadyPopulatedWillNotChangeServerAcl()
     {
         $acl = new Zend_Acl();
@@ -1131,9 +1127,7 @@ class Zend_Amf_ServerTest extends PHPUnit\Framework\TestCase
         $this->assertSame($acl, $this->_server->getAcl());
     }
 
-    /**
-     * @group ZF-6130
-     */
+    #[Group('ZF-6130')]
     public function testServerShouldCastObjectArgumentsToAppropriateType()
     {
         $server = new Zend_Amf_Server();

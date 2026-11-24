@@ -19,6 +19,7 @@
  * @license    http://framework.zend.com/license/new-bsd     New BSD License
  * @version    $Id$
  */
+use PHPUnit\Framework\Attributes\Group;
 
 
 /**
@@ -32,8 +33,8 @@ require_once 'Zend/Measure/Illumination.php';
  * @subpackage UnitTests
  * @copyright  Copyright (c) 2005-2015 Zend Technologies USA Inc. (http://www.zend.com)
  * @license    http://framework.zend.com/license/new-bsd     New BSD License
- * @group      Zend_Measure
  */
+#[Group('Zend_Measure')]
 class Zend_Measure_IlluminationTest extends PHPUnit\Framework\TestCase
 {
     /**
@@ -53,12 +54,8 @@ class Zend_Measure_IlluminationTest extends PHPUnit\Framework\TestCase
      */
     public function testIlluminationUnknownType()
     {
-        try {
-            $value = new Zend_Measure_Illumination('100','Illumination::UNKNOWN','de');
-            $this->fail('Exception expected because of unknown type');
-        } catch (Zend_Measure_Exception $e) {
-            // success
-        }
+        $this->expectException(Zend_Measure_Exception::class);
+        $value = new Zend_Measure_Illumination('100','Illumination::UNKNOWN','de');
     }
 
 
@@ -68,12 +65,8 @@ class Zend_Measure_IlluminationTest extends PHPUnit\Framework\TestCase
      */
     public function testIlluminationUnknownValue()
     {
-        try {
-            $value = new Zend_Measure_Illumination('novalue',Zend_Measure_Illumination::STANDARD,'de');
-            $this->fail('Exception expected because of empty value');
-        } catch (Zend_Measure_Exception $e) {
-            // success
-        }
+        $this->expectException(Zend_Measure_Exception::class);
+        $value = new Zend_Measure_Illumination('novalue',Zend_Measure_Illumination::STANDARD,'de');
     }
 
 
@@ -83,12 +76,8 @@ class Zend_Measure_IlluminationTest extends PHPUnit\Framework\TestCase
      */
     public function testIlluminationUnknownLocale()
     {
-        try {
-            $value = new Zend_Measure_Illumination('100',Zend_Measure_Illumination::STANDARD,'nolocale');
-            $this->fail('Exception expected because of unknown locale');
-        } catch (Zend_Measure_Exception $e) {
-            // success
-        }
+        $this->expectException(Zend_Measure_Exception::class);
+        $value = new Zend_Measure_Illumination('100',Zend_Measure_Illumination::STANDARD,'nolocale');
     }
 
 
@@ -248,13 +237,9 @@ class Zend_Measure_IlluminationTest extends PHPUnit\Framework\TestCase
      */
     public function testIlluminationSetUnknownType()
     {
-        try {
-            $value = new Zend_Measure_Illumination('100',Zend_Measure_Illumination::STANDARD,'de');
-            $value->setValue('-200.200,200','Illumination::UNKNOWN','de');
-            $this->fail('Exception expected because of unknown type');
-        } catch (Zend_Measure_Exception $e) {
-            // success
-        }
+        $this->expectException(Zend_Measure_Exception::class);
+        $value = new Zend_Measure_Illumination('100',Zend_Measure_Illumination::STANDARD,'de');
+        $value->setValue('-200.200,200','Illumination::UNKNOWN','de');
     }
 
 
@@ -264,13 +249,9 @@ class Zend_Measure_IlluminationTest extends PHPUnit\Framework\TestCase
      */
     public function testIlluminationSetUnknownValue()
     {
-        try {
-            $value = new Zend_Measure_Illumination('100',Zend_Measure_Illumination::STANDARD,'de');
-            $value->setValue('novalue',Zend_Measure_Illumination::STANDARD,'de');
-            $this->fail('Exception expected because of empty value');
-        } catch (Zend_Measure_Exception $e) {
-            // success
-        }
+        $this->expectException(Zend_Measure_Exception::class);
+        $value = new Zend_Measure_Illumination('100',Zend_Measure_Illumination::STANDARD,'de');
+        $value->setValue('novalue',Zend_Measure_Illumination::STANDARD,'de');
     }
 
 
@@ -280,13 +261,9 @@ class Zend_Measure_IlluminationTest extends PHPUnit\Framework\TestCase
      */
     public function testIlluminationSetUnknownLocale()
     {
-        try {
-            $value = new Zend_Measure_Illumination('100',Zend_Measure_Illumination::STANDARD,'de');
-            $value->setValue('200',Zend_Measure_Illumination::STANDARD,'nolocale');
-            $this->fail('Exception expected because of unknown locale');
-        } catch (Zend_Measure_Exception $e) {
-            // success
-        }
+        $this->expectException(Zend_Measure_Exception::class);
+        $value = new Zend_Measure_Illumination('100',Zend_Measure_Illumination::STANDARD,'de');
+        $value->setValue('200',Zend_Measure_Illumination::STANDARD,'nolocale');
     }
 
 
@@ -320,13 +297,9 @@ class Zend_Measure_IlluminationTest extends PHPUnit\Framework\TestCase
      */
     public function testIlluminationSetTypeFailed()
     {
-        try {
-            $value = new Zend_Measure_Illumination('-100',Zend_Measure_Illumination::STANDARD,'de');
-            $value->setType('Illumination::UNKNOWN');
-            $this->fail('Exception expected because of unknown type');
-        } catch (Zend_Measure_Exception $e) {
-            // success
-        }
+        $this->expectException(Zend_Measure_Exception::class);
+        $value = new Zend_Measure_Illumination('-100',Zend_Measure_Illumination::STANDARD,'de');
+        $value->setType('Illumination::UNKNOWN');
     }
 
 

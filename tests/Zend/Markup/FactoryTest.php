@@ -19,6 +19,8 @@
  * @license    http://framework.zend.com/license/new-bsd     New BSD License
  * @version    $Id$
  */
+use PHPUnit\Framework\Attributes\DoesNotPerformAssertions;
+use PHPUnit\Framework\Attributes\Group;
 
 require_once 'Zend/Markup.php';
 
@@ -26,13 +28,14 @@ require_once 'Zend/Markup.php';
  * @category   Zend
  * @package    Zend_Markup
  * @subpackage UnitTests
- * @group      Zend_Markup
  * @copyright  Copyright (c) 2005-2015 Zend Technologies USA Inc. (http://www.zend.com)
  * @license    http://framework.zend.com/license/new-bsd     New BSD License
  */
+#[Group('Zend_Markup')]
 class Zend_Markup_FactoryTest extends PHPUnit\Framework\TestCase
 {
 
+    #[DoesNotPerformAssertions]
     public function testFactory()
     {
         Zend_Markup::addParserPath('Zend_Markup_Test_Parser', 'Zend/Markup/Test/Parser');

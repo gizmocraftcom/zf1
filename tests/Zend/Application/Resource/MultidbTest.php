@@ -19,6 +19,7 @@
  * @license    http://framework.zend.com/license/new-bsd     New BSD License
  * @version    $Id$
  */
+use PHPUnit\Framework\Attributes\Group;
 
 
 /**
@@ -27,8 +28,8 @@
  * @subpackage UnitTests
  * @copyright  Copyright (c) 2005-2015 Zend Technologies USA Inc. (http://www.zend.com)
  * @license    http://framework.zend.com/license/new-bsd     New BSD License
- * @group      Zend_Application
  */
+#[Group('Zend_Application')]
 class Zend_Application_Resource_MultidbTest extends PHPUnit\Framework\TestCase
 {
     protected $_dbOptions = array('db1' => array('adapter' => 'pdo_mysql','dbname' => 'db1','password' => 'XXXX','username' => 'webuser'),
@@ -147,9 +148,7 @@ class Zend_Application_Resource_MultidbTest extends PHPUnit\Framework\TestCase
         }
     }
 
-    /**
-     * @group ZF-9131
-     */
+    #[Group('ZF-9131')]
     public function testParamDefaultAndAdapterAreNotPassedOnAsParameter()
     {
         $resource = new Zend_Application_Resource_Multidb(array());
@@ -179,9 +178,7 @@ class Zend_Application_Resource_MultidbTest extends PHPUnit\Framework\TestCase
         $this->assertEquals($expected, $res->getDb('db2')->getConfig());
     }
 
-    /**
-     * @group ZF-10049
-     */
+    #[Group('ZF-10049')]
     public function testSetDefaultMetadataCache()
     {
         $cache = Zend_Cache::factory('Core', 'Black Hole', array(
@@ -196,9 +193,7 @@ class Zend_Application_Resource_MultidbTest extends PHPUnit\Framework\TestCase
         $this->assertTrue(Zend_Db_Table::getDefaultMetadataCache() instanceof Zend_Cache_Core);
     }
 
-    /**
-     * @group ZF-10049
-     */
+    #[Group('ZF-10049')]
     public function testSetDefaultMetadataCacheFromCacheManager()
     {
         $configCache = array(

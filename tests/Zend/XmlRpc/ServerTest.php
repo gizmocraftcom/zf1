@@ -19,6 +19,7 @@
  * @license    http://framework.zend.com/license/new-bsd     New BSD License
  * @version $Id$
  */
+use PHPUnit\Framework\Attributes\Group;
 
 require_once 'Zend/XmlRpc/Server.php';
 require_once 'Zend/XmlRpc/Request.php';
@@ -32,8 +33,8 @@ require_once 'Zend/XmlRpc/Response.php';
  * @subpackage UnitTests
  * @copyright  Copyright (c) 2005-2015 Zend Technologies USA Inc. (http://www.zend.com)
  * @license    http://framework.zend.com/license/new-bsd     New BSD License
- * @group      Zend_XmlRpc
  */
+#[Group('Zend_XmlRpc')]
 class Zend_XmlRpc_ServerTest extends PHPUnit\Framework\TestCase
 {
     /**
@@ -156,9 +157,7 @@ class Zend_XmlRpc_ServerTest extends PHPUnit\Framework\TestCase
         $this->assertFalse(in_array('test.__construct', $methods));
     }
 
-    /**
-     * @group ZF-6526
-     */
+    #[Group('ZF-6526')]
     public function testSettingClassWithArguments()
     {
         $this->_server->setClass('Zend_XmlRpc_Server_testClass', 'test', 'argv-argument');
@@ -364,9 +363,7 @@ class Zend_XmlRpc_ServerTest extends PHPUnit\Framework\TestCase
         $this->assertIsString($returns[1], var_export($returns[1], 1));
     }
 
-    /**
-     * @group ZF-5635
-     */
+    #[Group('ZF-5635')]
     public function testMulticallHandlesFaults()
     {
         $struct = array(
@@ -441,12 +438,8 @@ class Zend_XmlRpc_ServerTest extends PHPUnit\Framework\TestCase
     public function testAddFunctionThrowsExceptionWithBadData()
     {
         $o = new stdClass();
-        try {
-            $this->_server->addFunction($o);
-            $this->fail('addFunction() should not accept objects');
-        } catch (Zend_XmlRpc_Exception $e) {
-            // success
-        }
+        $this->expectException(Zend_XmlRpc_Exception::class);
+        $this->_server->addFunction($o);
     }
 
     public function testLoadFunctionsThrowsExceptionWithBadData()
@@ -477,27 +470,21 @@ class Zend_XmlRpc_ServerTest extends PHPUnit\Framework\TestCase
 
     public function testLoadFunctionsReadsMethodsFromServerDefinitionObjects()
     {
-        $mockedMethod = $this->getMockBuilder('Zend_Server_Method_Definition')
-            ->disableOriginalConstructor()
-            ->disableOriginalClone()
-            ->getMock();
+        $mockedMethod = $this->createStub('Zend_Server_Method_Definition');
         $mockedDefinition = $this->getMockBuilder('Zend_Server_Definition')
             ->disableOriginalConstructor()
             ->disableOriginalClone()
             ->getMock();
         $mockedDefinition->expects($this->once())
                          ->method('getMethods')
-                         ->will($this->returnValue(array('bar' => $mockedMethod)));
+                         ->willReturn(array('bar' => $mockedMethod));
         $this->_server->loadFunctions($mockedDefinition);
     }
 
     public function testSetClassThrowsExceptionWithInvalidClass()
     {
-        try {
-            $this->_server->setClass('mybogusclass');
-            $this->fail('setClass() should not allow invalid classes');
-        } catch (Zend_XmlRpc_Exception $e) {
-        }
+        $this->expectException(Zend_XmlRpc_Exception::class);
+        $this->_server->setClass('mybogusclass');
     }
 
     public function testSetRequestUsingString()
@@ -513,14 +500,14 @@ class Zend_XmlRpc_ServerTest extends PHPUnit\Framework\TestCase
             $this->_server->setRequest('Zend_XmlRpc_Server_testRequest2');
             $this->fail('Invalid request class should throw exception');
         } catch (Zend_XmlRpc_Exception $e) {
-            // success
+            $this->assertInstanceOf(Zend_XmlRpc_Exception::class, $e);
         }
 
         try {
             $this->_server->setRequest($this);
             $this->fail('Invalid request object should throw exception');
         } catch (Zend_XmlRpc_Exception $e) {
-            // success
+            $this->assertInstanceOf(Zend_XmlRpc_Exception::class, $e);
         }
     }
 
@@ -607,9 +594,7 @@ class Zend_XmlRpc_ServerTest extends PHPUnit\Framework\TestCase
         $this->assertEquals(605, $response['faultCode']);
     }
 
-    /**
-     * @group ZF-2872
-     */
+    #[Group('ZF-2872')]
     public function testCanMarshalBase64Requests()
     {
         $this->_server->setClass('Zend_XmlRpc_Server_testClass', 'test');
@@ -622,9 +607,7 @@ class Zend_XmlRpc_ServerTest extends PHPUnit\Framework\TestCase
         $this->assertEquals($data, $response->getReturnValue());
     }
 
-    /**
-     * @group ZF-6034
-     */
+    #[Group('ZF-6034')]
     public function testPrototypeReturnValueMustReflectDocBlock()
     {
         $server = new Zend_XmlRpc_Server();

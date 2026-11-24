@@ -19,6 +19,7 @@
  * @license    http://framework.zend.com/license/new-bsd     New BSD License
  * @version    $Id$
  */
+use PHPUnit\Framework\Attributes\Group;
 
 require_once 'Zend/Feed/Writer/Feed.php';
 
@@ -26,11 +27,11 @@ require_once 'Zend/Feed/Writer/Feed.php';
  * @category   Zend
  * @package    Zend_Feed
  * @subpackage UnitTests
- * @group      Zend_Feed
- * @group      Zend_Feed_Writer
  * @copyright  Copyright (c) 2005-2015 Zend Technologies USA Inc. (http://www.zend.com)
  * @license    http://framework.zend.com/license/new-bsd     New BSD License
  */
+#[Group('Zend_Feed')]
+#[Group('Zend_Feed_Writer')]
 class Zend_Feed_Writer_Extension_ITunes_FeedTest extends PHPUnit\Framework\TestCase
 {
 

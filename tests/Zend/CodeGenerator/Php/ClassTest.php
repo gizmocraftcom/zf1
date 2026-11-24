@@ -19,6 +19,7 @@
  * @license    http://framework.zend.com/license/new-bsd     New BSD License
  * @version    $Id $
  */
+use PHPUnit\Framework\Attributes\Group;
 
 /**
  * @see Zend_CodeGenerator_Php_Class
@@ -31,10 +32,9 @@ require_once 'Zend/CodeGenerator/Php/Class.php';
  * @subpackage UnitTests
  * @copyright  Copyright (c) 2005-2015 Zend Technologies USA Inc. (http://www.zend.com)
  * @license    http://framework.zend.com/license/new-bsd     New BSD License
- *
- * @group Zend_CodeGenerator
- * @group Zend_CodeGenerator_Php
  */
+#[Group('Zend_CodeGenerator')]
+#[Group('Zend_CodeGenerator_Php')]
 class Zend_CodeGenerator_Php_ClassTest extends PHPUnit\Framework\TestCase
 {
 
@@ -168,9 +168,7 @@ class Zend_CodeGenerator_Php_ClassTest extends PHPUnit\Framework\TestCase
         $codeGenClass->setMethod($methodB);
     }
 
-    /**
-     * @group ZF-7361
-     */
+    #[Group('ZF-7361')]
     public function testHasMethod()
     {
         $method = new Zend_CodeGenerator_Php_Method();
@@ -182,9 +180,7 @@ class Zend_CodeGenerator_Php_ClassTest extends PHPUnit\Framework\TestCase
         $this->assertTrue($codeGenClass->hasMethod('methodOne'));
     }
 
-    /**
-     * @group ZF-7361
-     */
+    #[Group('ZF-7361')]
     public function testHasProperty()
     {
         $property = new Zend_CodeGenerator_Php_Property();
@@ -233,8 +229,7 @@ EOS;
         $this->assertEquals($expectedOutput, $output, $output);
     }
 
-    /**
-     * @group ZF-7909 */
+    #[Group('ZF-7909')]
     public function testClassFromReflectionThatImplementsInterfaces()
     {
         if(!class_exists('Zend_CodeGenerator_Php_ClassWithInterface')) {
@@ -252,9 +247,7 @@ EOS;
         $this->assertStringContainsString($expectedClassDef, $code);
     }
 
-    /**
-     * @group ZF-7909
-     */
+    #[Group('ZF-7909')]
     public function testClassFromReflectionDiscardParentImplementedInterfaces()
     {
         if(!class_exists('Zend_CodeGenerator_Php_ClassWithInterface')) {
@@ -273,9 +266,7 @@ EOS;
         $this->assertStringContainsString($expectedClassDef, $code);
     }
 
-    /**
-     * @group ZF-9602
-     */
+    #[Group('ZF-9602')]
     public function testSetextendedclassShouldIgnoreEmptyClassnameOnGenerate()
     {
         $codeGenClass = new Zend_CodeGenerator_Php_Class();
@@ -293,9 +284,7 @@ CODE;
         $this->assertEquals( $expected, $codeGenClass->generate() );
     }
 
-    /**
-     * @group ZF-9602
-     */
+    #[Group('ZF-9602')]
     public function testSetextendedclassShouldNotIgnoreNonEmptyClassnameOnGenerate()
     {
         $codeGenClass = new Zend_CodeGenerator_Php_Class();
@@ -313,9 +302,7 @@ CODE;
         $this->assertEquals( $expected, $codeGenClass->generate() );
     }
 
-    /**
-     * @group ZF-11513
-     */
+    #[Group('ZF-11513')]
     public function testAllowsClassConstantToHaveSameNameAsClassProperty()
     {
         $const = new Zend_CodeGenerator_Php_Property();

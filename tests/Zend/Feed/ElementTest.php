@@ -19,6 +19,7 @@
  * @license    http://framework.zend.com/license/new-bsd     New BSD License
  * @version    $Id$
  */
+use PHPUnit\Framework\Attributes\Group;
 
 /**
  * @see Zend_Feed_Entry_Atom
@@ -31,8 +32,8 @@ require_once 'Zend/Feed/Entry/Atom.php';
  * @subpackage UnitTests
  * @copyright  Copyright (c) 2005-2015 Zend Technologies USA Inc. (http://www.zend.com)
  * @license    http://framework.zend.com/license/new-bsd     New BSD License
- * @group      Zend_Feed
  */
+#[Group('Zend_Feed')]
 class Zend_Feed_ElementTest extends PHPUnit\Framework\TestCase
 {
 
@@ -118,9 +119,7 @@ class Zend_Feed_ElementTest extends PHPUnit\Framework\TestCase
         $this->assertEquals('', $e->test['namespace1:attr']);
     }
 
-    /**
-     * @group ZF-2606
-     */
+    #[Group('ZF-2606')]
     public function testValuesWithXmlSpecialChars()
     {
         $testAmp = '&';
@@ -137,9 +136,7 @@ class Zend_Feed_ElementTest extends PHPUnit\Framework\TestCase
         $this->assertEquals($testGt, $e->{'namespace1:gt'}());
     }
 
-    /**
-     * @group ZF-2606
-     */
+    #[Group('ZF-2606')]
     public function testAttributesWithXmlSpecialChars()
     {
         $testAmp   = '&';

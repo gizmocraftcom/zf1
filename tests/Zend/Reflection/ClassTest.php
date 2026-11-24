@@ -19,6 +19,7 @@
  * @license    http://framework.zend.com/license/new-bsd     New BSD License
  * @version    $Id $
  */
+use PHPUnit\Framework\Attributes\Group;
 
 /** requires */
 require_once 'Zend/Reflection/Class.php';
@@ -29,10 +30,9 @@ require_once 'Zend/Reflection/Class.php';
  * @subpackage UnitTests
  * @copyright  Copyright (c) 2005-2015 Zend Technologies USA Inc. (http://www.zend.com)
  * @license    http://framework.zend.com/license/new-bsd     New BSD License
- *
- * @group      Zend_Reflection
- * @group      Zend_Reflection_Class
  */
+#[Group('Zend_Reflection')]
+#[Group('Zend_Reflection_Class')]
 class Zend_Reflection_ClassTest extends PHPUnit\Framework\TestCase
 {
 

@@ -18,6 +18,7 @@
  * @copyright  Copyright (c) 2005-2015 Zend Technologies USA Inc. (http://www.zend.com)
  * @license    http://framework.zend.com/license/new-bsd     New BSD License
  */
+use PHPUnit\Framework\Attributes\Group;
 
 require_once 'Zend/Service/Rackspace/Files.php';
 
@@ -31,8 +32,8 @@ require_once 'Zend/Service/Rackspace/Files.php';
  * @subpackage UnitTests
  * @copyright  Copyright (c) 2005-2015 Zend Technologies USA Inc. (http://www.zend.com)
  * @license    http://framework.zend.com/license/new-bsd     New BSD License
- * @group      Zend_Service_Rackspace_Files
  */
+#[Group('Zend_Service_Rackspace_Files')]
 class Zend_Service_Rackspace_Files_OfflineTest
     extends PHPUnit\Framework\TestCase
 {
@@ -225,9 +226,7 @@ class Zend_Service_Rackspace_Files_OfflineTest
         $this->assertEquals($objects[1]->getName(), 'zf-object-test' . '-copy');
     }
 
-    /**
-     * @group GH-68
-     */
+    #[Group('GH-68')]
     public function testGetObjectsPseudoDirs()
     {
         $objects = $this->rackspace->getObjects(
@@ -332,9 +331,7 @@ class Zend_Service_Rackspace_Files_OfflineTest
         $this->assertTrue($this->rackspace->deleteContainer('zf-unit-test'));
     }
 
-    /**
-     * @group ZF-12542
-     */
+    #[Group('ZF-12542')]
     public function testGetInfoCdnContainer()
     {
         $info = $this->rackspace->getInfoCdnContainer(
@@ -349,27 +346,21 @@ class Zend_Service_Rackspace_Files_OfflineTest
         $this->assertTrue($info['log_retention']);
     }
 
-    /**
-     * @group ZF-12542
-     */
+    #[Group('ZF-12542')]
     public function testGetCdnTtl()
     {
         $ttl = $this->container->getCdnTtl();
         $this->assertTrue($ttl !== false);
     }
 
-    /**
-     * @group ZF-12542
-     */
+    #[Group('ZF-12542')]
     public function testGetCdnUri()
     {
         $uri = $this->container->getCdnUri();
         $this->assertTrue($uri !== false);
     }
 
-    /**
-     * @group ZF-12542
-     */
+    #[Group('ZF-12542')]
     public function testGetCdnUriSsl()
     {
         $uri = $this->container->getCdnUriSsl();

@@ -19,6 +19,8 @@
  * @license    http://framework.zend.com/license/new-bsd     New BSD License
  * @version $Id$
  */
+use PHPUnit\Framework\Attributes\DataProviderExternal;
+use PHPUnit\Framework\Attributes\Group;
 
 require_once 'Zend/XmlRpc/Value.php';
 require_once 'Zend/XmlRpc/Value/Scalar.php';
@@ -42,8 +44,8 @@ require_once 'Zend/XmlRpc/TestProvider.php';
  * @subpackage UnitTests
  * @copyright  Copyright (c) 2005-2015 Zend Technologies USA Inc. (http://www.zend.com)
  * @license    http://framework.zend.com/license/new-bsd     New BSD License
- * @group      Zend_XmlRpc
  */
+#[Group('Zend_XmlRpc')]
 class Zend_XmlRpc_ValueTest extends PHPUnit\Framework\TestCase
 {
     public $xmlRpcDateFormat = 'Ymd\\TH:i:s';
@@ -67,9 +69,7 @@ class Zend_XmlRpc_ValueTest extends PHPUnit\Framework\TestCase
         $this->assertSame($native, $val->getValue());
     }
 
-    /**
-     * @dataProvider Zend_XmlRpc_TestProvider::provideGenerators
-     */
+    #[DataProviderExternal(Zend_XmlRpc_TestProvider::class, 'provideGenerators')]
     public function testMarshalBooleanFromXmlRpc(Zend_XmlRpc_Generator_GeneratorAbstract $generator)
     {
         Zend_XmlRpc_Value::setGenerator($generator);
@@ -104,9 +104,7 @@ class Zend_XmlRpc_ValueTest extends PHPUnit\Framework\TestCase
         }
     }
 
-    /**
-     * @dataProvider Zend_XmlRpc_TestProvider::provideGenerators
-     */
+    #[DataProviderExternal(Zend_XmlRpc_TestProvider::class, 'provideGenerators')]
     public function testMarshalIntegerFromXmlRpc(Zend_XmlRpc_Generator_GeneratorAbstract $generator)
     {
         Zend_XmlRpc_Value::setGenerator($generator);
@@ -125,9 +123,7 @@ class Zend_XmlRpc_ValueTest extends PHPUnit\Framework\TestCase
         }
     }
 
-    /**
-     * @group ZF-3310
-     */
+    #[Group('ZF-3310')]
     public function testMarshalI4FromOverlongNativeThrowsException()
     {
         $this->expectException('Zend_XmlRpc_Value_Exception');
@@ -135,9 +131,7 @@ class Zend_XmlRpc_ValueTest extends PHPUnit\Framework\TestCase
         $x = Zend_XmlRpc_Value::getXmlRpcValue(PHP_INT_MAX + 5000, Zend_XmlRpc_Value::XMLRPC_TYPE_I4);
     }
 
-    /**
-     * @group ZF-3310
-     */
+    #[Group('ZF-3310')]
     public function testMarshalIntegerFromOverlongNativeThrowsException()
     {
         $this->expectException('Zend_XmlRpc_Value_Exception');
@@ -163,9 +157,7 @@ class Zend_XmlRpc_ValueTest extends PHPUnit\Framework\TestCase
         $this->assertSame($native, $val->getValue());
     }
 
-    /**
-     * @dataProvider Zend_XmlRpc_TestProvider::provideGenerators
-     */
+    #[DataProviderExternal(Zend_XmlRpc_TestProvider::class, 'provideGenerators')]
     public function testMarshalDoubleFromXmlRpc(Zend_XmlRpc_Generator_GeneratorAbstract $generator)
     {
         Zend_XmlRpc_Value::setGenerator($generator);
@@ -180,10 +172,8 @@ class Zend_XmlRpc_ValueTest extends PHPUnit\Framework\TestCase
         $this->assertEquals($this->wrapXml($xml), $val->saveXml());
     }
 
-    /**
-     * @group ZF-7712
-     * @dataProvider Zend_XmlRpc_TestProvider::provideGenerators
-     */
+    #[Group('ZF-7712')]
+    #[DataProviderExternal(Zend_XmlRpc_TestProvider::class, 'provideGenerators')]
     public function testMarshallingDoubleWithHigherPrecisionFromNative(Zend_XmlRpc_Generator_GeneratorAbstract $generator)
     {
         Zend_XmlRpc_Value::setGenerator($generator);
@@ -198,10 +188,8 @@ class Zend_XmlRpc_ValueTest extends PHPUnit\Framework\TestCase
         $this->assertSame('<value><double>0.1234567</double></value>', trim($value->saveXml()));
     }
 
-    /**
-     * @group ZF-7712
-     * @dataProvider Zend_XmlRpc_TestProvider::provideGenerators
-     */
+    #[Group('ZF-7712')]
+    #[DataProviderExternal(Zend_XmlRpc_TestProvider::class, 'provideGenerators')]
     public function testMarshallingDoubleWithHigherPrecisionFromNativeWithTrailingZeros(Zend_XmlRpc_Generator_GeneratorAbstract $generator)
     {
         Zend_XmlRpc_Value::setGenerator($generator);
@@ -249,9 +237,7 @@ class Zend_XmlRpc_ValueTest extends PHPUnit\Framework\TestCase
         $this->assertSame('false', $a[2]);
     }
 
-    /**
-     * @dataProvider Zend_XmlRpc_TestProvider::provideGenerators
-     */
+    #[DataProviderExternal(Zend_XmlRpc_TestProvider::class, 'provideGenerators')]
     public function testMarshalStringFromXmlRpc(Zend_XmlRpc_Generator_GeneratorAbstract $generator)
     {
         Zend_XmlRpc_Value::setGenerator($generator);
@@ -266,9 +252,7 @@ class Zend_XmlRpc_ValueTest extends PHPUnit\Framework\TestCase
         $this->assertEquals($this->wrapXml($xml), $val->saveXml());
     }
 
-    /**
-     * @dataProvider Zend_XmlRpc_TestProvider::provideGenerators
-     */
+    #[DataProviderExternal(Zend_XmlRpc_TestProvider::class, 'provideGenerators')]
     public function testMarshalStringFromDefault(Zend_XmlRpc_Generator_GeneratorAbstract $generator)
     {
         Zend_XmlRpc_Value::setGenerator($generator);
@@ -304,9 +288,7 @@ class Zend_XmlRpc_ValueTest extends PHPUnit\Framework\TestCase
         }
     }
 
-    /**
-     * @dataProvider Zend_XmlRpc_TestProvider::provideGenerators
-     */
+    #[DataProviderExternal(Zend_XmlRpc_TestProvider::class, 'provideGenerators')]
     public function testMarshalNilFromXmlRpc(Zend_XmlRpc_Generator_GeneratorAbstract $generator)
     {
         Zend_XmlRpc_Value::setGenerator($generator);
@@ -341,9 +323,7 @@ class Zend_XmlRpc_ValueTest extends PHPUnit\Framework\TestCase
         $this->assertSame($native, $val->getValue());
     }
 
-    /**
-     * @dataProvider Zend_XmlRpc_TestProvider::provideGenerators
-     */
+    #[DataProviderExternal(Zend_XmlRpc_TestProvider::class, 'provideGenerators')]
     public function testMarshalArrayFromXmlRpc(Zend_XmlRpc_Generator_GeneratorAbstract $generator)
     {
         Zend_XmlRpc_Value::setGenerator($generator);
@@ -360,9 +340,7 @@ class Zend_XmlRpc_ValueTest extends PHPUnit\Framework\TestCase
         $this->assertEquals($this->wrapXml($xml), $val->saveXml());
     }
 
-    /**
-     * @dataProvider Zend_XmlRpc_TestProvider::provideGenerators
-     */
+    #[DataProviderExternal(Zend_XmlRpc_TestProvider::class, 'provideGenerators')]
     public function testEmptyXmlRpcArrayResultsInEmptyArray(Zend_XmlRpc_Generator_GeneratorAbstract $generator)
     {
         Zend_XmlRpc_Value::setGenerator($generator);
@@ -382,9 +360,7 @@ class Zend_XmlRpc_ValueTest extends PHPUnit\Framework\TestCase
         $this->assertSame($native, $value->getValue());
     }
 
-    /**
-     * @dataProvider Zend_XmlRpc_TestProvider::provideGenerators
-     */
+    #[DataProviderExternal(Zend_XmlRpc_TestProvider::class, 'provideGenerators')]
     public function testArrayMustContainDataElement(Zend_XmlRpc_Generator_GeneratorAbstract $generator)
     {
         Zend_XmlRpc_Value::setGenerator($generator);
@@ -399,10 +375,8 @@ class Zend_XmlRpc_ValueTest extends PHPUnit\Framework\TestCase
                                     Zend_XmlRpc_Value::XML_STRING);
     }
 
-    /**
-     * @group ZF-5405
-     * @dataProvider Zend_XmlRpc_TestProvider::provideGenerators
-     */
+    #[Group('ZF-5405')]
+    #[DataProviderExternal(Zend_XmlRpc_TestProvider::class, 'provideGenerators')]
     public function testMarshalNilInStructWrappedInArray(Zend_XmlRpc_Generator_GeneratorAbstract $generator)
     {
         Zend_XmlRpc_Value::setGenerator($generator);
@@ -440,9 +414,7 @@ class Zend_XmlRpc_ValueTest extends PHPUnit\Framework\TestCase
         $this->assertSame($native, $val->getValue());
     }
 
-    /**
-     * @dataProvider Zend_XmlRpc_TestProvider::provideGenerators
-     */
+    #[DataProviderExternal(Zend_XmlRpc_TestProvider::class, 'provideGenerators')]
     public function testMarshalStructFromXmlRpc(Zend_XmlRpc_Generator_GeneratorAbstract $generator)
     {
         Zend_XmlRpc_Value::setGenerator($generator);
@@ -460,9 +432,7 @@ class Zend_XmlRpc_ValueTest extends PHPUnit\Framework\TestCase
         $this->assertEquals($this->wrapXml($xml), $val->saveXml());
     }
 
-    /**
-     * @dataProvider Zend_XmlRpc_TestProvider::provideGenerators
-     */
+    #[DataProviderExternal(Zend_XmlRpc_TestProvider::class, 'provideGenerators')]
     public function testMarshallingNestedStructFromXmlRpc(Zend_XmlRpc_Generator_GeneratorAbstract $generator)
     {
         Zend_XmlRpc_Value::setGenerator($generator);
@@ -482,9 +452,7 @@ class Zend_XmlRpc_ValueTest extends PHPUnit\Framework\TestCase
         $this->assertSame(trim($xml), trim($val->saveXml()));
     }
 
-    /**
-     * @dataProvider Zend_XmlRpc_TestProvider::provideGenerators
-     */
+    #[DataProviderExternal(Zend_XmlRpc_TestProvider::class, 'provideGenerators')]
     public function testMarshallingStructWithMemberWithoutValue(Zend_XmlRpc_Generator_GeneratorAbstract $generator)
     {
         Zend_XmlRpc_Value::setGenerator($generator);
@@ -504,9 +472,7 @@ class Zend_XmlRpc_ValueTest extends PHPUnit\Framework\TestCase
         $this->assertEquals($this->wrapXml($xml), $val->saveXml());
     }
 
-    /**
-     * @dataProvider Zend_XmlRpc_TestProvider::provideGenerators
-     */
+    #[DataProviderExternal(Zend_XmlRpc_TestProvider::class, 'provideGenerators')]
     public function testMarshallingStructWithMemberWithoutName(Zend_XmlRpc_Generator_GeneratorAbstract $generator)
     {
         Zend_XmlRpc_Value::setGenerator($generator);
@@ -526,10 +492,8 @@ class Zend_XmlRpc_ValueTest extends PHPUnit\Framework\TestCase
         $this->assertEquals($this->wrapXml($xml), $val->saveXml());
     }
 
-    /**
-     * @group ZF-7639
-     * @dataProvider Zend_XmlRpc_TestProvider::provideGenerators
-     */
+    #[Group('ZF-7639')]
+    #[DataProviderExternal(Zend_XmlRpc_TestProvider::class, 'provideGenerators')]
     public function testMarshalStructFromXmlRpcWithEntities(Zend_XmlRpc_Generator_GeneratorAbstract $generator)
     {
         Zend_XmlRpc_Value::setGenerator($generator);
@@ -542,10 +506,8 @@ class Zend_XmlRpc_ValueTest extends PHPUnit\Framework\TestCase
         $this->assertSame($this->wrapXml($xml), $val->saveXml());
     }
 
-    /**
-     * @group ZF-3947
-     * @dataProvider Zend_XmlRpc_TestProvider::provideGenerators
-     */
+    #[Group('ZF-3947')]
+    #[DataProviderExternal(Zend_XmlRpc_TestProvider::class, 'provideGenerators')]
     public function testMarshallingStructsWithEmptyValueFromXmlRpcShouldRetainKeys(Zend_XmlRpc_Generator_GeneratorAbstract $generator)
     {
         Zend_XmlRpc_Value::setGenerator($generator);
@@ -562,9 +524,7 @@ class Zend_XmlRpc_ValueTest extends PHPUnit\Framework\TestCase
         $this->assertEquals($this->wrapXml($xml), $val->saveXml());
     }
 
-    /**
-     * @dataProvider Zend_XmlRpc_TestProvider::provideGenerators
-     */
+    #[DataProviderExternal(Zend_XmlRpc_TestProvider::class, 'provideGenerators')]
     public function testMarshallingStructWithMultibyteValueFromXmlRpcRetainsMultibyteValue(Zend_XmlRpc_Generator_GeneratorAbstract $generator)
     {
         Zend_XmlRpc_Value::setGenerator($generator);
@@ -634,9 +594,7 @@ class Zend_XmlRpc_ValueTest extends PHPUnit\Framework\TestCase
         $this->assertSame($native, strtotime($val->getValue()));
     }
 
-    /**
-     * @group ZF-11588
-     */
+    #[Group('ZF-11588')]
     public function testMarshalDateTimeBeyondUnixEpochFromNativeStringPassedToConstructor()
     {
         $native = '2040-01-01T00:00:00';
@@ -645,9 +603,7 @@ class Zend_XmlRpc_ValueTest extends PHPUnit\Framework\TestCase
         $this->assertSame($expected->format($this->xmlRpcDateFormat), $value->getValue());
     }
 
-    /**
-     * @dataProvider Zend_XmlRpc_TestProvider::provideGenerators
-     */
+    #[DataProviderExternal(Zend_XmlRpc_TestProvider::class, 'provideGenerators')]
     public function testMarshalDateTimeFromXmlRpc(Zend_XmlRpc_Generator_GeneratorAbstract $generator)
     {
         Zend_XmlRpc_Value::setGenerator($generator);
@@ -666,10 +622,8 @@ class Zend_XmlRpc_ValueTest extends PHPUnit\Framework\TestCase
         $this->assertEquals($this->wrapXml($xml), $val->saveXml());
     }
 
-    /**
-     * @dataProvider Zend_XmlRpc_TestProvider::provideGenerators
-     * @group ZF-4249
-     */
+    #[DataProviderExternal(Zend_XmlRpc_TestProvider::class, 'provideGenerators')]
+    #[Group('ZF-4249')]
     public function testMarshalDateTimeFromFromZendDate(Zend_XmlRpc_Generator_GeneratorAbstract $generator)
     {
         Zend_XmlRpc_Value::setGenerator($generator);
@@ -686,10 +640,8 @@ class Zend_XmlRpc_ValueTest extends PHPUnit\Framework\TestCase
 
     }
 
-    /**
-     * @dataProvider Zend_XmlRpc_TestProvider::provideGenerators
-     * @group ZF-4249
-     */
+    #[DataProviderExternal(Zend_XmlRpc_TestProvider::class, 'provideGenerators')]
+    #[Group('ZF-4249')]
     public function testMarshalDateTimeFromZendDateAndAutodetectingType(Zend_XmlRpc_Generator_GeneratorAbstract $generator)
     {
         Zend_XmlRpc_Value::setGenerator($generator);
@@ -705,10 +657,8 @@ class Zend_XmlRpc_ValueTest extends PHPUnit\Framework\TestCase
         $this->assertEquals(trim($xml), trim($val->saveXml()));
     }
 
-    /**
-     * @dataProvider Zend_XmlRpc_TestProvider::provideGenerators
-     * @group ZF-4249
-     */
+    #[DataProviderExternal(Zend_XmlRpc_TestProvider::class, 'provideGenerators')]
+    #[Group('ZF-4249')]
     public function testMarshalDateTimeFromFromDateTime(Zend_XmlRpc_Generator_GeneratorAbstract $generator)
     {
         Zend_XmlRpc_Value::setGenerator($generator);
@@ -725,10 +675,8 @@ class Zend_XmlRpc_ValueTest extends PHPUnit\Framework\TestCase
 
     }
 
-    /**
-     * @dataProvider Zend_XmlRpc_TestProvider::provideGenerators
-     * @group ZF-4249
-     */
+    #[DataProviderExternal(Zend_XmlRpc_TestProvider::class, 'provideGenerators')]
+    #[Group('ZF-4249')]
     public function testMarshalDateTimeFromDateTimeAndAutodetectingType(Zend_XmlRpc_Generator_GeneratorAbstract $generator)
     {
         Zend_XmlRpc_Value::setGenerator($generator);
@@ -743,9 +691,7 @@ class Zend_XmlRpc_ValueTest extends PHPUnit\Framework\TestCase
         $this->assertEquals(trim($xml), trim($val->saveXml()));
     }
 
-    /**
-     * @group ZF-10776
-     */
+    #[Group('ZF-10776')]
     public function testGetValueDatetime()
     {
         $expectedValue = '20100101T00:00:00';
@@ -775,9 +721,7 @@ class Zend_XmlRpc_ValueTest extends PHPUnit\Framework\TestCase
         $this->assertSame($native, $val->getValue());
     }
 
-    /**
-     * @dataProvider Zend_XmlRpc_TestProvider::provideGenerators
-     */
+    #[DataProviderExternal(Zend_XmlRpc_TestProvider::class, 'provideGenerators')]
     public function testMarshalBase64FromXmlRpc(Zend_XmlRpc_Generator_GeneratorAbstract $generator)
     {
         Zend_XmlRpc_Value::setGenerator($generator);
@@ -805,9 +749,7 @@ class Zend_XmlRpc_ValueTest extends PHPUnit\Framework\TestCase
         $this->assertStringContainsString($encoded, $xml);
     }
 
-    /**
-     * @group ZF-3862
-     */
+    #[Group('ZF-3862')]
     public function testMarshalSerializedObjectAsBase64()
     {
         $o = new Zend_XmlRpc_SerializableTestClass();

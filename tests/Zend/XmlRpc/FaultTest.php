@@ -19,6 +19,7 @@
  * @license    http://framework.zend.com/license/new-bsd     New BSD License
  * @version $Id$
  */
+use PHPUnit\Framework\Attributes\Group;
 
 require_once 'Zend/XmlRpc/Fault.php';
 
@@ -30,8 +31,8 @@ require_once 'Zend/XmlRpc/Fault.php';
  * @subpackage UnitTests
  * @copyright  Copyright (c) 2005-2015 Zend Technologies USA Inc. (http://www.zend.com)
  * @license    http://framework.zend.com/license/new-bsd     New BSD License
- * @group      Zend_XmlRpc
  */
+#[Group('Zend_XmlRpc')]
 class Zend_XmlRpc_FaultTest extends PHPUnit\Framework\TestCase
 {
     /**

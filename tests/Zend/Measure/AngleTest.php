@@ -19,6 +19,7 @@
  * @license    http://framework.zend.com/license/new-bsd     New BSD License
  * @version    $Id$
  */
+use PHPUnit\Framework\Attributes\Group;
 
 
 /**
@@ -32,8 +33,8 @@ require_once 'Zend/Measure/Angle.php';
  * @subpackage UnitTests
  * @copyright  Copyright (c) 2005-2015 Zend Technologies USA Inc. (http://www.zend.com)
  * @license    http://framework.zend.com/license/new-bsd     New BSD License
- * @group      Zend_Measure
  */
+#[Group('Zend_Measure')]
 class Zend_Measure_AngleTest extends PHPUnit\Framework\TestCase
 {
     /**
@@ -53,12 +54,8 @@ class Zend_Measure_AngleTest extends PHPUnit\Framework\TestCase
      */
     public function testAngleUnknownType()
     {
-        try {
-            $value = new Zend_Measure_Angle('100','Angle::UNKNOWN','de');
-            $this->fail('Exception expected because of unknown type');
-        } catch (Zend_Measure_Exception $e) {
-            // success
-        }
+        $this->expectException(Zend_Measure_Exception::class);
+        $value = new Zend_Measure_Angle('100','Angle::UNKNOWN','de');
     }
 
 
@@ -68,12 +65,8 @@ class Zend_Measure_AngleTest extends PHPUnit\Framework\TestCase
      */
     public function testAngleUnknownValue()
     {
-        try {
-            $value = new Zend_Measure_Angle('novalue',Zend_Measure_Angle::STANDARD,'de');
-            $this->fail('Exception expected because of empty value');
-        } catch (Zend_Measure_Exception $e) {
-            // success
-        }
+        $this->expectException(Zend_Measure_Exception::class);
+        $value = new Zend_Measure_Angle('novalue',Zend_Measure_Angle::STANDARD,'de');
     }
 
 
@@ -83,12 +76,8 @@ class Zend_Measure_AngleTest extends PHPUnit\Framework\TestCase
      */
     public function testAngleUnknownLocale()
     {
-        try {
-            $value = new Zend_Measure_Angle('100',Zend_Measure_Angle::STANDARD,'nolocale');
-            $this->fail('Exception expected because of unknown locale');
-        } catch (Zend_Measure_Exception $e) {
-            // success
-        }
+        $this->expectException(Zend_Measure_Exception::class);
+        $value = new Zend_Measure_Angle('100',Zend_Measure_Angle::STANDARD,'nolocale');
     }
 
 
@@ -248,13 +237,9 @@ class Zend_Measure_AngleTest extends PHPUnit\Framework\TestCase
      */
     public function testAngleSetUnknownType()
     {
-        try {
-            $value = new Zend_Measure_Angle('100',Zend_Measure_Angle::STANDARD,'de');
-            $value->setValue('-200.200,200','Angle::UNKNOWN','de');
-            $this->fail('Exception expected because of unknown type');
-        } catch (Zend_Measure_Exception $e) {
-            // success
-        }
+        $this->expectException(Zend_Measure_Exception::class);
+        $value = new Zend_Measure_Angle('100',Zend_Measure_Angle::STANDARD,'de');
+        $value->setValue('-200.200,200','Angle::UNKNOWN','de');
     }
 
 
@@ -264,13 +249,9 @@ class Zend_Measure_AngleTest extends PHPUnit\Framework\TestCase
      */
     public function testAngleSetUnknownValue()
     {
-        try {
-            $value = new Zend_Measure_Angle('100',Zend_Measure_Angle::STANDARD,'de');
-            $value->setValue('novalue',Zend_Measure_Angle::STANDARD,'de');
-            $this->fail('Exception expected because of empty value');
-        } catch (Zend_Measure_Exception $e) {
-            // success
-        }
+        $this->expectException(Zend_Measure_Exception::class);
+        $value = new Zend_Measure_Angle('100',Zend_Measure_Angle::STANDARD,'de');
+        $value->setValue('novalue',Zend_Measure_Angle::STANDARD,'de');
     }
 
 
@@ -280,13 +261,9 @@ class Zend_Measure_AngleTest extends PHPUnit\Framework\TestCase
      */
     public function testAngleSetUnknownLocale()
     {
-        try {
-            $value = new Zend_Measure_Angle('100',Zend_Measure_Angle::STANDARD,'de');
-            $value->setValue('200',Zend_Measure_Angle::STANDARD,'nolocale');
-            $this->fail('Exception expected because of unknown locale');
-        } catch (Zend_Measure_Exception $e) {
-            // success
-        }
+        $this->expectException(Zend_Measure_Exception::class);
+        $value = new Zend_Measure_Angle('100',Zend_Measure_Angle::STANDARD,'de');
+        $value->setValue('200',Zend_Measure_Angle::STANDARD,'nolocale');
     }
 
 
@@ -344,13 +321,9 @@ class Zend_Measure_AngleTest extends PHPUnit\Framework\TestCase
      */
     public function testAngleSetTypeFailed()
     {
-        try {
-            $value = new Zend_Measure_Angle('-100',Zend_Measure_Angle::STANDARD,'de');
-            $value->setType('Angle::UNKNOWN');
-            $this->fail('Exception expected because of unknown type');
-        } catch (Zend_Measure_Exception $e) {
-            // success
-        }
+        $this->expectException(Zend_Measure_Exception::class);
+        $value = new Zend_Measure_Angle('-100',Zend_Measure_Angle::STANDARD,'de');
+        $value->setType('Angle::UNKNOWN');
     }
 
 

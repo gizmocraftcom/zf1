@@ -19,6 +19,7 @@
  * @license    http://framework.zend.com/license/new-bsd     New BSD License
  * @version    $Id$
  */
+use PHPUnit\Framework\Attributes\Group;
 
 /**
  * @see Zend_Tool_Framework_Action_Base
@@ -31,11 +32,10 @@ require_once 'Zend/Tool/Framework/Manifest/Metadata.php';
  * @subpackage UnitTests
  * @copyright  Copyright (c) 2005-2015 Zend Technologies USA Inc. (http://www.zend.com)
  * @license    http://framework.zend.com/license/new-bsd     New BSD License
- *
- * @group Zend_Tool
- * @group Zend_Tool_Framework
- * @group Zend_Tool_Framework_Manifest
  */
+#[Group('Zend_Tool')]
+#[Group('Zend_Tool_Framework')]
+#[Group('Zend_Tool_Framework_Manifest')]
 class Zend_Tool_Framework_Manifest_MetadataTest extends PHPUnit\Framework\TestCase
 {
 

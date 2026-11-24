@@ -18,6 +18,8 @@
  * @license    http://framework.zend.com/license/new-bsd     New BSD License
  * @version    $Id$
  */
+use PHPUnit\Framework\Attributes\AllowMockObjectsWithoutExpectations;
+use PHPUnit\Framework\Attributes\Group;
 
 require_once 'Zend/Feed/Pubsubhubbub/Subscriber/Callback.php';
 require_once 'Zend/Feed/Pubsubhubbub/Model/Subscription.php';
@@ -26,11 +28,12 @@ require_once 'Zend/Feed/Pubsubhubbub/Model/Subscription.php';
  * @category   Zend
  * @package    Zend_Feed
  * @subpackage UnitTests
- * @group      Zend_Feed
- * @group      Zend_Feed_Subsubhubbub
  * @copyright  Copyright (c) 2005-2015 Zend Technologies USA Inc. (http://www.zend.com)
  * @license    http://framework.zend.com/license/new-bsd     New BSD License
  */
+#[Group('Zend_Feed')]
+#[Group('Zend_Feed_Subsubhubbub')]
+#[AllowMockObjectsWithoutExpectations]
 class Zend_Feed_Pubsubhubbub_Subscriber_CallbackTest extends PHPUnit\Framework\TestCase
 {
     protected $_originalServer = null;
@@ -54,8 +57,8 @@ class Zend_Feed_Pubsubhubbub_Subscriber_CallbackTest extends PHPUnit\Framework\T
             'Zend_Db_Table_Rowset_Abstract'
         );
 
-        $this->_tableGateway->expects($this->any())->method('getAdapter')
-            ->will($this->returnValue($this->_adapter));
+        $this->_tableGateway->method('getAdapter')
+            ->willReturn($this->_adapter);
         $storage = new Zend_Feed_Pubsubhubbub_Model_Subscription($this->_tableGateway);
         $this->_callback->setStorage($storage);
 
@@ -92,20 +95,14 @@ class Zend_Feed_Pubsubhubbub_Subscriber_CallbackTest extends PHPUnit\Framework\T
 
     public function testThrowsExceptionOnInvalidHttpResponseObjectSet()
     {
-        try {
-            $this->_callback->setHttpResponse(new stdClass);
-            $this->fail('Should not fail as an Exception would be raised and caught');
-        } catch (Zend_Feed_Pubsubhubbub_Exception $e) {
-        }
+        $this->expectException(Zend_Feed_Pubsubhubbub_Exception::class);
+        $this->_callback->setHttpResponse(new stdClass);
     }
 
     public function testThrowsExceptionIfNonObjectSetAsHttpResponseObject()
     {
-        try {
-            $this->_callback->setHttpResponse('');
-            $this->fail('Should not fail as an Exception would be raised and caught');
-        } catch (Zend_Feed_Pubsubhubbub_Exception $e) {
-        }
+        $this->expectException(Zend_Feed_Pubsubhubbub_Exception::class);
+        $this->_callback->setHttpResponse('');
     }
 
     public function testCanSetSubscriberCount()
@@ -121,29 +118,20 @@ class Zend_Feed_Pubsubhubbub_Subscriber_CallbackTest extends PHPUnit\Framework\T
 
     public function testThrowsExceptionOnSettingZeroAsSubscriberCount()
     {
-        try {
-            $this->_callback->setSubscriberCount(0);
-            $this->fail('Should not fail as an Exception would be raised and caught');
-        } catch (Zend_Feed_Pubsubhubbub_Exception $e) {
-        }
+        $this->expectException(Zend_Feed_Pubsubhubbub_Exception::class);
+        $this->_callback->setSubscriberCount(0);
     }
 
     public function testThrowsExceptionOnSettingLessThanZeroAsSubscriberCount()
     {
-        try {
-            $this->_callback->setSubscriberCount(-1);
-            $this->fail('Should not fail as an Exception would be raised and caught');
-        } catch (Zend_Feed_Pubsubhubbub_Exception $e) {
-        }
+        $this->expectException(Zend_Feed_Pubsubhubbub_Exception::class);
+        $this->_callback->setSubscriberCount(-1);
     }
 
     public function testThrowsExceptionOnSettingAnyScalarTypeCastToAZeroOrLessIntegerAsSubscriberCount()
     {
-        try {
-            $this->_callback->setSubscriberCount('0aa');
-            $this->fail('Should not fail as an Exception would be raised and caught');
-        } catch (Zend_Feed_Pubsubhubbub_Exception $e) {
-        }
+        $this->expectException(Zend_Feed_Pubsubhubbub_Exception::class);
+        $this->_callback->setSubscriberCount('0aa');
     }
 
 
@@ -163,15 +151,12 @@ class Zend_Feed_Pubsubhubbub_Subscriber_CallbackTest extends PHPUnit\Framework\T
             }
         };
 
-        $this->_tableGateway->expects($this->any())
-            ->method('find')
+        $this->_tableGateway->expects($this->atLeastOnce())->method('find')
             ->with($this->equalTo('verifytokenkey'))
             ->willReturn($this->_rowset);
-        $this->_rowset->expects($this->any())
-            ->method('current')
+        $this->_rowset->method('current')
             ->willReturn($mock);
-        $this->_rowset->expects($this->any())
-            ->method('count')
+        $this->_rowset->method('count')
             ->willReturn(1);
 
         $this->assertTrue($this->_callback->isValidHubVerification($this->_get));
@@ -217,16 +202,13 @@ class Zend_Feed_Pubsubhubbub_Subscriber_CallbackTest extends PHPUnit\Framework\T
         };
 
         $this->_get['hub_mode'] = 'unsubscribe';
-        $this->_tableGateway->expects($this->any())
-            ->method('find')
+        $this->_tableGateway->expects($this->atLeastOnce())->method('find')
             ->with($this->equalTo('verifytokenkey'))
             ->willReturn($this->_rowset);
-        $this->_rowset->expects($this->any())
-            ->method('current')
+        $this->_rowset->method('current')
             ->willReturn($mock);
         // require for the count call on the rowset in Model/Subscription
-        $this->_rowset->expects($this->any())
-            ->method('count')
+        $this->_rowset->method('count')
             ->willReturn(1);
 
         $this->assertTrue($this->_callback->isValidHubVerification($this->_get));
@@ -278,8 +260,7 @@ class Zend_Feed_Pubsubhubbub_Subscriber_CallbackTest extends PHPUnit\Framework\T
         }
 
         $this->_get['hub_mode'] = 'unsubscribe';
-        $this->_tableGateway->expects($this->any())
-            ->method('find')
+        $this->_tableGateway->expects($this->atLeastOnce())->method('find')
             ->with($this->equalTo('verifytokenkey'))
             ->willReturn($this->_rowset);
 
@@ -293,12 +274,10 @@ class Zend_Feed_Pubsubhubbub_Subscriber_CallbackTest extends PHPUnit\Framework\T
 
         $row = new Zend_Db_Table_Row(array('data' => $rowdata));
 
-        $this->_rowset->expects($this->any())
-            ->method('current')
+        $this->_rowset->method('current')
             ->willReturn($row);
         // require for the count call on the rowset in Model/Subscription
-        $this->_rowset->expects($this->any())
-            ->method('count')
+        $this->_rowset->method('count')
             ->willReturn(1);
 
         $this->_tableGateway->expects($this->once())
@@ -324,8 +303,7 @@ class Zend_Feed_Pubsubhubbub_Subscriber_CallbackTest extends PHPUnit\Framework\T
             );
         }
 
-        $this->_tableGateway->expects($this->any())
-            ->method('find')
+        $this->_tableGateway->expects($this->atLeastOnce())->method('find')
             ->with($this->equalTo('verifytokenkey'))
             ->willReturn($this->_rowset);
 
@@ -339,12 +317,10 @@ class Zend_Feed_Pubsubhubbub_Subscriber_CallbackTest extends PHPUnit\Framework\T
 
         $row = new Zend_Db_Table_Row(array('data' => $rowdata));
 
-        $this->_rowset->expects($this->any())
-            ->method('current')
+        $this->_rowset->method('current')
             ->willReturn($row);
         // require for the count call on the rowset in Model/Subscription
-        $this->_rowset->expects($this->any())
-            ->method('count')
+        $this->_rowset->method('count')
             ->willReturn(1);
 
         $this->_tableGateway->expects($this->once())
@@ -369,8 +345,7 @@ class Zend_Feed_Pubsubhubbub_Subscriber_CallbackTest extends PHPUnit\Framework\T
         $feedXml = file_get_contents(dirname(__FILE__) . '/_files/atom10.xml');
         $GLOBALS['HTTP_RAW_POST_DATA'] = $feedXml; // dirty  alternative to php://input
 
-        $this->_tableGateway->expects($this->any())
-            ->method('find')
+        $this->_tableGateway->expects($this->atLeastOnce())->method('find')
             ->with($this->equalTo('verifytokenkey'))
             ->willReturn($this->_rowset);
 
@@ -383,12 +358,10 @@ class Zend_Feed_Pubsubhubbub_Subscriber_CallbackTest extends PHPUnit\Framework\T
 
         $row = new Zend_Db_Table_Row(array('data' => $rowdata));
 
-        $this->_rowset->expects($this->any())
-            ->method('current')
+        $this->_rowset->method('current')
             ->willReturn($row);
         // require for the count call on the rowset in Model/Subscription
-        $this->_rowset->expects($this->any())
-            ->method('count')
+        $this->_rowset->method('count')
             ->willReturn(1);
 
         $this->_callback->handle(array());
@@ -432,8 +405,7 @@ class Zend_Feed_Pubsubhubbub_Subscriber_CallbackTest extends PHPUnit\Framework\T
         $feedXml = file_get_contents(dirname(__FILE__) . '/_files/atom10.xml');
         $GLOBALS['HTTP_RAW_POST_DATA'] = $feedXml;
 
-        $this->_tableGateway->expects($this->any())
-            ->method('find')
+        $this->_tableGateway->expects($this->atLeastOnce())->method('find')
             ->with($this->equalTo('verifytokenkey'))
             ->willReturn($this->_rowset);
 
@@ -446,12 +418,10 @@ class Zend_Feed_Pubsubhubbub_Subscriber_CallbackTest extends PHPUnit\Framework\T
 
         $row = new Zend_Db_Table_Row(array('data' => $rowdata));
 
-        $this->_rowset->expects($this->any())
-            ->method('current')
+        $this->_rowset->method('current')
             ->willReturn($row);
         // require for the count call on the rowset in Model/Subscription
-        $this->_rowset->expects($this->any())
-            ->method('count')
+        $this->_rowset->method('count')
             ->willReturn(1);
 
         $this->_callback->handle(array());
@@ -466,8 +436,7 @@ class Zend_Feed_Pubsubhubbub_Subscriber_CallbackTest extends PHPUnit\Framework\T
         $feedXml = file_get_contents(dirname(__FILE__) . '/_files/atom10.xml');
         $GLOBALS['HTTP_RAW_POST_DATA'] = $feedXml;
 
-        $this->_tableGateway->expects($this->any())
-            ->method('find')
+        $this->_tableGateway->expects($this->atLeastOnce())->method('find')
             ->with($this->equalTo('verifytokenkey'))
             ->willReturn($this->_rowset);
 
@@ -480,12 +449,10 @@ class Zend_Feed_Pubsubhubbub_Subscriber_CallbackTest extends PHPUnit\Framework\T
 
         $row = new Zend_Db_Table_Row(array('data' => $rowdata));
 
-        $this->_rowset->expects($this->any())
-            ->method('current')
+        $this->_rowset->method('current')
             ->willReturn($row);
         // require for the count call on the rowset in Model/Subscription
-        $this->_rowset->expects($this->any())
-            ->method('count')
+        $this->_rowset->method('count')
             ->willReturn(1);
 
         $this->_callback->handle(array());

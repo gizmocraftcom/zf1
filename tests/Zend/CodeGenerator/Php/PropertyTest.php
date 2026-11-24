@@ -19,6 +19,8 @@
  * @license    http://framework.zend.com/license/new-bsd     New BSD License
  * @version    $Id $
  */
+use PHPUnit\Framework\Attributes\DataProvider;
+use PHPUnit\Framework\Attributes\Group;
 
 require_once 'Zend/CodeGenerator/Php/Property.php';
 
@@ -30,10 +32,9 @@ require_once 'Zend/Reflection/Class.php';
  * @subpackage UnitTests
  * @copyright  Copyright (c) 2005-2015 Zend Technologies USA Inc. (http://www.zend.com)
  * @license    http://framework.zend.com/license/new-bsd     New BSD License
- *
- * @group Zend_CodeGenerator
- * @group Zend_CodeGenerator_Php
  */
+#[Group('Zend_CodeGenerator')]
+#[Group('Zend_CodeGenerator_Php')]
 class Zend_CodeGenerator_Php_PropertyTest extends PHPUnit\Framework\TestCase
 {
     public function setUp(): void
@@ -100,9 +101,7 @@ EOS;
         $this->assertEquals('    public static $someVal = \'some string value\';', $codeGenProperty->generate());
     }
 
-    /**
-     * @group ZF-6444
-     */
+    #[Group('ZF-6444')]
     public function testPropertyWillLoadFromReflection()
     {
         $reflectionClass = new Zend_Reflection_Class('Zend_CodeGenerator_Php_TestClassWithManyProperties');
@@ -128,9 +127,7 @@ EOS;
         $this->assertEquals('private', $cgProp->getVisibility());
     }
 
-    /**
-     * @group ZF-6444
-     */
+    #[Group('ZF-6444')]
     public function testPropertyWillEmitStaticModifier()
     {
         $codeGenProperty = new Zend_CodeGenerator_Php_Property(array(
@@ -142,9 +139,7 @@ EOS;
         $this->assertEquals('    protected static $someVal = \'some string value\';', $codeGenProperty->generate());
     }
 
-    /**
-     * @group ZF-7205
-     */
+    #[Group('ZF-7205')]
     public function testPropertyCanHaveDocblock()
     {
         $codeGenProperty = new Zend_CodeGenerator_Php_Property(array(
@@ -194,11 +189,11 @@ EOS;
     }
 
     /**
-     * @dataProvider dataSetTypeSetValueGenerate
      * @param string $type
      * @param mixed $value
      * @param string $code
      */
+    #[DataProvider('dataSetTypeSetValueGenerate')]
     public function testSetTypeSetValueGenerate($type, $value, $code)
     {
         $defaultValue = new Zend_CodeGenerator_Php_Property_DefaultValue();
@@ -210,14 +205,15 @@ EOS;
     }
 
     /**
-     * @dataProvider dataSetTypeSetValueGenerate
      * @param string $type
      * @param mixed $value
      * @param string $code
      */
+    #[DataProvider('dataSetTypeSetValueGenerate')]
     public function testSetBogusTypeSetValueGenerateUseAutoDetection($type, $value, $code)
     {
         if ($type == 'constant') {
+            $this->expectNotToPerformAssertions();
             return; // constant can only be detected explicitly
         }
 
@@ -228,9 +224,7 @@ EOS;
         $this->assertEquals($code, $defaultValue->generate());
     }
 
-    /**
-     * @group ZF-8849
-     */
+    #[Group('ZF-8849')]
     public function testZF8849()
     {
         $property = new Zend_CodeGenerator_Php_Property(array(

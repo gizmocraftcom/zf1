@@ -18,6 +18,7 @@
  * @copyright  Copyright (c) 2005-2015 Zend Technologies USA Inc. (http://www.zend.com)
  * @license    http://framework.zend.com/license/new-bsd     New BSD License
  */
+use PHPUnit\Framework\Attributes\Group;
 
 /**
  * Zend_Pdf_Filter_Ascii85
@@ -30,8 +31,8 @@ require_once 'Zend/Pdf/Filter/Ascii85.php';
  * @subpackage UnitTests
  * @copyright  Copyright (c) 2005-2015 Zend Technologies USA Inc. (http://www.zend.com)
  * @license    http://framework.zend.com/license/new-bsd     New BSD License
- * @group      Zend_Pdf
  */
+#[Group('Zend_Pdf')]
 class Zend_Pdf_Filter_Ascii85Test extends PHPUnit\Framework\TestCase
 {
     public function testStringDivisibleBy4Encode()

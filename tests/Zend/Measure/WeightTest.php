@@ -19,6 +19,7 @@
  * @license    http://framework.zend.com/license/new-bsd     New BSD License
  * @version    $Id$
  */
+use PHPUnit\Framework\Attributes\Group;
 
 
 /**
@@ -32,8 +33,8 @@ require_once 'Zend/Measure/Weight.php';
  * @subpackage UnitTests
  * @copyright  Copyright (c) 2005-2015 Zend Technologies USA Inc. (http://www.zend.com)
  * @license    http://framework.zend.com/license/new-bsd     New BSD License
- * @group      Zend_Measure
  */
+#[Group('Zend_Measure')]
 class Zend_Measure_WeightTest extends PHPUnit\Framework\TestCase
 {
     /**
@@ -53,12 +54,8 @@ class Zend_Measure_WeightTest extends PHPUnit\Framework\TestCase
      */
     public function testWeightUnknownType()
     {
-        try {
-            $value = new Zend_Measure_Weight('100','Weight::UNKNOWN','de');
-            $this->fail('Exception expected because of unknown type');
-        } catch (Zend_Measure_Exception $e) {
-            // success
-        }
+        $this->expectException(Zend_Measure_Exception::class);
+        $value = new Zend_Measure_Weight('100','Weight::UNKNOWN','de');
     }
 
 
@@ -68,12 +65,8 @@ class Zend_Measure_WeightTest extends PHPUnit\Framework\TestCase
      */
     public function testWeightUnknownValue()
     {
-        try {
-            $value = new Zend_Measure_Weight('novalue',Zend_Measure_Weight::STANDARD,'de');
-            $this->fail('Exception expected because of empty value');
-        } catch (Zend_Measure_Exception $e) {
-            // success
-        }
+        $this->expectException(Zend_Measure_Exception::class);
+        $value = new Zend_Measure_Weight('novalue',Zend_Measure_Weight::STANDARD,'de');
     }
 
 
@@ -83,12 +76,8 @@ class Zend_Measure_WeightTest extends PHPUnit\Framework\TestCase
      */
     public function testWeightUnknownLocale()
     {
-        try {
-            $value = new Zend_Measure_Weight('100',Zend_Measure_Weight::STANDARD,'nolocale');
-            $this->fail('Exception expected because of unknown locale');
-        } catch (Zend_Measure_Exception $e) {
-            // success
-        }
+        $this->expectException(Zend_Measure_Exception::class);
+        $value = new Zend_Measure_Weight('100',Zend_Measure_Weight::STANDARD,'nolocale');
     }
 
 
@@ -248,13 +237,9 @@ class Zend_Measure_WeightTest extends PHPUnit\Framework\TestCase
      */
     public function testWeightSetUnknownType()
     {
-        try {
-            $value = new Zend_Measure_Weight('100',Zend_Measure_Weight::STANDARD,'de');
-            $value->setValue('-200.200,200','Weight::UNKNOWN','de');
-            $this->fail('Exception expected because of unknown type');
-        } catch (Zend_Measure_Exception $e) {
-            // success
-        }
+        $this->expectException(Zend_Measure_Exception::class);
+        $value = new Zend_Measure_Weight('100',Zend_Measure_Weight::STANDARD,'de');
+        $value->setValue('-200.200,200','Weight::UNKNOWN','de');
     }
 
 
@@ -264,13 +249,9 @@ class Zend_Measure_WeightTest extends PHPUnit\Framework\TestCase
      */
     public function testWeightSetUnknownValue()
     {
-        try {
-            $value = new Zend_Measure_Weight('100',Zend_Measure_Weight::STANDARD,'de');
-            $value->setValue('novalue',Zend_Measure_Weight::STANDARD,'de');
-            $this->fail('Exception expected because of empty value');
-        } catch (Zend_Measure_Exception $e) {
-            // success
-        }
+        $this->expectException(Zend_Measure_Exception::class);
+        $value = new Zend_Measure_Weight('100',Zend_Measure_Weight::STANDARD,'de');
+        $value->setValue('novalue',Zend_Measure_Weight::STANDARD,'de');
     }
 
 
@@ -280,13 +261,9 @@ class Zend_Measure_WeightTest extends PHPUnit\Framework\TestCase
      */
     public function testWeightSetUnknownLocale()
     {
-        try {
-            $value = new Zend_Measure_Weight('100',Zend_Measure_Weight::STANDARD,'de');
-            $value->setValue('200',Zend_Measure_Weight::STANDARD,'nolocale');
-            $this->fail('Exception expected because of unknown locale');
-        } catch (Zend_Measure_Exception $e) {
-            // success
-        }
+        $this->expectException(Zend_Measure_Exception::class);
+        $value = new Zend_Measure_Weight('100',Zend_Measure_Weight::STANDARD,'de');
+        $value->setValue('200',Zend_Measure_Weight::STANDARD,'nolocale');
     }
 
 
@@ -344,13 +321,9 @@ class Zend_Measure_WeightTest extends PHPUnit\Framework\TestCase
      */
     public function testWeightSetTypeFailed()
     {
-        try {
-            $value = new Zend_Measure_Weight('-100',Zend_Measure_Weight::STANDARD,'de');
-            $value->setType('Weight::UNKNOWN');
-            $this->fail('Exception expected because of unknown type');
-        } catch (Zend_Measure_Exception $e) {
-            // success
-        }
+        $this->expectException(Zend_Measure_Exception::class);
+        $value = new Zend_Measure_Weight('-100',Zend_Measure_Weight::STANDARD,'de');
+        $value->setType('Weight::UNKNOWN');
     }
 
 

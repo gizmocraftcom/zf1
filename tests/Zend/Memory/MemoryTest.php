@@ -19,6 +19,8 @@
  * @license    http://framework.zend.com/license/new-bsd     New BSD License
  * @version    $Id$
  */
+use PHPUnit\Framework\Attributes\DataProviderExternal;
+use PHPUnit\Framework\Attributes\Group;
 
 /** Zend_Memory */
 require_once 'Zend/Memory.php';
@@ -29,8 +31,8 @@ require_once 'Zend/Memory.php';
  * @subpackage UnitTests
  * @copyright  Copyright (c) 2005-2015 Zend Technologies USA Inc. (http://www.zend.com)
  * @license    http://framework.zend.com/license/new-bsd     New BSD License
- * @group      Zend_Memory
  */
+#[Group('Zend_Memory')]
 class Zend_Memory_MemoryTest extends PHPUnit\Framework\TestCase
 {
     protected $cacheDir;
@@ -81,10 +83,8 @@ class Zend_Memory_MemoryTest extends PHPUnit\Framework\TestCase
         unset($memoryManager);
     }
 
-    /**
-     * @group ZF-9883
-     * @dataProvider Zend_Memory_MemoryTest::providerCacheBackend
-     */
+    #[Group('ZF-9883')]
+    #[DataProviderExternal(Zend_Memory_MemoryTest::class, 'providerCacheBackend')]
     public function testFactoryCacheBackendStandards($backend)
     {
         try {
@@ -95,10 +95,8 @@ class Zend_Memory_MemoryTest extends PHPUnit\Framework\TestCase
         $this->assertInstanceOf(Zend_Memory_Manager::class, $memoryManager);
     }
 
-    /**
-     * @group ZF-9883
-     */
-    public function providerCacheBackend()
+    #[Group('ZF-9883')]
+    public static function providerCacheBackend()
     {
         return array(
             array('Apc'),

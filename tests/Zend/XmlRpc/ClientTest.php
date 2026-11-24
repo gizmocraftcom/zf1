@@ -19,6 +19,7 @@
  * @license    http://framework.zend.com/license/new-bsd     New BSD License
  * @version $Id$
  */
+use PHPUnit\Framework\Attributes\Group;
 
 require_once 'Zend/XmlRpc/Client.php';
 
@@ -36,8 +37,8 @@ require_once 'Zend/XmlRpc/Client/ServerIntrospection.php';
  * @subpackage UnitTests
  * @copyright  Copyright (c) 2005-2015 Zend Technologies USA Inc. (http://www.zend.com)
  * @license    http://framework.zend.com/license/new-bsd     New BSD License
- * @group      Zend_XmlRpc
  */
+#[Group('Zend_XmlRpc')]
 class Zend_XmlRpc_ClientTest extends PHPUnit\Framework\TestCase
 {
     /**
@@ -156,9 +157,7 @@ class Zend_XmlRpc_ClientTest extends PHPUnit\Framework\TestCase
         $this->assertFalse($response->isFault());
     }
 
-    /**
-     * @group ZF-2090
-     */
+    #[Group('ZF-2090')]
     public function testSuccessfullyDetectsEmptyArrayParameterAsArray()
     {
         $expectedMethod = 'foo.bar';
@@ -178,10 +177,10 @@ class Zend_XmlRpc_ClientTest extends PHPUnit\Framework\TestCase
     }
 
     /**
-     * @group ZF-1412
      *
      * @return void
      */
+    #[Group('ZF-1412')]
     public function testSuccessfulRpcMethodCallWithMixedDateParameters()
     {
         $time = time();
@@ -209,9 +208,7 @@ class Zend_XmlRpc_ClientTest extends PHPUnit\Framework\TestCase
         $this->assertFalse($response->isFault());
     }
 
-    /**
-     * @group ZF-1797
-     */
+    #[Group('ZF-1797')]
     public function testSuccesfulRpcMethodCallWithXmlRpcValueParameters()
     {
         $time   = time();
@@ -236,17 +233,13 @@ class Zend_XmlRpc_ClientTest extends PHPUnit\Framework\TestCase
         $this->assertFalse($response->isFault());
     }
 
-    /**
-     * @group ZF-2978
-     */
+    #[Group('ZF-2978')]
     public function testSkippingSystemCallDisabledByDefault()
     {
         $this->assertFalse($this->xmlrpcClient->skipSystemLookup());
     }
 
-    /**
-     * @group ZF-6993
-     */
+    #[Group('ZF-6993')]
     public function testWhenPassingAStringAndAnIntegerIsExpectedParamIsConverted()
     {
         $this->mockIntrospector();
@@ -254,7 +247,7 @@ class Zend_XmlRpc_ClientTest extends PHPUnit\Framework\TestCase
              ->expects($this->exactly(2))
              ->method('getMethodSignature')
              ->with('test.method')
-             ->will($this->returnValue(array(array('parameters' => array('int')))));
+             ->willReturn(array(array('parameters' => array('int'))));
 
         $expect = 'test.method response';
         $this->setServerResponseTo($expect);
@@ -269,9 +262,7 @@ class Zend_XmlRpc_ClientTest extends PHPUnit\Framework\TestCase
         $this->assertSame(1, $params[0]->getValue());
     }
 
-    /**
-     * @group ZF-8074
-     */
+    #[Group('ZF-8074')]
     public function testXmlRpcObjectsAreNotConverted()
     {
         $this->mockIntrospector();
@@ -279,7 +270,7 @@ class Zend_XmlRpc_ClientTest extends PHPUnit\Framework\TestCase
              ->expects($this->exactly(1))
              ->method('getMethodSignature')
              ->with('date.method')
-             ->will($this->returnValue(array(array('parameters' => array('dateTime.iso8601', 'string')))));
+             ->willReturn(array(array('parameters' => array('dateTime.iso8601', 'string'))));
 
         $expects = 'date.method response';
         $this->setServerResponseTo($expects);
@@ -298,7 +289,7 @@ class Zend_XmlRpc_ClientTest extends PHPUnit\Framework\TestCase
         $this->mockedHttpClient->expects($this->once())
                                ->method('request')
                                ->with('POST')
-                               ->will($this->returnValue($this->makeHttpResponseFor('foo')));
+                               ->willReturn($this->makeHttpResponseFor('foo'));
         $this->xmlrpcClient->setHttpClient($this->mockedHttpClient);
         $this->xmlrpcClient->setSkipSystemLookup(true);
         $this->assertSame('foo', $this->xmlrpcClient->call('test.method'));
@@ -608,9 +599,7 @@ class Zend_XmlRpc_ClientTest extends PHPUnit\Framework\TestCase
         $this->assertEquals('system.methodSignature', $request->getMethod());
     }
 
-    /**
-     * @group ZF-4372
-     */
+    #[Group('ZF-4372')]
     public function testSettingUriOnHttpClientIsNotOverwrittenByXmlRpcClient()
     {
         $changedUri = "http://bar:80";
@@ -623,9 +612,7 @@ class Zend_XmlRpc_ClientTest extends PHPUnit\Framework\TestCase
         $this->assertEquals($changedUri, $uri);
     }
 
-    /**
-     * @group ZF-4372
-     */
+    #[Group('ZF-4372')]
     public function testSettingNoHttpClientUriForcesClientToSetUri()
     {
         $baseUri = "http://foo:80";
@@ -643,9 +630,7 @@ class Zend_XmlRpc_ClientTest extends PHPUnit\Framework\TestCase
         $this->assertEquals($baseUri, $uri);
     }
 
-    /**
-     * @group ZF-3288
-     */
+    #[Group('ZF-3288')]
     public function testCustomHttpClientUserAgentIsNotOverridden()
     {
         $this->assertNull(
@@ -668,9 +653,7 @@ class Zend_XmlRpc_ClientTest extends PHPUnit\Framework\TestCase
         $this->assertSame($expectedUserAgent, $this->httpClient->getHeader('user-agent'));
     }
 
-    /**
-     * @group ZF-8478
-     */
+    #[Group('ZF-8478')]
     public function testPythonSimpleXMLRPCServerWithUnsupportedMethodSignatures()
     {
         try
@@ -689,9 +672,7 @@ class Zend_XmlRpc_ClientTest extends PHPUnit\Framework\TestCase
         }
     }
 
-    /**
-     * @group ZF-8580
-     */
+    #[Group('ZF-8580')]
     public function testCallSelectsCorrectSignatureIfMoreThanOneIsAvailable()
     {
         $this->mockIntrospector();
@@ -700,10 +681,10 @@ class Zend_XmlRpc_ClientTest extends PHPUnit\Framework\TestCase
              ->expects($this->exactly(2))
              ->method('getMethodSignature')
              ->with('get')
-             ->will($this->returnValue(array(
+             ->willReturn(array(
                  array('parameters' => array('int')),
                  array('parameters' => array('array'))
-             )));
+             ));
 
           $expectedResult = 'array';
           $this->setServerResponseTo($expectedResult);
@@ -722,9 +703,7 @@ class Zend_XmlRpc_ClientTest extends PHPUnit\Framework\TestCase
           );
     }
 
-    /**
-     * @group ZF-1897
-     */
+    #[Group('ZF-1897')]
     public function testHandlesLeadingOrTrailingWhitespaceInChunkedResponseProperly()
     {
         $baseUri = "http://foo:80";

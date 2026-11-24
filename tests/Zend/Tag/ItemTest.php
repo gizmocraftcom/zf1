@@ -19,6 +19,8 @@
  * @license    http://framework.zend.com/license/new-bsd     New BSD License
  * @version    $Id$
  */
+use PHPUnit\Framework\Attributes\DoesNotPerformAssertions;
+use PHPUnit\Framework\Attributes\Group;
 
 require_once 'Zend/Tag/Item.php';
 
@@ -28,8 +30,8 @@ require_once 'Zend/Tag/Item.php';
  * @subpackage UnitTests
  * @copyright  Copyright (c) 2005-2015 Zend Technologies USA Inc. (http://www.zend.com)
  * @license    http://framework.zend.com/license/new-bsd     New BSD License
- * @group      Zend_Tag
  */
+#[Group('Zend_Tag')]
 class Zend_Tag_ItemTest extends PHPUnit\Framework\TestCase
 {
     public function testConstuctor()
@@ -108,6 +110,7 @@ class Zend_Tag_ItemTest extends PHPUnit\Framework\TestCase
         }
     }
 
+    #[DoesNotPerformAssertions]
     public function testSkipOptions()
     {
         $tag = new Zend_Tag_Item(array('title' => 'foo', 'weight' => 1, 'param' => 'foobar'));

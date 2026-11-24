@@ -19,6 +19,8 @@
  * @license    http://framework.zend.com/license/new-bsd     New BSD License
  * @version    $Id$
  */
+use PHPUnit\Framework\Attributes\DoesNotPerformAssertions;
+use PHPUnit\Framework\Attributes\Group;
 
 require_once dirname(__FILE__) . '/TestCommon.php';
 
@@ -30,10 +32,10 @@ require_once 'Zend/Barcode/Object/Code39.php';
  * @category   Zend
  * @package    Zend_Barcode
  * @subpackage UnitTests
- * @group      Zend_Barcode
  * @copyright  Copyright (c) 2005-2015 Zend Technologies USA Inc. (http://www.zend.com)
  * @license    http://framework.zend.com/license/new-bsd     New BSD License
  */
+#[Group('Zend_Barcode')]
 class Zend_Barcode_Renderer_PdfTest extends Zend_Barcode_Renderer_TestCommon
 {
 
@@ -47,6 +49,7 @@ class Zend_Barcode_Renderer_PdfTest extends Zend_Barcode_Renderer_TestCommon
         $this->assertSame('pdf', $this->_renderer->getType());
     }
 
+    #[DoesNotPerformAssertions]
     public function testGoodPdfResource()
     {
         $pdfResource = new Zend_Pdf();

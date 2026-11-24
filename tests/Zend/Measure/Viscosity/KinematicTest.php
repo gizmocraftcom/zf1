@@ -19,6 +19,7 @@
  * @license    http://framework.zend.com/license/new-bsd     New BSD License
  * @version    $Id$
  */
+use PHPUnit\Framework\Attributes\Group;
 
 /**
  * Zend_Measure_Viscosity_Kinematic
@@ -31,8 +32,8 @@ require_once 'Zend/Measure/Viscosity/Kinematic.php';
  * @subpackage UnitTests
  * @copyright  Copyright (c) 2005-2015 Zend Technologies USA Inc. (http://www.zend.com)
  * @license    http://framework.zend.com/license/new-bsd     New BSD License
- * @group      Zend_Measure
  */
+#[Group('Zend_Measure')]
 class Zend_Measure_Viscosity_KinematicTest extends PHPUnit\Framework\TestCase
 {
     /**
@@ -52,12 +53,8 @@ class Zend_Measure_Viscosity_KinematicTest extends PHPUnit\Framework\TestCase
      */
     public function testViscosity_KinematicUnknownType()
     {
-        try {
-            $value = new Zend_Measure_Viscosity_Kinematic('100','Viscosity_Kinematic::UNKNOWN','de');
-            $this->fail('Exception expected because of unknown type');
-        } catch (Zend_Measure_Exception $e) {
-            // success
-        }
+        $this->expectException(Zend_Measure_Exception::class);
+        $value = new Zend_Measure_Viscosity_Kinematic('100','Viscosity_Kinematic::UNKNOWN','de');
     }
 
 
@@ -67,12 +64,8 @@ class Zend_Measure_Viscosity_KinematicTest extends PHPUnit\Framework\TestCase
      */
     public function testViscosity_KinematicUnknownValue()
     {
-        try {
-            $value = new Zend_Measure_Viscosity_Kinematic('novalue',Zend_Measure_Viscosity_Kinematic::STANDARD,'de');
-            $this->fail('Exception expected because of empty value');
-        } catch (Zend_Measure_Exception $e) {
-            // success
-        }
+        $this->expectException(Zend_Measure_Exception::class);
+        $value = new Zend_Measure_Viscosity_Kinematic('novalue',Zend_Measure_Viscosity_Kinematic::STANDARD,'de');
     }
 
 
@@ -82,12 +75,8 @@ class Zend_Measure_Viscosity_KinematicTest extends PHPUnit\Framework\TestCase
      */
     public function testViscosity_KinematicUnknownLocale()
     {
-        try {
-            $value = new Zend_Measure_Viscosity_Kinematic('100',Zend_Measure_Viscosity_Kinematic::STANDARD,'nolocale');
-            $this->fail('Exception expected because of unknown locale');
-        } catch (Zend_Measure_Exception $e) {
-            // success
-        }
+        $this->expectException(Zend_Measure_Exception::class);
+        $value = new Zend_Measure_Viscosity_Kinematic('100',Zend_Measure_Viscosity_Kinematic::STANDARD,'nolocale');
     }
 
 
@@ -247,13 +236,9 @@ class Zend_Measure_Viscosity_KinematicTest extends PHPUnit\Framework\TestCase
      */
     public function testViscosity_KinematicSetUnknownType()
     {
-        try {
-            $value = new Zend_Measure_Viscosity_Kinematic('100',Zend_Measure_Viscosity_Kinematic::STANDARD,'de');
-            $value->setValue('-200.200,200','Viscosity_Kinematic::UNKNOWN','de');
-            $this->fail('Exception expected because of unknown type');
-        } catch (Zend_Measure_Exception $e) {
-            // success
-        }
+        $this->expectException(Zend_Measure_Exception::class);
+        $value = new Zend_Measure_Viscosity_Kinematic('100',Zend_Measure_Viscosity_Kinematic::STANDARD,'de');
+        $value->setValue('-200.200,200','Viscosity_Kinematic::UNKNOWN','de');
     }
 
 
@@ -263,13 +248,9 @@ class Zend_Measure_Viscosity_KinematicTest extends PHPUnit\Framework\TestCase
      */
     public function testViscosity_KinematicSetUnknownValue()
     {
-        try {
-            $value = new Zend_Measure_Viscosity_Kinematic('100',Zend_Measure_Viscosity_Kinematic::STANDARD,'de');
-            $value->setValue('novalue',Zend_Measure_Viscosity_Kinematic::STANDARD,'de');
-            $this->fail('Exception expected because of empty value');
-        } catch (Zend_Measure_Exception $e) {
-            // success
-        }
+        $this->expectException(Zend_Measure_Exception::class);
+        $value = new Zend_Measure_Viscosity_Kinematic('100',Zend_Measure_Viscosity_Kinematic::STANDARD,'de');
+        $value->setValue('novalue',Zend_Measure_Viscosity_Kinematic::STANDARD,'de');
     }
 
 
@@ -279,13 +260,9 @@ class Zend_Measure_Viscosity_KinematicTest extends PHPUnit\Framework\TestCase
      */
     public function testViscosity_KinematicSetUnknownLocale()
     {
-        try {
-            $value = new Zend_Measure_Viscosity_Kinematic('100',Zend_Measure_Viscosity_Kinematic::STANDARD,'de');
-            $value->setValue('200',Zend_Measure_Viscosity_Kinematic::STANDARD,'nolocale');
-            $this->fail('Exception expected because of unknown locale');
-        } catch (Zend_Measure_Exception $e) {
-            // success
-        }
+        $this->expectException(Zend_Measure_Exception::class);
+        $value = new Zend_Measure_Viscosity_Kinematic('100',Zend_Measure_Viscosity_Kinematic::STANDARD,'de');
+        $value->setValue('200',Zend_Measure_Viscosity_Kinematic::STANDARD,'nolocale');
     }
 
 
@@ -343,13 +320,9 @@ class Zend_Measure_Viscosity_KinematicTest extends PHPUnit\Framework\TestCase
      */
     public function testViscosity_KinematicSetTypeFailed()
     {
-        try {
-            $value = new Zend_Measure_Viscosity_Kinematic('-100',Zend_Measure_Viscosity_Kinematic::STANDARD,'de');
-            $value->setType('Viscosity_Kinematic::UNKNOWN');
-            $this->fail('Exception expected because of unknown type');
-        } catch (Zend_Measure_Exception $e) {
-            // success
-        }
+        $this->expectException(Zend_Measure_Exception::class);
+        $value = new Zend_Measure_Viscosity_Kinematic('-100',Zend_Measure_Viscosity_Kinematic::STANDARD,'de');
+        $value->setType('Viscosity_Kinematic::UNKNOWN');
     }
 
 

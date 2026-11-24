@@ -19,6 +19,7 @@
  * @license    http://framework.zend.com/license/new-bsd     New BSD License
  * @version    $Id$
  */
+use PHPUnit\Framework\Attributes\Group;
 
 require_once 'Zend/Feed/Reader.php';
 
@@ -28,9 +29,9 @@ require_once 'Zend/Feed/Reader.php';
  * @subpackage UnitTests
  * @copyright  Copyright (c) 2005-2015 Zend Technologies USA Inc. (http://www.zend.com)
  * @license    http://framework.zend.com/license/new-bsd     New BSD License
- * @group      Zend_Feed
- * @group      Zend_Feed_Reader
  */
+#[Group('Zend_Feed')]
+#[Group('Zend_Feed_Reader')]
 class Zend_Feed_Reader_Entry_RssTest extends PHPUnit\Framework\TestCase
 {
 
@@ -1897,9 +1898,7 @@ class Zend_Feed_Reader_Entry_RssTest extends PHPUnit\Framework\TestCase
         $this->assertTrue($edate->equals($entry->getDateModified()));
     }
 
-    /**
-     * @group ZF-8702
-     */
+    #[Group('ZF-8702')]
     public function testParsesCorrectDateIfMissingOffsetWhenSystemUsesUSLocale()
     {
         $locale = new Zend_Locale('en_US');
@@ -2138,9 +2137,7 @@ class Zend_Feed_Reader_Entry_RssTest extends PHPUnit\Framework\TestCase
         $this->assertEquals(null, $entry->getDateModified());
     }
 
-    /**
-     * @group ZF-7908
-     */
+    #[Group('ZF-7908')]
     public function testGetsDateModifiedFromRss20_UnrecognisedGmtFormat()
     {
         $feed = Zend_Feed_Reader::importString(

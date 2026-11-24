@@ -68,12 +68,12 @@ class Zend_Service_ShortUrl_BitLyTest extends PHPUnit\Framework\TestCase
         $clientResponse = $this->getMockBuilder('Zend_Http_Response')
             ->disableOriginalConstructor()
             ->getMock();
-        $clientResponse->expects($this->once())->method('getStatus')->will($this->returnValue(500));
+        $clientResponse->expects($this->once())->method('getStatus')->willReturn(500);
 
         $client = $this->getMockBuilder('Zend_Http_Client')
             ->disableOriginalConstructor()
             ->getMock();
-        $client->expects($this->once())->method('request')->will($this->returnValue($clientResponse));
+        $client->expects($this->once())->method('request')->willReturn($clientResponse);
 
         $s = new Zend_Service_ShortUrl_BitLy('test');
         $s->setHttpClient($client);
@@ -87,15 +87,15 @@ class Zend_Service_ShortUrl_BitLyTest extends PHPUnit\Framework\TestCase
         $clientResponse = $this->getMockBuilder('Zend_Http_Response')
             ->disableOriginalConstructor()
             ->getMock();
-        $clientResponse->expects($this->once())->method('getStatus')->will($this->returnValue(200));
-        $clientResponse->expects($this->once())->method('getBody')->will($this->returnValue('http://bit.ly/ZFramework'));
+        $clientResponse->expects($this->once())->method('getStatus')->willReturn(200);
+        $clientResponse->expects($this->once())->method('getBody')->willReturn('http://bit.ly/ZFramework');
 
         $client = $this->getMockBuilder('Zend_Http_Client')
             ->disableOriginalConstructor()
             ->getMock();
         $client->expects($this->any())->method('setParameterGet')->with($this->anything(),$this->anything());
         $client->expects($this->at(0))->method('setParameterGet')->with('access_token',$accessToken);
-        $client->expects($this->once())->method('request')->will($this->returnValue($clientResponse));
+        $client->expects($this->once())->method('request')->willReturn($clientResponse);
 
         $s = new Zend_Service_ShortUrl_BitLy($accessToken);
         $s->setHttpClient($client);
@@ -110,8 +110,8 @@ class Zend_Service_ShortUrl_BitLyTest extends PHPUnit\Framework\TestCase
         $clientResponse = $this->getMockBuilder('Zend_Http_Response')
             ->disableOriginalConstructor()
             ->getMock();
-        $clientResponse->expects($this->once())->method('getStatus')->will($this->returnValue(200));
-        $clientResponse->expects($this->once())->method('getBody')->will($this->returnValue('http://bit.ly/ZFramework'));
+        $clientResponse->expects($this->once())->method('getStatus')->willReturn(200);
+        $clientResponse->expects($this->once())->method('getBody')->willReturn('http://bit.ly/ZFramework');
 
         $client = $this->getMockBuilder('Zend_Http_Client')
             ->disableOriginalConstructor()
@@ -119,7 +119,7 @@ class Zend_Service_ShortUrl_BitLyTest extends PHPUnit\Framework\TestCase
         $client->expects($this->any())->method('setParameterGet')->with($this->anything(),$this->anything());
         $client->expects($this->at(0))->method('setParameterGet')->with('login',$login);
         $client->expects($this->at(1))->method('setParameterGet')->with('apiKey',$apiKey);
-        $client->expects($this->once())->method('request')->will($this->returnValue($clientResponse));
+        $client->expects($this->once())->method('request')->willReturn($clientResponse);
 
         $s = new Zend_Service_ShortUrl_BitLy($login, $apiKey);
         $s->setHttpClient($client);

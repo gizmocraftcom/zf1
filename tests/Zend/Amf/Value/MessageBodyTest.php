@@ -19,6 +19,7 @@
  * @license    http://framework.zend.com/license/new-bsd     New BSD License
  * @version    $Id$
  */
+use PHPUnit\Framework\Attributes\Group;
 
 require_once 'Zend/Amf/Value/MessageBody.php';
 
@@ -30,8 +31,8 @@ require_once 'Zend/Amf/Value/MessageBody.php';
  * @subpackage UnitTests
  * @copyright  Copyright (c) 2005-2015 Zend Technologies USA Inc. (http://www.zend.com)
  * @license    http://framework.zend.com/license/new-bsd     New BSD License
- * @group      Zend_Amf
  */
+#[Group('Zend_Amf')]
 class Zend_Amf_Value_MessageBodyTest extends PHPUnit\Framework\TestCase
 {
     protected $body;

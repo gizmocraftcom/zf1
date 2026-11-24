@@ -19,6 +19,7 @@
  * @license    http://framework.zend.com/license/new-bsd     New BSD License
  * @version    $Id$
  */
+use PHPUnit\Framework\Attributes\Group;
 
 /**
  * @see Zend_Amf_Response_Http
@@ -33,15 +34,15 @@ require_once 'Zend/Amf/Response/Http.php';
  * @subpackage UnitTests
  * @copyright  Copyright (c) 2005-2015 Zend Technologies USA Inc. (http://www.zend.com)
  * @license    http://framework.zend.com/license/new-bsd     New BSD License
- * @group      Zend_Amf
- * @group      Zend_Amf_Response
  */
+#[Group('Zend_Amf')]
+#[Group('Zend_Amf_Response')]
 class Zend_Amf_Response_HttpTest extends PHPUnit\Framework\TestCase
 {
     /**
      * Ensure isIeOverSsl() does not emit a notice when $_SERVER['HTTPS'] not set
-     * @group ZF-11783
      */
+    #[Group('ZF-11783')]
     public function testDoesNotEmitNoticeWhenHttpsServerKeyNotSet()
     {
         unset($_SERVER['HTTPS']);

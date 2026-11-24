@@ -19,6 +19,8 @@
  * @license    http://framework.zend.com/license/new-bsd     New BSD License
  * @version    $Id$
  */
+use PHPUnit\Framework\Attributes\DoesNotPerformAssertions;
+use PHPUnit\Framework\Attributes\Group;
 
 require_once 'Zend/Feed/Reader.php';
 
@@ -28,9 +30,9 @@ require_once 'Zend/Feed/Reader.php';
  * @subpackage UnitTests
  * @copyright  Copyright (c) 2005-2015 Zend Technologies USA Inc. (http://www.zend.com)
  * @license    http://framework.zend.com/license/new-bsd     New BSD License
- * @group      Zend_Feed
- * @group      Zend_Feed_Reader
  */
+#[Group('Zend_Feed')]
+#[Group('Zend_Feed_Reader')]
 class Zend_Feed_ReaderTest extends PHPUnit\Framework\TestCase
 {
     protected $_feedSamplePath = null;
@@ -126,9 +128,7 @@ class Zend_Feed_ReaderTest extends PHPUnit\Framework\TestCase
         $this->assertEquals(Zend_Feed_Reader::TYPE_ATOM_03, $type);
     }
 
-    /**
-     * @group ZF-9723
-     */
+    #[Group('ZF-9723')]
     public function testDetectsTypeFromStringOrToRemindPaddyAboutForgettingATestWhichLetsAStupidTypoSurviveUnnoticedForMonths()
     {
         $feed = '<?xml version="1.0" encoding="utf-8" ?><rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns="http://purl.org/rss/1.0/"><channel></channel></rdf:RDF>';
@@ -146,6 +146,7 @@ class Zend_Feed_ReaderTest extends PHPUnit\Framework\TestCase
         $this->assertEquals('utf-8', $feed->current()->getEncoding());
     }
 
+    #[DoesNotPerformAssertions]
     public function testImportsFile()
     {
         try {
@@ -173,9 +174,7 @@ class Zend_Feed_ReaderTest extends PHPUnit\Framework\TestCase
         }
     }
 
-    /**
-     * @group ZF-8328
-     */
+    #[Group('ZF-8328')]
     public function testImportsUriAndThrowsExceptionIfNotAFeed()
     {
         $this->expectException(\Zend_Feed_Exception::class);
@@ -247,9 +246,7 @@ class Zend_Feed_ReaderTest extends PHPUnit\Framework\TestCase
         $this->assertCount(0, $links);
     }
 
-    /**
-     * @group ZF-8327
-     */
+    #[Group('ZF-8327')]
     public function testGetsFeedLinksAndTrimsNewlines()
     {
         if (!defined('TESTS_ZEND_FEED_READER_ONLINE_ENABLED')
@@ -267,9 +264,7 @@ class Zend_Feed_ReaderTest extends PHPUnit\Framework\TestCase
         $this->assertEquals('http://feeds.feedburner.com/jonnyken/infoblog', $links->rss);
     }
 
-    /**
-     * @group ZF-8330
-     */
+    #[Group('ZF-8330')]
     public function testGetsFeedLinksAndNormalisesRelativeUrls()
     {
         if (!defined('TESTS_ZEND_FEED_READER_ONLINE_ENABLED')
@@ -287,9 +282,7 @@ class Zend_Feed_ReaderTest extends PHPUnit\Framework\TestCase
         $this->assertEquals('http://meiobit.com/rss.xml', $links->rss);
     }
 
-    /**
-     * @group ZF-8330
-     */
+    #[Group('ZF-8330')]
     public function testGetsFeedLinksAndNormalisesRelativeUrlsOnUriWithPath()
     {
         try {
@@ -328,9 +321,7 @@ class Zend_Feed_ReaderTest extends PHPUnit\Framework\TestCase
         $this->assertTrue(Zend_Feed_Reader::isRegistered('JungleBooks'));
     }
 
-    /**
-     * @group ZF-11184
-     */
+    #[Group('ZF-11184')]
     public function testImportingUriWithEmptyResponseBodyTriggersException()
     {
         $currClient = Zend_Feed_Reader::getHttpClient();

@@ -19,6 +19,7 @@
  * @license    http://framework.zend.com/license/new-bsd     New BSD License
  * @version    $Id$
  */
+use PHPUnit\Framework\Attributes\Group;
 
 require_once 'Zend/Tag/Item.php';
 require_once 'Zend/Tag/ItemList.php';
@@ -29,8 +30,8 @@ require_once 'Zend/Tag/ItemList.php';
  * @subpackage UnitTests
  * @copyright  Copyright (c) 2005-2015 Zend Technologies USA Inc. (http://www.zend.com)
  * @license    http://framework.zend.com/license/new-bsd     New BSD License
- * @group      Zend_Tag
  */
+#[Group('Zend_Tag')]
 class Zend_Tag_ItemListTest extends PHPUnit\Framework\TestCase
 {
     public function testArrayAccessAndCount()

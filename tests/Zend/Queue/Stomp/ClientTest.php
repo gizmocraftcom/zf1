@@ -19,6 +19,7 @@
  * @license    http://framework.zend.com/license/new-bsd     New BSD License
  * @version    $Id$
  */
+use PHPUnit\Framework\Attributes\Group;
 
 /*
  * The adapter test class provides a universal test class for all of the
@@ -43,8 +44,8 @@ require_once 'Zend/Queue/Stomp/Client/Connection.php';
  * @subpackage UnitTests
  * @copyright  Copyright (c) 2005-2015 Zend Technologies USA Inc. (http://www.zend.com)
  * @license    http://framework.zend.com/license/new-bsd     New BSD License
- * @group      Zend_Queue
  */
+#[Group('Zend_Queue')]
 class Zend_Queue_Stomp_Connection_Mock
     extends Zend_Queue_Stomp_Client_Connection
 {
@@ -117,8 +118,8 @@ class Zend_Queue_Stomp_Connection_Mock
  * @subpackage UnitTests
  * @copyright  Copyright (c) 2005-2015 Zend Technologies USA Inc. (http://www.zend.com)
  * @license    http://framework.zend.com/license/new-bsd     New BSD License
- * @group      Zend_Queue
  */
+#[Group('Zend_Queue')]
 class Zend_Queue_Stomp_ClientTest extends PHPUnit\Framework\TestCase
 {
     public function testConstruct()

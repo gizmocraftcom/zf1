@@ -19,6 +19,8 @@
  * @license    http://framework.zend.com/license/new-bsd     New BSD License
  * @version    $Id $
  */
+use PHPUnit\Framework\Attributes\DataProvider;
+use PHPUnit\Framework\Attributes\Group;
 
 /** requires */
 require_once 'Zend/Reflection/Parameter.php';
@@ -32,10 +34,9 @@ require_once '_files/TestSampleSingleClass.php';
  * @subpackage UnitTests
  * @copyright  Copyright (c) 2005-2015 Zend Technologies USA Inc. (http://www.zend.com)
  * @license    http://framework.zend.com/license/new-bsd     New BSD License
- *
- * @group Zend_CodeGenerator
- * @group Zend_CodeGenerator_Php
  */
+#[Group('Zend_CodeGenerator')]
+#[Group('Zend_CodeGenerator_Php')]
 class Zend_CodeGenerator_Php_ParameterTest extends PHPUnit\Framework\TestCase
 {
 
@@ -160,10 +161,10 @@ class Zend_CodeGenerator_Php_ParameterTest extends PHPUnit\Framework\TestCase
     }
 
     /**
-     * @dataProvider dataFromReflection_Generate
      * @param string $methodName
      * @param string $expectedCode
      */
+    #[DataProvider('dataFromReflection_Generate')]
     public function testFromReflection_Generate($methodName, $expectedCode)
     {
         $reflParam = $this->getFirstReflectionParameter($methodName);

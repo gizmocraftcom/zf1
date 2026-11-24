@@ -19,6 +19,7 @@
  * @license    http://framework.zend.com/license/new-bsd     New BSD License
  * @version    $Id$
  */
+use PHPUnit\Framework\Attributes\Group;
 
 /** Zend_Pdf */
 require_once 'Zend/Pdf.php';
@@ -29,8 +30,8 @@ require_once 'Zend/Pdf.php';
  * @subpackage UnitTests
  * @copyright  Copyright (c) 2005-2015 Zend Technologies USA Inc. (http://www.zend.com)
  * @license    http://framework.zend.com/license/new-bsd     New BSD License
- * @group      Zend_Pdf
  */
+#[Group('Zend_Pdf')]
 class Zend_Pdf_ProcessingTest extends PHPUnit\Framework\TestCase
 {
     public function setUp(): void
@@ -336,9 +337,7 @@ class Zend_Pdf_ProcessingTest extends PHPUnit\Framework\TestCase
         unlink(dirname(__FILE__) . '/_files/output.pdf');
     }
 
-    /**
-     * @group ZF-3701
-     */
+    #[Group('ZF-3701')]
     public function testZendPdfIsExtendableWithAccessToProperties()
     {
         $pdf = new ExtendedZendPdf();

@@ -19,6 +19,7 @@
  * @license    http://framework.zend.com/license/new-bsd     New BSD License
  * @version    $Id$
  */
+use PHPUnit\Framework\Attributes\Group;
 
 /**
  * Zend_Measure_Energy
@@ -31,8 +32,8 @@ require_once 'Zend/Measure/Energy.php';
  * @subpackage UnitTests
  * @copyright  Copyright (c) 2005-2015 Zend Technologies USA Inc. (http://www.zend.com)
  * @license    http://framework.zend.com/license/new-bsd     New BSD License
- * @group      Zend_Measure
  */
+#[Group('Zend_Measure')]
 class Zend_Measure_EnergyTest extends PHPUnit\Framework\TestCase
 {
     /**
@@ -52,12 +53,8 @@ class Zend_Measure_EnergyTest extends PHPUnit\Framework\TestCase
      */
     public function testEnergyUnknownType()
     {
-        try {
-            $value = new Zend_Measure_Energy('100','Energy::UNKNOWN','de');
-            $this->fail('Exception expected because of unknown type');
-        } catch (Zend_Measure_Exception $e) {
-            // success
-        }
+        $this->expectException(Zend_Measure_Exception::class);
+        $value = new Zend_Measure_Energy('100','Energy::UNKNOWN','de');
     }
 
 
@@ -67,12 +64,8 @@ class Zend_Measure_EnergyTest extends PHPUnit\Framework\TestCase
      */
     public function testEnergyUnknownValue()
     {
-        try {
-            $value = new Zend_Measure_Energy('novalue',Zend_Measure_Energy::STANDARD,'de');
-            $this->fail('Exception expected because of empty value');
-        } catch (Zend_Measure_Exception $e) {
-            // success
-        }
+        $this->expectException(Zend_Measure_Exception::class);
+        $value = new Zend_Measure_Energy('novalue',Zend_Measure_Energy::STANDARD,'de');
     }
 
 
@@ -82,12 +75,8 @@ class Zend_Measure_EnergyTest extends PHPUnit\Framework\TestCase
      */
     public function testEnergyUnknownLocale()
     {
-        try {
-            $value = new Zend_Measure_Energy('100',Zend_Measure_Energy::STANDARD,'nolocale');
-            $this->fail('Exception expected because of unknown locale');
-        } catch (Zend_Measure_Exception $e) {
-            // success
-        }
+        $this->expectException(Zend_Measure_Exception::class);
+        $value = new Zend_Measure_Energy('100',Zend_Measure_Energy::STANDARD,'nolocale');
     }
 
 
@@ -247,13 +236,9 @@ class Zend_Measure_EnergyTest extends PHPUnit\Framework\TestCase
      */
     public function testEnergySetUnknownType()
     {
-        try {
-            $value = new Zend_Measure_Energy('100',Zend_Measure_Energy::STANDARD,'de');
-            $value->setValue('-200.200,200','Energy::UNKNOWN','de');
-            $this->fail('Exception expected because of unknown type');
-        } catch (Zend_Measure_Exception $e) {
-            // success
-        }
+        $this->expectException(Zend_Measure_Exception::class);
+        $value = new Zend_Measure_Energy('100',Zend_Measure_Energy::STANDARD,'de');
+        $value->setValue('-200.200,200','Energy::UNKNOWN','de');
     }
 
 
@@ -263,13 +248,9 @@ class Zend_Measure_EnergyTest extends PHPUnit\Framework\TestCase
      */
     public function testEnergySetUnknownValue()
     {
-        try {
-            $value = new Zend_Measure_Energy('100',Zend_Measure_Energy::STANDARD,'de');
-            $value->setValue('novalue',Zend_Measure_Energy::STANDARD,'de');
-            $this->fail('Exception expected because of empty value');
-        } catch (Zend_Measure_Exception $e) {
-            // success
-        }
+        $this->expectException(Zend_Measure_Exception::class);
+        $value = new Zend_Measure_Energy('100',Zend_Measure_Energy::STANDARD,'de');
+        $value->setValue('novalue',Zend_Measure_Energy::STANDARD,'de');
     }
 
 
@@ -279,13 +260,9 @@ class Zend_Measure_EnergyTest extends PHPUnit\Framework\TestCase
      */
     public function testEnergySetUnknownLocale()
     {
-        try {
-            $value = new Zend_Measure_Energy('100',Zend_Measure_Energy::STANDARD,'de');
-            $value->setValue('200',Zend_Measure_Energy::STANDARD,'nolocale');
-            $this->fail('Exception expected because of unknown locale');
-        } catch (Zend_Measure_Exception $e) {
-            // success
-        }
+        $this->expectException(Zend_Measure_Exception::class);
+        $value = new Zend_Measure_Energy('100',Zend_Measure_Energy::STANDARD,'de');
+        $value->setValue('200',Zend_Measure_Energy::STANDARD,'nolocale');
     }
 
 
@@ -316,8 +293,8 @@ class Zend_Measure_EnergyTest extends PHPUnit\Framework\TestCase
     /**
      * test setting computed type
      * expected new type
-     * @group foo
      */
+    #[Group('foo')]
     public function testEnergySetComputedType1()
     {
         $value = new Zend_Measure_Energy('-100',Zend_Measure_Energy::ERG,'de');
@@ -344,13 +321,9 @@ class Zend_Measure_EnergyTest extends PHPUnit\Framework\TestCase
      */
     public function testEnergySetTypeFailed()
     {
-        try {
-            $value = new Zend_Measure_Energy('-100',Zend_Measure_Energy::STANDARD,'de');
-            $value->setType('Energy::UNKNOWN');
-            $this->fail('Exception expected because of unknown type');
-        } catch (Zend_Measure_Exception $e) {
-            // success
-        }
+        $this->expectException(Zend_Measure_Exception::class);
+        $value = new Zend_Measure_Energy('-100',Zend_Measure_Energy::STANDARD,'de');
+        $value->setType('Energy::UNKNOWN');
     }
 
 

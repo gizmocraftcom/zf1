@@ -19,6 +19,7 @@
  * @license    http://framework.zend.com/license/new-bsd     New BSD License
  * @version    $Id$
  */
+use PHPUnit\Framework\Attributes\DoesNotPerformAssertions;
 
 
 /**
@@ -88,6 +89,7 @@ class resources_languages_Zend_ValidateTest extends PHPUnit\Framework\TestCase
     /**
      * Tests if the given language is really a language
      */
+    #[DoesNotPerformAssertions]
     public function testIsLocale()
     {
         foreach ($this->_languages as $lang) {
@@ -100,6 +102,7 @@ class resources_languages_Zend_ValidateTest extends PHPUnit\Framework\TestCase
     /**
      * Tests if all english original keys have the same translations
      */
+    #[DoesNotPerformAssertions]
     public function testEnglishKeySameAsValue()
     {
         $errors = array();
@@ -146,6 +149,7 @@ class resources_languages_Zend_ValidateTest extends PHPUnit\Framework\TestCase
     /**
      * Tests if the key is translated
      */
+    #[DoesNotPerformAssertions]
     public function testTranslationDiffersFromEnglish()
     {
         $errors = array();
@@ -171,6 +175,7 @@ class resources_languages_Zend_ValidateTest extends PHPUnit\Framework\TestCase
     /**
      * Tests if all placeholders from the original are also available within the translation
      */
+    #[DoesNotPerformAssertions]
     public function testPlaceholder()
     {
         $errors = array();

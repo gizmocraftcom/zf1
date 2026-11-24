@@ -19,6 +19,7 @@
  * @license    http://framework.zend.com/license/new-bsd     New BSD License
  * @version    $Id$
  */
+use PHPUnit\Framework\Attributes\Group;
 
 /**
  * Zend_Measure_Temperature
@@ -31,8 +32,8 @@ require_once 'Zend/Measure/Temperature.php';
  * @subpackage UnitTests
  * @copyright  Copyright (c) 2005-2015 Zend Technologies USA Inc. (http://www.zend.com)
  * @license    http://framework.zend.com/license/new-bsd     New BSD License
- * @group      Zend_Measure
  */
+#[Group('Zend_Measure')]
 class Zend_Measure_TemperatureTest extends PHPUnit\Framework\TestCase
 {
     protected $_locale;
@@ -80,12 +81,8 @@ class Zend_Measure_TemperatureTest extends PHPUnit\Framework\TestCase
      */
     public function testTemperatureUnknownType()
     {
-        try {
-            $value = new Zend_Measure_Temperature('100','Temperature::UNKNOWN','de');
-            $this->fail('Exception expected because of unknown type');
-        } catch (Zend_Measure_Exception $e) {
-            // success
-        }
+        $this->expectException(Zend_Measure_Exception::class);
+        $value = new Zend_Measure_Temperature('100','Temperature::UNKNOWN','de');
     }
 
 
@@ -95,12 +92,8 @@ class Zend_Measure_TemperatureTest extends PHPUnit\Framework\TestCase
      */
     public function testTemperatureUnknownValue()
     {
-        try {
-            $value = new Zend_Measure_Temperature('novalue',Zend_Measure_Temperature::STANDARD,'de');
-            $this->fail('Exception expected because of empty value');
-        } catch (Zend_Measure_Exception $e) {
-            // success
-        }
+        $this->expectException(Zend_Measure_Exception::class);
+        $value = new Zend_Measure_Temperature('novalue',Zend_Measure_Temperature::STANDARD,'de');
     }
 
 
@@ -110,12 +103,8 @@ class Zend_Measure_TemperatureTest extends PHPUnit\Framework\TestCase
      */
     public function testTemperatureUnknownLocale()
     {
-        try {
-            $value = new Zend_Measure_Temperature('100',Zend_Measure_Temperature::STANDARD,'nolocale');
-            $this->fail('Exception expected because of unknown locale');
-        } catch (Zend_Measure_Exception $e) {
-            // success
-        }
+        $this->expectException(Zend_Measure_Exception::class);
+        $value = new Zend_Measure_Temperature('100',Zend_Measure_Temperature::STANDARD,'nolocale');
     }
 
 
@@ -275,13 +264,9 @@ class Zend_Measure_TemperatureTest extends PHPUnit\Framework\TestCase
      */
     public function testTemperatureSetUnknownType()
     {
-        try {
-            $value = new Zend_Measure_Temperature('100',Zend_Measure_Temperature::STANDARD,'de');
-            $value->setValue('-200.200,200','Temperature::UNKNOWN','de');
-            $this->fail('Exception expected because of unknown type');
-        } catch (Zend_Measure_Exception $e) {
-            // success
-        }
+        $this->expectException(Zend_Measure_Exception::class);
+        $value = new Zend_Measure_Temperature('100',Zend_Measure_Temperature::STANDARD,'de');
+        $value->setValue('-200.200,200','Temperature::UNKNOWN','de');
     }
 
 
@@ -291,13 +276,9 @@ class Zend_Measure_TemperatureTest extends PHPUnit\Framework\TestCase
      */
     public function testTemperatureSetUnknownValue()
     {
-        try {
-            $value = new Zend_Measure_Temperature('100',Zend_Measure_Temperature::STANDARD,'de');
-            $value->setValue('novalue',Zend_Measure_Temperature::STANDARD,'de');
-            $this->fail('Exception expected because of empty value');
-        } catch (Zend_Measure_Exception $e) {
-            // success
-        }
+        $this->expectException(Zend_Measure_Exception::class);
+        $value = new Zend_Measure_Temperature('100',Zend_Measure_Temperature::STANDARD,'de');
+        $value->setValue('novalue',Zend_Measure_Temperature::STANDARD,'de');
     }
 
 
@@ -307,13 +288,9 @@ class Zend_Measure_TemperatureTest extends PHPUnit\Framework\TestCase
      */
     public function testTemperatureSetUnknownLocale()
     {
-        try {
-            $value = new Zend_Measure_Temperature('100',Zend_Measure_Temperature::STANDARD,'de');
-            $value->setValue('200',Zend_Measure_Temperature::STANDARD,'nolocale');
-            $this->fail('Exception expected because of unknown locale');
-        } catch (Zend_Measure_Exception $e) {
-            // success
-        }
+        $this->expectException(Zend_Measure_Exception::class);
+        $value = new Zend_Measure_Temperature('100',Zend_Measure_Temperature::STANDARD,'de');
+        $value->setValue('200',Zend_Measure_Temperature::STANDARD,'nolocale');
     }
 
 
@@ -371,13 +348,9 @@ class Zend_Measure_TemperatureTest extends PHPUnit\Framework\TestCase
      */
     public function testTemperatureSetTypeFailed()
     {
-        try {
-            $value = new Zend_Measure_Temperature('-100',Zend_Measure_Temperature::STANDARD,'de');
-            $value->setType('Temperature::UNKNOWN');
-            $this->fail('Exception expected because of unknown type');
-        } catch (Zend_Measure_Exception $e) {
-            // success
-        }
+        $this->expectException(Zend_Measure_Exception::class);
+        $value = new Zend_Measure_Temperature('-100',Zend_Measure_Temperature::STANDARD,'de');
+        $value->setType('Temperature::UNKNOWN');
     }
 
 

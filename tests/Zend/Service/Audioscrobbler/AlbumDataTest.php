@@ -19,6 +19,7 @@
  * @license    http://framework.zend.com/license/new-bsd     New BSD License
  * @version    $Id$
  */
+use PHPUnit\Framework\Attributes\Group;
 
 /**
  * @see Zend_Service_Audioscrobbler
@@ -34,9 +35,9 @@ require_once "AudioscrobblerTestCase.php";
  * @subpackage UnitTests
  * @copyright  Copyright (c) 2005-2015 Zend Technologies USA Inc. (http://www.zend.com)
  * @license    http://framework.zend.com/license/new-bsd     New BSD License
- * @group      Zend_Service
- * @group      Zend_Service_Audioscrobbler
  */
+#[Group('Zend_Service')]
+#[Group('Zend_Service_Audioscrobbler')]
 class Zend_Service_Audioscrobbler_AlbumDataTest extends Zend_Service_Audioscrobbler_AudioscrobblerTestCase
 {
     public function testGetAlbumInfo()

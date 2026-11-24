@@ -19,6 +19,7 @@
  * @license    http://framework.zend.com/license/new-bsd     New BSD License
  * @version    $Id$
  */
+use PHPUnit\Framework\Attributes\Group;
 
 /** Zend_Memory */
 require_once 'Zend/Memory.php';
@@ -71,8 +72,8 @@ class Zend_Memory_Manager_Dummy extends Zend_Memory_Manager
  * @subpackage UnitTests
  * @copyright  Copyright (c) 2005-2015 Zend Technologies USA Inc. (http://www.zend.com)
  * @license    http://framework.zend.com/license/new-bsd     New BSD License
- * @group      Zend_Memory
  */
+#[Group('Zend_Memory')]
 class Zend_Memory_Container_MovableTest extends PHPUnit\Framework\TestCase
 {
     /**

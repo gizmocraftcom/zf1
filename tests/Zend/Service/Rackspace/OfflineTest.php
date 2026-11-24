@@ -18,6 +18,7 @@
  * @copyright  Copyright (c) 2005-2015 Zend Technologies USA Inc. (http://www.zend.com)
  * @license    http://framework.zend.com/license/new-bsd     New BSD License
  */
+use PHPUnit\Framework\Attributes\Group;
 
 require_once 'Zend/Service/Rackspace/Files.php';
 
@@ -31,10 +32,10 @@ require_once 'Zend/Service/Rackspace/Files.php';
  * @subpackage UnitTests
  * @copyright  Copyright (c) 2005-2015 Zend Technologies USA Inc. (http://www.zend.com)
  * @license    http://framework.zend.com/license/new-bsd     New BSD License
- * @group      Zend\Service
- * @group      Zend\Service\Rackspace
- * @group      Zend\Service\Rackspace\Files
  */
+#[Group('Zend\Service')]
+#[Group('Zend\Service\Rackspace')]
+#[Group('Zend\Service\Rackspace\Files')]
  class Zend_Service_Rackspace_OfflineTest extends PHPUnit\Framework\TestCase
 {
     /**

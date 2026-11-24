@@ -19,6 +19,7 @@
  * @license    http://framework.zend.com/license/new-bsd     New BSD License
  * @version    $Id: AtomTest.php 19159 2009-11-21 14:23:15Z padraic $
  */
+use PHPUnit\Framework\Attributes\Group;
 
 require_once 'Zend/Feed/Reader.php';
 
@@ -28,9 +29,9 @@ require_once 'Zend/Feed/Reader.php';
  * @subpackage UnitTests
  * @copyright  Copyright (c) 2005-2015 Zend Technologies USA Inc. (http://www.zend.com)
  * @license    http://framework.zend.com/license/new-bsd     New BSD License
- * @group      Zend_Feed
- * @group      Zend_Feed_Reader
  */
+#[Group('Zend_Feed')]
+#[Group('Zend_Feed_Reader')]
 class Zend_Feed_Reader_Entry_AtomStandaloneEntryTest extends PHPUnit\Framework\TestCase
 {
 
@@ -103,8 +104,8 @@ class Zend_Feed_Reader_Entry_AtomStandaloneEntryTest extends PHPUnit\Framework\T
 
     /**
      * Get Id (Unencoded Text)
-     * @group ZFR002
      */
+    #[Group('ZFR002')]
     public function testGetsIdFromAtom10()
     {
         $entry = Zend_Feed_Reader::importString(
@@ -115,8 +116,8 @@ class Zend_Feed_Reader_Entry_AtomStandaloneEntryTest extends PHPUnit\Framework\T
 
     /**
      * Get creation date (Unencoded Text)
-     * @group ZFR002
      */
+    #[Group('ZFR002')]
     public function testGetsDateCreatedFromAtom10()
     {
         $entry = Zend_Feed_Reader::importString(
@@ -129,8 +130,8 @@ class Zend_Feed_Reader_Entry_AtomStandaloneEntryTest extends PHPUnit\Framework\T
 
     /**
      * Get modification date (Unencoded Text)
-     * @group ZFR002
      */
+    #[Group('ZFR002')]
     public function testGetsDateModifiedFromAtom10()
     {
         $entry = Zend_Feed_Reader::importString(
@@ -143,8 +144,8 @@ class Zend_Feed_Reader_Entry_AtomStandaloneEntryTest extends PHPUnit\Framework\T
 
     /**
      * Get Title (Unencoded Text)
-     * @group ZFR002
      */
+    #[Group('ZFR002')]
     public function testGetsTitleFromAtom10()
     {
         $entry = Zend_Feed_Reader::importString(
@@ -155,8 +156,8 @@ class Zend_Feed_Reader_Entry_AtomStandaloneEntryTest extends PHPUnit\Framework\T
 
     /**
      * Get Authors (Unencoded Text)
-     * @group ZFR002
      */
+    #[Group('ZFR002')]
     public function testGetsAuthorsFromAtom10()
     {
         $entry = Zend_Feed_Reader::importString(
@@ -177,8 +178,8 @@ class Zend_Feed_Reader_Entry_AtomStandaloneEntryTest extends PHPUnit\Framework\T
 
     /**
      * Get Author (Unencoded Text)
-     * @group ZFR002
      */
+    #[Group('ZFR002')]
     public function testGetsAuthorFromAtom10()
     {
         $entry = Zend_Feed_Reader::importString(
@@ -189,8 +190,8 @@ class Zend_Feed_Reader_Entry_AtomStandaloneEntryTest extends PHPUnit\Framework\T
 
     /**
      * Get Description (Unencoded Text)
-     * @group ZFR002
      */
+    #[Group('ZFR002')]
     public function testGetsDescriptionFromAtom10()
     {
         $entry = Zend_Feed_Reader::importString(
@@ -201,8 +202,8 @@ class Zend_Feed_Reader_Entry_AtomStandaloneEntryTest extends PHPUnit\Framework\T
 
     /**
      * Get enclosure
-     * @group ZFR002
      */
+    #[Group('ZFR002')]
     public function testGetsEnclosureFromAtom10()
     {
         $entry = Zend_Feed_Reader::importString(
@@ -219,8 +220,8 @@ class Zend_Feed_Reader_Entry_AtomStandaloneEntryTest extends PHPUnit\Framework\T
 
     /**
      * TEXT
-     * @group ZFRATOMCONTENT
      */
+    #[Group('ZFRATOMCONTENT')]
     public function testGetsContentFromAtom10()
     {
         $entry = Zend_Feed_Reader::importString(
@@ -231,8 +232,8 @@ class Zend_Feed_Reader_Entry_AtomStandaloneEntryTest extends PHPUnit\Framework\T
 
     /**
      * HTML Escaped
-     * @group ZFRATOMCONTENT
      */
+    #[Group('ZFRATOMCONTENT')]
     public function testGetsContentFromAtom10Html()
     {
         $entry = Zend_Feed_Reader::importString(
@@ -243,8 +244,8 @@ class Zend_Feed_Reader_Entry_AtomStandaloneEntryTest extends PHPUnit\Framework\T
 
     /**
      * HTML CDATA Escaped
-     * @group ZFRATOMCONTENT
      */
+    #[Group('ZFRATOMCONTENT')]
     public function testGetsContentFromAtom10HtmlCdata()
     {
         $entry = Zend_Feed_Reader::importString(
@@ -255,8 +256,8 @@ class Zend_Feed_Reader_Entry_AtomStandaloneEntryTest extends PHPUnit\Framework\T
 
     /**
      * XHTML
-     * @group ZFRATOMCONTENT
      */
+    #[Group('ZFRATOMCONTENT')]
     public function testGetsContentFromAtom10XhtmlNamespaced()
     {
         $entry = Zend_Feed_Reader::importString(
@@ -267,8 +268,8 @@ class Zend_Feed_Reader_Entry_AtomStandaloneEntryTest extends PHPUnit\Framework\T
 
     /**
      * Get Link (Unencoded Text)
-     * @group ZFR002
      */
+    #[Group('ZFR002')]
     public function testGetsLinkFromAtom10()
     {
         $entry = Zend_Feed_Reader::importString(
@@ -279,8 +280,8 @@ class Zend_Feed_Reader_Entry_AtomStandaloneEntryTest extends PHPUnit\Framework\T
 
     /**
      * Get Comment HTML Link
-     * @group ZFR002
      */
+    #[Group('ZFR002')]
     public function testGetsCommentLinkFromAtom10()
     {
         $entry = Zend_Feed_Reader::importString(
@@ -291,8 +292,8 @@ class Zend_Feed_Reader_Entry_AtomStandaloneEntryTest extends PHPUnit\Framework\T
 
     /**
      * Get category data
-     * @group ZFR002
      */
+    #[Group('ZFR002')]
     public function testGetsCategoriesFromAtom10()
     {
         $entry = Zend_Feed_Reader::importString(

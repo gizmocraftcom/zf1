@@ -19,6 +19,7 @@
  * @license    http://framework.zend.com/license/new-bsd     New BSD License
  * @version    $Id$
  */
+use PHPUnit\Framework\Attributes\Group;
 
 require_once 'Zend/Reflection/File.php';
 
@@ -28,11 +29,11 @@ require_once 'Zend/Reflection/File.php';
  * @subpackage UnitTests
  * @copyright  Copyright (c) 2005-2015 Zend Technologies USA Inc. (http://www.zend.com)
  * @license    http://framework.zend.com/license/new-bsd     New BSD License
- * @group      Zend_Reflection
- * @group      Zend_Reflection_Docblock
- * @group      Zend_Reflection_Docblock_Tag
- * @group      Zend_Reflection_Docblock_Tag_Return
  */
+#[Group('Zend_Reflection')]
+#[Group('Zend_Reflection_Docblock')]
+#[Group('Zend_Reflection_Docblock_Tag')]
+#[Group('Zend_Reflection_Docblock_Tag_Return')]
 class Zend_Reflection_Docblock_Tag_ReturnTest extends PHPUnit\Framework\TestCase
 {
 
@@ -65,9 +66,7 @@ class Zend_Reflection_Docblock_Tag_ReturnTest extends PHPUnit\Framework\TestCase
         $this->assertEquals($paramTag->getDescription(),'Description of return value', 'Final Match Failed');
     }
 
-    /**
-     * @group ZF-8307
-     */
+    #[Group('ZF-8307')]
     public function testReturnClassWithNamespace()
     {
         $classReflection = new Zend_Reflection_Class('Zend_Reflection_Docblock_Param_WithNamespace');
@@ -77,9 +76,7 @@ class Zend_Reflection_Docblock_Tag_ReturnTest extends PHPUnit\Framework\TestCase
         $this->assertEquals('Zend\Reflection\Docblock', $paramTag->getType());
     }
 
-    /**
-     * @group ZF-8373
-     */
+    #[Group('ZF-8373')]
     public function testArrayNotationInParam()
     {
         $targetLine = '@param string[] $foo An array of strings';

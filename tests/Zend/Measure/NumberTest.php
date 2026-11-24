@@ -19,6 +19,8 @@
  * @license    http://framework.zend.com/license/new-bsd     New BSD License
  * @version    $Id$
  */
+use PHPUnit\Framework\Attributes\DataProvider;
+use PHPUnit\Framework\Attributes\Group;
 
 
 /**
@@ -32,8 +34,8 @@ require_once 'Zend/Measure/Number.php';
  * @subpackage UnitTests
  * @copyright  Copyright (c) 2005-2015 Zend Technologies USA Inc. (http://www.zend.com)
  * @license    http://framework.zend.com/license/new-bsd     New BSD License
- * @group      Zend_Measure
  */
+#[Group('Zend_Measure')]
 class Zend_Measure_NumberTest extends PHPUnit\Framework\TestCase
 {
     /**
@@ -255,10 +257,8 @@ class Zend_Measure_NumberTest extends PHPUnit\Framework\TestCase
         $this->assertEquals('10,000 ⑽', $value->convertTo(Zend_Measure_Number::DECIMAL));
     }
 
-    /**
-     * @dataProvider providerConvertingDecimalToRoman
-     * @group GH-536
-     */
+    #[DataProvider('providerConvertingDecimalToRoman')]
+    #[Group('GH-536')]
     public function testConvertingDecimalToRoman($decimal, $roman)
     {
         $number = new Zend_Measure_Number(
@@ -275,10 +275,10 @@ class Zend_Measure_NumberTest extends PHPUnit\Framework\TestCase
 
     /**
      * Data provider for testConvertingDecimalToRoman
-     * @group GH-536
      * @return array
      */
-    public function providerConvertingDecimalToRoman()
+    #[Group('GH-536')]
+    public static function providerConvertingDecimalToRoman()
     {
         return array(
             array(10, 'X'),

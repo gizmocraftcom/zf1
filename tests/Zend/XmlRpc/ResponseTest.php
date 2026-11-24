@@ -19,6 +19,7 @@
  * @license    http://framework.zend.com/license/new-bsd     New BSD License
  * @version $Id$
  */
+use PHPUnit\Framework\Attributes\Group;
 
 require_once 'Zend/XmlRpc/Response.php';
 
@@ -30,8 +31,8 @@ require_once 'Zend/XmlRpc/Response.php';
  * @subpackage UnitTests
  * @copyright  Copyright (c) 2005-2015 Zend Technologies USA Inc. (http://www.zend.com)
  * @license    http://framework.zend.com/license/new-bsd     New BSD License
- * @group      Zend_XmlRpc
  */
+#[Group('Zend_XmlRpc')]
 class Zend_XmlRpc_ResponseTest extends PHPUnit\Framework\TestCase
 {
     /**
@@ -138,22 +139,22 @@ class Zend_XmlRpc_ResponseTest extends PHPUnit\Framework\TestCase
         $this->assertSame(650, $this->_response->getFault()->getCode());
     }
 
-    /**
-     * @group ZF-9039
-     */
+    #[Group('ZF-9039')]
     public function testExceptionIsThrownWhenInvalidXmlIsReturnedByServer()
     {
         set_error_handler(array($this, 'trackError'));
-        $invalidResponse = 'foo';
-        $response = new Zend_XmlRpc_Response();
-        $this->assertFalse($this->_errorOccured);
-        $this->assertFalse($response->loadXml($invalidResponse));
-        $this->assertFalse($this->_errorOccured);
+        try {
+            $invalidResponse = 'foo';
+            $response = new Zend_XmlRpc_Response();
+            $this->assertFalse($this->_errorOccured);
+            $this->assertFalse($response->loadXml($invalidResponse));
+            $this->assertFalse($this->_errorOccured);
+        } finally {
+            restore_error_handler();
+        }
     }
 
-    /**
-     * @group ZF-5404
-     */
+    #[Group('ZF-5404')]
     public function testNilResponseFromXmlRpcServer()
     {
         $rawResponse = <<<EOD
@@ -253,9 +254,7 @@ EOD;
         $this->_errorOccured = true;
     }
 
-    /**
-     * @group ZF-12293
-     */
+    #[Group('ZF-12293')]
     public function testDoesNotAllowExternalEntities()
     {
         $payload = file_get_contents(dirname(__FILE__) . '/_files/ZF12293-response.xml');

@@ -19,6 +19,7 @@
  * @license    http://framework.zend.com/license/new-bsd     New BSD License
  * @version $Id$
  */
+use PHPUnit\Framework\Attributes\Group;
 
 require_once 'Zend/XmlRpc/Request.php';
 require_once 'Zend/XmlRpc/Value/Nil.php';
@@ -33,8 +34,8 @@ require_once 'Zend/XmlRpc/Value/String.php';
  * @subpackage UnitTests
  * @copyright  Copyright (c) 2005-2015 Zend Technologies USA Inc. (http://www.zend.com)
  * @license    http://framework.zend.com/license/new-bsd     New BSD License
- * @group      Zend_XmlRpc
  */
+#[Group('Zend_XmlRpc')]
 class Zend_XmlRpc_RequestTest extends PHPUnit\Framework\TestCase
 {
     /**
@@ -351,11 +352,11 @@ class Zend_XmlRpc_RequestTest extends PHPUnit\Framework\TestCase
     }
 
     /**
-     * @group ZF-12293
 +     *
 +     * Test should remain, but is defunct since DOCTYPE presence should return FALSE
 +     * from loadXml()
      */
+    #[Group('ZF-12293')]
     public function testDoesNotAllowExternalEntities()
     {
         $payload = file_get_contents(dirname(__FILE__) . '/_files/ZF12293-request.xml');

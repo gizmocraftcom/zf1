@@ -19,6 +19,7 @@
  * @license    http://framework.zend.com/license/new-bsd     New BSD License
  * @version    $Id: LayoutTest.php 17667 2009-08-18 21:40:09Z mikaelkael $
  */
+use PHPUnit\Framework\Attributes\Group;
 
 /**
  * @category   Zend
@@ -26,8 +27,8 @@
  * @subpackage UnitTests
  * @copyright  Copyright (c) 2005-2015 Zend Technologies USA Inc. (http://www.zend.com)
  * @license    http://framework.zend.com/license/new-bsd     New BSD License
- * @group      Zend_Application
  */
+#[Group('Zend_Application')]
 class Zend_Application_Resource_DojoTest extends PHPUnit\Framework\TestCase
 {
     protected $loaders;

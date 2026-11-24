@@ -19,6 +19,7 @@
  * @license    http://framework.zend.com/license/new-bsd     New BSD License
  * @version    $Id: ActivemqTest.php 20096 2010-01-06 02:05:09Z bkarwin $
  */
+use PHPUnit\Framework\Attributes\Group;
 
 require_once 'Zend/Queue/Adapter/Activemq.php';
 require_once 'Zend/Queue/Stomp/Client.php';
@@ -30,13 +31,11 @@ require_once 'Zend/Queue/Stomp/Frame.php';
  * @subpackage UnitTests
  * @copyright  Copyright (c) 2005-2015 Zend Technologies USA Inc. (http://www.zend.com)
  * @license    http://framework.zend.com/license/new-bsd     New BSD License
- * @group      Zend_Queue
  */
+#[Group('Zend_Queue')]
 class Zend_Queue_Adapter_ActivemqOfflineTest extends PHPUnit\Framework\TestCase
 {
-    /**
-     * @group ZF-7948
-     */
+    #[Group('ZF-7948')]
     public function testSubscribesOncePerQueue()
     {
         $stompClient = new StompClientMock;

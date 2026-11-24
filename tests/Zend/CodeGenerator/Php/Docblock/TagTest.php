@@ -19,6 +19,7 @@
  * @license    http://framework.zend.com/license/new-bsd     New BSD License
  * @version    $Id $
  */
+use PHPUnit\Framework\Attributes\Group;
 
 /**
  * @see Zend_CodeGenerator_Php_Class
@@ -31,10 +32,9 @@ require_once 'Zend/CodeGenerator/Php/Docblock/Tag.php';
  * @subpackage UnitTests
  * @copyright  Copyright (c) 2005-2015 Zend Technologies USA Inc. (http://www.zend.com)
  * @license    http://framework.zend.com/license/new-bsd     New BSD License
- *
- * @group Zend_CodeGenerator
- * @group Zend_CodeGenerator_Php
  */
+#[Group('Zend_CodeGenerator')]
+#[Group('Zend_CodeGenerator_Php')]
 class Zend_CodeGenerator_Php_Docblock_TagTest extends PHPUnit\Framework\TestCase
 {
 

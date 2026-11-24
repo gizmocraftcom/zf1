@@ -19,6 +19,8 @@
  * @license    http://framework.zend.com/license/new-bsd     New BSD License
  * @version    $Id$
  */
+use PHPUnit\Framework\Attributes\DoesNotPerformAssertions;
+use PHPUnit\Framework\Attributes\Group;
 
 /** Zend_Pdf_Action */
 require_once 'Zend/Pdf/Action.php';
@@ -49,8 +51,8 @@ require_once 'Zend/Pdf/ElementFactory.php';
  * @subpackage UnitTests
  * @copyright  Copyright (c) 2005-2015 Zend Technologies USA Inc. (http://www.zend.com)
  * @license    http://framework.zend.com/license/new-bsd     New BSD License
- * @group      Zend_Pdf
  */
+#[Group('Zend_Pdf')]
 class Zend_Pdf_ActionTest extends PHPUnit\Framework\TestCase
 {
     public function setUp(): void
@@ -436,9 +438,8 @@ class Zend_Pdf_ActionTest extends PHPUnit\Framework\TestCase
                             '<</Type /Action /S /URI /URI (http://another_host/) >>');
     }
 
-    /**
-     * @group ZF-8462
-     */
+    #[Group('ZF-8462')]
+    #[DoesNotPerformAssertions]
     public function testPhpVersionBug()
     {
         try {

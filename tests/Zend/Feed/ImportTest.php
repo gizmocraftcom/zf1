@@ -19,6 +19,8 @@
  * @license    http://framework.zend.com/license/new-bsd     New BSD License
  * @version    $Id$
  */
+use PHPUnit\Framework\Attributes\DoesNotPerformAssertions;
+use PHPUnit\Framework\Attributes\Group;
 
 /**
  * @see Zend_Feed
@@ -36,8 +38,8 @@ require_once 'Zend/Feed/Builder.php';
  * @subpackage UnitTests
  * @copyright  Copyright (c) 2005-2015 Zend Technologies USA Inc. (http://www.zend.com)
  * @license    http://framework.zend.com/license/new-bsd     New BSD License
- * @group      Zend_Feed
  */
+#[Group('Zend_Feed')]
 class Zend_Feed_ImportTest extends PHPUnit\Framework\TestCase
 {
     protected $_client;
@@ -207,8 +209,8 @@ class Zend_Feed_ImportTest extends PHPUnit\Framework\TestCase
 
     /**
      * Test the import of a RSS feed from an array
-     * @group ZF-5833
      */
+    #[Group('ZF-5833')]
     public function testRssImportSetsIsPermaLinkAsFalseIfGuidNotAUri()
     {
         $feed = Zend_Feed::importArray($this->_getFullArray(), 'rss');
@@ -219,6 +221,7 @@ class Zend_Feed_ImportTest extends PHPUnit\Framework\TestCase
     /**
      * Test the import of a RSS feed from an array
      */
+    #[DoesNotPerformAssertions]
     public function testAtomImportFullArray()
     {
         $feed = Zend_Feed::importArray($this->_getFullArray(), 'atom');
@@ -255,6 +258,7 @@ class Zend_Feed_ImportTest extends PHPUnit\Framework\TestCase
     /**
      * Test the import of an Atom feed from a builder
      */
+    #[DoesNotPerformAssertions]
     public function testAtomImportFullBuilder()
     {
         $feed = Zend_Feed::importBuilder(new Zend_Feed_Builder($this->_getFullArray()), 'atom');
@@ -437,9 +441,7 @@ class Zend_Feed_ImportTest extends PHPUnit\Framework\TestCase
         }
     }
 
-    /**
-     * @group ZF-5903
-     */
+    #[Group('ZF-5903')]
     public function testFindFeedsIncludesUriAsArrayKey()
     {
         if (!defined('TESTS_ZEND_FEED_READER_ONLINE_ENABLED')

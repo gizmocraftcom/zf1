@@ -19,6 +19,7 @@
  * @license    http://framework.zend.com/license/new-bsd     New BSD License
  * @version    $Id$
  */
+use PHPUnit\Framework\Attributes\Group;
 
 require_once 'Zend/Tool/Project/Profile.php';
 
@@ -28,11 +29,10 @@ require_once 'Zend/Tool/Project/Profile.php';
  * @subpackage UnitTests
  * @copyright  Copyright (c) 2005-2015 Zend Technologies USA Inc. (http://www.zend.com)
  * @license    http://framework.zend.com/license/new-bsd     New BSD License
- *
- * @group Zend_Tool
- * @group Zend_Tool_Framework
- * @group Zend_Tool_Framework_Action
  */
+#[Group('Zend_Tool')]
+#[Group('Zend_Tool_Framework')]
+#[Group('Zend_Tool_Framework_Action')]
 class Zend_Tool_Project_ProfileTest extends PHPUnit\Framework\TestCase
 {
 

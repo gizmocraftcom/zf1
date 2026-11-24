@@ -19,6 +19,7 @@
  * @license    http://framework.zend.com/license/new-bsd     New BSD License
  * @version    $Id$
  */
+use PHPUnit\Framework\Attributes\Group;
 
 require_once 'Zend/Feed/Writer/Entry.php';
 
@@ -26,11 +27,11 @@ require_once 'Zend/Feed/Writer/Entry.php';
  * @category   Zend
  * @package    Zend_Exception
  * @subpackage UnitTests
- * @group      Zend_Feed
- * @group      Zend_Feed_Writer
  * @copyright  Copyright (c) 2005-2015 Zend Technologies USA Inc. (http://www.zend.com)
  * @license    http://framework.zend.com/license/new-bsd     New BSD License
  */
+#[Group('Zend_Feed')]
+#[Group('Zend_Feed_Writer')]
 class Zend_Feed_Writer_EntryTest extends PHPUnit\Framework\TestCase
 {
     protected $_feedSamplePath = null;
@@ -64,31 +65,22 @@ class Zend_Feed_Writer_EntryTest extends PHPUnit\Framework\TestCase
     public function testAddAuthorThrowsExceptionOnInvalidName()
     {
         $entry = new Zend_Feed_Writer_Entry;
-        try {
-            $entry->addAuthor('');
-            $this->fail();
-        } catch (Zend_Feed_Exception $e) {
-        }
+        $this->expectException(Zend_Feed_Exception::class);
+        $entry->addAuthor('');
     }
 
     public function testAddAuthorThrowsExceptionOnInvalidEmail()
     {
         $entry = new Zend_Feed_Writer_Entry;
-        try {
-            $entry->addAuthor('Joe', '');
-            $this->fail();
-        } catch (Zend_Feed_Exception $e) {
-        }
+        $this->expectException(Zend_Feed_Exception::class);
+        $entry->addAuthor('Joe', '');
     }
 
     public function testAddAuthorThrowsExceptionOnInvalidUri()
     {
         $entry = new Zend_Feed_Writer_Entry;
-        try {
-            $entry->addAuthor('Joe', null, 'notauri');
-            $this->fail();
-        } catch (Zend_Feed_Exception $e) {
-        }
+        $this->expectException(Zend_Feed_Exception::class);
+        $entry->addAuthor('Joe', null, 'notauri');
     }
 
     public function testAddsAuthorNameFromArray()
@@ -115,41 +107,29 @@ class Zend_Feed_Writer_EntryTest extends PHPUnit\Framework\TestCase
     public function testAddAuthorThrowsExceptionOnInvalidNameFromArray()
     {
         $entry = new Zend_Feed_Writer_Entry;
-        try {
-            $entry->addAuthor(array('name'=>''));
-            $this->fail();
-        } catch (Zend_Feed_Exception $e) {
-        }
+        $this->expectException(Zend_Feed_Exception::class);
+        $entry->addAuthor(array('name'=>''));
     }
 
     public function testAddAuthorThrowsExceptionOnInvalidEmailFromArray()
     {
         $entry = new Zend_Feed_Writer_Entry;
-        try {
-            $entry->addAuthor(array('name'=>'Joe','email'=>''));
-            $this->fail();
-        } catch (Zend_Feed_Exception $e) {
-        }
+        $this->expectException(Zend_Feed_Exception::class);
+        $entry->addAuthor(array('name'=>'Joe','email'=>''));
     }
 
     public function testAddAuthorThrowsExceptionOnInvalidUriFromArray()
     {
         $entry = new Zend_Feed_Writer_Entry;
-        try {
-            $entry->addAuthor(array('name'=>'Joe','uri'=>'notauri'));
-            $this->fail();
-        } catch (Zend_Feed_Exception $e) {
-        }
+        $this->expectException(Zend_Feed_Exception::class);
+        $entry->addAuthor(array('name'=>'Joe','uri'=>'notauri'));
     }
 
     public function testAddAuthorThrowsExceptionIfNameOmittedFromArray()
     {
         $entry = new Zend_Feed_Writer_Entry;
-        try {
-            $entry->addAuthor(array('uri'=>'notauri'));
-            $this->fail();
-        } catch (Zend_Feed_Exception $e) {
-        }
+        $this->expectException(Zend_Feed_Exception::class);
+        $entry->addAuthor(array('uri'=>'notauri'));
     }
 
     public function testAddsAuthorsFromArrayOfAuthors()
@@ -219,11 +199,8 @@ class Zend_Feed_Writer_EntryTest extends PHPUnit\Framework\TestCase
     public function testSetCopyrightThrowsExceptionOnInvalidParam()
     {
         $entry = new Zend_Feed_Writer_Entry;
-        try {
-            $entry->setCopyright('');
-            $this->fail();
-        } catch (Zend_Feed_Exception $e) {
-        }
+        $this->expectException(Zend_Feed_Exception::class);
+        $entry->setCopyright('');
     }
 
     public function testSetsContent()
@@ -236,11 +213,8 @@ class Zend_Feed_Writer_EntryTest extends PHPUnit\Framework\TestCase
     public function testSetContentThrowsExceptionOnInvalidParam()
     {
         $entry = new Zend_Feed_Writer_Entry;
-        try {
-            $entry->setContent('');
-            $this->fail();
-        } catch (Zend_Feed_Exception $e) {
-        }
+        $this->expectException(Zend_Feed_Exception::class);
+        $entry->setContent('');
     }
 
     public function testSetDateCreatedDefaultsToCurrentTime()
@@ -259,9 +233,7 @@ class Zend_Feed_Writer_EntryTest extends PHPUnit\Framework\TestCase
         $this->assertTrue($myDate->equals($entry->getDateCreated()));
     }
 
-    /**
-     * @group ZF-12070
-     */
+    #[Group('ZF-12070')]
     public function testSetDateCreatedUsesGivenUnixTimestampWhenItIsLessThanTenDigits()
     {
         $entry = new Zend_Feed_Writer_Entry;
@@ -270,9 +242,7 @@ class Zend_Feed_Writer_EntryTest extends PHPUnit\Framework\TestCase
         $this->assertTrue($myDate->equals($entry->getDateCreated()));
     }
 
-    /**
-     * @group ZF-11610
-     */
+    #[Group('ZF-11610')]
     public function testSetDateCreatedUsesGivenUnixTimestampWhenItIsAVerySmallInteger()
     {
         $entry = new Zend_Feed_Writer_Entry;
@@ -305,9 +275,7 @@ class Zend_Feed_Writer_EntryTest extends PHPUnit\Framework\TestCase
         $this->assertTrue($myDate->equals($entry->getDateModified()));
     }
 
-    /**
-     * @group ZF-12070
-     */
+    #[Group('ZF-12070')]
     public function testSetDateModifiedUsesGivenUnixTimestampWhenItIsLessThanTenDigits()
     {
         $entry = new Zend_Feed_Writer_Entry;
@@ -316,9 +284,7 @@ class Zend_Feed_Writer_EntryTest extends PHPUnit\Framework\TestCase
         $this->assertTrue($myDate->equals($entry->getDateModified()));
     }
 
-    /**
-     * @group ZF-11610
-     */
+    #[Group('ZF-11610')]
     public function testSetDateModifiedUsesGivenUnixTimestampWhenItIsAVerySmallInteger()
     {
         $entry = new Zend_Feed_Writer_Entry;
@@ -338,21 +304,15 @@ class Zend_Feed_Writer_EntryTest extends PHPUnit\Framework\TestCase
     public function testSetDateCreatedThrowsExceptionOnInvalidParameter()
     {
         $entry = new Zend_Feed_Writer_Entry;
-        try {
-            $entry->setDateCreated('abc');
-            $this->fail();
-        } catch (Zend_Feed_Exception $e) {
-        }
+        $this->expectException(Zend_Feed_Exception::class);
+        $entry->setDateCreated('abc');
     }
 
     public function testSetDateModifiedThrowsExceptionOnInvalidParameter()
     {
         $entry = new Zend_Feed_Writer_Entry;
-        try {
-            $entry->setDateModified('abc');
-            $this->fail();
-        } catch (Zend_Feed_Exception $e) {
-        }
+        $this->expectException(Zend_Feed_Exception::class);
+        $entry->setDateModified('abc');
     }
 
     public function testGetDateCreatedReturnsNullIfDateNotSet()
@@ -389,11 +349,8 @@ class Zend_Feed_Writer_EntryTest extends PHPUnit\Framework\TestCase
     public function testSetDescriptionThrowsExceptionOnInvalidParameter()
     {
         $entry = new Zend_Feed_Writer_Entry;
-        try {
-            $entry->setDescription('');
-            $this->fail();
-        } catch (Zend_Feed_Exception $e) {
-        }
+        $this->expectException(Zend_Feed_Exception::class);
+        $entry->setDescription('');
     }
 
     public function testGetDescriptionReturnsNullIfDateNotSet()
@@ -412,11 +369,8 @@ class Zend_Feed_Writer_EntryTest extends PHPUnit\Framework\TestCase
     public function testSetIdThrowsExceptionOnInvalidParameter()
     {
         $entry = new Zend_Feed_Writer_Entry;
-        try {
-            $entry->setId('');
-            $this->fail();
-        } catch (Zend_Feed_Exception $e) {
-        }
+        $this->expectException(Zend_Feed_Exception::class);
+        $entry->setId('');
     }
 
     public function testGetIdReturnsNullIfNotSet()
@@ -435,21 +389,15 @@ class Zend_Feed_Writer_EntryTest extends PHPUnit\Framework\TestCase
     public function testSetLinkThrowsExceptionOnEmptyString()
     {
         $entry = new Zend_Feed_Writer_Entry;
-        try {
-            $entry->setLink('');
-            $this->fail();
-        } catch (Zend_Feed_Exception $e) {
-        }
+        $this->expectException(Zend_Feed_Exception::class);
+        $entry->setLink('');
     }
 
     public function testSetLinkThrowsExceptionOnInvalidUri()
     {
         $entry = new Zend_Feed_Writer_Entry;
-        try {
-            $entry->setLink('http://');
-            $this->fail();
-        } catch (Zend_Feed_Exception $e) {
-        }
+        $this->expectException(Zend_Feed_Exception::class);
+        $entry->setLink('http://');
     }
 
     public function testGetLinkReturnsNullIfNotSet()
@@ -468,21 +416,15 @@ class Zend_Feed_Writer_EntryTest extends PHPUnit\Framework\TestCase
     public function testSetCommentLinkThrowsExceptionOnEmptyString()
     {
         $entry = new Zend_Feed_Writer_Entry;
-        try {
-            $entry->setCommentLink('');
-            $this->fail();
-        } catch (Zend_Feed_Exception $e) {
-        }
+        $this->expectException(Zend_Feed_Exception::class);
+        $entry->setCommentLink('');
     }
 
     public function testSetCommentLinkThrowsExceptionOnInvalidUri()
     {
         $entry = new Zend_Feed_Writer_Entry;
-        try {
-            $entry->setCommentLink('http://');
-            $this->fail();
-        } catch (Zend_Feed_Exception $e) {
-        }
+        $this->expectException(Zend_Feed_Exception::class);
+        $entry->setCommentLink('http://');
     }
 
     public function testGetCommentLinkReturnsNullIfDateNotSet()
@@ -502,31 +444,22 @@ class Zend_Feed_Writer_EntryTest extends PHPUnit\Framework\TestCase
     public function testSetCommentFeedLinkThrowsExceptionOnEmptyString()
     {
         $entry = new Zend_Feed_Writer_Entry;
-        try {
-            $entry->setCommentFeedLink(array('uri'=>'', 'type'=>'rdf'));
-            $this->fail();
-        } catch (Zend_Feed_Exception $e) {
-        }
+        $this->expectException(Zend_Feed_Exception::class);
+        $entry->setCommentFeedLink(array('uri'=>'', 'type'=>'rdf'));
     }
 
     public function testSetCommentFeedLinkThrowsExceptionOnInvalidUri()
     {
         $entry = new Zend_Feed_Writer_Entry;
-        try {
-            $entry->setCommentFeedLink(array('uri'=>'http://', 'type'=>'rdf'));
-            $this->fail();
-        } catch (Zend_Feed_Exception $e) {
-        }
+        $this->expectException(Zend_Feed_Exception::class);
+        $entry->setCommentFeedLink(array('uri'=>'http://', 'type'=>'rdf'));
     }
 
     public function testSetCommentFeedLinkThrowsExceptionOnInvalidType()
     {
         $entry = new Zend_Feed_Writer_Entry;
-        try {
-            $entry->setCommentFeedLink(array('uri'=>'http://www.example.com/id/comments', 'type'=>'foo'));
-            $this->fail();
-        } catch (Zend_Feed_Exception $e) {
-        }
+        $this->expectException(Zend_Feed_Exception::class);
+        $entry->setCommentFeedLink(array('uri'=>'http://www.example.com/id/comments', 'type'=>'foo'));
     }
 
     public function testGetCommentFeedLinkReturnsNullIfNoneSet()
@@ -545,11 +478,8 @@ class Zend_Feed_Writer_EntryTest extends PHPUnit\Framework\TestCase
     public function testSetTitleThrowsExceptionOnInvalidParameter()
     {
         $entry = new Zend_Feed_Writer_Entry;
-        try {
-            $entry->setTitle('');
-            $this->fail();
-        } catch (Zend_Feed_Exception $e) {
-        }
+        $this->expectException(Zend_Feed_Exception::class);
+        $entry->setTitle('');
     }
 
     public function testGetTitleReturnsNullIfDateNotSet()
@@ -565,9 +495,7 @@ class Zend_Feed_Writer_EntryTest extends PHPUnit\Framework\TestCase
         $this->assertEquals(10, $entry->getCommentCount());
     }
 
-    /**
-     * @group ZF-11150
-     */
+    #[Group('ZF-11150')]
     public function testSetCommentCountAcceptsZero()
     {
         $entry = new Zend_Feed_Writer_Entry();
@@ -578,21 +506,15 @@ class Zend_Feed_Writer_EntryTest extends PHPUnit\Framework\TestCase
     public function testSetCommentCountThrowsExceptionOnInvalidEmptyParameter()
     {
         $entry = new Zend_Feed_Writer_Entry;
-        try {
-            $entry->setCommentCount('');
-            $this->fail();
-        } catch (Zend_Feed_Exception $e) {
-        }
+        $this->expectException(Zend_Feed_Exception::class);
+        $entry->setCommentCount('');
     }
 
     public function testSetCommentCountThrowsExceptionOnInvalidNonIntegerParameter()
     {
         $entry = new Zend_Feed_Writer_Entry;
-        try {
-            $entry->setCommentCount('a');
-            $this->fail();
-        } catch (Zend_Feed_Exception $e) {
-        }
+        $this->expectException(Zend_Feed_Exception::class);
+        $entry->setCommentCount('a');
     }
 
     public function testGetCommentCountReturnsNullIfDateNotSet()

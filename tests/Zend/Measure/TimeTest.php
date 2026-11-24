@@ -19,6 +19,8 @@
  * @license    http://framework.zend.com/license/new-bsd     New BSD License
  * @version    $Id$
  */
+use PHPUnit\Framework\Attributes\DoesNotPerformAssertions;
+use PHPUnit\Framework\Attributes\Group;
 
 /**
  * Zend_Measure_Time
@@ -31,8 +33,8 @@ require_once 'Zend/Measure/Time.php';
  * @subpackage UnitTests
  * @copyright  Copyright (c) 2005-2015 Zend Technologies USA Inc. (http://www.zend.com)
  * @license    http://framework.zend.com/license/new-bsd     New BSD License
- * @group      Zend_Measure
  */
+#[Group('Zend_Measure')]
 class Zend_Measure_TimeTest extends PHPUnit\Framework\TestCase
 {
     /**
@@ -55,7 +57,7 @@ class Zend_Measure_TimeTest extends PHPUnit\Framework\TestCase
             $value = new Zend_Measure_Time('100','Time::UNKNOWN','de');
             $this->fail('Exception expected because of unknown type');
         } catch (Exception $e) {
-            return true; // Test OK
+            $this->assertInstanceOf(Exception::class, $e);
         }
     }
 
@@ -69,7 +71,7 @@ class Zend_Measure_TimeTest extends PHPUnit\Framework\TestCase
             $value = new Zend_Measure_Time('novalue',Zend_Measure_Time::STANDARD,'de');
             $this->fail('Exception expected because of empty value');
         } catch (Exception $e) {
-            return true; // Test OK
+            $this->assertInstanceOf(Exception::class, $e);
         }
     }
 
@@ -83,7 +85,7 @@ class Zend_Measure_TimeTest extends PHPUnit\Framework\TestCase
             $value = new Zend_Measure_Time('100',Zend_Measure_Time::STANDARD,'nolocale');
             $this->fail('Exception expected because of unknown locale');
         } catch (Exception $e) {
-            return true; // Test OK
+            $this->assertInstanceOf(Exception::class, $e);
         }
     }
 
@@ -248,7 +250,7 @@ class Zend_Measure_TimeTest extends PHPUnit\Framework\TestCase
             $value->setValue('-200.200,200','Time::UNKNOWN','de');
             $this->fail('Exception expected because of unknown type');
         } catch (Exception $e) {
-            return true; // Test OK
+            $this->assertInstanceOf(Exception::class, $e);
         }
     }
 
@@ -257,6 +259,7 @@ class Zend_Measure_TimeTest extends PHPUnit\Framework\TestCase
      * test for exception unknown value
      * expected exception
      */
+    #[DoesNotPerformAssertions]
     public function testTimeSetUnknownValue()
     {
         try {
@@ -280,7 +283,7 @@ class Zend_Measure_TimeTest extends PHPUnit\Framework\TestCase
             $value->setValue('200',Zend_Measure_Time::STANDARD,'nolocale');
             $this->fail('Exception expected because of unknown locale');
         } catch (Exception $e) {
-            return true; // Test OK
+            $this->assertInstanceOf(Exception::class, $e);
         }
     }
 
@@ -339,13 +342,9 @@ class Zend_Measure_TimeTest extends PHPUnit\Framework\TestCase
      */
     public function testTimeSetTypeFailed()
     {
-        try {
-            $value = new Zend_Measure_Time('-100',Zend_Measure_Time::STANDARD,'de');
-            $value->setType('Time::UNKNOWN');
-            $this->fail('Exception expected because of unknown type');
-        } catch (Zend_Measure_Exception $e) {
-            // success
-        }
+        $this->expectException(Zend_Measure_Exception::class);
+        $value = new Zend_Measure_Time('-100',Zend_Measure_Time::STANDARD,'de');
+        $value->setType('Time::UNKNOWN');
     }
 
 
@@ -382,9 +381,7 @@ class Zend_Measure_TimeTest extends PHPUnit\Framework\TestCase
         $this->assertIsArray($unit, 'Array expected');
     }
 
-    /**
-     * @group ZF-9078
-     */
+    #[Group('ZF-9078')]
     public function testSetTypeOnPhpMathWithStrippedValue()
     {
         $locale = new Zend_Locale('en_US');

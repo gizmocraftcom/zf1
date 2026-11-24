@@ -19,6 +19,8 @@
  * @license    http://framework.zend.com/license/new-bsd     New BSD License
  * @version    $Id$
  */
+use PHPUnit\Framework\Attributes\DoesNotPerformAssertions;
+use PHPUnit\Framework\Attributes\Group;
 
 require_once 'Zend/Tag/Cloud/Decorator/HtmlCloud.php';
 
@@ -28,9 +30,9 @@ require_once 'Zend/Tag/Cloud/Decorator/HtmlCloud.php';
  * @subpackage UnitTests
  * @copyright  Copyright (c) 2005-2015 Zend Technologies USA Inc. (http://www.zend.com)
  * @license    http://framework.zend.com/license/new-bsd     New BSD License
- * @group      Zend_Tag
- * @group      Zend_Tag_Cloud
  */
+#[Group('Zend_Tag')]
+#[Group('Zend_Tag_Cloud')]
 class Zend_Tag_Cloud_Decorator_HtmlCloudTest extends PHPUnit\Framework\TestCase
 {
     public function testDefaultOutput()
@@ -78,6 +80,7 @@ class Zend_Tag_Cloud_Decorator_HtmlCloudTest extends PHPUnit\Framework\TestCase
         $this->assertEquals('<div>foo bar</div>', $decorator->render(array('foo', 'bar')));
     }
 
+    #[DoesNotPerformAssertions]
     public function testSkipOptions()
     {
         $decorator = new Zend_Tag_Cloud_Decorator_HtmlCloud(array('options' => 'foobar'));

@@ -19,6 +19,7 @@
  * @license    http://framework.zend.com/license/new-bsd     New BSD License
  * @version    $Id$
  */
+use PHPUnit\Framework\Attributes\Group;
 
 /**
  * Zend_Pdf_Element_Numeric
@@ -31,8 +32,8 @@ require_once 'Zend/Pdf/Element/Numeric.php';
  * @subpackage UnitTests
  * @copyright  Copyright (c) 2005-2015 Zend Technologies USA Inc. (http://www.zend.com)
  * @license    http://framework.zend.com/license/new-bsd     New BSD License
- * @group      Zend_Pdf
  */
+#[Group('Zend_Pdf')]
 class Zend_Pdf_Element_NumericTest extends PHPUnit\Framework\TestCase
 {
     public function testPDFNumeric()

@@ -19,6 +19,7 @@
  * @license    http://framework.zend.com/license/new-bsd     New BSD License
  * @version    $Id$
  */
+use PHPUnit\Framework\Attributes\Group;
 
 /**
  * @category   Zend
@@ -26,8 +27,8 @@
  * @subpackage UnitTests
  * @copyright  Copyright (c) 2005-2015 Zend Technologies USA Inc. (http://www.zend.com)
  * @license    http://framework.zend.com/license/new-bsd     New BSD License
- * @group      Zend_Application
  */
+#[Group('Zend_Application')]
 class Zend_Application_Resource_DbTest extends PHPUnit\Framework\TestCase
 {
     protected $loaders;
@@ -50,7 +51,7 @@ class Zend_Application_Resource_DbTest extends PHPUnit\Framework\TestCase
 
         $this->application = new Zend_Application('testing');
 
-        $this->bootstrap = new ZfAppBootstrap($this->application);
+        $this->bootstrap = new Zend_Application_Bootstrap_Bootstrap($this->application);
     }
 
     public function tearDown(): void
@@ -126,9 +127,7 @@ class Zend_Application_Resource_DbTest extends PHPUnit\Framework\TestCase
         $this->assertInstanceOf(Zend_Db_Adapter_Pdo_Sqlite::class, $db);
     }
 
-    /**
-     * @group ZF-10033
-     */
+    #[Group('ZF-10033')]
     public function testSetDefaultMetadataCache()
     {
         $cache = Zend_Cache::factory('Core', 'Black Hole', array(
@@ -148,9 +147,7 @@ class Zend_Application_Resource_DbTest extends PHPUnit\Framework\TestCase
         $this->assertTrue(Zend_Db_Table::getDefaultMetadataCache() instanceof Zend_Cache_Core);
     }
 
-    /**
-     * @group ZF-10033
-     */
+    #[Group('ZF-10033')]
     public function testSetDefaultMetadataCacheFromCacheManager()
     {
         $configCache = array(
@@ -182,9 +179,7 @@ class Zend_Application_Resource_DbTest extends PHPUnit\Framework\TestCase
         $this->assertTrue(Zend_Db_Table::getDefaultMetadataCache() instanceof Zend_Cache_Core);
     }
 
-    /**
-     * @group ZF-6620
-     */
+    #[Group('ZF-6620')]
     public function testSetOptionFetchMode()
     {
         $config = array(
@@ -202,9 +197,7 @@ class Zend_Application_Resource_DbTest extends PHPUnit\Framework\TestCase
         $this->assertEquals($db->getFetchMode(), Zend_Db::FETCH_OBJ);
     }
 
-    /**
-     * @group ZF-10543
-     */
+    #[Group('ZF-10543')]
     public function testSetDefaultMetadataCacheThroughBootstrap()
     {
         $options = array(

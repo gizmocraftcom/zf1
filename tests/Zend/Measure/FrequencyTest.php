@@ -19,6 +19,7 @@
  * @license    http://framework.zend.com/license/new-bsd     New BSD License
  * @version    $Id$
  */
+use PHPUnit\Framework\Attributes\Group;
 
 
 /**
@@ -32,8 +33,8 @@ require_once 'Zend/Measure/Frequency.php';
  * @subpackage UnitTests
  * @copyright  Copyright (c) 2005-2015 Zend Technologies USA Inc. (http://www.zend.com)
  * @license    http://framework.zend.com/license/new-bsd     New BSD License
- * @group      Zend_Measure
  */
+#[Group('Zend_Measure')]
 class Zend_Measure_FrequencyTest extends PHPUnit\Framework\TestCase
 {
     /**
@@ -53,12 +54,8 @@ class Zend_Measure_FrequencyTest extends PHPUnit\Framework\TestCase
      */
     public function testFrequencyUnknownType()
     {
-        try {
-            $value = new Zend_Measure_Frequency('100','Frequency::UNKNOWN','de');
-            $this->fail('Exception expected because of unknown type');
-        } catch (Zend_Measure_Exception $e) {
-            // success
-        }
+        $this->expectException(Zend_Measure_Exception::class);
+        $value = new Zend_Measure_Frequency('100','Frequency::UNKNOWN','de');
     }
 
 
@@ -68,12 +65,8 @@ class Zend_Measure_FrequencyTest extends PHPUnit\Framework\TestCase
      */
     public function testFrequencyUnknownValue()
     {
-        try {
-            $value = new Zend_Measure_Frequency('novalue',Zend_Measure_Frequency::STANDARD,'de');
-            $this->fail('Exception expected because of empty value');
-        } catch (Zend_Measure_Exception $e) {
-            // success
-        }
+        $this->expectException(Zend_Measure_Exception::class);
+        $value = new Zend_Measure_Frequency('novalue',Zend_Measure_Frequency::STANDARD,'de');
     }
 
 
@@ -83,12 +76,8 @@ class Zend_Measure_FrequencyTest extends PHPUnit\Framework\TestCase
      */
     public function testFrequencyUnknownLocale()
     {
-        try {
-            $value = new Zend_Measure_Frequency('100',Zend_Measure_Frequency::STANDARD,'nolocale');
-            $this->fail('Exception expected because of unknown locale');
-        } catch (Zend_Measure_Exception $e) {
-            // success
-        }
+        $this->expectException(Zend_Measure_Exception::class);
+        $value = new Zend_Measure_Frequency('100',Zend_Measure_Frequency::STANDARD,'nolocale');
     }
 
 
@@ -248,13 +237,9 @@ class Zend_Measure_FrequencyTest extends PHPUnit\Framework\TestCase
      */
     public function testFrequencySetUnknownType()
     {
-        try {
-            $value = new Zend_Measure_Frequency('100',Zend_Measure_Frequency::STANDARD,'de');
-            $value->setValue('-200.200,200','Frequency::UNKNOWN','de');
-            $this->fail('Exception expected because of unknown type');
-        } catch (Zend_Measure_Exception $e) {
-            // success
-        }
+        $this->expectException(Zend_Measure_Exception::class);
+        $value = new Zend_Measure_Frequency('100',Zend_Measure_Frequency::STANDARD,'de');
+        $value->setValue('-200.200,200','Frequency::UNKNOWN','de');
     }
 
 
@@ -264,13 +249,9 @@ class Zend_Measure_FrequencyTest extends PHPUnit\Framework\TestCase
      */
     public function testFrequencySetUnknownValue()
     {
-        try {
-            $value = new Zend_Measure_Frequency('100',Zend_Measure_Frequency::STANDARD,'de');
-            $value->setValue('novalue',Zend_Measure_Frequency::STANDARD,'de');
-            $this->fail('Exception expected because of empty value');
-        } catch (Zend_Measure_Exception $e) {
-            // success
-        }
+        $this->expectException(Zend_Measure_Exception::class);
+        $value = new Zend_Measure_Frequency('100',Zend_Measure_Frequency::STANDARD,'de');
+        $value->setValue('novalue',Zend_Measure_Frequency::STANDARD,'de');
     }
 
 
@@ -280,13 +261,9 @@ class Zend_Measure_FrequencyTest extends PHPUnit\Framework\TestCase
      */
     public function testFrequencySetUnknownLocale()
     {
-        try {
-            $value = new Zend_Measure_Frequency('100',Zend_Measure_Frequency::STANDARD,'de');
-            $value->setValue('200',Zend_Measure_Frequency::STANDARD,'nolocale');
-            $this->fail('Exception expected because of unknown locale');
-        } catch (Zend_Measure_Exception $e) {
-            // success
-        }
+        $this->expectException(Zend_Measure_Exception::class);
+        $value = new Zend_Measure_Frequency('100',Zend_Measure_Frequency::STANDARD,'de');
+        $value->setValue('200',Zend_Measure_Frequency::STANDARD,'nolocale');
     }
 
 
@@ -344,13 +321,9 @@ class Zend_Measure_FrequencyTest extends PHPUnit\Framework\TestCase
      */
     public function testFrequencySetTypeFailed()
     {
-        try {
-            $value = new Zend_Measure_Frequency('-100',Zend_Measure_Frequency::STANDARD,'de');
-            $value->setType('Frequency::UNKNOWN');
-            $this->fail('Exception expected because of unknown type');
-        } catch (Zend_Measure_Exception $e) {
-            // success
-        }
+        $this->expectException(Zend_Measure_Exception::class);
+        $value = new Zend_Measure_Frequency('-100',Zend_Measure_Frequency::STANDARD,'de');
+        $value->setType('Frequency::UNKNOWN');
     }
 
 

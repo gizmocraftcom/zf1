@@ -19,6 +19,7 @@
  * @license    http://framework.zend.com/license/new-bsd     New BSD License
  * @version    $Id$
  */
+use PHPUnit\Framework\Attributes\Group;
 
 /** Zend_Queue */
 require_once 'Zend/Queue.php';
@@ -38,8 +39,8 @@ require_once dirname(__FILE__) . '/AdapterTest.php';
  * @subpackage UnitTests
  * @copyright  Copyright (c) 2005-2015 Zend Technologies USA Inc. (http://www.zend.com)
  * @license    http://framework.zend.com/license/new-bsd     New BSD License
- * @group      Zend_Queue
  */
+#[Group('Zend_Queue')]
 class Zend_Queue_Adapter_PlatformJobQueueTest extends Zend_Queue_Adapter_AdapterTest
 {
     public function setUp(): void

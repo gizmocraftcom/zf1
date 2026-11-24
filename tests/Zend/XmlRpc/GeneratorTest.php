@@ -19,6 +19,8 @@
  * @license    http://framework.zend.com/license/new-bsd     New BSD License
  * @version $Id: ValueTest.php 18442 2009-09-30 13:17:48Z lars $
  */
+use PHPUnit\Framework\Attributes\DataProviderExternal;
+use PHPUnit\Framework\Attributes\Group;
 
 require_once 'Zend/XmlRpc/TestProvider.php';
 
@@ -30,13 +32,11 @@ require_once 'Zend/XmlRpc/TestProvider.php';
  * @subpackage UnitTests
  * @copyright  Copyright (c) 2005-2015 Zend Technologies USA Inc. (http://www.zend.com)
  * @license    http://framework.zend.com/license/new-bsd     New BSD License
- * @group      Zend_XmlRpc
  */
+#[Group('Zend_XmlRpc')]
 class Zend_XmlRpc_GeneratorTest extends PHPUnit\Framework\TestCase
 {
-    /**
-     * @dataProvider Zend_XmlRpc_TestProvider::provideGenerators
-     */
+    #[DataProviderExternal(Zend_XmlRpc_TestProvider::class, 'provideGenerators')]
     public function testCreatingSingleElement(Zend_XmlRpc_Generator_GeneratorAbstract $generator)
     {
         $generator->openElement('element');
@@ -44,9 +44,7 @@ class Zend_XmlRpc_GeneratorTest extends PHPUnit\Framework\TestCase
         $this->assertXml('<element/>', $generator);
     }
 
-    /**
-     * @dataProvider Zend_XmlRpc_TestProvider::provideGenerators
-     */
+    #[DataProviderExternal(Zend_XmlRpc_TestProvider::class, 'provideGenerators')]
     public function testCreatingSingleElementWithValue(Zend_XmlRpc_Generator_GeneratorAbstract $generator)
     {
         $generator->openElement('element', 'value');
@@ -54,9 +52,7 @@ class Zend_XmlRpc_GeneratorTest extends PHPUnit\Framework\TestCase
         $this->assertXml('<element>value</element>', $generator);
     }
 
-    /**
-     * @dataProvider Zend_XmlRpc_TestProvider::provideGenerators
-     */
+    #[DataProviderExternal(Zend_XmlRpc_TestProvider::class, 'provideGenerators')]
     public function testCreatingComplexXmlDocument(Zend_XmlRpc_Generator_GeneratorAbstract $generator)
     {
         $generator->openElement('root');
@@ -71,9 +67,7 @@ class Zend_XmlRpc_GeneratorTest extends PHPUnit\Framework\TestCase
         );
     }
 
-    /**
-     * @dataProvider Zend_XmlRpc_TestProvider::provideGenerators
-     */
+    #[DataProviderExternal(Zend_XmlRpc_TestProvider::class, 'provideGenerators')]
     public function testFlushingGeneratorFlushesEverything(Zend_XmlRpc_Generator_GeneratorAbstract $generator)
     {
         $generator->openElement('test')->closeElement('test');
@@ -82,9 +76,7 @@ class Zend_XmlRpc_GeneratorTest extends PHPUnit\Framework\TestCase
         $this->assertSame('', (string)$generator);
     }
 
-    /**
-     * @dataProvider Zend_XmlRpc_TestProvider::provideGenerators
-     */
+    #[DataProviderExternal(Zend_XmlRpc_TestProvider::class, 'provideGenerators')]
     public function testSpecialCharsAreEncoded(Zend_XmlRpc_Generator_GeneratorAbstract $generator)
     {
         $generator->openElement('element', '<>&"\'€')->closeElement('element');
@@ -97,18 +89,14 @@ class Zend_XmlRpc_GeneratorTest extends PHPUnit\Framework\TestCase
         }
     }
 
-    /**
-     * @dataProvider Zend_XmlRpc_TestProvider::provideGeneratorsWithAlternateEncodings
-     */
+    #[DataProviderExternal(Zend_XmlRpc_TestProvider::class, 'provideGeneratorsWithAlternateEncodings')]
     public function testDifferentEncodings(Zend_XmlRpc_Generator_GeneratorAbstract $generator)
     {
         $generator->openElement('element', '€')->closeElement('element');
         $this->assertXml('<element>&#8364;</element>', $generator);
     }
 
-    /**
-     * @dataProvider Zend_XmlRpc_TestProvider::provideGenerators
-     */
+    #[DataProviderExternal(Zend_XmlRpc_TestProvider::class, 'provideGenerators')]
     public function testFluentInterfacesProvided(Zend_XmlRpc_Generator_GeneratorAbstract $generator)
     {
         $this->assertSame($generator, $generator->openElement('foo'));

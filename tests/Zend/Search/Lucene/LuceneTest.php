@@ -19,6 +19,7 @@
  * @license    http://framework.zend.com/license/new-bsd     New BSD License
  * @version    $Id$
  */
+use PHPUnit\Framework\Attributes\Group;
 
 /**
  * Zend_Search_Lucene
@@ -31,8 +32,8 @@ require_once 'Zend/Search/Lucene.php';
  * @subpackage UnitTests
  * @copyright  Copyright (c) 2005-2015 Zend Technologies USA Inc. (http://www.zend.com)
  * @license    http://framework.zend.com/license/new-bsd     New BSD License
- * @group      Zend_Search_Lucene
  */
+#[Group('Zend_Search_Lucene')]
 class Zend_Search_Lucene_LuceneTest extends PHPUnit\Framework\TestCase
 {
     private function _clearDirectory($dirName)
@@ -521,9 +522,7 @@ class Zend_Search_Lucene_LuceneTest extends PHPUnit\Framework\TestCase
         $this->_clearDirectory(dirname(__FILE__) . '/_index/_files');
     }
 
-    /**
-     * @group ZF-7518
-     */
+    #[Group('ZF-7518')]
     public function testTermsStreamInterfaceSkipToMatchedTerm()
     {
         $index = Zend_Search_Lucene::create(dirname(__FILE__) . '/_index/_files');
@@ -553,9 +552,7 @@ class Zend_Search_Lucene_LuceneTest extends PHPUnit\Framework\TestCase
         $this->_clearDirectory(dirname(__FILE__) . '/_index/_files');
     }
 
-    /**
-     * @group ZF-9680
-     */
+    #[Group('ZF-9680')]
     public function testIsDeletedWithoutExplicitCommit()
     {
         //$this->_clearDirectory(dirname(__FILE__) . '/_index/_files');

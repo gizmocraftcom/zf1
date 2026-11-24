@@ -19,6 +19,8 @@
  * @license    http://framework.zend.com/license/new-bsd     New BSD License
  * @version    $Id$
  */
+use PHPUnit\Framework\Attributes\DoesNotPerformAssertions;
+use PHPUnit\Framework\Attributes\Group;
 
 require_once 'Zend/Feed/Writer/Renderer/Feed/Rss.php';
 require_once 'Zend/Feed/Reader.php';
@@ -28,11 +30,11 @@ require_once 'Zend/Version.php';
  * @category   Zend
  * @package    Zend_Feed
  * @subpackage UnitTests
- * @group      Zend_Feed
- * @group      Zend_Feed_Writer
  * @copyright  Copyright (c) 2005-2015 Zend Technologies USA Inc. (http://www.zend.com)
  * @license    http://framework.zend.com/license/new-bsd     New BSD License
  */
+#[Group('Zend_Feed')]
+#[Group('Zend_Feed_Writer')]
 class Zend_Feed_Writer_Renderer_Entry_RssTest extends PHPUnit\Framework\TestCase
 {
     protected $_validWriter = null;
@@ -61,6 +63,7 @@ class Zend_Feed_Writer_Renderer_Entry_RssTest extends PHPUnit\Framework\TestCase
         $this->_validEntry = null;
     }
 
+    #[DoesNotPerformAssertions]
     public function testRenderMethodRunsMinimalWriterContainerProperlyBeforeICheckAtomCompliance()
     {
         $renderer = new Zend_Feed_Writer_Renderer_Feed_Rss($this->_validWriter);
@@ -354,9 +357,7 @@ class Zend_Feed_Writer_Renderer_Entry_RssTest extends PHPUnit\Framework\TestCase
         $this->assertEquals($expected, (array) $entry->getCategories());
     }
 
-    /**
-     * @group ZFWCHARDATA01
-     */
+    #[Group('ZFWCHARDATA01')]
     public function testCategoriesCharDataEncoding()
     {
         $this->_validEntry->addCategories(array(
@@ -373,9 +374,7 @@ class Zend_Feed_Writer_Renderer_Entry_RssTest extends PHPUnit\Framework\TestCase
         $this->assertEquals($expected, (array) $entry->getCategories());
     }
 
-    /**
-     * @group GH-461
-     */
+    #[Group('GH-461')]
     public function testCategoryHasCDataSection()
     {
         $this->_validEntry->addCategory(array(

@@ -19,6 +19,7 @@
  * @license    http://framework.zend.com/license/new-bsd     New BSD License
  * @version    $Id$
  */
+use PHPUnit\Framework\Attributes\Group;
 
 /**
  * Zend_Measure_Flow_Mass
@@ -31,8 +32,8 @@ require_once 'Zend/Measure/Flow/Mass.php';
  * @subpackage UnitTests
  * @copyright  Copyright (c) 2005-2015 Zend Technologies USA Inc. (http://www.zend.com)
  * @license    http://framework.zend.com/license/new-bsd     New BSD License
- * @group      Zend_Measure
  */
+#[Group('Zend_Measure')]
 class Zend_Measure_Flow_MassTest extends PHPUnit\Framework\TestCase
 {
     /**
@@ -52,12 +53,8 @@ class Zend_Measure_Flow_MassTest extends PHPUnit\Framework\TestCase
      */
     public function testFlow_MassUnknownType()
     {
-        try {
-            $value = new Zend_Measure_Flow_Mass('100','Flow_Mass::UNKNOWN','de');
-            $this->fail('Exception expected because of unknown type');
-        } catch (Zend_Measure_Exception $e) {
-            // success
-        }
+        $this->expectException(Zend_Measure_Exception::class);
+        $value = new Zend_Measure_Flow_Mass('100','Flow_Mass::UNKNOWN','de');
     }
 
 
@@ -67,12 +64,8 @@ class Zend_Measure_Flow_MassTest extends PHPUnit\Framework\TestCase
      */
     public function testFlow_MassUnknownValue()
     {
-        try {
-            $value = new Zend_Measure_Flow_Mass('novalue',Zend_Measure_Flow_Mass::STANDARD,'de');
-            $this->fail('Exception expected because of empty value');
-        } catch (Zend_Measure_Exception $e) {
-            // success
-        }
+        $this->expectException(Zend_Measure_Exception::class);
+        $value = new Zend_Measure_Flow_Mass('novalue',Zend_Measure_Flow_Mass::STANDARD,'de');
     }
 
 
@@ -82,12 +75,8 @@ class Zend_Measure_Flow_MassTest extends PHPUnit\Framework\TestCase
      */
     public function testFlow_MassUnknownLocale()
     {
-        try {
-            $value = new Zend_Measure_Flow_Mass('100',Zend_Measure_Flow_Mass::STANDARD,'nolocale');
-            $this->fail('Exception expected because of unknown locale');
-        } catch (Zend_Measure_Exception $e) {
-            // success
-        }
+        $this->expectException(Zend_Measure_Exception::class);
+        $value = new Zend_Measure_Flow_Mass('100',Zend_Measure_Flow_Mass::STANDARD,'nolocale');
     }
 
 
@@ -247,13 +236,9 @@ class Zend_Measure_Flow_MassTest extends PHPUnit\Framework\TestCase
      */
     public function testFlow_MassSetUnknownType()
     {
-        try {
-            $value = new Zend_Measure_Flow_Mass('100',Zend_Measure_Flow_Mass::STANDARD,'de');
-            $value->setValue('-200.200,200','Flow_Mass::UNKNOWN','de');
-            $this->fail('Exception expected because of unknown type');
-        } catch (Zend_Measure_Exception $e) {
-            // success
-        }
+        $this->expectException(Zend_Measure_Exception::class);
+        $value = new Zend_Measure_Flow_Mass('100',Zend_Measure_Flow_Mass::STANDARD,'de');
+        $value->setValue('-200.200,200','Flow_Mass::UNKNOWN','de');
     }
 
 
@@ -263,13 +248,9 @@ class Zend_Measure_Flow_MassTest extends PHPUnit\Framework\TestCase
      */
     public function testFlow_MassSetUnknownValue()
     {
-        try {
-            $value = new Zend_Measure_Flow_Mass('100',Zend_Measure_Flow_Mass::STANDARD,'de');
-            $value->setValue('novalue',Zend_Measure_Flow_Mass::STANDARD,'de');
-            $this->fail('Exception expected because of empty value');
-        } catch (Zend_Measure_Exception $e) {
-            // success
-        }
+        $this->expectException(Zend_Measure_Exception::class);
+        $value = new Zend_Measure_Flow_Mass('100',Zend_Measure_Flow_Mass::STANDARD,'de');
+        $value->setValue('novalue',Zend_Measure_Flow_Mass::STANDARD,'de');
     }
 
 
@@ -279,13 +260,9 @@ class Zend_Measure_Flow_MassTest extends PHPUnit\Framework\TestCase
      */
     public function testFlow_MassSetUnknownLocale()
     {
-        try {
-            $value = new Zend_Measure_Flow_Mass('100',Zend_Measure_Flow_Mass::STANDARD,'de');
-            $value->setValue('200',Zend_Measure_Flow_Mass::STANDARD,'nolocale');
-            $this->fail('Exception expected because of unknown locale');
-        } catch (Zend_Measure_Exception $e) {
-            // success
-        }
+        $this->expectException(Zend_Measure_Exception::class);
+        $value = new Zend_Measure_Flow_Mass('100',Zend_Measure_Flow_Mass::STANDARD,'de');
+        $value->setValue('200',Zend_Measure_Flow_Mass::STANDARD,'nolocale');
     }
 
 
@@ -343,13 +320,9 @@ class Zend_Measure_Flow_MassTest extends PHPUnit\Framework\TestCase
      */
     public function testFlow_MassSetTypeFailed()
     {
-        try {
-            $value = new Zend_Measure_Flow_Mass('-100',Zend_Measure_Flow_Mass::STANDARD,'de');
-            $value->setType('Flow_Mass::UNKNOWN');
-            $this->fail('Exception expected because of unknown type');
-        } catch (Zend_Measure_Exception $e) {
-            // success
-        }
+        $this->expectException(Zend_Measure_Exception::class);
+        $value = new Zend_Measure_Flow_Mass('-100',Zend_Measure_Flow_Mass::STANDARD,'de');
+        $value->setType('Flow_Mass::UNKNOWN');
     }
 
 

@@ -19,6 +19,7 @@
  * @license    http://framework.zend.com/license/new-bsd     New BSD License
  * @version    $Id$
  */
+use PHPUnit\Framework\Attributes\Group;
 
 require_once 'Zend/Tool/Framework/Loader/IncludePathLoader.php';
 require_once 'Zend/Tool/Framework/Manifest/Repository.php';
@@ -31,11 +32,10 @@ require_once 'Zend/Tool/Framework/Provider/Repository.php';
  * @subpackage UnitTests
  * @copyright  Copyright (c) 2005-2015 Zend Technologies USA Inc. (http://www.zend.com)
  * @license    http://framework.zend.com/license/new-bsd     New BSD License
- *
- * @group Zend_Tool
- * @group Zend_Tool_Framework
- * @group Zend_Tool_Framework_Loader
  */
+#[Group('Zend_Tool')]
+#[Group('Zend_Tool_Framework')]
+#[Group('Zend_Tool_Framework_Loader')]
 class Zend_Tool_Framework_Loader_IncludePathLoaderTest extends PHPUnit\Framework\TestCase
 {
 

@@ -19,6 +19,8 @@
  * @license    http://framework.zend.com/license/new-bsd     New BSD License
  * @version    $Id$
  */
+use PHPUnit\Framework\Attributes\DoesNotPerformAssertions;
+use PHPUnit\Framework\Attributes\Group;
 
 /** Zend_Memory */
 require_once 'Zend/Memory.php';
@@ -29,8 +31,8 @@ require_once 'Zend/Memory.php';
  * @subpackage UnitTests
  * @copyright  Copyright (c) 2005-2015 Zend Technologies USA Inc. (http://www.zend.com)
  * @license    http://framework.zend.com/license/new-bsd     New BSD License
- * @group      Zend_Memory
  */
+#[Group('Zend_Memory')]
 class Zend_Memory_Container_LockedTest extends PHPUnit\Framework\TestCase
 {
     /**
@@ -90,6 +92,7 @@ class Zend_Memory_Container_LockedTest extends PHPUnit\Framework\TestCase
     /**
      * tests the touch() method
      */
+    #[DoesNotPerformAssertions]
     public function testTouch()
     {
         $memObject = new Zend_Memory_Container_Locked('0123456789');

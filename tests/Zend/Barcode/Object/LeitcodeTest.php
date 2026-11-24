@@ -19,6 +19,7 @@
  * @license    http://framework.zend.com/license/new-bsd     New BSD License
  * @version    $Id$
  */
+use PHPUnit\Framework\Attributes\Group;
 
 require_once dirname(__FILE__) . '/TestCommon.php';
 
@@ -28,10 +29,10 @@ require_once 'Zend/Barcode/Object/Leitcode.php';
  * @category   Zend
  * @package    Zend_Barcode
  * @subpackage UnitTests
- * @group      Zend_Barcode
  * @copyright  Copyright (c) 2005-2015 Zend Technologies USA Inc. (http://www.zend.com)
  * @license    http://framework.zend.com/license/new-bsd     New BSD License
  */
+#[Group('Zend_Barcode')]
 class Zend_Barcode_Object_LeitcodeTest extends Zend_Barcode_Object_TestCommon
 {
 

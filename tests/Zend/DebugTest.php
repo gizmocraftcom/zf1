@@ -19,6 +19,7 @@
  * @license    http://framework.zend.com/license/new-bsd     New BSD License
  * @version    $Id $
  */
+use PHPUnit\Framework\Attributes\Group;
 
 /**
  * Zend_Debug
@@ -31,8 +32,8 @@ require_once 'Zend/Debug.php';
  * @subpackage UnitTests
  * @copyright  Copyright (c) 2005-2015 Zend Technologies USA Inc. (http://www.zend.com)
  * @license    http://framework.zend.com/license/new-bsd     New BSD License
- * @group      Zend_Debug
  */
+#[Group('Zend_Debug')]
 class Zend_DebugTest extends PHPUnit\Framework\TestCase
 {
 
@@ -91,10 +92,8 @@ class Zend_DebugTest extends PHPUnit\Framework\TestCase
         $this->assertMatchesRegularExpression('/^' . $expected . '$/', $result);
     }
 
-    /**
-     * @group ZF-4136
-     * @group ZF-1663
-     */
+    #[Group('ZF-4136')]
+    #[Group('ZF-1663')]
     public function testXdebugEnabledAndNonCliSapiDoesNotEscapeSpecialChars()
     {
         if(!extension_loaded('xdebug')) {

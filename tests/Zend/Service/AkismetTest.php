@@ -19,6 +19,8 @@
  * @license    http://framework.zend.com/license/new-bsd     New BSD License
  * @version    $Id$
  */
+use PHPUnit\Framework\Attributes\DoesNotPerformAssertions;
+use PHPUnit\Framework\Attributes\Group;
 
 /**
  * @see Zend_Service_Akismet
@@ -31,9 +33,9 @@ require_once 'Zend/Service/Akismet.php';
  * @subpackage UnitTests
  * @copyright  Copyright (c) 2005-2015 Zend Technologies USA Inc. (http://www.zend.com)
  * @license    http://framework.zend.com/license/new-bsd     New BSD License
- * @group      Zend_Service
- * @group      Zend_Service_Akismet
  */
+#[Group('Zend_Service')]
+#[Group('Zend_Service_Akismet')]
 class Zend_Service_AkismetTest extends PHPUnit\Framework\TestCase
 {
     protected $akismet;
@@ -135,12 +137,8 @@ class Zend_Service_AkismetTest extends PHPUnit\Framework\TestCase
                   . "\r\n"
                   . "invalid";
         $this->adapter->setResponse($response);
-        try {
-            $this->akismet->isSpam($this->comment);
-            $this->fail('Response of "invalid" should trigger exception');
-        } catch (Exception $e) {
-            // success
-        }
+        $this->expectException(Exception::class);
+        $this->akismet->isSpam($this->comment);
     }
 
     public function testIsSpam()
@@ -185,14 +183,11 @@ class Zend_Service_AkismetTest extends PHPUnit\Framework\TestCase
                   . "\r\n"
                   . "invalid";
         $this->adapter->setResponse($response);
-        try {
-            $this->akismet->submitSpam($this->comment);
-            $this->fail('Response of "invalid" should trigger exception');
-        } catch (Exception $e) {
-            // success
-        }
+        $this->expectException(Exception::class);
+        $this->akismet->submitSpam($this->comment);
     }
 
+    #[DoesNotPerformAssertions]
     public function testSubmitSpam()
     {
         $response = "HTTP/1.0 200 OK\r\n"
@@ -212,6 +207,7 @@ class Zend_Service_AkismetTest extends PHPUnit\Framework\TestCase
         }
     }
 
+    #[DoesNotPerformAssertions]
     public function testSubmitHam()
     {
         $response = "HTTP/1.0 200 OK\r\n"

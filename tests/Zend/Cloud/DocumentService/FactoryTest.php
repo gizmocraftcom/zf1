@@ -18,6 +18,7 @@
  * @copyright  Copyright (c) 2005-2015 Zend Technologies USA Inc. (http://www.zend.com)
  * @license    http://framework.zend.com/license/new-bsd     New BSD License
  */
+use PHPUnit\Framework\Attributes\Group;
 
 /**
  * @see Zend_Cloud_DocumentService_Factory
@@ -32,8 +33,8 @@ require_once 'Zend/Cloud/DocumentService/Factory.php';
  * @subpackage UnitTests
  * @copyright  Copyright (c) 2005-2015 Zend Technologies USA Inc. (http://www.zend.com)
  * @license    http://framework.zend.com/license/new-bsd     New BSD License
- * @group      Zend_Cloud
  */
+#[Group('Zend_Cloud')]
 class Zend_Cloud_DocumentService_FactoryTest extends PHPUnit\Framework\TestCase
 {
     public function testGetDocumentAdapterKey()

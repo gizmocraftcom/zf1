@@ -19,6 +19,7 @@
  * @license    http://framework.zend.com/license/new-bsd     New BSD License
  * @version    $Id$
  */
+use PHPUnit\Framework\Attributes\Group;
 
 /**
  * Zend_Measure_Density
@@ -31,8 +32,8 @@ require_once 'Zend/Measure/Density.php';
  * @subpackage UnitTests
  * @copyright  Copyright (c) 2005-2015 Zend Technologies USA Inc. (http://www.zend.com)
  * @license    http://framework.zend.com/license/new-bsd     New BSD License
- * @group      Zend_Measure
  */
+#[Group('Zend_Measure')]
 class Zend_Measure_DensityTest extends PHPUnit\Framework\TestCase
 {
     /**
@@ -52,12 +53,8 @@ class Zend_Measure_DensityTest extends PHPUnit\Framework\TestCase
      */
     public function testDensityUnknownType()
     {
-        try {
-            $value = new Zend_Measure_Density('100','Density::UNKNOWN','de');
-            $this->fail('Exception expected because of unknown type');
-        } catch (Zend_Measure_Exception $e) {
-            // success
-        }
+        $this->expectException(Zend_Measure_Exception::class);
+        $value = new Zend_Measure_Density('100','Density::UNKNOWN','de');
     }
 
 
@@ -67,12 +64,8 @@ class Zend_Measure_DensityTest extends PHPUnit\Framework\TestCase
      */
     public function testDensityUnknownValue()
     {
-        try {
-            $value = new Zend_Measure_Density('novalue',Zend_Measure_Density::STANDARD,'de');
-            $this->fail('Exception expected because of empty value');
-        } catch (Zend_Measure_Exception $e) {
-            // success
-        }
+        $this->expectException(Zend_Measure_Exception::class);
+        $value = new Zend_Measure_Density('novalue',Zend_Measure_Density::STANDARD,'de');
     }
 
 
@@ -82,12 +75,8 @@ class Zend_Measure_DensityTest extends PHPUnit\Framework\TestCase
      */
     public function testDensityUnknownLocale()
     {
-        try {
-            $value = new Zend_Measure_Density('100',Zend_Measure_Density::STANDARD,'nolocale');
-            $this->fail('Exception expected because of unknown locale');
-        } catch (Zend_Measure_Exception $e) {
-            // success
-        }
+        $this->expectException(Zend_Measure_Exception::class);
+        $value = new Zend_Measure_Density('100',Zend_Measure_Density::STANDARD,'nolocale');
     }
 
 
@@ -247,13 +236,9 @@ class Zend_Measure_DensityTest extends PHPUnit\Framework\TestCase
      */
     public function testDensitySetUnknownType()
     {
-        try {
-            $value = new Zend_Measure_Density('100',Zend_Measure_Density::STANDARD,'de');
-            $value->setValue('-200.200,200','Density::UNKNOWN','de');
-            $this->fail('Exception expected because of unknown type');
-        } catch (Zend_Measure_Exception $e) {
-            // success
-        }
+        $this->expectException(Zend_Measure_Exception::class);
+        $value = new Zend_Measure_Density('100',Zend_Measure_Density::STANDARD,'de');
+        $value->setValue('-200.200,200','Density::UNKNOWN','de');
     }
 
 
@@ -263,13 +248,9 @@ class Zend_Measure_DensityTest extends PHPUnit\Framework\TestCase
      */
     public function testDensitySetUnknownValue()
     {
-        try {
-            $value = new Zend_Measure_Density('100',Zend_Measure_Density::STANDARD,'de');
-            $value->setValue('novalue',Zend_Measure_Density::STANDARD,'de');
-            $this->fail('Exception expected because of empty value');
-        } catch (Zend_Measure_Exception $e) {
-            // success
-        }
+        $this->expectException(Zend_Measure_Exception::class);
+        $value = new Zend_Measure_Density('100',Zend_Measure_Density::STANDARD,'de');
+        $value->setValue('novalue',Zend_Measure_Density::STANDARD,'de');
     }
 
 
@@ -279,13 +260,9 @@ class Zend_Measure_DensityTest extends PHPUnit\Framework\TestCase
      */
     public function testDensitySetUnknownLocale()
     {
-        try {
-            $value = new Zend_Measure_Density('100',Zend_Measure_Density::STANDARD,'de');
-            $value->setValue('200',Zend_Measure_Density::STANDARD,'nolocale');
-            $this->fail('Exception expected because of unknown locale');
-        } catch (Zend_Measure_Exception $e) {
-            // success
-        }
+        $this->expectException(Zend_Measure_Exception::class);
+        $value = new Zend_Measure_Density('100',Zend_Measure_Density::STANDARD,'de');
+        $value->setValue('200',Zend_Measure_Density::STANDARD,'nolocale');
     }
 
 
@@ -343,13 +320,9 @@ class Zend_Measure_DensityTest extends PHPUnit\Framework\TestCase
      */
     public function testDensitySetTypeFailed()
     {
-        try {
-            $value = new Zend_Measure_Density('-100',Zend_Measure_Density::STANDARD,'de');
-            $value->setType('Density::UNKNOWN');
-            $this->fail('Exception expected because of unknown type');
-        } catch (Zend_Measure_Exception $e) {
-            // success
-        }
+        $this->expectException(Zend_Measure_Exception::class);
+        $value = new Zend_Measure_Density('-100',Zend_Measure_Density::STANDARD,'de');
+        $value->setType('Density::UNKNOWN');
     }
 
 

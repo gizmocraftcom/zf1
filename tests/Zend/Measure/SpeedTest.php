@@ -19,6 +19,7 @@
  * @license    http://framework.zend.com/license/new-bsd     New BSD License
  * @version    $Id$
  */
+use PHPUnit\Framework\Attributes\Group;
 
 
 /**
@@ -32,8 +33,8 @@ require_once 'Zend/Measure/Speed.php';
  * @subpackage UnitTests
  * @copyright  Copyright (c) 2005-2015 Zend Technologies USA Inc. (http://www.zend.com)
  * @license    http://framework.zend.com/license/new-bsd     New BSD License
- * @group      Zend_Measure
  */
+#[Group('Zend_Measure')]
 class Zend_Measure_SpeedTest extends PHPUnit\Framework\TestCase
 {
     /**
@@ -53,12 +54,8 @@ class Zend_Measure_SpeedTest extends PHPUnit\Framework\TestCase
      */
     public function testSpeedUnknownType()
     {
-        try {
-            $value = new Zend_Measure_Speed('100','Speed::UNKNOWN','de');
-            $this->fail('Exception expected because of unknown type');
-        } catch (Zend_Measure_Exception $e) {
-            // success
-        }
+        $this->expectException(Zend_Measure_Exception::class);
+        $value = new Zend_Measure_Speed('100','Speed::UNKNOWN','de');
     }
 
 
@@ -68,12 +65,8 @@ class Zend_Measure_SpeedTest extends PHPUnit\Framework\TestCase
      */
     public function testSpeedUnknownValue()
     {
-        try {
-            $value = new Zend_Measure_Speed('novalue',Zend_Measure_Speed::STANDARD,'de');
-            $this->fail('Exception expected because of empty value');
-        } catch (Zend_Measure_Exception $e) {
-            // success
-        }
+        $this->expectException(Zend_Measure_Exception::class);
+        $value = new Zend_Measure_Speed('novalue',Zend_Measure_Speed::STANDARD,'de');
     }
 
 
@@ -83,12 +76,8 @@ class Zend_Measure_SpeedTest extends PHPUnit\Framework\TestCase
      */
     public function testSpeedUnknownLocale()
     {
-        try {
-            $value = new Zend_Measure_Speed('100',Zend_Measure_Speed::STANDARD,'nolocale');
-            $this->fail('Exception expected because of unknown locale');
-        } catch (Zend_Measure_Exception $e) {
-            // success
-        }
+        $this->expectException(Zend_Measure_Exception::class);
+        $value = new Zend_Measure_Speed('100',Zend_Measure_Speed::STANDARD,'nolocale');
     }
 
 
@@ -248,13 +237,9 @@ class Zend_Measure_SpeedTest extends PHPUnit\Framework\TestCase
      */
     public function testSpeedSetUnknownType()
     {
-        try {
-            $value = new Zend_Measure_Speed('100',Zend_Measure_Speed::STANDARD,'de');
-            $value->setValue('-200.200,200','Speed::UNKNOWN','de');
-            $this->fail('Exception expected because of unknown type');
-        } catch (Zend_Measure_Exception $e) {
-            // success
-        }
+        $this->expectException(Zend_Measure_Exception::class);
+        $value = new Zend_Measure_Speed('100',Zend_Measure_Speed::STANDARD,'de');
+        $value->setValue('-200.200,200','Speed::UNKNOWN','de');
     }
 
 
@@ -264,13 +249,9 @@ class Zend_Measure_SpeedTest extends PHPUnit\Framework\TestCase
      */
     public function testSpeedSetUnknownValue()
     {
-        try {
-            $value = new Zend_Measure_Speed('100',Zend_Measure_Speed::STANDARD,'de');
-            $value->setValue('novalue',Zend_Measure_Speed::STANDARD,'de');
-            $this->fail('Exception expected because of empty value');
-        } catch (Zend_Measure_Exception $e) {
-            // success
-        }
+        $this->expectException(Zend_Measure_Exception::class);
+        $value = new Zend_Measure_Speed('100',Zend_Measure_Speed::STANDARD,'de');
+        $value->setValue('novalue',Zend_Measure_Speed::STANDARD,'de');
     }
 
 
@@ -280,13 +261,9 @@ class Zend_Measure_SpeedTest extends PHPUnit\Framework\TestCase
      */
     public function testSpeedSetUnknownLocale()
     {
-        try {
-            $value = new Zend_Measure_Speed('100',Zend_Measure_Speed::STANDARD,'de');
-            $value->setValue('200',Zend_Measure_Speed::STANDARD,'nolocale');
-            $this->fail('Exception expected because of unknown locale');
-        } catch (Zend_Measure_Exception $e) {
-            // success
-        }
+        $this->expectException(Zend_Measure_Exception::class);
+        $value = new Zend_Measure_Speed('100',Zend_Measure_Speed::STANDARD,'de');
+        $value->setValue('200',Zend_Measure_Speed::STANDARD,'nolocale');
     }
 
 
@@ -344,13 +321,9 @@ class Zend_Measure_SpeedTest extends PHPUnit\Framework\TestCase
      */
     public function testSpeedSetTypeFailed()
     {
-        try {
-            $value = new Zend_Measure_Speed('-100',Zend_Measure_Speed::STANDARD,'de');
-            $value->setType('Speed::UNKNOWN');
-            $this->fail('Exception expected because of unknown type');
-        } catch (Zend_Measure_Exception $e) {
-            // success
-        }
+        $this->expectException(Zend_Measure_Exception::class);
+        $value = new Zend_Measure_Speed('-100',Zend_Measure_Speed::STANDARD,'de');
+        $value->setType('Speed::UNKNOWN');
     }
 
 

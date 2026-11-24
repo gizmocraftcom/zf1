@@ -19,6 +19,7 @@
  * @license    http://framework.zend.com/license/new-bsd     New BSD License
  * @version    $Id$
  */
+use PHPUnit\Framework\Attributes\Group;
 
 /**
  * @see Zend_Feed
@@ -31,8 +32,8 @@ require_once 'Zend/Feed.php';
  * @subpackage UnitTests
  * @copyright  Copyright (c) 2005-2015 Zend Technologies USA Inc. (http://www.zend.com)
  * @license    http://framework.zend.com/license/new-bsd     New BSD License
- * @group      Zend_Feed
  */
+#[Group('Zend_Feed')]
 class Zend_Feed_ArrayAccessTest extends PHPUnit\Framework\TestCase
 {
     protected $_feed;
@@ -88,9 +89,7 @@ class Zend_Feed_ArrayAccessTest extends PHPUnit\Framework\TestCase
         $this->assertEquals('', $nsfeed['version'], 'Version should be equal to the empty string');
     }
 
-    /**
-     * @group ZF-5354
-     */
+    #[Group('ZF-5354')]
     public function testGetsLinkWithEmptyOrMissingRelAsAlternateRel()
     {
         $feed = Zend_Feed::importFile(dirname(__FILE__) . '/_files/AtomHOnline.xml');

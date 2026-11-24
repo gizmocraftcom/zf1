@@ -19,6 +19,7 @@
  * @license    http://framework.zend.com/license/new-bsd     New BSD License
  * @version    $Id $
  */
+use PHPUnit\Framework\Attributes\Group;
 
 require_once 'Zend/CodeGenerator/Php/Property/DefaultValue.php';
 
@@ -28,10 +29,9 @@ require_once 'Zend/CodeGenerator/Php/Property/DefaultValue.php';
  * @subpackage UnitTests
  * @copyright  Copyright (c) 2005-2015 Zend Technologies USA Inc. (http://www.zend.com)
  * @license    http://framework.zend.com/license/new-bsd     New BSD License
- *
- * @group Zend_CodeGenerator
- * @group Zend_CodeGenerator_Php
  */
+#[Group('Zend_CodeGenerator')]
+#[Group('Zend_CodeGenerator_Php')]
 class Zend_CodeGenerator_Php_Property_DefaultValueTest extends PHPUnit\Framework\TestCase
 {
 

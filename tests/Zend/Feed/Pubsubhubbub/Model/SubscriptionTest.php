@@ -18,22 +18,21 @@
  * @license    http://framework.zend.com/license/new-bsd     New BSD License
  * @version    $Id$
  */
+use PHPUnit\Framework\Attributes\Group;
 
 require_once 'Zend/Feed/Pubsubhubbub/Model/Subscription.php';
 /**
  * @category   Zend
  * @package    Zend_Feed
  * @subpackage UnitTests
- * @group      Zend_Feed
- * @group      Zend_Feed_Pubsubhubbub_Model
  * @copyright  Copyright (c) 2005-2015 Zend Technologies USA Inc. (http://www.zend.com)
  * @license    http://framework.zend.com/license/new-bsd     New BSD License
  */
+#[Group('Zend_Feed')]
+#[Group('Zend_Feed_Pubsubhubbub_Model')]
 class Zend_Feed_Pubsubhubbub_Model_SubscriptionTest extends PHPUnit\Framework\TestCase
 {
-    /**
-     * @group ZF-10069
-     */
+    #[Group('ZF-10069')]
     public function testAllOperations()
     {
         $this->_initDb();

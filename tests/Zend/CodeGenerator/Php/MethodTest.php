@@ -19,6 +19,7 @@
  * @license    http://framework.zend.com/license/new-bsd     New BSD License
  * @version    $Id $
  */
+use PHPUnit\Framework\Attributes\Group;
 
 /** requires */
 require_once 'Zend/Reflection/Method.php';
@@ -34,10 +35,9 @@ require_once '_files/TestSampleSingleClass.php';
  * @subpackage UnitTests
  * @copyright  Copyright (c) 2005-2015 Zend Technologies USA Inc. (http://www.zend.com)
  * @license    http://framework.zend.com/license/new-bsd     New BSD License
- *
- * @group Zend_CodeGenerator
- * @group Zend_CodeGenerator_Php
  */
+#[Group('Zend_CodeGenerator')]
+#[Group('Zend_CodeGenerator_Php')]
 class Zend_CodeGenerator_Php_MethodTest extends PHPUnit\Framework\TestCase
 {
 
@@ -109,9 +109,7 @@ EOS;
         $this->assertEquals($target, (string) $codeGenMethod);
     }
 
-    /**
-     * @group ZF-6444
-     */
+    #[Group('ZF-6444')]
     public function testMethodWithStaticModifierIsEmitted()
     {
         $codeGen = new Zend_CodeGenerator_Php_Method();
@@ -131,9 +129,7 @@ EOS;
         $this->assertEquals($expected, $codeGen->generate());
     }
 
-    /**
-     * @group ZF-6444
-     */
+    #[Group('ZF-6444')]
     public function testMethodWithFinalModifierIsEmitted()
     {
         $codeGen = new Zend_CodeGenerator_Php_Method();
@@ -152,9 +148,7 @@ EOS;
         $this->assertEquals($expected, $codeGen->generate());
     }
 
-    /**
-     * @group ZF-6444
-     */
+    #[Group('ZF-6444')]
     public function testMethodWithFinalModifierIsNotEmittedWhenMethodIsAbstract()
     {
         $codeGen = new Zend_CodeGenerator_Php_Method();
@@ -174,9 +168,7 @@ EOS;
         $this->assertEquals($expected, $codeGen->generate());
     }
 
-    /**
-     * @group ZF-7205
-     */
+    #[Group('ZF-7205')]
     public function testMethodCanHaveDocblock()
     {
         $codeGenProperty = new Zend_CodeGenerator_Php_Method(array(

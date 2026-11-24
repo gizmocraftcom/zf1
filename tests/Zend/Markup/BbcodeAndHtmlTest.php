@@ -19,6 +19,8 @@
  * @license    http://framework.zend.com/license/new-bsd     New BSD License
  * @version    $Id$
  */
+use PHPUnit\Framework\Attributes\DoesNotPerformAssertions;
+use PHPUnit\Framework\Attributes\Group;
 
 require_once 'Zend/Markup.php';
 
@@ -26,10 +28,10 @@ require_once 'Zend/Markup.php';
  * @category   Zend
  * @package    Zend_Markup
  * @subpackage UnitTests
- * @group      Zend_Markup
  * @copyright  Copyright (c) 2005-2015 Zend Technologies USA Inc. (http://www.zend.com)
  * @license    http://framework.zend.com/license/new-bsd     New BSD License
  */
+#[Group('Zend_Markup')]
 class Zend_Markup_BbcodeAndHtmlTest extends PHPUnit\Framework\TestCase
 {
 
@@ -169,6 +171,7 @@ class Zend_Markup_BbcodeAndHtmlTest extends PHPUnit\Framework\TestCase
         $this->assertEquals($expected, $this->_markup->render($value));
     }
 
+    #[DoesNotPerformAssertions]
     public function testAttributeNotEndingValueDoesNotThrowNotice()
     {
         // Notice: Uninitialized string offset: 13
@@ -177,6 +180,7 @@ class Zend_Markup_BbcodeAndHtmlTest extends PHPUnit\Framework\TestCase
         $this->_markup->render('[url=http://framework.zend.com/ title="');
     }
 
+    #[DoesNotPerformAssertions]
     public function testAttributeFollowingValueDoesNotThrowNotice()
     {
         // Notice: Uninitialized string offset: 38
@@ -372,6 +376,7 @@ class Zend_Markup_BbcodeAndHtmlTest extends PHPUnit\Framework\TestCase
                             $m->render('[b class=\'">xss\']foobar[/b]'));
     }
 
+    #[DoesNotPerformAssertions]
     public function testWrongNestedLists()
     {
         $m = $this->_markup;

@@ -19,6 +19,7 @@
  * @license    http://framework.zend.com/license/new-bsd     New BSD License
  * @version    $Id$
  */
+use PHPUnit\Framework\Attributes\Group;
 
 /**
  * @see Zend_Reflection_Method
@@ -36,9 +37,9 @@ require_once dirname(__FILE__) . '/_files/ZF9018TestClass.php';
  * @subpackage UnitTests
  * @copyright  Copyright (c) 2005-2015 Zend Technologies USA Inc. (http://www.zend.com)
  * @license    http://framework.zend.com/license/new-bsd     New BSD License
- * @group      Zend_Reflection
- * @group      Zend_Reflection_Method
  */
+#[Group('Zend_Reflection')]
+#[Group('Zend_Reflection_Method')]
 class Zend_Reflection_MethodTest extends PHPUnit\Framework\TestCase
 {
 
@@ -85,10 +86,8 @@ class Zend_Reflection_MethodTest extends PHPUnit\Framework\TestCase
         $this->assertEquals($body, $reflectionMethod->getBody());
     }
 
-    /**
-     * @group ZF-9018
-     * @group ZF-9501
-     */
+    #[Group('ZF-9018')]
+    #[Group('ZF-9501')]
     public function testGetBodyReturnsCorrectBodyWhenContentEndsWithClosingCurlyBrace()
     {
         $body = '        if ( true ) {
@@ -100,10 +99,8 @@ class Zend_Reflection_MethodTest extends PHPUnit\Framework\TestCase
         $this->assertEquals($body, $reflectionMethod->getBody());
     }
 
-    /**
-     * @group ZF-9018
-     * @group ZF-9501
-     */
+    #[Group('ZF-9018')]
+    #[Group('ZF-9501')]
     public function testGetBodyReturnsCorrectBodyWhenMethodWithInlineOpenBraceHasBodyWhichEndsWithClosingCurlyBrace()
     {
         $body = '        if ( true ) {
@@ -121,9 +118,7 @@ class Zend_Reflection_MethodTest extends PHPUnit\Framework\TestCase
         $this->assertEquals("    {\n\n        return 'mixedValue';\n\n    }\n", $reflectionMethod->getContents(false));
     }
 
-    /**
-     * @group ZF-10870
-     */
+    #[Group('ZF-10870')]
     public function testGetBodyReturnsCorrectBodyWhenMethodSignatureIsMultiline()
     {
         $body = '        // FUNKY SIGNATURE';
@@ -131,9 +126,7 @@ class Zend_Reflection_MethodTest extends PHPUnit\Framework\TestCase
         $this->assertEquals($body, $reflectionMethod->getBody());
     }
 
-    /**
-     * @group ZF-10870
-     */
+    #[Group('ZF-10870')]
     public function testGetBodyReturnsCorrectBodyWhenMethodSignatureAndBodyAreOnSameLine()
     {
         $body = 'return true;';

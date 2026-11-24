@@ -19,6 +19,7 @@
  * @license    http://framework.zend.com/license/new-bsd     New BSD License
  * @version    $Id$
  */
+use PHPUnit\Framework\Attributes\Group;
 
 /**
  * Zend_Measure_Cooking_Volume
@@ -31,8 +32,8 @@ require_once 'Zend/Measure/Cooking/Volume.php';
  * @subpackage UnitTests
  * @copyright  Copyright (c) 2005-2015 Zend Technologies USA Inc. (http://www.zend.com)
  * @license    http://framework.zend.com/license/new-bsd     New BSD License
- * @group      Zend_Measure
  */
+#[Group('Zend_Measure')]
 class Zend_Measure_Cooking_VolumeTest extends PHPUnit\Framework\TestCase
 {
     /**
@@ -52,12 +53,8 @@ class Zend_Measure_Cooking_VolumeTest extends PHPUnit\Framework\TestCase
      */
     public function testCooking_VolumeUnknownType()
     {
-        try {
-            $value = new Zend_Measure_Cooking_Volume('100','Cooking_Volume::UNKNOWN','de');
-            $this->fail('Exception expected because of unknown type');
-        } catch (Zend_Measure_Exception $e) {
-            // success
-        }
+        $this->expectException(Zend_Measure_Exception::class);
+        $value = new Zend_Measure_Cooking_Volume('100','Cooking_Volume::UNKNOWN','de');
     }
 
 
@@ -67,12 +64,8 @@ class Zend_Measure_Cooking_VolumeTest extends PHPUnit\Framework\TestCase
      */
     public function testCooking_VolumeUnknownValue()
     {
-        try {
-            $value = new Zend_Measure_Cooking_Volume('novalue',Zend_Measure_Cooking_Volume::STANDARD,'de');
-            $this->fail('Exception expected because of empty value');
-        } catch (Zend_Measure_Exception $e) {
-            // success
-        }
+        $this->expectException(Zend_Measure_Exception::class);
+        $value = new Zend_Measure_Cooking_Volume('novalue',Zend_Measure_Cooking_Volume::STANDARD,'de');
     }
 
 
@@ -82,12 +75,8 @@ class Zend_Measure_Cooking_VolumeTest extends PHPUnit\Framework\TestCase
      */
     public function testCooking_VolumeUnknownLocale()
     {
-        try {
-            $value = new Zend_Measure_Cooking_Volume('100',Zend_Measure_Cooking_Volume::STANDARD,'nolocale');
-            $this->fail('Exception expected because of unknown locale');
-        } catch (Zend_Measure_Exception $e) {
-            // success
-        }
+        $this->expectException(Zend_Measure_Exception::class);
+        $value = new Zend_Measure_Cooking_Volume('100',Zend_Measure_Cooking_Volume::STANDARD,'nolocale');
     }
 
 
@@ -247,13 +236,9 @@ class Zend_Measure_Cooking_VolumeTest extends PHPUnit\Framework\TestCase
      */
     public function testCooking_VolumeSetUnknownType()
     {
-        try {
-            $value = new Zend_Measure_Cooking_Volume('100',Zend_Measure_Cooking_Volume::STANDARD,'de');
-            $value->setValue('-200.200,200','Cooking_Volume::UNKNOWN','de');
-            $this->fail('Exception expected because of unknown type');
-        } catch (Zend_Measure_Exception $e) {
-            // success
-        }
+        $this->expectException(Zend_Measure_Exception::class);
+        $value = new Zend_Measure_Cooking_Volume('100',Zend_Measure_Cooking_Volume::STANDARD,'de');
+        $value->setValue('-200.200,200','Cooking_Volume::UNKNOWN','de');
     }
 
 
@@ -263,13 +248,9 @@ class Zend_Measure_Cooking_VolumeTest extends PHPUnit\Framework\TestCase
      */
     public function testCooking_VolumeSetUnknownValue()
     {
-        try {
-            $value = new Zend_Measure_Cooking_Volume('100',Zend_Measure_Cooking_Volume::STANDARD,'de');
-            $value->setValue('novalue',Zend_Measure_Cooking_Volume::STANDARD,'de');
-            $this->fail('Exception expected because of empty value');
-        } catch (Exception $e) {
-            // success
-        }
+        $this->expectException(Exception::class);
+        $value = new Zend_Measure_Cooking_Volume('100',Zend_Measure_Cooking_Volume::STANDARD,'de');
+        $value->setValue('novalue',Zend_Measure_Cooking_Volume::STANDARD,'de');
     }
 
 
@@ -279,13 +260,9 @@ class Zend_Measure_Cooking_VolumeTest extends PHPUnit\Framework\TestCase
      */
     public function testCooking_VolumeSetUnknownLocale()
     {
-        try {
-            $value = new Zend_Measure_Cooking_Volume('100',Zend_Measure_Cooking_Volume::STANDARD,'de');
-            $value->setValue('200',Zend_Measure_Cooking_Volume::STANDARD,'nolocale');
-            $this->fail('Exception expected because of unknown locale');
-        } catch (Zend_Measure_Exception $e) {
-            // success
-        }
+        $this->expectException(Zend_Measure_Exception::class);
+        $value = new Zend_Measure_Cooking_Volume('100',Zend_Measure_Cooking_Volume::STANDARD,'de');
+        $value->setValue('200',Zend_Measure_Cooking_Volume::STANDARD,'nolocale');
     }
 
 
@@ -342,13 +319,9 @@ class Zend_Measure_Cooking_VolumeTest extends PHPUnit\Framework\TestCase
      */
     public function testCooking_VolumeSetTypeFailed()
     {
-        try {
-            $value = new Zend_Measure_Cooking_Volume('-100',Zend_Measure_Cooking_Volume::STANDARD,'de');
-            $value->setType('Cooking_Volume::UNKNOWN');
-            $this->fail('Exception expected because of unknown type');
-        } catch (Zend_Measure_Exception $e) {
-            // success
-        }
+        $this->expectException(Zend_Measure_Exception::class);
+        $value = new Zend_Measure_Cooking_Volume('-100',Zend_Measure_Cooking_Volume::STANDARD,'de');
+        $value->setType('Cooking_Volume::UNKNOWN');
     }
 
 

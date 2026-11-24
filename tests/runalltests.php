@@ -57,15 +57,11 @@ if (!empty($missingFiles)) {
     exit(1);
 }
 
-$loader = new \PHPUnit\TextUI\XmlConfiguration\Loader();
-$configuration = $loader->load($phpUnitXml);
-$suites = $configuration->testSuite();
+$configuration = simplexml_load_file($phpUnitXml);
 $testSuites = [];
-
-foreach ($suites as $suite) {
-    $testSuites[] = $suite->name();
+foreach ($configuration->testsuites->testsuite as $suite) {
+    $testSuites[] = (string) $suite['name'];
 }
-
 $result = 0;
 $failedSuites = [];
 
@@ -78,9 +74,9 @@ foreach ($testSuites as $testSuite) {
     echo "\033[33mExecuting Suite {$testSuite}\033[0m" . PHP_EOL;
     echo '-------------------------------------------------------------' . PHP_EOL . PHP_EOL;
     if (isset($argv[1]) && $argv[1] === '--coverage') {
-        system('php -dpcov.directory=../library ' . $PHPUNIT . ' --coverage-php=../build/coverage/' . escapeshellarg($testSuite) . '.cov --testsuite=' . escapeshellarg($testSuite), $c_result);
+        system(escapeshellarg(PHP_BINARY) . ' -d register_argc_argv=1 -dpcov.directory=../library ' . $PHPUNIT . ' --coverage-php=../build/coverage/' . escapeshellarg($testSuite) . '.cov --testsuite=' . escapeshellarg($testSuite), $c_result);
     } else {
-        system($PHPUNIT . ' --testsuite=' . escapeshellarg($testSuite), $c_result);
+        system(escapeshellarg(PHP_BINARY) . ' -d register_argc_argv=1 ' . $PHPUNIT . ' --testsuite=' . escapeshellarg($testSuite), $c_result);
     }
     echo PHP_EOL;
 

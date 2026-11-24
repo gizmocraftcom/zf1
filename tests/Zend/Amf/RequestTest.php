@@ -19,6 +19,7 @@
  * @license    http://framework.zend.com/license/new-bsd     New BSD License
  * @version    $Id$
  */
+use PHPUnit\Framework\Attributes\Group;
 
 require_once 'Zend/Amf/Request.php';
 require_once 'Zend/Amf/Parse/TypeLoader.php';
@@ -33,8 +34,8 @@ require_once 'Contact.php';
  * @subpackage UnitTests
  * @copyright  Copyright (c) 2005-2015 Zend Technologies USA Inc. (http://www.zend.com)
  * @license    http://framework.zend.com/license/new-bsd     New BSD License
- * @group      Zend_Amf
  */
+#[Group('Zend_Amf')]
 class Zend_Amf_RequestTest extends PHPUnit\Framework\TestCase
 {
     /**
@@ -378,8 +379,8 @@ class Zend_Amf_RequestTest extends PHPUnit\Framework\TestCase
 
     /**
      * Test to make sure that a generic object as the first paramater does not crash
-     * @group ZF-5346
      */
+    #[Group('ZF-5346')]
     public function testAmf0ObjectFirstParameter()
     {
         $myRequest = file_get_contents(dirname(__FILE__) .'/Request/mock/objectFirstParamRequest.bin');

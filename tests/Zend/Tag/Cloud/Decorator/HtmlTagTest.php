@@ -19,6 +19,8 @@
  * @license    http://framework.zend.com/license/new-bsd     New BSD License
  * @version    $Id$
  */
+use PHPUnit\Framework\Attributes\DoesNotPerformAssertions;
+use PHPUnit\Framework\Attributes\Group;
 
 require_once 'Zend/Tag/Item.php';
 require_once 'Zend/Tag/ItemList.php';
@@ -30,9 +32,9 @@ require_once 'Zend/Tag/Cloud/Decorator/HtmlTag.php';
  * @subpackage UnitTests
  * @copyright  Copyright (c) 2005-2015 Zend Technologies USA Inc. (http://www.zend.com)
  * @license    http://framework.zend.com/license/new-bsd     New BSD License
- * @group      Zend_Tag
- * @group      Zend_Tag_Cloud
  */
+#[Group('Zend_Tag')]
+#[Group('Zend_Tag_Cloud')]
 class Zend_Tag_Cloud_Decorator_HtmlTagTest extends PHPUnit\Framework\TestCase
 {
     public function testDefaultOutput()
@@ -170,6 +172,7 @@ class Zend_Tag_Cloud_Decorator_HtmlTagTest extends PHPUnit\Framework\TestCase
         $this->assertEquals('pt', $decorator->getFontSizeUnit());
     }
 
+    #[DoesNotPerformAssertions]
     public function testSkipOptions()
     {
         $decorator = new Zend_Tag_Cloud_Decorator_HtmlTag(array('options' => 'foobar'));

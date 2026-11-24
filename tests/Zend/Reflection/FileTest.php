@@ -19,6 +19,7 @@
  * @license    http://framework.zend.com/license/new-bsd     New BSD License
  * @version    $Id$
  */
+use PHPUnit\Framework\Attributes\Group;
 
 /**
  * @see Zend_Reflection_File
@@ -31,9 +32,9 @@ require_once 'Zend/Reflection/File.php';
  * @subpackage UnitTests
  * @copyright  Copyright (c) 2005-2015 Zend Technologies USA Inc. (http://www.zend.com)
  * @license    http://framework.zend.com/license/new-bsd     New BSD License
- * @group      Zend_Reflection
- * @group      Zend_Reflection_File
  */
+#[Group('Zend_Reflection')]
+#[Group('Zend_Reflection_File')]
 class Zend_Reflection_FileTest extends PHPUnit\Framework\TestCase
 {
 
@@ -142,9 +143,7 @@ class Zend_Reflection_FileTest extends PHPUnit\Framework\TestCase
         $this->assertTrue($class->isInterface());
     }
 
-    /**
-     * @group ZF-12155
-     */
+    #[Group('ZF-12155')]
     public function testFileCanReflectFunctionsContainingVariablesEmbeddedInStringWithCurlyBraces()
     {
         $fileToRequire = dirname(__FILE__) . '/_files/FunctionWithEmbeddedVariableInString.php';
@@ -152,7 +151,7 @@ class Zend_Reflection_FileTest extends PHPUnit\Framework\TestCase
         $reflectionFile = new Zend_Reflection_File($fileToRequire);
         $functions = $reflectionFile->getFunctions();
         $this->assertCount(2, $functions);
-        $this->assertContainsOnly('Zend_Reflection_Function', $functions);
+        $this->assertContainsOnlyInstancesOf('Zend_Reflection_Function', $functions);
         $this->assertEquals('firstOne', $functions[0]->getName());
         $this->assertEquals('secondOne', $functions[1]->getName());
     }

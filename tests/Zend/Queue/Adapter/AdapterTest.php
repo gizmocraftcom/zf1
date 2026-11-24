@@ -19,6 +19,7 @@
  * @license    http://framework.zend.com/license/new-bsd     New BSD License
  * @version    $Id$
  */
+use PHPUnit\Framework\Attributes\Group;
 
 /*
  * The adapter test class provides a universal test class for all of the
@@ -46,8 +47,8 @@ require_once 'Iterator2.php';
  * @subpackage UnitTests
  * @copyright  Copyright (c) 2005-2015 Zend Technologies USA Inc. (http://www.zend.com)
  * @license    http://framework.zend.com/license/new-bsd     New BSD License
- * @group      Zend_Queue
  */
+#[Group('Zend_Queue')]
 abstract class Zend_Queue_Adapter_AdapterTest extends PHPUnit\Framework\TestCase
 {
     protected $error;
@@ -139,21 +140,15 @@ abstract class Zend_Queue_Adapter_AdapterTest extends PHPUnit\Framework\TestCase
             $queue = new Zend_Queue($this->getAdapterName(), $config);
         } catch (Zend_Queue_Exception $e) {
             $this->markTestSkipped($e->getMessage());
+        } finally {
             restore_error_handler();
-            return false;
         }
-
         // a PHP level error occurred, mark test as failed with error as reason
         // (misconfigured test? undefined constant?)
         if ($this->error) {
             $err = error_get_last();
             $this->fail($err['message']);
-            restore_error_handler();
-            return false;
         }
-
-        restore_error_handler();
-
         return $queue;
     }
 
@@ -786,11 +781,16 @@ abstract class Zend_Queue_Adapter_AdapterTest extends PHPUnit\Framework\TestCase
     public function testIsSupportException()
     {
         if (!$queue = $this->createQueue(__FUNCTION__)) {
+            $this->expectNotToPerformAssertions();
             return;
         }
         $adapter = $queue->getAdapter();
 
         $functions = $adapter->getCapabilities();
+        if (!in_array(false, $functions, true)) {
+            // every operation is supported, so there is no exception to check
+            $this->expectNotToPerformAssertions();
+        }
 
         if (! $functions['create']) {
             try {

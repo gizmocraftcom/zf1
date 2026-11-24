@@ -19,6 +19,8 @@
  * @license    http://framework.zend.com/license/new-bsd     New BSD License
  * @version    $Id$
  */
+use PHPUnit\Framework\Attributes\DataProvider;
+use PHPUnit\Framework\Attributes\Group;
 
 /**
  * @see Zend_Reflection_Parameter
@@ -31,9 +33,9 @@ require_once 'Zend/Reflection/Parameter.php';
  * @subpackage UnitTests
  * @copyright  Copyright (c) 2005-2015 Zend Technologies USA Inc. (http://www.zend.com)
  * @license    http://framework.zend.com/license/new-bsd     New BSD License
- * @group      Zend_Reflection
- * @group      Zend_Reflection_Parameter
  */
+#[Group('Zend_Reflection')]
+#[Group('Zend_Reflection_Parameter')]
 class Zend_Reflection_ParameterTest extends PHPUnit\Framework\TestCase
 {
 
@@ -67,16 +69,14 @@ class Zend_Reflection_ParameterTest extends PHPUnit\Framework\TestCase
         $this->assertEquals(get_class($parameter->getClass()), 'Zend_Reflection_Class');
     }
 
-    /**
-     * @dataProvider paramTypeTestProvider
-     */
+    #[DataProvider('paramTypeTestProvider')]
     public function testTypeReturn($param, $type)
     {
         $parameter = new Zend_Reflection_Parameter(array('Zend_Reflection_TestSampleClass5', 'doSomething'), $param);
         $this->assertEquals($parameter->getType(), $type);
     }
 
-    public function paramTypeTestProvider()
+    public static function paramTypeTestProvider()
     {
         return array(
             array('one','int'),

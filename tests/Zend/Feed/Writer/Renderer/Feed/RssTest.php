@@ -19,6 +19,8 @@
  * @license    http://framework.zend.com/license/new-bsd     New BSD License
  * @version    $Id$
  */
+use PHPUnit\Framework\Attributes\DoesNotPerformAssertions;
+use PHPUnit\Framework\Attributes\Group;
 
 require_once 'Zend/Feed/Writer/Renderer/Feed/Rss.php';
 require_once 'Zend/Feed/Reader.php';
@@ -28,11 +30,11 @@ require_once 'Zend/Version.php';
  * @category   Zend
  * @package    Zend_Feed
  * @subpackage UnitTests
- * @group      Zend_Feed
- * @group      Zend_Feed_Writer
  * @copyright  Copyright (c) 2005-2015 Zend Technologies USA Inc. (http://www.zend.com)
  * @license    http://framework.zend.com/license/new-bsd     New BSD License
  */
+#[Group('Zend_Feed')]
+#[Group('Zend_Feed_Writer')]
 class Zend_Feed_Writer_Renderer_Feed_RssTest extends PHPUnit\Framework\TestCase
 {
     protected $_validWriter = null;
@@ -59,6 +61,7 @@ class Zend_Feed_Writer_Renderer_Feed_RssTest extends PHPUnit\Framework\TestCase
         $this->assertTrue($feed->getDataContainer() instanceof Zend_Feed_Writer_Feed);
     }
 
+    #[DoesNotPerformAssertions]
     public function testBuildMethodRunsMinimalWriterContainerProperlyBeforeICheckRssCompliance()
     {
         $feed = new Zend_Feed_Writer_Renderer_Feed_Rss($this->_validWriter);
@@ -105,9 +108,7 @@ class Zend_Feed_Writer_Renderer_Feed_RssTest extends PHPUnit\Framework\TestCase
         $rssFeed->render();
     }
 
-    /**
-     * @group ZFWCHARDATA01
-     */
+    #[Group('ZFWCHARDATA01')]
     public function testFeedTitleCharDataEncoding()
     {
         $rssFeed = new Zend_Feed_Writer_Renderer_Feed_Rss($this->_validWriter);
@@ -136,9 +137,7 @@ class Zend_Feed_Writer_Renderer_Feed_RssTest extends PHPUnit\Framework\TestCase
         $rssFeed->render();
     }
 
-    /**
-     * @group ZFWCHARDATA01
-     */
+    #[Group('ZFWCHARDATA01')]
     public function testFeedDescriptionCharDataEncoding()
     {
         $rssFeed = new Zend_Feed_Writer_Renderer_Feed_Rss($this->_validWriter);
@@ -157,6 +156,7 @@ class Zend_Feed_Writer_Renderer_Feed_RssTest extends PHPUnit\Framework\TestCase
         $this->assertEquals(1234567890, $feed->getDateModified()->get(Zend_Date::TIMESTAMP));
     }
 
+    #[DoesNotPerformAssertions]
     public function testFeedUpdatedDateIfMissingThrowsNoException()
     {
         $rssFeed = new Zend_Feed_Writer_Renderer_Feed_Rss($this->_validWriter);
@@ -182,6 +182,7 @@ class Zend_Feed_Writer_Renderer_Feed_RssTest extends PHPUnit\Framework\TestCase
         $this->assertEquals('FooFeedBuilder 1.00 (http://www.example.com)', $feed->getGenerator());
     }
 
+    #[DoesNotPerformAssertions]
     public function testFeedGeneratorIfMissingThrowsNoException()
     {
         $rssFeed = new Zend_Feed_Writer_Renderer_Feed_Rss($this->_validWriter);
@@ -206,6 +207,7 @@ class Zend_Feed_Writer_Renderer_Feed_RssTest extends PHPUnit\Framework\TestCase
         $this->assertEquals('fr', $feed->getLanguage());
     }
 
+    #[DoesNotPerformAssertions]
     public function testFeedLanguageIfMissingThrowsNoException()
     {
         $rssFeed = new Zend_Feed_Writer_Renderer_Feed_Rss($this->_validWriter);
@@ -249,6 +251,7 @@ class Zend_Feed_Writer_Renderer_Feed_RssTest extends PHPUnit\Framework\TestCase
         $this->assertEquals('http://www.example.com/rss', $feed->getFeedLink());
     }
 
+    #[DoesNotPerformAssertions]
     public function testFeedLinkToXmlRssWhereTheFeedWillBeAvailableIfMissingThrowsNoException()
     {
         $rssFeed = new Zend_Feed_Writer_Renderer_Feed_Rss($this->_validWriter);
@@ -265,9 +268,7 @@ class Zend_Feed_Writer_Renderer_Feed_RssTest extends PHPUnit\Framework\TestCase
         $this->assertEquals('http://www.example.com/base', $feed->getBaseUrl());
     }
 
-    /**
-     * @group ZFW003
-     */
+    #[Group('ZFW003')]
     public function testFeedHoldsAnyAuthorAdded()
     {
         $this->_validWriter->addAuthor('Joe', 'joe@example.com', 'http://www.example.com/joe');
@@ -278,9 +279,7 @@ class Zend_Feed_Writer_Renderer_Feed_RssTest extends PHPUnit\Framework\TestCase
         $this->assertEquals(array('name'=>'Joe'), $feed->getAuthor());
     }
 
-    /**
-     * @group ZFWCHARDATA01
-     */
+    #[Group('ZFWCHARDATA01')]
     public function testFeedAuthorCharDataEncoding()
     {
         $this->_validWriter->addAuthor('<>&\'"áéíóú', 'joe@example.com', 'http://www.example.com/joe');
@@ -300,9 +299,7 @@ class Zend_Feed_Writer_Renderer_Feed_RssTest extends PHPUnit\Framework\TestCase
         $this->assertEquals('Copyright © 2009 Paddy', $feed->getCopyright());
     }
 
-    /**
-     * @group ZFWCHARDATA01
-     */
+    #[Group('ZFWCHARDATA01')]
     public function testCopyrightCharDataEncoding()
     {
         $this->_validWriter->setCopyright('<>&\'"áéíóú');
@@ -328,9 +325,7 @@ class Zend_Feed_Writer_Renderer_Feed_RssTest extends PHPUnit\Framework\TestCase
         $this->assertEquals($expected, (array) $feed->getCategories());
     }
 
-    /**
-     * @group ZFWCHARDATA01
-     */
+    #[Group('ZFWCHARDATA01')]
     public function testCategoriesCharDataEncoding()
     {
         $this->_validWriter->addCategories(array(

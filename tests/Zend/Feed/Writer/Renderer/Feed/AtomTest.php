@@ -19,6 +19,8 @@
  * @license    http://framework.zend.com/license/new-bsd     New BSD License
  * @version    $Id$
  */
+use PHPUnit\Framework\Attributes\DoesNotPerformAssertions;
+use PHPUnit\Framework\Attributes\Group;
 
 require_once 'Zend/Feed/Writer/Renderer/Feed/Atom.php';
 require_once 'Zend/Feed/Reader.php';
@@ -28,11 +30,11 @@ require_once 'Zend/Version.php';
  * @category   Zend
  * @package    Zend_Feed
  * @subpackage UnitTests
- * @group      Zend_Feed
- * @group      Zend_Feed_Writer
  * @copyright  Copyright (c) 2005-2015 Zend Technologies USA Inc. (http://www.zend.com)
  * @license    http://framework.zend.com/license/new-bsd     New BSD License
  */
+#[Group('Zend_Feed')]
+#[Group('Zend_Feed_Writer')]
 class Zend_Feed_Writer_Renderer_Feed_AtomTest extends PHPUnit\Framework\TestCase
 {
     protected $_validWriter = null;
@@ -62,6 +64,7 @@ class Zend_Feed_Writer_Renderer_Feed_AtomTest extends PHPUnit\Framework\TestCase
         $this->assertTrue($feed->getDataContainer() instanceof Zend_Feed_Writer_Feed);
     }
 
+    #[DoesNotPerformAssertions]
     public function testBuildMethodRunsMinimalWriterContainerProperlyBeforeICheckAtomCompliance()
     {
         $feed = new Zend_Feed_Writer_Renderer_Feed_Atom($this->_validWriter);
@@ -108,9 +111,7 @@ class Zend_Feed_Writer_Renderer_Feed_AtomTest extends PHPUnit\Framework\TestCase
         $atomFeed->render();
     }
 
-    /**
-     * @group ZFWCHARDATA01
-     */
+    #[Group('ZFWCHARDATA01')]
     public function testFeedTitleCharDataEncoding()
     {
         $atomFeed = new Zend_Feed_Writer_Renderer_Feed_Atom($this->_validWriter);
@@ -128,6 +129,7 @@ class Zend_Feed_Writer_Renderer_Feed_AtomTest extends PHPUnit\Framework\TestCase
         $this->assertEquals('This is a test description.', $feed->getDescription());
     }
 
+    #[DoesNotPerformAssertions]
     public function testFeedSubtitleThrowsNoExceptionIfMissing()
     {
         $atomFeed = new Zend_Feed_Writer_Renderer_Feed_Atom($this->_validWriter);
@@ -135,9 +137,7 @@ class Zend_Feed_Writer_Renderer_Feed_AtomTest extends PHPUnit\Framework\TestCase
         $atomFeed->render();
     }
 
-    /**
-     * @group ZFWCHARDATA01
-     */
+    #[Group('ZFWCHARDATA01')]
     public function testFeedSubtitleCharDataEncoding()
     {
         $atomFeed = new Zend_Feed_Writer_Renderer_Feed_Atom($this->_validWriter);
@@ -175,6 +175,7 @@ class Zend_Feed_Writer_Renderer_Feed_AtomTest extends PHPUnit\Framework\TestCase
         $this->assertEquals('FooFeedBuilder', $feed->getGenerator());
     }
 
+    #[DoesNotPerformAssertions]
     public function testFeedGeneratorIfMissingThrowsNoException()
     {
         $atomFeed = new Zend_Feed_Writer_Renderer_Feed_Atom($this->_validWriter);
@@ -190,9 +191,7 @@ class Zend_Feed_Writer_Renderer_Feed_AtomTest extends PHPUnit\Framework\TestCase
         $this->assertEquals('Zend_Feed_Writer', $feed->getGenerator());
     }
 
-    /**
-     * @group ZFWCHARDATA01
-     */
+    #[Group('ZFWCHARDATA01')]
     public function testFeedGeneratorCharDataEncoding()
     {
         $this->_validWriter->setGenerator('<>&\'"áéíóú', '1.00', 'http://www.example.com');
@@ -211,6 +210,7 @@ class Zend_Feed_Writer_Renderer_Feed_AtomTest extends PHPUnit\Framework\TestCase
         $this->assertEquals('fr', $feed->getLanguage());
     }
 
+    #[DoesNotPerformAssertions]
     public function testFeedLanguageIfMissingThrowsNoException()
     {
         $atomFeed = new Zend_Feed_Writer_Renderer_Feed_Atom($this->_validWriter);
@@ -234,6 +234,7 @@ class Zend_Feed_Writer_Renderer_Feed_AtomTest extends PHPUnit\Framework\TestCase
         $this->assertEquals('http://www.example.com', $feed->getLink());
     }
 
+    #[DoesNotPerformAssertions]
     public function testFeedLinkToHtmlVersionOfFeedIfMissingThrowsNoExceptionIfIdSet()
     {
         $atomFeed = new Zend_Feed_Writer_Renderer_Feed_Atom($this->_validWriter);
@@ -284,9 +285,7 @@ class Zend_Feed_Writer_Renderer_Feed_AtomTest extends PHPUnit\Framework\TestCase
             'uri'=>'http://www.example.com/joe'), $feed->getAuthor());
     }
 
-    /**
-     * @group ZFWCHARDATA01
-     */
+    #[Group('ZFWCHARDATA01')]
     public function testFeedAuthorCharDataEncoding()
     {
         $atomFeed = new Zend_Feed_Writer_Renderer_Feed_Atom($this->_validWriter);

@@ -19,6 +19,7 @@
  * @license    http://framework.zend.com/license/new-bsd     New BSD License
  * @version    $Id$
  */
+use PHPUnit\Framework\Attributes\Group;
 
 require_once 'Zend/Amf/Response.php';
 require_once 'Zend/Amf/Request.php';
@@ -37,8 +38,8 @@ require_once 'ContactVO.php';
  * @subpackage UnitTests
  * @copyright  Copyright (c) 2005-2015 Zend Technologies USA Inc. (http://www.zend.com)
  * @license    http://framework.zend.com/license/new-bsd     New BSD License
- * @group      Zend_Amf
  */
+#[Group('Zend_Amf')]
 class Zend_Amf_ResponseTest extends PHPUnit\Framework\TestCase
 {
     // The message response status code.
@@ -512,8 +513,8 @@ class Zend_Amf_ResponseTest extends PHPUnit\Framework\TestCase
     * The feature test allows for php to just retun it's class name if nothing is specified. Using
     * _explicitType, setClassMap, getASClassName() should only be used now if you want to override the
     * PHP class name for specifying the return type.
-    * @group ZF-6130
-    */
+     */
+    #[Group('ZF-6130')]
     public function testPhpObjectNameSerializedToAmf3ClassName()
     {
         if (version_compare(PHP_VERSION, '8.1.0', '>=')) {
@@ -567,9 +568,8 @@ class Zend_Amf_ResponseTest extends PHPUnit\Framework\TestCase
 
     /**
      * Returning a DOMDocument object to AMF is serialized into a XMString ready for E4X
-     *
-     * @group ZF-4999
      */
+    #[Group('ZF-4999')]
     public function testPhpDomDocumentSerializedToAmf3XmlString()
     {
         if (version_compare(PHP_VERSION, '8.1.0', '>=')) {
@@ -610,9 +610,8 @@ class Zend_Amf_ResponseTest extends PHPUnit\Framework\TestCase
 
     /**
      * Returning a SimpleXML object to AMF is serialized into a XMString ready for E4X
-     *
-     * @group ZF-4999
      */
+    #[Group('ZF-4999')]
     public function testSimpleXmlSerializedToAmf3XmlString()
     {
         if (version_compare(PHP_VERSION, '8.1.0', '>=')) {
@@ -655,8 +654,8 @@ class Zend_Amf_ResponseTest extends PHPUnit\Framework\TestCase
 
     /**
      * Check to make sure that cyclic references work inside of the AMF3 serializer
-     * @group ZF-6205
      */
+    #[Group('ZF-6205')]
     public function testReferenceObjectsToAmf3()
     {
         if (version_compare(PHP_VERSION, '8.1.0', '>=')) {
@@ -737,9 +736,8 @@ class Zend_Amf_ResponseTest extends PHPUnit\Framework\TestCase
 
     /**
      * Check to make sure that we can place arrays in arrays.
-     *
-     * @group ZF-4712
      */
+    #[Group('ZF-4712')]
     public function testPhpNestedArraySerializedToAmf0Array()
     {
         $data = array("items"=>array("a","b"));
@@ -756,9 +754,8 @@ class Zend_Amf_ResponseTest extends PHPUnit\Framework\TestCase
 
     /**
      * Allow sparse arrays to be retruned to Actionscript without loosing the keys.
-     *
-     * @group ZF-5094
      */
+    #[Group('ZF-5094')]
     public function testPhpSparseArraySerializedToAmf0Array()
     {
         $data = array(1 => 'foo', 5 => 'bar');
@@ -776,9 +773,8 @@ class Zend_Amf_ResponseTest extends PHPUnit\Framework\TestCase
     /**
      * Test to convert string keyed arrays are converted to objects so that we do not loose
      * the key refrence in the associative array.
-     *
-     * @group ZF-5094
      */
+    #[Group('ZF-5094')]
     public function testPhpStringKeyArrayToAmf0Object()
     {
         $data = array('foo' => 5, 'bar' => 23);
@@ -917,8 +913,8 @@ class Zend_Amf_ResponseTest extends PHPUnit\Framework\TestCase
      * The feature test allows for php to just retun it's class name if nothing is specified. Using
      * _explicitType, setClassMap, getASClassName() should only be used now if you want to override the
      * PHP class name for specifying the return type.
-     * @group ZF-6130
      */
+    #[Group('ZF-6130')]
     public function testPhpObjectNameSerializedToAmf0ClassName()
     {
         $data = array();

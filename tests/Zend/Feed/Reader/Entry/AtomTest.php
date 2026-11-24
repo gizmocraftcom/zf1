@@ -19,6 +19,7 @@
  * @license    http://framework.zend.com/license/new-bsd     New BSD License
  * @version    $Id$
  */
+use PHPUnit\Framework\Attributes\Group;
 
 require_once 'Zend/Feed/Reader.php';
 
@@ -28,9 +29,9 @@ require_once 'Zend/Feed/Reader.php';
  * @subpackage UnitTests
  * @copyright  Copyright (c) 2005-2015 Zend Technologies USA Inc. (http://www.zend.com)
  * @license    http://framework.zend.com/license/new-bsd     New BSD License
- * @group      Zend_Feed
- * @group      Zend_Feed_Reader
  */
+#[Group('Zend_Feed')]
+#[Group('Zend_Feed_Reader')]
 class Zend_Feed_Reader_Entry_AtomTest extends PHPUnit\Framework\TestCase
 {
     protected $_feedSamplePath = null;
@@ -94,8 +95,8 @@ class Zend_Feed_Reader_Entry_AtomTest extends PHPUnit\Framework\TestCase
 
     /**
      * Get Id (Unencoded Text)
-     * @group ZFR003
      */
+    #[Group('ZFR003')]
     public function testGetsIdFromAtom03()
     {
         $feed = Zend_Feed_Reader::importString(
@@ -315,8 +316,8 @@ class Zend_Feed_Reader_Entry_AtomTest extends PHPUnit\Framework\TestCase
 
     /**
      * TEXT
-     * @group ZFRATOMCONTENT
      */
+    #[Group('ZFRATOMCONTENT')]
     public function testGetsContentFromAtom10()
     {
         $feed = Zend_Feed_Reader::importString(
@@ -328,8 +329,8 @@ class Zend_Feed_Reader_Entry_AtomTest extends PHPUnit\Framework\TestCase
 
     /**
      * HTML Escaped
-     * @group ZFRATOMCONTENT
      */
+    #[Group('ZFRATOMCONTENT')]
     public function testGetsContentFromAtom10Html()
     {
         $feed = Zend_Feed_Reader::importString(
@@ -341,8 +342,8 @@ class Zend_Feed_Reader_Entry_AtomTest extends PHPUnit\Framework\TestCase
 
     /**
      * HTML CDATA Escaped
-     * @group ZFRATOMCONTENT
      */
+    #[Group('ZFRATOMCONTENT')]
     public function testGetsContentFromAtom10HtmlCdata()
     {
         $feed = Zend_Feed_Reader::importString(
@@ -354,8 +355,8 @@ class Zend_Feed_Reader_Entry_AtomTest extends PHPUnit\Framework\TestCase
 
     /**
      * XHTML
-     * @group ZFRATOMCONTENT
      */
+    #[Group('ZFRATOMCONTENT')]
     public function testGetsContentFromAtom10XhtmlNamespaced()
     {
         $feed = Zend_Feed_Reader::importString(
