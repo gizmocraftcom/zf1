@@ -795,12 +795,12 @@ class Zend_Service_WindowsAzure_Storage_Blob extends Zend_Service_WindowsAzure_S
 		}
 
 		// Generate block list request
-		$fileContents = utf8_encode(implode("\n", array(
+		$fileContents = implode("\n", array(
 				'<?xml version="1.0" encoding="utf-8"?>',
 				'<BlockList>',
 				$blocks,
 				'</BlockList>'
-			)));
+			));
 
 			// Create metadata headers
 			$headers = array();

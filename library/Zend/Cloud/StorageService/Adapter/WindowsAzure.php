@@ -204,7 +204,7 @@ class Zend_Cloud_StorageService_Adapter_WindowsAzure
             fclose($fpDestination);
 
             $removeTemporaryFilePath = true;
-        } elseif (file_exists($data)) {
+        } elseif (strpos((string) $data, "\0") === false && file_exists($data)) {
             $temporaryFilePath       = $data;
             $removeTemporaryFilePath = false;
         } else {

@@ -373,7 +373,7 @@ class Zend_Amf_Parse_Amf3_Serializer extends Zend_Amf_Parse_Serializer
             $object = &$objectByVal;
         }
 
-        $hash = spl_object_hash($object);
+        $hash = sprintf('%032x', spl_object_id($object));
         $ref = array_key_exists($hash, $this->_referenceObjects)
              ? $this->_referenceObjects[$hash]
              : false;

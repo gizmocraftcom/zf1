@@ -83,10 +83,10 @@ class Zend_Pdf_Element_Reference extends Zend_Pdf_Element
      */
     public function __construct($objNum, $genNum, Zend_Pdf_Element_Reference_Context $context, Zend_Pdf_ElementFactory $factory)
     {
-        if ( !(is_integer($objNum) && $objNum > 0) ) {
+        if ( !(is_int($objNum) && $objNum > 0) ) {
             throw new Zend_Pdf_Exception('Object number must be positive integer');
         }
-        if ( !(is_integer($genNum) && $genNum >= 0) ) {
+        if ( !(is_int($genNum) && $genNum >= 0) ) {
             throw new Zend_Pdf_Exception('Generation number must be non-negative integer');
         }
 
@@ -187,7 +187,7 @@ class Zend_Pdf_Element_Reference extends Zend_Pdf_Element
 
         // This code duplicates code in Zend_Pdf_Element_Object class,
         // but allows to avoid unnecessary method call in most cases
-        $id = spl_object_hash($this->_ref);
+        $id = sprintf('%032x', spl_object_id($this->_ref));
         if (isset($processed[$id])) {
             // Do nothing if object is already processed
             // return it

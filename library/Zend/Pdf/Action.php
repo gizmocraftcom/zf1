@@ -73,15 +73,15 @@ abstract class Zend_Pdf_Action extends Zend_Pdf_Target implements RecursiveItera
         if ($dictionary->Next !== null) {
             if ($dictionary->Next instanceof Zend_Pdf_Element_Dictionary) {
                 // Check if dictionary object is not already processed
-                if (!$processedActions->contains($dictionary->Next)) {
-                    $processedActions->attach($dictionary->Next);
+                if (!$processedActions->offsetExists($dictionary->Next)) {
+                    $processedActions->offsetSet($dictionary->Next, null);
                     $this->next[] = Zend_Pdf_Action::load($dictionary->Next, $processedActions);
                 }
             } else if ($dictionary->Next instanceof Zend_Pdf_Element_Array) {
                 foreach ($dictionary->Next->items as $chainedActionDictionary) {
                     // Check if dictionary object is not already processed
-                    if (!$processedActions->contains($chainedActionDictionary)) {
-                        $processedActions->attach($chainedActionDictionary);
+                    if (!$processedActions->offsetExists($chainedActionDictionary)) {
+                        $processedActions->offsetSet($chainedActionDictionary, null);
                         $this->next[] = Zend_Pdf_Action::load($chainedActionDictionary, $processedActions);
                     }
                 }
@@ -224,10 +224,10 @@ abstract class Zend_Pdf_Action extends Zend_Pdf_Target implements RecursiveItera
         if ($processedActions === null) {
             $processedActions = new SplObjectStorage();
         }
-        if ($processedActions->contains($this)) {
+        if ($processedActions->offsetExists($this)) {
             throw new Zend_Pdf_Exception('Action chain cyclyc reference is detected.');
         }
-        $processedActions->attach($this);
+        $processedActions->offsetSet($this, null);
 
         $childListUpdated = false;
         if (count($this->_originalNextList) != count($this->next)) {

@@ -1,6 +1,19 @@
 # Changelog
 
 ## Unreleased
+### PHP 8.5 and 8.6
+-   Minimum PHP version is 8.5. CI runs PHP 8.5 and 8.6 (GitHub Actions at the latest majors).
+-   `Zend_Pdf`, `Zend_Amf`: `spl_object_hash()` (deprecated in PHP 8.6) is replaced by `sprintf('%032x', spl_object_id())`, which keeps the 32 character string ids. `is_integer()`, `is_long()`, `is_double()` (deprecated in PHP 8.6) are replaced by `is_int()`/`is_float()` in `Zend_Pdf`, `Zend_Queue`, `Zend_Search_Lucene`, `Zend_XmlRpc_Value`.
+-   `Zend_Pdf`: `SplObjectStorage::attach()`/`contains()` (deprecated in PHP 8.5) are replaced by `offsetSet()`/`offsetExists()`.
+-   `Zend_Feed` (Atom, RSS, `Zend_Feed_Element`): `DOMDocument::$actualEncoding` (deprecated in PHP 8.4) is replaced by `DOMDocument::$encoding`.
+-   `Zend_CodeGenerator_Php_Property_DefaultValue`: the array walk no longer iterates over objects with `RecursiveArrayIterator` (deprecated in PHP 8.5, "object as backing array"). The generated code is unchanged.
+-   `Zend_Service_WindowsAzure_Management_Client`: `utf8_decode()` (deprecated in PHP 8.2) is replaced by the new protected method `_utf8Decode()` (mbstring, falls back to iconv). `Zend_Service_WindowsAzure_Storage_Blob`: `utf8_encode()` on the ASCII block list XML was a no-op and is removed.
+-   `Zend_Cloud_StorageService_Adapter_WindowsAzure::storeItem()` and `Zend_Service_WindowsAzure_Management_Client`: strings with NUL bytes (binary data, PFX certificates) are no longer passed to `file_exists()`, which throws a `ValueError` for them on PHP 8.6.
+-   No public method signature changed. The only added method is the protected `Zend_Service_WindowsAzure_Management_Client::_utf8Decode()`.
+-   `Zend_Version::VERSION` stays at the upstream value `1.12.21dev` on purpose (see the class docblock): code that compares against 1.12.x keeps working. The fork release number is the Composer package version.
+### Dev dependencies and tests
+-   `require-dev`: PHPUnit ^13.4.8, phpunit/phpcov ^13.2.1, PHPStan ^2.3.7, php-cs-fixer ^3.95.32.
+-   The test suite is migrated to PHPUnit 13 (attributes, static data providers, `failOnDeprecation`/`failOnNotice`/`failOnWarning`/`failOnRisky`, no removed APIs). `tests/phpunit.xml` now contains only the suites for code that lives in this repository; the suites for the `gizmocraft/zendframework1-*` packages were dropped because each package runs its own tests. The `Zend_Queue_Adapter_Db` tests run against MySQL in CI.
 
 ### Breaking changes
 

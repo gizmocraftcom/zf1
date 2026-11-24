@@ -911,8 +911,8 @@ class Zend_Service_WindowsAzure_Management_Client
     		throw new Zend_Service_WindowsAzure_Management_Exception('Configuration should be specified.');
     	}
 
-    	if (@file_exists($configuration)) {
-    		$configuration = utf8_decode(file_get_contents($configuration));
+    	if (strpos((string) $configuration, "\0") === false && @file_exists($configuration)) {
+    		$configuration = $this->_utf8Decode(file_get_contents($configuration));
     	}
 
     	// Clean up the configuration
@@ -1351,8 +1351,8 @@ class Zend_Service_WindowsAzure_Management_Client
     		throw new Zend_Service_WindowsAzure_Management_Exception('Configuration name should be specified.');
     	}
 
-        if (@file_exists($configuration)) {
-    		$configuration = utf8_decode(file_get_contents($configuration));
+        if (strpos((string) $configuration, "\0") === false && @file_exists($configuration)) {
+    		$configuration = $this->_utf8Decode(file_get_contents($configuration));
     	}
 
     	$operationUrl = self::OP_HOSTED_SERVICES . '/' . $serviceName . '/deploymentslots/' . $deploymentSlot;
@@ -1381,8 +1381,8 @@ class Zend_Service_WindowsAzure_Management_Client
     		throw new Zend_Service_WindowsAzure_Management_Exception('Configuration name should be specified.');
     	}
 
-        if (@file_exists($configuration)) {
-    		$configuration = utf8_decode(file_get_contents($configuration));
+        if (strpos((string) $configuration, "\0") === false && @file_exists($configuration)) {
+    		$configuration = $this->_utf8Decode(file_get_contents($configuration));
     	}
 
     	$operationUrl = self::OP_HOSTED_SERVICES . '/' . $serviceName . '/deployments/' . $deploymentId;
@@ -1451,8 +1451,8 @@ class Zend_Service_WindowsAzure_Management_Client
     		throw new Zend_Service_WindowsAzure_Management_Exception('Mode should be auto|manual.');
     	}
 
-    	if (@file_exists($configuration)) {
-    		$configuration = utf8_decode(file_get_contents($configuration));
+    	if (strpos((string) $configuration, "\0") === false && @file_exists($configuration)) {
+    		$configuration = $this->_utf8Decode(file_get_contents($configuration));
     	}
 
 		$operationUrl = self::OP_HOSTED_SERVICES . '/' . $serviceName . '/deploymentslots/' . $deploymentSlot;
@@ -1496,8 +1496,8 @@ class Zend_Service_WindowsAzure_Management_Client
     		throw new Zend_Service_WindowsAzure_Management_Exception('Mode should be auto|manual.');
     	}
 
-    	if (@file_exists($configuration)) {
-    		$configuration = utf8_decode(file_get_contents($configuration));
+    	if (strpos((string) $configuration, "\0") === false && @file_exists($configuration)) {
+    		$configuration = $this->_utf8Decode(file_get_contents($configuration));
     	}
 
 		$operationUrl = self::OP_HOSTED_SERVICES . '/' . $serviceName . '/deployments/' . $deploymentId;
@@ -1822,7 +1822,7 @@ class Zend_Service_WindowsAzure_Management_Client
     		throw new Zend_Service_WindowsAzure_Management_Exception('Certificate format should be "pfx".');
     	}
 
-    	if (@file_exists($certificateData)) {
+    	if (strpos((string) $certificateData, "\0") === false && @file_exists($certificateData)) {
     		$certificateData = file_get_contents($certificateData);
     	}
 
@@ -2225,5 +2225,20 @@ class Zend_Service_WindowsAzure_Management_Client
 		$configuration = str_replace("\n", "", $configuration);
 
 		return $configuration;
+    }
+
+    /**
+     * Convert a UTF-8 string to ISO-8859-1 (replacement for the utf8_decode() function,
+     * deprecated since PHP 8.2). Characters that ISO-8859-1 cannot represent become "?".
+     *
+     * @param string|false $string
+     * @return string
+     */
+    protected function _utf8Decode($string) {
+    	$string = (string) $string;
+    	if (function_exists('mb_convert_encoding')) {
+    		return mb_convert_encoding($string, 'ISO-8859-1', 'UTF-8');
+    	}
+    	return (string) iconv('UTF-8', 'ISO-8859-1//TRANSLIT', $string);
     }
 }

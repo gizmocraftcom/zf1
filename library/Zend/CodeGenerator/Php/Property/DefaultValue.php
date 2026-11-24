@@ -241,18 +241,15 @@ class Zend_CodeGenerator_Php_Property_DefaultValue extends Zend_CodeGenerator_Ph
             $type = $this->_getAutoDeterminedType($value);
 
             if ($type == self::TYPE_ARRAY) {
-                $rii = new RecursiveIteratorIterator(
-                    $it = new RecursiveArrayIterator($value),
-                    RecursiveIteratorIterator::SELF_FIRST
-                    );
-                foreach ($rii as $curKey => $curValue) {
+                // Wrap every element in a default value object. Nested arrays are wrapped
+                // when the wrapping object generates its own code (the type is auto detected there).
+                foreach ($value as $curKey => $curValue) {
                     if (!$curValue instanceof Zend_CodeGenerator_Php_Property_DefaultValue) {
                         $curValue = new self(array('value' => $curValue));
-                        $rii->getSubIterator()->offsetSet($curKey, $curValue);
+                        $value[$curKey] = $curValue;
                     }
-                    $curValue->setArrayDepth($rii->getDepth());
+                    $curValue->setArrayDepth($this->_arrayDepth + 1);
                 }
-                $value = $rii->getSubIterator()->getArrayCopy();
             }
 
         }

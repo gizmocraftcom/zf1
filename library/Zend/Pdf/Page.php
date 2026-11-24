@@ -642,7 +642,7 @@ class Zend_Pdf_Page extends Zend_Pdf_Canvas_Abstract
                 throw new Zend_Pdf_Exception('Font dictionary has to be an indirect object or object reference.');
             }
 
-            $fontResourcesUnique[spl_object_hash($fontDictionary->getObject())] = $fontDictionary;
+            $fontResourcesUnique[sprintf('%032x', spl_object_id($fontDictionary->getObject()))] = $fontDictionary;
         }
 
         $fonts = array();
@@ -689,7 +689,7 @@ class Zend_Pdf_Page extends Zend_Pdf_Canvas_Abstract
                 throw new Zend_Pdf_Exception('Font dictionary has to be an indirect object or object reference.');
             }
 
-            $resourceId = spl_object_hash($fontDictionary->getObject());
+            $resourceId = sprintf('%032x', spl_object_id($fontDictionary->getObject()));
             if (isset($fontResourcesUnique[$resourceId])) {
                 continue;
             } else {

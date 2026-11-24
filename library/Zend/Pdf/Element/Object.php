@@ -73,11 +73,11 @@ class Zend_Pdf_Element_Object extends Zend_Pdf_Element
             throw new Zend_Pdf_Exception('Object number must not be an instance of Zend_Pdf_Element_Object.');
         }
 
-        if ( !(is_integer($objNum) && $objNum > 0) ) {
+        if ( !(is_int($objNum) && $objNum > 0) ) {
             throw new Zend_Pdf_Exception('Object number must be positive integer.');
         }
 
-        if ( !(is_integer($genNum) && $genNum >= 0) ) {
+        if ( !(is_int($genNum) && $genNum >= 0) ) {
             throw new Zend_Pdf_Exception('Generation number must be non-negative integer.');
         }
 
@@ -214,7 +214,7 @@ class Zend_Pdf_Element_Object extends Zend_Pdf_Element
      */
     public function makeClone(Zend_Pdf_ElementFactory $factory, array &$processed, $mode)
     {
-        $id = spl_object_hash($this);
+        $id = sprintf('%032x', spl_object_id($this));
         if (isset($processed[$id])) {
             // Do nothing if object is already processed
             // return it

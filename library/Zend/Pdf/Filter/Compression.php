@@ -190,7 +190,7 @@ abstract class Zend_Pdf_Filter_Compression implements Zend_Pdf_Filter_Interface
             $output         = '';
             $offset         = 0;
 
-            if (!is_integer($rows)) {
+            if (!is_int($rows)) {
                 throw new Zend_Pdf_Exception('Wrong data length.');
             }
 

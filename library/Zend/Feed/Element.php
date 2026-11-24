@@ -135,7 +135,7 @@ class Zend_Feed_Element implements ArrayAccess
     {
         // Return a complete document including XML prologue.
         $doc = new DOMDocument($this->_element->ownerDocument->version,
-                               $this->_element->ownerDocument->actualEncoding ?? '');
+                               $this->_element->ownerDocument->encoding ?? '');
         $doc->appendChild($doc->importNode($this->_element, true));
         return $doc->saveXML();
     }

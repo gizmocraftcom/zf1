@@ -26,6 +26,11 @@
  * @package    Zend_Version
  * @copyright  Copyright (c) 2005-2015 Zend Technologies USA Inc. (http://www.zend.com)
  * @license    http://framework.zend.com/license/new-bsd     New BSD License
+ *
+ * The gizmocraft fork keeps the upstream version number on purpose: code that
+ * calls compareVersion() against 1.12.x (and the "zendframework/zendframework1"
+ * replace entry in composer.json) keeps working. The release number of the
+ * fork is the Composer package version of gizmocraft/zendframework1 (see CHANGELOG.md).
  */
 final class Zend_Version
 {
