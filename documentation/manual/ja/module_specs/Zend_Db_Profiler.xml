@@ -428,7 +428,6 @@ $profiles = $profiler->getQueryProfiles(Zend_Db_Profiler::DELETE);
             プロファイリング情報を特別な方法で処理します。
         </para>
 
-        <xi:include href="Zend_Db_Profiler-Firebug.xml" />
 
     </sect2>
 </sect1>

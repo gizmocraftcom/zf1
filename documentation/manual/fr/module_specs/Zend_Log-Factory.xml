@@ -34,7 +34,7 @@ $logger = Zend_Log::factory(array(
         ),
     ),
     array(
-        'writerName'   => 'Firebug',
+        'writerName'   => 'Syslog',
         'filterName'   => 'Priority',
         'filterParams' => array(
             'priority' => Zend_Log::INFO,
@@ -45,7 +45,7 @@ $logger = Zend_Log::factory(array(
 
     <para>
         Le code ci-dessus instancie un objet journal et 2 objets d'écriture dont un vers un
-        fichier local, puis un vers Firebug. Chacun possède un filtre sur la priorité avec
+        fichier local, puis un vers syslog. Chacun possède un filtre sur la priorité avec
         un niveau maximum différent.
     </para>
 
@@ -66,7 +66,7 @@ $logger = Zend_Log::factory(array(
                 <para>
                     Le nom "court" de l'objet d'écriture; le nom sans le préfixe. Voyez
                     "writerNamespace" pour plus de détails, des exemples sont : "Mock",
-                    "Stream", "Firebug".
+                    "Stream".
                 </para>
             </listitem>
         </varlistentry>
@@ -204,13 +204,6 @@ $logger = Zend_Log::factory(array(
             </variablelist>
         </sect3>
 
-        <sect3 id="zend.log.factory.writer-options.firebug">
-            <title>Zend_Log_Writer_Firebug Options</title>
-
-            <para>
-                Aucune option n'est acceptée par cet objet d'écriture.
-            </para>
-        </sect3>
 
         <sect3 id="zend.log.factory.writer-options.mail">
             <title>Zend_Log_Writer_Mail Options</title>

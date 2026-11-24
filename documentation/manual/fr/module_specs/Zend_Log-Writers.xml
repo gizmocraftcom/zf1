@@ -91,7 +91,6 @@ $logger->info("Message d'information");
         </para>
     </sect2>
 
-    <xi:include href="Zend_Log-Writers-Firebug.xml" />
     <xi:include href="Zend_Log-Writers-Mail.xml" />
     <xi:include href="Zend_Log-Writers-Syslog.xml" />
     <xi:include href="Zend_Log-Writers-ZendMonitor.xml">

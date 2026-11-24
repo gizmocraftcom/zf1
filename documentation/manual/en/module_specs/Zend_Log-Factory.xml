@@ -35,7 +35,7 @@ $logger = Zend_Log::factory(array(
         ),
     ),
     array(
-        'writerName'   => 'Firebug',
+        'writerName'   => 'Syslog',
         'filterName'   => 'Priority',
         'filterParams' => array(
             'priority' => Zend_Log::INFO,
@@ -46,7 +46,7 @@ $logger = Zend_Log::factory(array(
 
     <para>
         The above will instantiate a logger with two writers, one for writing to a local file,
-        another for sending data to Firebug. Each has an attached priority filter, with different
+        another for sending data to the system log. Each has an attached priority filter, with different
         maximum priorities.
     </para>
 
@@ -67,7 +67,7 @@ $logger = Zend_Log::factory(array(
                 <para>
                     The "short" name of a log writer; the name of the log writer minus the leading
                     class prefix/namespace. See the "writerNamespace" entry below for more details.
-                    Examples: "Mock", "Stream", "Firebug".
+                    Examples: "Mock", "Stream".
                 </para>
             </listitem>
         </varlistentry>
@@ -213,13 +213,6 @@ $logger = Zend_Log::factory(array(
             </variablelist>
         </sect3>
 
-        <sect3 id="zend.log.factory.writer-options.firebug">
-            <title>Zend_Log_Writer_Firebug Options</title>
-
-            <para>
-                This log writer takes no options; any provided will be ignored.
-            </para>
-        </sect3>
 
         <sect3 id="zend.log.factory.writer-options.mail">
             <title>Zend_Log_Writer_Mail Options</title>
