@@ -166,7 +166,7 @@ email indicating you have changes to pull:
   - The URL to your repository (e.g., `git://mwop.net/zf1.git`)
   - The branch containing the changes you want pulled (e.g., `zf9295`)
   - The nature of the changes (e.g., `implements
-    Zend_Service_Twitter`, `fixes ZF-9295`, etc.)
+    Zend_Service_ShortUrl`, `fixes ZF-9295`, etc.)
 
 ### What branch to issue the pull request against?
 

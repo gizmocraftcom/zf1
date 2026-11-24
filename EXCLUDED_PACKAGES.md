@@ -40,7 +40,9 @@
 
 ## Removed classes in the main repository
 
-These classes are not separate packages. They live in `library/` of the main repository and are removed from the `gizmocraft/zf1` fork in task 11 (nothing is removed yet).
+These classes are not separate packages. They live in `library/` of the main repository and are removed from the `gizmocraft/zf1` fork in task 11.7.
+
+**Status: DONE** in the main clone (commits 92c7b7ef8 library, f65cd380d tests, c16276a4f demos, 12cccd804 documentation, 7240ff730 composer/phpstan; see `CHANGELOG.md`, Breaking changes). Remaining follow-up: `Zend_Service_Rackspace` (see below).
 
 | Class | Reason | Evidence |
 |---|---|---|

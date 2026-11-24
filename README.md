@@ -111,23 +111,6 @@ available at http://browsers.garykeith.com/stream.asp?PHP_BrowsCapINI.
 Zend_Http_UserAgent_Features_Adapter_Browscap was created by Matthew
 Weier O’Phinney
 
-## Zend_Mobile_Push
-
-Zend_Mobile_Push is a component for implementing push notifications for
-the 3 major push notification platforms (Apple (Apns), Google (C2dm) and
-Microsoft (Mpns).
-
-Zend_Mobile_Push was contributed by Mike Willbanks.
-
-## Zend_Gdata_Analytics
-
-Zend_Gdata_Analytics is an extension to Zend_Gdata to allow interaction
-with Google’s Analytics Data Export API. This extension does not
-encompass any major changes in the overall operation of Zend_Gdata
-components.
-
-Zend_Gdata_Analytics was contributed by Daniel Hartmann.
-
 # Removed features
 
 ## Zend_Http_UserAgent_Features_Adapter_WurflApi
