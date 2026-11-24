@@ -14,8 +14,7 @@
         ZF توفر دعم ايضا لـ web services مشهورة مثل :
 
         <link linkend="zend.service.amazon">Amazon</link>,
-        <link linkend="zend.service.flickr">Flickr</link>, و
-        <link linkend="zend.service.yahoo">Yahoo!</link>.
+        <link linkend="zend.service.flickr">Flickr</link>.
         و ربما سيتم اضافة المزيد فى المستقبل.
     </para>
 </sect1>

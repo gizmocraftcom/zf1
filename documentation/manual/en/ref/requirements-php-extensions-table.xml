@@ -105,25 +105,17 @@
                 <entry>---</entry>
             </row>
             <row>
-                <entry morerows="8" valign="middle">
+                <entry morerows="7" valign="middle">
                     <emphasis>
                         <ulink
                             url="&php.manual.link;/ref.ctype.php">ctype</ulink>
                     </emphasis>
                 </entry>
-                <entry morerows="8" valign="middle">&requirements.hard;</entry>
+                <entry morerows="7" valign="middle">&requirements.hard;</entry>
                 <entry>
                     <ulink
                         url="&zf.manual.link;/zend.auth.adapter.http.html">
                         <classname>Zend_Auth_Adapter_Http</classname>
-                    </ulink>
-                </entry>
-            </row>
-            <row>
-                <entry>
-                    <ulink
-                        url="&zf.manual.link;/zend.gdata.html">
-                        <classname>Zend_Gdata</classname>
                     </ulink>
                 </entry>
             </row>
@@ -234,13 +226,13 @@
                 <entry>---</entry>
             </row>
             <row>
-                <entry morerows="13" valign="middle">
+                <entry morerows="10" valign="middle">
                     <emphasis>
                         <ulink
                             url="&php.manual.link;/ref.dom.php">dom</ulink>
                     </emphasis>
                 </entry>
-                <entry morerows="13" valign="middle">&requirements.hard;</entry>
+                <entry morerows="10" valign="middle">&requirements.hard;</entry>
                 <entry>
                     <ulink
                         url="&zf.manual.link;/zend.amf.html">
@@ -261,14 +253,6 @@
                     <ulink
                         url="&zf.manual.link;/zend.feed.html">
                         <classname>Zend_Feed</classname>
-                    </ulink>
-                </entry>
-            </row>
-            <row>
-                <entry>
-                    <ulink
-                        url="&zf.manual.link;/zend.gdata.html">
-                        <classname>Zend_Gdata</classname>
                     </ulink>
                 </entry>
             </row>
@@ -315,24 +299,8 @@
             <row>
                 <entry>
                     <ulink
-                        url="&zf.manual.link;/zend.service.delicious.html">
-                        <classname>Zend_Service_Delicious</classname>
-                    </ulink>
-                </entry>
-            </row>
-            <row>
-                <entry>
-                    <ulink
                         url="&zf.manual.link;/zend.service.flickr.html">
                         <classname>Zend_Service_Flickr</classname>
-                    </ulink>
-                </entry>
-            </row>
-            <row>
-                <entry>
-                    <ulink
-                        url="&zf.manual.link;/zend.service.yahoo.html">
-                        <classname>Zend_Service_Yahoo</classname>
                     </ulink>
                 </entry>
             </row>
@@ -1188,21 +1156,13 @@
                 </entry>
             </row>
             <row>
-                <entry morerows="1" valign="middle">
+                <entry valign="middle">
                     <emphasis>
                         <ulink
                             url="&php.manual.link;/ref.soap.php">soap</ulink>
                     </emphasis>
                 </entry>
-                <entry morerows="1" valign="middle">&requirements.hard;</entry>
-                <entry>
-                    <ulink
-                        url="&zf.manual.link;/zend.service.strikeiron.html">
-                        <classname>Zend_Service_StrikeIron</classname>
-                    </ulink>
-                </entry>
-            </row>
-            <row>
+                <entry valign="middle">&requirements.hard;</entry>
                 <entry>
                     <ulink
                         url="&zf.manual.link;/zend.soap.html">

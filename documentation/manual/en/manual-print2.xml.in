@@ -193,15 +193,8 @@
         <xi:include href="module_specs/Zend_Service_Amazon_Ec2-Securitygroups.xml" />
         <xi:include href="module_specs/Zend_Service_Amazon_S3.xml" />
         <xi:include href="module_specs/Zend_Service_Audioscrobbler.xml" />
-        <xi:include href="module_specs/Zend_Service_Delicious.xml" />
         <xi:include href="module_specs/Zend_Service_Flickr.xml" />
         <xi:include href="module_specs/Zend_Service-ReCaptcha.xml" />
-        <xi:include href="module_specs/Zend_Service_SlideShare.xml" />
-        <xi:include href="module_specs/Zend_Service_StrikeIron-Overview.xml" />
-        <xi:include href="module_specs/Zend_Service_StrikeIron-BundledServices.xml" />
-        <xi:include href="module_specs/Zend_Service_StrikeIron-AdvancedUses.xml" />
-        <xi:include href="module_specs/Zend_Service_Twitter.xml" parse="xml" />
-        <xi:include href="module_specs/Zend_Service_Yahoo.xml" />
     </chapter>
 
     <chapter id="zend.session">

@@ -98,12 +98,9 @@
                         <entry>---</entry>
                     </row>
                     <row>
-                        <entry morerows="8" valign="middle"><emphasis role="strong"><ulink url="http://www.php.net/manual/en/ref.ctype.php"><code>ctype</code></ulink></emphasis></entry>
-                        <entry morerows="8" valign="middle">Hard</entry>
+                        <entry morerows="7" valign="middle"><emphasis role="strong"><ulink url="http://www.php.net/manual/en/ref.ctype.php"><code>ctype</code></ulink></emphasis></entry>
+                        <entry morerows="7" valign="middle">Hard</entry>
                         <entry><ulink url="http://framework.zend.com/manual/en/zend.auth.adapter.http.html"><code>Zend_Auth_Adapter_Http</code></ulink></entry>
-                    </row>
-                    <row>
-                        <entry><ulink url="http://framework.zend.com/manual/en/zend.gdata.html"><code>Zend_Gdata</code></ulink></entry>
                     </row>
                     <row>
                         <entry><ulink url="http://framework.zend.com/manual/en/zend.http.html"><code>Zend_Http_Client</code></ulink></entry>
@@ -147,12 +144,9 @@
                         <entry>---</entry>
                     </row>
                     <row>
-                        <entry morerows="10" valign="middle"><emphasis role="strong"><ulink url="http://www.php.net/manual/en/ref.dom.php"><code>dom</code></ulink></emphasis></entry>
-                        <entry morerows="10" valign="middle">Hard</entry>
+                        <entry morerows="7" valign="middle"><emphasis role="strong"><ulink url="http://www.php.net/manual/en/ref.dom.php"><code>dom</code></ulink></emphasis></entry>
+                        <entry morerows="7" valign="middle">Hard</entry>
                         <entry><ulink url="http://framework.zend.com/manual/en/zend.feed.html"><code>Zend_Feed</code></ulink></entry>
-                    </row>
-                    <row>
-                        <entry><ulink url="http://framework.zend.com/manual/en/zend.gdata.html"><code>Zend_Gdata</code></ulink></entry>
                     </row>
                     <row>
                         <entry><ulink url="http://framework.zend.com/manual/en/zend.log.formatters.html"><code>Zend_Log_Formatter_Xml</code></ulink></entry>
@@ -167,13 +161,7 @@
                         <entry><ulink url="http://framework.zend.com/manual/en/zend.service.amazon.html"><code>Zend_Service_Amazon</code></ulink></entry>
                     </row>
                     <row>
-                        <entry><ulink url="http://framework.zend.com/manual/en/zend.service.delicious.html"><code>Zend_Service_Delicious</code></ulink></entry>
-                    </row>
-                    <row>
                         <entry><ulink url="http://framework.zend.com/manual/en/zend.service.flickr.html"><code>Zend_Service_Flickr</code></ulink></entry>
-                    </row>
-                    <row>
-                        <entry><ulink url="http://framework.zend.com/manual/en/zend.service.yahoo.html"><code>Zend_Service_Yahoo</code></ulink></entry>
                     </row>
                     <row>
                         <entry><ulink url="http://framework.zend.com/manual/en/zend.xmlrpc.html"><code>Zend_XmlRpc</code></ulink></entry>
@@ -498,11 +486,6 @@
                         <entry><ulink url="http://framework.zend.com/manual/en/zend.xmlrpc.html"><code>Zend_XmlRpc</code></ulink></entry>
                     </row>
                     <row>
-                        <entry><emphasis role="strong"><ulink url="http://www.php.net/manual/en/ref.soap.php"><code>soap</code></ulink></emphasis></entry>
-                        <entry>Hard</entry>
-                        <entry><ulink url="http://framework.zend.com/manual/en/zend.service.strikeiron.html"><code>Zend_Service_StrikeIron</code></ulink></entry>
-                    </row>
-                    <row>
                         <entry><emphasis role="strong"><ulink url="http://www.php.net/manual/en/ref.sockets.php"><code>sockets</code></ulink></emphasis></entry>
                         <entry>---</entry>
                         <entry>---</entry>
@@ -804,19 +787,6 @@
                         <entry>---</entry>
                     </row>
                     <row>
-                        <entry morerows="2" valign="middle"><emphasis role="strong"><ulink url="http://framework.zend.com/manual/en/zend.gdata.html"><code>Zend_Gdata</code></ulink></emphasis></entry>
-                        <entry morerows="2" valign="middle">Hard</entry>
-                        <entry><ulink url="http://framework.zend.com/manual/en/zend.gdata.html"><code>Zend_Gdata_App</code></ulink></entry>
-                        <entry><ulink url="http://www.php.net/manual/en/ref.ctype.php"><code>ctype</code></ulink></entry>
-                    </row>
-                    <row>
-                        <entry morerows="1" valign="middle">---</entry>
-                        <entry><ulink url="http://www.php.net/manual/en/ref.dom.php"><code>dom</code></ulink></entry>
-                    </row>
-                    <row>
-                        <entry><ulink url="http://www.php.net/manual/en/ref.libxml.php"><code>libxml</code></ulink></entry>
-                    </row>
-                    <row>
                         <entry morerows="2" valign="middle"><emphasis role="strong"><ulink url="http://framework.zend.com/manual/en/zend.http.html"><code>Zend_Http</code></ulink></emphasis></entry>
                         <entry morerows="2" valign="middle">Hard</entry>
                         <entry><ulink url="http://framework.zend.com/manual/en/zend.http.client.adapters.html"><code>Zend_Http_Client_Adapter_Curl</code></ulink></entry>
@@ -1017,15 +987,6 @@
                         <entry><ulink url="http://www.php.net/manual/en/ref.simplexml.php"><code>SimpleXML</code></ulink></entry>
                     </row>
                     <row>
-                        <entry morerows="1" valign="middle"><emphasis role="strong"><ulink url="http://framework.zend.com/manual/en/zend.service.delicious.html"><code>Zend_Service_Delicious</code></ulink></emphasis></entry>
-                        <entry morerows="1" valign="middle">Hard</entry>
-                        <entry morerows="1" valign="middle">---</entry>
-                        <entry><ulink url="http://www.php.net/manual/en/ref.dom.php"><code>dom</code></ulink></entry>
-                    </row>
-                    <row>
-                        <entry><ulink url="http://www.php.net/manual/en/ref.libxml.php"><code>libxml</code></ulink></entry>
-                    </row>
-                    <row>
                         <entry morerows="2" valign="middle"><emphasis role="strong"><ulink url="http://framework.zend.com/manual/en/zend.service.flickr.html"><code>Zend_Service_Flickr</code></ulink></emphasis></entry>
                         <entry morerows="2" valign="middle">Hard</entry>
                         <entry morerows="2" valign="middle">---</entry>
@@ -1033,27 +994,6 @@
                     </row>
                     <row>
                         <entry><ulink url="http://www.php.net/manual/en/ref.iconv.php"><code>iconv</code></ulink></entry>
-                    </row>
-                    <row>
-                        <entry><ulink url="http://www.php.net/manual/en/ref.libxml.php"><code>libxml</code></ulink></entry>
-                    </row>
-                    <row>
-                        <entry><emphasis role="strong"><ulink url="http://framework.zend.com/manual/en/zend.service.slideshare.html"><code>Zend_Service_SlideShare</code></ulink></emphasis></entry>
-                        <entry>---</entry>
-                        <entry>---</entry>
-                        <entry>---</entry>
-                    </row>
-                    <row>
-                        <entry><emphasis role="strong"><ulink url="http://framework.zend.com/manual/en/zend.service.strikeiron.html"><code>Zend_Service_StrikeIron</code></ulink></emphasis></entry>
-                        <entry>Hard</entry>
-                        <entry>---</entry>
-                        <entry><ulink url="http://www.php.net/manual/en/ref.soap.php"><code>soap</code></ulink></entry>
-                    </row>
-                    <row>
-                        <entry morerows="1" valign="middle"><emphasis role="strong"><ulink url="http://framework.zend.com/manual/en/zend.service.yahoo.html"><code>Zend_Service_Yahoo</code></ulink></emphasis></entry>
-                        <entry morerows="1" valign="middle">Hard</entry>
-                        <entry morerows="1" valign="middle">---</entry>
-                        <entry><ulink url="http://www.php.net/manual/en/ref.dom.php"><code>dom</code></ulink></entry>
                     </row>
                     <row>
                         <entry><ulink url="http://www.php.net/manual/en/ref.libxml.php"><code>libxml</code></ulink></entry>
@@ -1349,23 +1289,6 @@
                         <entry><ulink url="http://framework.zend.com/manual/en/zend.validate.html"><code>Zend_Validate</code></ulink></entry>
                     </row>
                     <row>
-                        <entry morerows="4" valign="middle"><emphasis role="strong"><ulink url="http://framework.zend.com/manual/en/zend.gdata.html"><code>Zend_Gdata</code></ulink></emphasis></entry>
-                        <entry morerows="4" valign="middle">Hard</entry>
-                        <entry><ulink url="http://framework.zend.com/manual/en/zend.exception.html"><code>Zend_Exception</code></ulink></entry>
-                    </row>
-                    <row>
-                        <entry><ulink url="http://framework.zend.com/manual/en/zend.http.html"><code>Zend_Http</code></ulink></entry>
-                    </row>
-                    <row>
-                        <entry><ulink url="http://framework.zend.com/manual/en/zend.loader.html"><code>Zend_Loader</code></ulink></entry>
-                    </row>
-                    <row>
-                        <entry><ulink url="http://framework.zend.com/manual/en/zend.mime.html"><code>Zend_Mime</code></ulink></entry>
-                    </row>
-                    <row>
-                        <entry><ulink url="http://framework.zend.com/manual/en/zend.version.html"><code>Zend_Version</code></ulink></entry>
-                    </row>
-                    <row>
                         <entry morerows="2" valign="middle"><emphasis role="strong"><ulink url="http://framework.zend.com/manual/en/zend.http.html"><code>Zend_Http</code></ulink></emphasis></entry>
                         <entry morerows="2" valign="middle">Hard</entry>
                         <entry><ulink url="http://framework.zend.com/manual/en/zend.exception.html"><code>Zend_Exception</code></ulink></entry>
@@ -1549,60 +1472,7 @@
                         <entry><ulink url="http://framework.zend.com/manual/en/zend.http.html"><code>Zend_Http</code></ulink></entry>
                     </row>
                     <row>
-                        <entry morerows="4" valign="middle"><emphasis role="strong"><ulink url="http://framework.zend.com/manual/en/zend.service.delicious.html"><code>Zend_Service_Delicious</code></ulink></emphasis></entry>
-                        <entry morerows="4" valign="middle">Hard</entry>
-                        <entry><ulink url="http://framework.zend.com/manual/en/zend.date.html"><code>Zend_Date</code></ulink></entry>
-                    </row>
-                    <row>
-                        <entry><ulink url="http://framework.zend.com/manual/en/zend.exception.html"><code>Zend_Exception</code></ulink></entry>
-                    </row>
-                    <row>
-                        <entry><ulink url="http://framework.zend.com/manual/en/zend.http.html"><code>Zend_Http</code></ulink></entry>
-                    </row>
-                    <row>
-                        <entry><ulink url="http://framework.zend.com/manual/en/zend.json.html"><code>Zend_Json</code></ulink></entry>
-                    </row>
-                    <row>
-                        <entry><ulink url="http://framework.zend.com/manual/en/zend.rest.html"><code>Zend_Rest</code></ulink></entry>
-                    </row>
-                    <row>
                         <entry morerows="3" valign="middle"><emphasis role="strong"><ulink url="http://framework.zend.com/manual/en/zend.service.flickr.html"><code>Zend_Service_Flickr</code></ulink></emphasis></entry>
-                        <entry morerows="3" valign="middle">Hard</entry>
-                        <entry><ulink url="http://framework.zend.com/manual/en/zend.exception.html"><code>Zend_Exception</code></ulink></entry>
-                    </row>
-                    <row>
-                        <entry><ulink url="http://framework.zend.com/manual/en/zend.http.html"><code>Zend_Http</code></ulink></entry>
-                    </row>
-                    <row>
-                        <entry><ulink url="http://framework.zend.com/manual/en/zend.rest.html"><code>Zend_Rest</code></ulink></entry>
-                    </row>
-                    <row>
-                        <entry><ulink url="http://framework.zend.com/manual/en/zend.validate.html"><code>Zend_Validate</code></ulink></entry>
-                    </row>
-                    <row>
-                        <entry morerows="2" valign="middle"><emphasis role="strong"><ulink url="http://framework.zend.com/manual/en/zend.service.slideshare.html"><code>Zend_Service_SlideShare</code></ulink></emphasis></entry>
-                        <entry morerows="2" valign="middle">Hard</entry>
-                        <entry><ulink url="http://framework.zend.com/manual/en/zend.cache.html"><code>Zend_Cache</code></ulink></entry>
-                    </row>
-                    <row>
-                        <entry><ulink url="http://framework.zend.com/manual/en/zend.exception.html"><code>Zend_Exception</code></ulink></entry>
-                    </row>
-                    <row>
-                        <entry><ulink url="http://framework.zend.com/manual/en/zend.http.html"><code>Zend_Http</code></ulink></entry>
-                    </row>
-                    <row>
-                        <entry morerows="2" valign="middle"><emphasis role="strong"><ulink url="http://framework.zend.com/manual/en/zend.service.strikeiron.html"><code>Zend_Service_StrikeIron</code></ulink></emphasis></entry>
-                        <entry morerows="2" valign="middle">Hard</entry>
-                        <entry><ulink url="http://framework.zend.com/manual/en/zend.exception.html"><code>Zend_Exception</code></ulink></entry>
-                    </row>
-                    <row>
-                        <entry><ulink url="http://framework.zend.com/manual/en/zend.http.html"><code>Zend_Http</code></ulink></entry>
-                    </row>
-                    <row>
-                        <entry><ulink url="http://framework.zend.com/manual/en/zend.loader.html"><code>Zend_Loader</code></ulink></entry>
-                    </row>
-                    <row>
-                        <entry morerows="3" valign="middle"><emphasis role="strong"><ulink url="http://framework.zend.com/manual/en/zend.service.yahoo.html"><code>Zend_Service_Yahoo</code></ulink></emphasis></entry>
                         <entry morerows="3" valign="middle">Hard</entry>
                         <entry><ulink url="http://framework.zend.com/manual/en/zend.exception.html"><code>Zend_Exception</code></ulink></entry>
                     </row>
@@ -1743,7 +1613,6 @@ Exception
 Feed
 Filter
 Form
-Gdata
 Http
 Json
 Layout
@@ -1765,11 +1634,7 @@ Server_Reflection
 Service_Akismet
 Service_Amazon
 Service_Audioscrobbler
-Service_Delicious
 Service_Flickr
-Service_SlideShare
-Service_StrikeIron
-Service_Yahoo
 Session
 TimeSync
 Translate

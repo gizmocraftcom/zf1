@@ -12,8 +12,7 @@
         voor REST-gebaseerde web services biedt Zend ook ondersteuning voor populaire web services zoals
         <link linkend="zend.service.akismet">Akismet</link>,
         <link linkend="zend.service.amazon">Amazon</link>,
-        <link linkend="zend.service.flickr">Flickr</link>, and
-        <link linkend="zend.service.yahoo">Yahoo!</link>. Er kunnen er worden bijgevoegd in de toekomst.
+        <link linkend="zend.service.flickr">Flickr</link>. Er kunnen er worden bijgevoegd in de toekomst.
     </para>
 </sect1>
 <!--

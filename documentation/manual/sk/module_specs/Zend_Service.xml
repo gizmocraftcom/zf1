@@ -33,22 +33,7 @@
         </listitem>
         <listitem>
             <para>
-                <link linkend="zend.service.delicious">Del.icio.us</link>
-            </para>
-        </listitem>
-        <listitem>
-            <para>
                 <link linkend="zend.service.flickr">Flickr</link>
-            </para>
-        </listitem>
-        <listitem>
-            <para>
-                <link linkend="zend.service.strikeiron">StrikeIron</link>
-            </para>
-        </listitem>
-        <listitem>
-            <para>
-                <link linkend="zend.service.yahoo">Yahoo!</link>
             </para>
         </listitem>
     </itemizedlist>

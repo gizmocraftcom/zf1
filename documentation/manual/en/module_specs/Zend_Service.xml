@@ -39,11 +39,6 @@
             </para>
         </listitem>
 
-        <listitem>
-            <para>
-                <link linkend="zend.service.delicious">Del.icio.us</link>
-            </para>
-        </listitem>
 
         <listitem>
             <para>
@@ -57,11 +52,6 @@
             </para>
         </listitem>
 
-        <listitem>
-            <para>
-                <link linkend="zend.service.livedocx">LiveDocx</link>
-            </para>
-        </listitem>
 
         <listitem>
             <para>
@@ -75,23 +65,8 @@
             </para>
         </listitem>
 
-        <listitem>
-            <para>
-                <link linkend="zend.service.slideshare">SlideShare</link>
-            </para>
-        </listitem>
 
-        <listitem>
-            <para>
-                <link linkend="zend.service.strikeiron">StrikeIron</link>
-            </para>
-        </listitem>
 
-        <listitem>
-            <para>
-                <link linkend="zend.service.twitter">Twitter</link>
-            </para>
-        </listitem>
 
         <listitem>
             <para>
@@ -99,11 +74,6 @@
             </para>
         </listitem>
 
-        <listitem>
-            <para>
-                <link linkend="zend.service.yahoo">Yahoo!</link>
-            </para>
-        </listitem>
     </itemizedlist>
 
     <para>

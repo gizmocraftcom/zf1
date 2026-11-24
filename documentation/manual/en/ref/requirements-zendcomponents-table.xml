@@ -431,33 +431,6 @@
                 <entry morerows="2" valign="middle">
                     <emphasis>
                         <ulink
-                            url="&zf.manual.link;/zend.gdata.html">
-                            <classname>Zend_Gdata</classname>
-                        </ulink>
-                    </emphasis>
-                </entry>
-                <entry morerows="2" valign="middle">&requirements.hard;</entry>
-                <entry>
-                    <ulink
-                        url="&php.manual.link;/ref.ctype.php">ctype</ulink>
-                </entry>
-            </row>
-            <row>
-                <entry>
-                    <ulink
-                        url="&php.manual.link;/ref.dom.php">dom</ulink>
-                </entry>
-            </row>
-            <row>
-                <entry>
-                    <ulink
-                        url="&php.manual.link;/ref.libxml.php">libxml</ulink>
-                </entry>
-            </row>
-            <row>
-                <entry morerows="2" valign="middle">
-                    <emphasis>
-                        <ulink
                             url="&zf.manual.link;/zend.http.html">
                             <classname>Zend_Http</classname>
                         </ulink>
@@ -931,27 +904,6 @@
                 </entry>
             </row>
             <row>
-                <entry morerows="1" valign="middle">
-                    <emphasis>
-                        <ulink
-                            url="&zf.manual.link;/zend.service.delicious.html">
-                            <classname>Zend_Service_Delicious</classname>
-                        </ulink>
-                    </emphasis>
-                </entry>
-                <entry morerows="1" valign="middle">&requirements.hard;</entry>
-                <entry>
-                    <ulink
-                        url="&php.manual.link;/ref.dom.php">dom</ulink>
-                </entry>
-            </row>
-            <row>
-                <entry>
-                    <ulink
-                        url="&php.manual.link;/ref.libxml.php">libxml</ulink>
-                </entry>
-            </row>
-            <row>
                 <entry morerows="2" valign="middle">
                     <emphasis>
                         <ulink
@@ -993,54 +945,6 @@
                         <ulink
                             url="&php.manual.link;/ref.mcrypt.php">mcrypt</ulink>
                     </emphasis>
-                </entry>
-            </row>
-            <row>
-                <entry>
-                    <emphasis>
-                        <ulink
-                            url="&zf.manual.link;/zend.service.strikeiron.html">
-                            <classname>Zend_Service_StrikeIron</classname>
-                        </ulink>
-                    </emphasis>
-                </entry>
-                <entry>&requirements.hard;</entry>
-                <entry>
-                    <ulink
-                        url="&php.manual.link;/ref.soap.php">soap</ulink>
-                </entry>
-            </row>
-            <row>
-                <entry>
-                    <emphasis>
-                        <ulink
-                            url="&zf.manual.link;/zend.service.twitter.html">
-                            <classname>Zend_Service_Twitter</classname>
-                        </ulink>
-                    </emphasis>
-                </entry>
-                <entry>---</entry>
-                <entry>---</entry>
-            </row>
-            <row>
-                <entry morerows="1" valign="middle">
-                    <emphasis>
-                        <ulink
-                            url="&zf.manual.link;/zend.service.yahoo.html">
-                            <classname>Zend_Service_Yahoo</classname>
-                        </ulink>
-                    </emphasis>
-                </entry>
-                <entry morerows="1" valign="middle">&requirements.hard;</entry>
-                <entry>
-                    <ulink
-                        url="&php.manual.link;/ref.dom.php">dom</ulink>
-                </entry>
-            </row>
-            <row>
-                <entry>
-                    <ulink
-                        url="&php.manual.link;/ref.libxml.php">libxml</ulink>
                 </entry>
             </row>
             <row>

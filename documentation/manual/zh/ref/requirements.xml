@@ -87,21 +87,6 @@
                         <entry></entry>
                     </row>
                     <row>
-                        <entry><ulink url="http://www.php.net/manual/zh/ref.ctype.php"><code>ctype</code></ulink></entry>
-                        <entry>依赖</entry>
-                        <entry>
-                           <ulink url="http://framework.zend.com/manual/en/zend.auth.adapter.http.html"><code>Zend_Auth_Adapter_Http</code></ulink>,
-                           <ulink url="http://framework.zend.com/manual/en/zend.gdata.html"><code>Zend_Gdata_App</code></ulink>,
-                           <ulink url="http://framework.zend.com/manual/en/zend.http.html"><code>Zend_Http_Client</code></ulink>,
-                           <ulink url="http://framework.zend.com/manual/en/zend.pdf.html"><code>Zend_Pdf</code></ulink>,
-                           <ulink url="http://framework.zend.com/manual/en/zend.rest.client.html"><code>Zend_Rest_Client</code></ulink>,
-                           <ulink url="http://framework.zend.com/manual/en/zend.rest.server.html"><code>Zend_Rest_Server</code></ulink>,
-                           <ulink url="http://framework.zend.com/manual/en/zend.search.lucene.html"><code>Zend_Search_Lucene</code></ulink>,
-                           <ulink url="http://framework.zend.com/manual/en/zend.uri.html"><code>Zend_Uri</code></ulink>,
-                           <ulink url="http://framework.zend.com/manual/en/zend.validate.html"><code>Zend_Validate</code></ulink>
-                        </entry>
-                    </row>
-                    <row>
                         <entry><ulink url="http://www.php.net/manual/zh/ref.curl.php"><code>curl</code></ulink></entry>
                         <entry>依赖</entry>
                         <entry><ulink url="http://framework.zend.com/manual/en/zend.http.client.adapters.html"><code>Zend_Http_Client_Adapter_Curl</code></ulink></entry>
@@ -120,22 +105,6 @@
                         <entry><ulink url="http://www.php.net/manual/zh/ref.dbase.php"><code>dbase</code></ulink></entry>
                         <entry>--</entry>
                         <entry></entry>
-                    </row>
-                    <row>
-                        <entry><ulink url="http://www.php.net/manual/zh/ref.dom.php"><code>dom</code></ulink></entry>
-                        <entry>依赖</entry>
-                        <entry>
-                            <ulink url="http://framework.zend.com/manual/en/zend.feed.html"><code>Zend_Feed</code></ulink>,
-                            <ulink url="http://framework.zend.com/manual/en/zend.gdata.html"><code>Zend_Gdata</code></ulink>,
-                            <ulink url="http://framework.zend.com/manual/en/zend.log.formatters.html"><code>Zend_Log_Formatter_Xml</code></ulink>,
-                            <ulink url="http://framework.zend.com/manual/en/zend.rest.server.html"><code>Zend_Rest_Server</code></ulink>,
-                            <ulink url="http://framework.zend.com/manual/en/zend.search.lucene.html"><code>Zend_Search_Lucene</code></ulink>,
-                            <ulink url="http://framework.zend.com/manual/en/zend.service.amazon.html"><code>Zend_Service_Amazon</code></ulink>,
-                            <ulink url="http://framework.zend.com/manual/en/zend.service.delicious.html"><code>Zend_Service_Delicious</code></ulink>,
-                            <ulink url="http://framework.zend.com/manual/en/zend.service.flickr.html"><code>Zend_Service_Flickr</code></ulink>,
-                            <ulink url="http://framework.zend.com/manual/en/zend.service.yahoo.html"><code>Zend_Service_Yahoo</code></ulink>,
-                            <ulink url="http://framework.zend.com/manual/en/zend.xmlrpc.html"><code>Zend_XmlRpc</code></ulink>
-                        </entry>
                     </row>
                     <row>
                         <entry><ulink url="http://www.php.net/manual/zh/ref.exif.php"><code>exif</code></ulink></entry>
@@ -420,11 +389,6 @@
                         </entry>
                     </row>
                     <row>
-                        <entry><ulink url="http://www.php.net/manual/zh/ref.soap.php"><code>soap</code></ulink></entry>
-                        <entry>依赖</entry>
-                        <entry><ulink url="http://framework.zend.com/manual/en/zend.service.strikeiron.html"><code>Zend_Service_StrikeIron</code></ulink></entry>
-                    </row>
-                    <row>
                         <entry><ulink url="http://www.php.net/manual/zh/ref.sockets.php"><code>sockets</code></ulink></entry>
                         <entry>---</entry>
                         <entry></entry>
@@ -668,17 +632,6 @@
                         </entry>
                     </row>
                     <row>
-                        <entry><ulink url="http://framework.zend.com/manual/en/zend.gdata.html"><code>Zend_Gdata</code></ulink></entry>
-                        <entry>
-                            <ulink url="http://www.php.net/manual/zh/ref.ctype.php"><code>ctype</code></ulink>
-                            ( <ulink url="http://framework.zend.com/manual/en/zend.gdata.html"><code>Zend_Gdata_App</code></ulink> / 依赖 )
-                            <ulink url="http://www.php.net/manual/zh/ref.dom.php"><code>dom</code></ulink>
-                            ( 依赖 )
-                            <ulink url="http://www.php.net/manual/zh/ref.libxml.php"><code>libxml</code></ulink>
-                            ( 依赖 )
-                        </entry>
-                    </row>
-                    <row>
                         <entry><ulink url="http://framework.zend.com/manual/en/zend.http.html"><code>Zend_Http</code></ulink></entry>
                         <entry>
                             <ulink url="http://www.php.net/manual/zh/ref.ctype.php"><code>ctype</code></ulink>
@@ -829,36 +782,11 @@
                         </entry>
                     </row>
                     <row>
-                        <entry><ulink url="http://framework.zend.com/manual/en/zend.service.delicious.html"><code>Zend_Service_Delicious</code></ulink></entry>
-                        <entry>
-                            <ulink url="http://www.php.net/manual/zh/ref.dom.php"><code>dom</code></ulink>
-                            ( 依赖 )
-                            <ulink url="http://www.php.net/manual/zh/ref.libxml.php"><code>libxml</code></ulink>
-                            ( 依赖 )
-                        </entry>
-                    </row>
-                    <row>
                         <entry><ulink url="http://framework.zend.com/manual/en/zend.service.flickr.html"><code>Zend_Service_Flickr</code></ulink></entry>
                         <entry>
                             <ulink url="http://www.php.net/manual/zh/ref.dom.php"><code>dom</code></ulink>
                             ( 依赖 )
                             <ulink url="http://www.php.net/manual/zh/ref.iconv.php"><code>iconv</code></ulink>
-                            ( 依赖 )
-                            <ulink url="http://www.php.net/manual/zh/ref.libxml.php"><code>libxml</code></ulink>
-                            ( 依赖 )
-                        </entry>
-                    </row>
-                    <row>
-                        <entry><ulink url="http://framework.zend.com/manual/en/zend.service.strikeiron.html"><code>Zend_Service_StrikeIron</code></ulink></entry>
-                        <entry>
-                            <ulink url="http://www.php.net/manual/zh/ref.soap.php"><code>soap</code></ulink>
-                            ( 依赖 )
-                        </entry>
-                    </row>
-                    <row>
-                        <entry><ulink url="http://framework.zend.com/manual/en/zend.service.yahoo.html"><code>Zend_Service_Yahoo</code></ulink></entry>
-                        <entry>
-                            <ulink url="http://www.php.net/manual/zh/ref.dom.php"><code>dom</code></ulink>
                             ( 依赖 )
                             <ulink url="http://www.php.net/manual/zh/ref.libxml.php"><code>libxml</code></ulink>
                             ( 依赖 )

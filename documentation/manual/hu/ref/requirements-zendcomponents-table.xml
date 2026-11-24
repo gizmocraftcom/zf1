@@ -409,33 +409,6 @@
                 <entry morerows="2" valign="middle">
                     <emphasis>
                         <ulink
-                            url="http://framework.zend.com/manual/en/zend.gdata.html">
-                            <classname>Zend_Gdata</classname>
-                        </ulink>
-                    </emphasis>
-                </entry>
-                <entry morerows="2" valign="middle">Erős</entry>
-                <entry>
-                    <ulink
-                        url="http://www.php.net/manual/en/ref.ctype.php">ctype</ulink>
-                </entry>
-            </row>
-            <row>
-                <entry>
-                    <ulink
-                        url="http://www.php.net/manual/en/ref.dom.php">dom</ulink>
-                </entry>
-            </row>
-            <row>
-                <entry>
-                    <ulink
-                        url="http://www.php.net/manual/en/ref.libxml.php">libxml</ulink>
-                </entry>
-            </row>
-            <row>
-                <entry morerows="2" valign="middle">
-                    <emphasis>
-                        <ulink
                             url="http://framework.zend.com/manual/en/zend.http.html">
                             <classname>Zend_Http</classname>
                         </ulink>
@@ -871,27 +844,6 @@
                 </entry>
             </row>
             <row>
-                <entry morerows="1" valign="middle">
-                    <emphasis>
-                        <ulink
-                            url="http://framework.zend.com/manual/en/zend.service.delicious.html">
-                            <classname>Zend_Service_Delicious</classname>
-                        </ulink>
-                    </emphasis>
-                </entry>
-                <entry morerows="1" valign="middle">Erős</entry>
-                <entry>
-                    <ulink
-                        url="http://www.php.net/manual/en/ref.dom.php">dom</ulink>
-                </entry>
-            </row>
-            <row>
-                <entry>
-                    <ulink
-                        url="http://www.php.net/manual/en/ref.libxml.php">libxml</ulink>
-                </entry>
-            </row>
-            <row>
                 <entry morerows="2" valign="middle">
                     <emphasis>
                         <ulink
@@ -933,66 +885,6 @@
                         <ulink
                             url="http://www.php.net/manual/en/ref.mcrypt.php">mcrypt</ulink>
                     </emphasis>
-                </entry>
-            </row>
-            <row>
-                <entry>
-                    <emphasis>
-                        <ulink
-                            url="http://framework.zend.com/manual/en/zend.service.slideshare.html">
-                            <classname>Zend_Service_SlideShare</classname>
-                        </ulink>
-                    </emphasis>
-                </entry>
-                <entry>–</entry>
-                <entry>–</entry>
-            </row>
-            <row>
-                <entry>
-                    <emphasis>
-                        <ulink
-                            url="http://framework.zend.com/manual/en/zend.service.strikeiron.html">
-                            <classname>Zend_Service_StrikeIron</classname>
-                        </ulink>
-                    </emphasis>
-                </entry>
-                <entry>Erős</entry>
-                <entry>
-                    <ulink
-                        url="http://www.php.net/manual/en/ref.soap.php">soap</ulink>
-                </entry>
-            </row>
-            <row>
-                <entry>
-                    <emphasis>
-                        <ulink
-                            url="http://framework.zend.com/manual/en/zend.service.twitter.html">
-                            <classname>Zend_Service_Twitter</classname>
-                        </ulink>
-                    </emphasis>
-                </entry>
-                <entry>–</entry>
-                <entry>–</entry>
-            </row>
-            <row>
-                <entry morerows="1" valign="middle">
-                    <emphasis>
-                        <ulink
-                            url="http://framework.zend.com/manual/en/zend.service.yahoo.html">
-                            <classname>Zend_Service_Yahoo</classname>
-                        </ulink>
-                    </emphasis>
-                </entry>
-                <entry morerows="1" valign="middle">Erős</entry>
-                <entry>
-                    <ulink
-                        url="http://www.php.net/manual/en/ref.dom.php">dom</ulink>
-                </entry>
-            </row>
-            <row>
-                <entry>
-                    <ulink
-                        url="http://www.php.net/manual/en/ref.libxml.php">libxml</ulink>
                 </entry>
             </row>
             <row>

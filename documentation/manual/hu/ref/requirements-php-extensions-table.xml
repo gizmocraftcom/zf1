@@ -96,25 +96,17 @@
                 <entry>–</entry>
             </row>
             <row>
-                <entry morerows="8" valign="middle">
+                <entry morerows="7" valign="middle">
                     <emphasis>
                         <ulink
                             url="http://www.php.net/manual/en/ref.ctype.php">ctype</ulink>
                     </emphasis>
                 </entry>
-                <entry morerows="8" valign="middle">Erős</entry>
+                <entry morerows="7" valign="middle">Erős</entry>
                 <entry>
                     <ulink
                         url="http://framework.zend.com/manual/en/zend.auth.adapter.http.html">
                         <classname>Zend_Auth_Adapter_Http</classname>
-                    </ulink>
-                </entry>
-            </row>
-            <row>
-                <entry>
-                    <ulink
-                        url="http://framework.zend.com/manual/en/zend.gdata.html">
-                        <classname>Zend_Gdata</classname>
                     </ulink>
                 </entry>
             </row>
@@ -225,13 +217,13 @@
                 <entry>–</entry>
             </row>
             <row>
-                <entry morerows="13" valign="middle">
+                <entry morerows="10" valign="middle">
                     <emphasis>
                         <ulink
                             url="http://www.php.net/manual/en/ref.dom.php">dom</ulink>
                     </emphasis>
                 </entry>
-                <entry morerows="13" valign="middle">Erős</entry>
+                <entry morerows="10" valign="middle">Erős</entry>
                 <entry>
                     <ulink
                         url="http://framework.zend.com/manual/en/zend.amf.html">
@@ -252,14 +244,6 @@
                     <ulink
                         url="http://framework.zend.com/manual/en/zend.feed.html">
                         <classname>Zend_Feed</classname>
-                    </ulink>
-                </entry>
-            </row>
-            <row>
-                <entry>
-                    <ulink
-                        url="http://framework.zend.com/manual/en/zend.gdata.html">
-                        <classname>Zend_Gdata</classname>
                     </ulink>
                 </entry>
             </row>
@@ -306,24 +290,8 @@
             <row>
                 <entry>
                     <ulink
-                        url="http://framework.zend.com/manual/en/zend.service.delicious.html">
-                        <classname>Zend_Service_Delicious</classname>
-                    </ulink>
-                </entry>
-            </row>
-            <row>
-                <entry>
-                    <ulink
                         url="http://framework.zend.com/manual/en/zend.service.flickr.html">
                         <classname>Zend_Service_Flickr</classname>
-                    </ulink>
-                </entry>
-            </row>
-            <row>
-                <entry>
-                    <ulink
-                        url="http://framework.zend.com/manual/en/zend.service.yahoo.html">
-                        <classname>Zend_Service_Yahoo</classname>
                     </ulink>
                 </entry>
             </row>
@@ -1129,21 +1097,13 @@
                 </entry>
             </row>
             <row>
-                <entry morerows="1" valign="middle">
+                <entry valign="middle">
                     <emphasis>
                         <ulink
                             url="http://www.php.net/manual/en/ref.soap.php">soap</ulink>
                     </emphasis>
                 </entry>
-                <entry morerows="1" valign="middle">Erős</entry>
-                <entry>
-                    <ulink
-                        url="http://framework.zend.com/manual/en/zend.service.strikeiron.html">
-                        <classname>Zend_Service_StrikeIron</classname>
-                    </ulink>
-                </entry>
-            </row>
-            <row>
+                <entry valign="middle">Erős</entry>
                 <entry>
                     <ulink
                         url="http://framework.zend.com/manual/en/zend.soap.html">
