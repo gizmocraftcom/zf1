@@ -55,6 +55,7 @@ These classes are not separate packages. They live in `library/` of the main rep
 | Zend_Service_Twitter | Implements the retired Twitter API v1.1. The current X API requires different endpoints and authentication. | https://docs.x.com/x-api/posts/manage-tweets/migrate/overview |
 | Zend_Service_LiveDocx | User decision. No shutdown notice was found, so this is not backed by vendor evidence. | none (user decision) |
 | Zend_Service_StrikeIron | User decision. No shutdown notice was found, so this is not backed by vendor evidence. | none (user decision) |
+| Zend_Cloud adapters `Zend_Cloud_StorageService_Adapter_S3`, `Zend_Cloud_DocumentService_Adapter_SimpleDb` (and `_SimpleDb_Query`), `Zend_Cloud_QueueService_Adapter_Sqs`, `Zend_Cloud_Infrastructure_Adapter_Ec2` | They are thin wrappers around the excluded `Zend_Service_Amazon` (S3, SimpleDb, Sqs, Ec2) and cannot work without it. The Zend_Cloud core and the WindowsAzure, Rackspace, FileSystem and ZendQueue adapters are kept. No Nirvanix or other dead-service adapter exists. | none (follows the user decision to exclude `Zend_Service_Amazon`) |
 
 ### Kept
 
@@ -64,10 +65,8 @@ Flickr, Akismet, Audioscrobbler, ShortUrl, WindowsAzure, SqlAzure, Cloud and Ser
 
 Kept for now. `Zend_Service_Rackspace_Abstract` uses the Rackspace v1.0 auth API (`auth.api.rackspacecloud.com`, `X-Auth-User`/`X-Auth-Key`), and `Zend_Service_Rackspace_Servers` is the first-generation Cloud Servers API. The classes are not clearly separable: Abstract, Files and Servers share one auth base, and `Zend_Cloud_StorageService_Adapter_Rackspace` and `Zend_Cloud_Infrastructure_Adapter_Rackspace` (Zend_Cloud is kept) depend on them. Evidence that the first-generation API is retired: https://docs-ospc.rackspace.com/cloud-servers/v2/release-notes/index.html. Decide later whether to remove the whole Rackspace set together with the two Cloud adapters.
 
-### Leftovers (not removed, need a decision)
-- `Zend_Cloud_{StorageService,DocumentService,QueueService,Infrastructure}_Adapter_{S3,SimpleDb,Sqs,Ec2}` (library, tests, docs `Zend_Cloud_*.xml`) depend on the excluded `Zend_Service_Amazon`; they cannot work without it. Their tests still read the removed `TESTS_ZEND_SERVICE_AMAZON_*` constants (guarded by `defined()`, so they skip).
-- `Zend_Captcha_ReCaptcha` and `Zend_Form_Decorator_ReCaptcha` tests/docs (package captcha) and prose in `Zend_Captcha-Adapters.xml` still mention `Zend_Service_ReCaptcha` (now plain `classname`).
-- `Zend_Log_Formatter_Firebug`, `Zend_Db_Profiler_Firebug` and their tests live in the active log/db packages; the Zend_Db_Profiler/Log-Writers docs still mention Firebug.
+### Leftovers
+None. The Zend_Cloud Amazon adapters (commits 3ab04aa80 library/tests/baseline, d02318ceb demo, 60b8fa764 docs), the ReCaptcha test entries, docs and sk translations (c3cff5419) and the dead Firebug writer and DB profiler doc includes and prose (71db9f35d) were removed. `Zend_Log_Formatter_Firebug` and its test live in the kept log package and stay.
 
 ### Directories and files that task 11 must also remove or edit
 

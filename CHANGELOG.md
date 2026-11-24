@@ -19,9 +19,11 @@ These classes lived in `library/` of this repository. They are removed together 
 | `Zend_Service_Twitter` | Implements the retired Twitter API v1.1. The current X API needs different endpoints and authentication. | https://docs.x.com/x-api/posts/manage-tweets/migrate/overview |
 | `Zend_Service_LiveDocx` | User decision. No vendor evidence. | none (user decision) |
 | `Zend_Service_StrikeIron` | User decision. No vendor evidence. | none (user decision) |
+| `Zend_Cloud_StorageService_Adapter_S3`, `Zend_Cloud_DocumentService_Adapter_SimpleDb` (and `_SimpleDb_Query`), `Zend_Cloud_QueueService_Adapter_Sqs`, `Zend_Cloud_Infrastructure_Adapter_Ec2` | They wrap the excluded `Zend_Service_Amazon` and cannot work without it. WindowsAzure, Rackspace, FileSystem and ZendQueue adapters stay. | none (follows the exclusion of `Zend_Service_Amazon`) |
 
 Also removed: the `Zend_Gdata_` and `Zend_Mobile_` psr-0 entries and the `library/Zend/Gdata.php` classmap entry in `composer.json`, `tests/Zend/Gdata/TestUtility/MockHttpClient.php` from `autoload-dev`, the `phpstan-php83.php` baseline file (its only entry belonged to `Zend_Gdata`), and 1448 entries from `phpstan-baseline.php`.
 
+Also removed: the ReCaptcha test entries in `tests/phpunit.xml`, the `Zend_Captcha_ReCaptcha` documentation section in all languages, the matching Slovak translations, and the dead includes and prose for the Firebug log writer and Firebug DB profiler in the manual. `Zend_Log_Formatter_Firebug` stays. The Cloud Explorer demo and the Zend_Cloud manual pages now use Windows Azure and Rackspace instead of Amazon.
 Kept: Flickr, Akismet, Audioscrobbler, ShortUrl, WindowsAzure, SqlAzure, Cloud and Service_Console. `Zend_Service_Rackspace` is kept for now and needs a follow-up decision (see `EXCLUDED_PACKAGES.md`).
 
 #### Dropped excluded packages
