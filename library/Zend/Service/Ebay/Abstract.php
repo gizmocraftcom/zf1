@@ -265,7 +265,6 @@ abstract class Zend_Service_Ebay_Abstract
      *
      * @param  string $value
      * @param  string $type
-     * @see    http://developer.ebay.com/DevZone/finding/CallRef/types/simpleTypes.html
      * @throws Zend_Service_Ebay_Finding_Exception When $type is not valid
      * @return mixed
      */
