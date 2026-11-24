@@ -364,11 +364,9 @@
             "Zend_CodeGenerator_": "library/",
             "Zend_Console_": "library/",
             "Zend_Feed_": "library/",
-            "Zend_Gdata_": "library/",
             "Zend_Markup_": "library/",
             "Zend_Measure_": "library/",
             "Zend_Memory_": "library/",
-            "Zend_Mobile_": "library/",
             "Zend_Pdf_": "library/",
             "Zend_Queue_": "library/",
             "Zend_Reflection_": "library/",
@@ -383,7 +381,6 @@
             "library/Zend/Barcode.php",
             "library/Zend/Debug.php",
             "library/Zend/Feed.php",
-            "library/Zend/Gdata.php",
             "library/Zend/Markup.php",
             "library/Zend/Memory.php",
             "library/Zend/Pdf.php",
@@ -398,7 +395,6 @@
         },
         "files": [
             "library/Zend/Service/WindowsAzure/CommandLine/Scaffolders/DefaultScaffolder/index.php",
-            "tests/Zend/Gdata/TestUtility/MockHttpClient.php",
             "tests/TestHelper.php"
         ],
         "classmap": [
