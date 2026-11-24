@@ -87,7 +87,7 @@
                 </entry>
             </row>
             <row>
-                <entry morerows="25" valign="middle">
+                <entry morerows="22" valign="middle">
                     <emphasis>
                         <ulink url="http://framework.zend.com/manual/en/zend.auth.html">
                             <classname>Zend_Auth</classname>
@@ -102,7 +102,7 @@
                 </entry>
             </row>
             <row>
-                <entry morerows="4" valign="middle">Soft</entry>
+                <entry morerows="3" valign="middle">Soft</entry>
                 <entry>
                     <ulink url="http://framework.zend.com/manual/en/zend.db.html">
                         <classname>Zend_Db</classname>
@@ -113,13 +113,6 @@
                 <entry>
                     <ulink url="http://framework.zend.com/manual/en/zend.ldap.html">
                         <classname>Zend_Ldap</classname>
-                    </ulink>
-                </entry>
-            </row>
-            <row>
-                <entry>
-                    <ulink url="http://framework.zend.com/manual/en/zend.openid.html">
-                        <classname>Zend_OpenId</classname>
                     </ulink>
                 </entry>
             </row>
@@ -174,7 +167,7 @@
                 </entry>
             </row>
             <row>
-                <entry morerows="13" valign="middle">Sub</entry>
+                <entry morerows="11" valign="middle">Sub</entry>
                 <entry>
                     <ulink url="http://framework.zend.com/manual/en/zend.captcha.html">
                         <classname>Zend_Captcha</classname>
@@ -246,13 +239,6 @@
             </row>
             <row>
                 <entry>
-                    <ulink url="http://framework.zend.com/manual/en/zend.service.recaptcha.html">
-                        <classname>Zend_Service_ReCaptcha</classname>
-                    </ulink>
-                </entry>
-            </row>
-            <row>
-                <entry>
                     <ulink url="http://framework.zend.com/manual/en/zend.text.html">
                         <classname>Zend_Text</classname>
                     </ulink>
@@ -266,14 +252,7 @@
                 </entry>
             </row>
             <row>
-                <entry>
-                    <ulink url="http://framework.zend.com/manual/en/zend.wildfire.html">
-                        <classname>Zend_Wildfire</classname>
-                    </ulink>
-                </entry>
-            </row>
-            <row>
-                <entry morerows="23" valign="middle">
+                <entry morerows="21" valign="middle">
                     <emphasis>
                         <ulink url="http://framework.zend.com/manual/en/zend.cache.html">
                             <classname>Zend_Cache</classname>
@@ -296,7 +275,7 @@
                 </entry>
             </row>
             <row>
-                <entry morerows="21" valign="middle">Sub</entry>
+                <entry morerows="19" valign="middle">Sub</entry>
                 <entry>
                     <ulink url="http://framework.zend.com/manual/en/zend.captcha.html">
                         <classname>Zend_Captcha</classname>
@@ -403,13 +382,6 @@
             </row>
             <row>
                 <entry>
-                    <ulink url="http://framework.zend.com/manual/en/zend.service.recaptcha.html">
-                        <classname>Zend_Service_ReCaptcha</classname>
-                    </ulink>
-                </entry>
-            </row>
-            <row>
-                <entry>
                     <ulink url="http://framework.zend.com/manual/en/zend.session.html">
                         <classname>Zend_Session</classname>
                     </ulink>
@@ -444,31 +416,17 @@
                 </entry>
             </row>
             <row>
-                <entry>
-                    <ulink url="http://framework.zend.com/manual/en/zend.wildfire.html">
-                        <classname>Zend_Wildfire</classname>
-                    </ulink>
-                </entry>
-            </row>
-            <row>
-                <entry morerows="12" valign="middle">
+                <entry morerows="11" valign="middle">
                     <emphasis>
                         <ulink url="http://framework.zend.com/manual/en/zend.captcha.html">
                             <classname>Zend_Captcha</classname>
                         </ulink>
                     </emphasis>
                 </entry>
-                <entry morerows="3" valign="middle">Hard</entry>
+                <entry morerows="2" valign="middle">Hard</entry>
                 <entry>
                     <ulink url="http://framework.zend.com/manual/en/zend.exception.html">
                         <classname>Zend_Exception</classname>
-                    </ulink>
-                </entry>
-            </row>
-            <row>
-                <entry>
-                    <ulink url="http://framework.zend.com/manual/en/zend.service.recaptcha.html">
-                        <classname>Zend_Service_ReCaptcha</classname>
                     </ulink>
                 </entry>
             </row>
@@ -605,7 +563,7 @@
                 </entry>
             </row>
             <row>
-                <entry morerows="21" valign="middle">
+                <entry morerows="19" valign="middle">
                     <emphasis>
                         <ulink url="http://framework.zend.com/manual/en/zend.controller.html">
                             <classname>Zend_Controller</classname>
@@ -699,7 +657,7 @@
                 </entry>
             </row>
             <row>
-                <entry morerows="9" valign="middle">Sub</entry>
+                <entry morerows="7" valign="middle">Sub</entry>
                 <entry>
                     <ulink url="http://framework.zend.com/manual/en/zend.captcha.html">
                         <classname>Zend_Captcha</classname>
@@ -743,13 +701,6 @@
             </row>
             <row>
                 <entry>
-                    <ulink url="http://framework.zend.com/manual/en/zend.service.recaptcha.html">
-                        <classname>Zend_Service_ReCaptcha</classname>
-                    </ulink>
-                </entry>
-            </row>
-            <row>
-                <entry>
                     <ulink url="http://framework.zend.com/manual/en/zend.session.html">
                         <classname>Zend_Session</classname>
                     </ulink>
@@ -759,13 +710,6 @@
                 <entry>
                     <ulink url="http://framework.zend.com/manual/en/zend.text.html">
                         <classname>Zend_Text</classname>
-                    </ulink>
-                </entry>
-            </row>
-            <row>
-                <entry>
-                    <ulink url="http://framework.zend.com/manual/en/zend.wildfire.html">
-                        <classname>Zend_Wildfire</classname>
                     </ulink>
                 </entry>
             </row>
@@ -844,7 +788,7 @@
                 </entry>
             </row>
             <row>
-                <entry morerows="21" valign="middle">
+                <entry morerows="19" valign="middle">
                     <emphasis>
                         <ulink url="http://framework.zend.com/manual/en/zend.db.html">
                             <classname>Zend_Db</classname>
@@ -866,7 +810,7 @@
                 </entry>
             </row>
             <row>
-                <entry morerows="1" valign="middle">Soft</entry>
+                <entry valign="middle">Soft</entry>
                 <entry>
                     <ulink url="http://framework.zend.com/manual/en/zend.registry.html">
                         <classname>Zend_Registry</classname>
@@ -874,14 +818,7 @@
                 </entry>
             </row>
             <row>
-                <entry>
-                    <ulink url="http://framework.zend.com/manual/en/zend.wildfire.html">
-                        <classname>Zend_Wildfire</classname>
-                    </ulink>
-                </entry>
-            </row>
-            <row>
-                <entry morerows="17" valign="middle">Sub</entry>
+                <entry morerows="16" valign="middle">Sub</entry>
                 <entry>
                     <ulink url="http://framework.zend.com/manual/en/zend.captcha.html">
                         <classname>Zend_Captcha</classname>
@@ -967,13 +904,6 @@
             </row>
             <row>
                 <entry>
-                    <ulink url="http://framework.zend.com/manual/en/zend.service.recaptcha.html">
-                        <classname>Zend_Service_ReCaptcha</classname>
-                    </ulink>
-                </entry>
-            </row>
-            <row>
-                <entry>
                     <ulink url="http://framework.zend.com/manual/en/zend.session.html">
                         <classname>Zend_Session</classname>
                     </ulink>
@@ -1019,7 +949,7 @@
                 <entry>---</entry>
             </row>
             <row>
-                <entry morerows="22" valign="middle">
+                <entry morerows="20" valign="middle">
                     <emphasis>
                         <ulink url="http://framework.zend.com/manual/en/zend.dojo.html">
                             <classname>Zend_Dojo</classname>
@@ -1106,7 +1036,7 @@
                 </entry>
             </row>
             <row>
-                <entry morerows="11" valign="middle">Sub</entry>
+                <entry morerows="9" valign="middle">Sub</entry>
                 <entry>
                     <ulink url="http://framework.zend.com/manual/en/zend.captcha.html">
                         <classname>Zend_Captcha</classname>
@@ -1164,13 +1094,6 @@
             </row>
             <row>
                 <entry>
-                    <ulink url="http://framework.zend.com/manual/en/zend.service.recaptcha.html">
-                        <classname>Zend_Service_ReCaptcha</classname>
-                    </ulink>
-                </entry>
-            </row>
-            <row>
-                <entry>
                     <ulink url="http://framework.zend.com/manual/en/zend.session.html">
                         <classname>Zend_Session</classname>
                     </ulink>
@@ -1180,13 +1103,6 @@
                 <entry>
                     <ulink url="http://framework.zend.com/manual/en/zend.text.html">
                         <classname>Zend_Text</classname>
-                    </ulink>
-                </entry>
-            </row>
-            <row>
-                <entry>
-                    <ulink url="http://framework.zend.com/manual/en/zend.wildfire.html">
-                        <classname>Zend_Wildfire</classname>
                     </ulink>
                 </entry>
             </row>
@@ -1363,7 +1279,7 @@
                 </entry>
             </row>
             <row>
-                <entry morerows="22" valign="middle">
+                <entry morerows="20" valign="middle">
                     <emphasis>
                         <ulink url="http://framework.zend.com/manual/en/zend.form.html">
                             <classname>Zend_Form</classname>
@@ -1435,7 +1351,7 @@
                 </entry>
             </row>
             <row>
-                <entry morerows="7" valign="middle">Fix</entry>
+                <entry morerows="6" valign="middle">Fix</entry>
                 <entry>
                     <ulink url="http://framework.zend.com/manual/en/zend.config.html">
                         <classname>Zend_Config</classname>
@@ -1465,13 +1381,6 @@
             </row>
             <row>
                 <entry>
-                    <ulink url="http://framework.zend.com/manual/en/zend.service.recaptcha.html">
-                        <classname>Zend_Service_ReCaptcha</classname>
-                    </ulink>
-                </entry>
-            </row>
-            <row>
-                <entry>
                     <ulink url="http://framework.zend.com/manual/en/zend.text.html">
                         <classname>Zend_Text</classname>
                     </ulink>
@@ -1492,7 +1401,7 @@
                 </entry>
             </row>
             <row>
-                <entry morerows="5" valign="middle">Sub</entry>
+                <entry morerows="4" valign="middle">Sub</entry>
                 <entry>
                     <ulink url="http://framework.zend.com/manual/en/zend.date.html">
                         <classname>Zend_Date</classname>
@@ -1524,13 +1433,6 @@
                 <entry>
                     <ulink url="http://framework.zend.com/manual/en/zend.layout.html">
                         <classname>Zend_Layout</classname>
-                    </ulink>
-                </entry>
-            </row>
-            <row>
-                <entry>
-                    <ulink url="http://framework.zend.com/manual/en/zend.wildfire.html">
-                        <classname>Zend_Wildfire</classname>
                     </ulink>
                 </entry>
             </row>
@@ -1637,7 +1539,7 @@
                 </entry>
             </row>
             <row>
-                <entry morerows="22" valign="middle">
+                <entry morerows="20" valign="middle">
                     <emphasis>
                         <ulink url="http://framework.zend.com/manual/en/zend.layout.html">
                             <classname>Zend_Layout</classname>
@@ -1717,7 +1619,7 @@
                 </entry>
             </row>
             <row>
-                <entry morerows="12" valign="middle">Sub</entry>
+                <entry morerows="10" valign="middle">Sub</entry>
                 <entry>
                     <ulink url="http://framework.zend.com/manual/en/zend.captcha.html">
                         <classname>Zend_Captcha</classname>
@@ -1782,13 +1684,6 @@
             </row>
             <row>
                 <entry>
-                    <ulink url="http://framework.zend.com/manual/en/zend.service.recaptcha.html">
-                        <classname>Zend_Service_ReCaptcha</classname>
-                    </ulink>
-                </entry>
-            </row>
-            <row>
-                <entry>
                     <ulink url="http://framework.zend.com/manual/en/zend.session.html">
                         <classname>Zend_Session</classname>
                     </ulink>
@@ -1798,13 +1693,6 @@
                 <entry>
                     <ulink url="http://framework.zend.com/manual/en/zend.text.html">
                         <classname>Zend_Text</classname>
-                    </ulink>
-                </entry>
-            </row>
-            <row>
-                <entry>
-                    <ulink url="http://framework.zend.com/manual/en/zend.wildfire.html">
-                        <classname>Zend_Wildfire</classname>
                     </ulink>
                 </entry>
             </row>
@@ -1870,7 +1758,7 @@
                 </entry>
             </row>
             <row>
-                <entry morerows="21" valign="middle">
+                <entry morerows="19" valign="middle">
                     <emphasis>
                         <ulink url="http://framework.zend.com/manual/en/zend.log.html">
                             <classname>Zend_Log</classname>
@@ -1885,15 +1773,7 @@
                 </entry>
             </row>
             <row>
-                <entry>Soft</entry>
-                <entry>
-                    <ulink url="http://framework.zend.com/manual/en/zend.wildfire.html">
-                        <classname>Zend_Wildfire</classname>
-                    </ulink>
-                </entry>
-            </row>
-            <row>
-                <entry morerows="19" valign="middle">Sub</entry>
+                <entry morerows="18" valign="middle">Sub</entry>
                 <entry>
                     <ulink url="http://framework.zend.com/manual/en/zend.captcha.html">
                         <classname>Zend_Captcha</classname>
@@ -1988,13 +1868,6 @@
                 <entry>
                     <ulink url="http://framework.zend.com/manual/en/zend.server.html">
                         <classname>Zend_Server</classname>
-                    </ulink>
-                </entry>
-            </row>
-            <row>
-                <entry>
-                    <ulink url="http://framework.zend.com/manual/en/zend.service.recaptcha.html">
-                        <classname>Zend_Service_ReCaptcha</classname>
                     </ulink>
                 </entry>
             </row>
@@ -2137,7 +2010,7 @@
                 </entry>
             </row>
             <row>
-                <entry morerows="24" valign="middle">
+                <entry morerows="22" valign="middle">
                     <emphasis>
                         <ulink url="http://framework.zend.com/manual/en/zend.memory.html">
                             <classname>Zend_Memory</classname>
@@ -2159,7 +2032,7 @@
                 </entry>
             </row>
             <row>
-                <entry morerows="22" valign="middle">Sub</entry>
+                <entry morerows="20" valign="middle">Sub</entry>
                 <entry>
                     <ulink url="http://framework.zend.com/manual/en/zend.captcha.html">
                         <classname>Zend_Captcha</classname>
@@ -2273,13 +2146,6 @@
             </row>
             <row>
                 <entry>
-                    <ulink url="http://framework.zend.com/manual/en/zend.service.recaptcha.html">
-                        <classname>Zend_Service_ReCaptcha</classname>
-                    </ulink>
-                </entry>
-            </row>
-            <row>
-                <entry>
                     <ulink url="http://framework.zend.com/manual/en/zend.session.html">
                         <classname>Zend_Session</classname>
                     </ulink>
@@ -2310,13 +2176,6 @@
                 <entry>
                     <ulink url="http://framework.zend.com/manual/en/zend.view.html">
                         <classname>Zend_View</classname>
-                    </ulink>
-                </entry>
-            </row>
-            <row>
-                <entry>
-                    <ulink url="http://framework.zend.com/manual/en/zend.wildfire.html">
-                        <classname>Zend_Wildfire</classname>
                     </ulink>
                 </entry>
             </row>
@@ -2336,178 +2195,7 @@
                 </entry>
             </row>
             <row>
-                <entry morerows="22" valign="middle">
-                    <emphasis>
-                        <ulink url="http://framework.zend.com/manual/en/zend.openid.html">
-                            <classname>Zend_OpenId</classname>
-                        </ulink>
-                    </emphasis>
-                </entry>
-                <entry morerows="3" valign="middle">Hard</entry>
-                <entry>
-                    <ulink url="http://framework.zend.com/manual/en/zend.controller.html">
-                        <classname>Zend_Controller</classname>
-                    </ulink>
-                </entry>
-            </row>
-            <row>
-                <entry>
-                    <ulink url="http://framework.zend.com/manual/en/zend.exception.html">
-                        <classname>Zend_Exception</classname>
-                    </ulink>
-                </entry>
-            </row>
-            <row>
-                <entry>
-                    <ulink url="http://framework.zend.com/manual/en/zend.http.html">
-                        <classname>Zend_Http</classname>
-                    </ulink>
-                </entry>
-            </row>
-            <row>
-                <entry>
-                    <ulink url="http://framework.zend.com/manual/en/zend.session.html">
-                        <classname>Zend_Session</classname>
-                    </ulink>
-                </entry>
-            </row>
-            <row>
-                <entry morerows="7" valign="middle">Fix</entry>
-                <entry>
-                    <ulink url="http://framework.zend.com/manual/en/zend.config.html">
-                        <classname>Zend_Config</classname>
-                    </ulink>
-                </entry>
-            </row>
-            <row>
-                <entry>
-                    <ulink url="http://framework.zend.com/manual/en/zend.dojo.html">
-                        <classname>Zend_Dojo</classname>
-                    </ulink>
-                </entry>
-            </row>
-            <row>
-                <entry>
-                    <ulink url="http://framework.zend.com/manual/en/zend.loader.html">
-                        <classname>Zend_Loader</classname>
-                    </ulink>
-                </entry>
-            </row>
-            <row>
-                <entry>
-                    <ulink url="http://framework.zend.com/manual/en/zend.locale.html">
-                        <classname>Zend_Locale</classname>
-                    </ulink>
-                </entry>
-            </row>
-            <row>
-                <entry>
-                    <ulink url="http://framework.zend.com/manual/en/zend.registry.html">
-                        <classname>Zend_Registry</classname>
-                    </ulink>
-                </entry>
-            </row>
-            <row>
-                <entry>
-                    <ulink url="http://framework.zend.com/manual/en/zend.uri.html">
-                        <classname>Zend_Uri</classname>
-                    </ulink>
-                </entry>
-            </row>
-            <row>
-                <entry>
-                    <ulink url="http://framework.zend.com/manual/en/zend.validate.html">
-                        <classname>Zend_Validate</classname>
-                    </ulink>
-                </entry>
-            </row>
-            <row>
-                <entry>
-                    <ulink url="http://framework.zend.com/manual/en/zend.view.html">
-                        <classname>Zend_View</classname>
-                    </ulink>
-                </entry>
-            </row>
-            <row>
-                <entry morerows="10" valign="middle">Sub</entry>
-                <entry>
-                    <ulink url="http://framework.zend.com/manual/en/zend.captcha.html">
-                        <classname>Zend_Captcha</classname>
-                    </ulink>
-                </entry>
-            </row>
-            <row>
-                <entry>
-                    <ulink url="http://framework.zend.com/manual/en/zend.date.html">
-                        <classname>Zend_Date</classname>
-                    </ulink>
-                </entry>
-            </row>
-            <row>
-                <entry>
-                    <ulink url="http://framework.zend.com/manual/en/zend.db.html">
-                        <classname>Zend_Db</classname>
-                    </ulink>
-                </entry>
-            </row>
-            <row>
-                <entry>
-                    <ulink url="http://framework.zend.com/manual/en/zend.filter.html">
-                        <classname>Zend_Filter</classname>
-                    </ulink>
-                </entry>
-            </row>
-            <row>
-                <entry>
-                    <ulink url="http://framework.zend.com/manual/en/zend.form.html">
-                        <classname>Zend_Form</classname>
-                    </ulink>
-                </entry>
-            </row>
-            <row>
-                <entry>
-                    <ulink url="http://framework.zend.com/manual/en/zend.json.html">
-                        <classname>Zend_Json</classname>
-                    </ulink>
-                </entry>
-            </row>
-            <row>
-                <entry>
-                    <ulink url="http://framework.zend.com/manual/en/zend.layout.html">
-                        <classname>Zend_Layout</classname>
-                    </ulink>
-                </entry>
-            </row>
-            <row>
-                <entry>
-                    <ulink url="http://framework.zend.com/manual/en/zend.server.html">
-                        <classname>Zend_Server</classname>
-                    </ulink>
-                </entry>
-            </row>
-            <row>
-                <entry>
-                    <ulink url="http://framework.zend.com/manual/en/zend.service.recaptcha.html">
-                        <classname>Zend_Service_ReCaptcha</classname>
-                    </ulink>
-                </entry>
-            </row>
-            <row>
-                <entry>
-                    <ulink url="http://framework.zend.com/manual/en/zend.text.html">
-                        <classname>Zend_Text</classname>
-                    </ulink>
-                </entry>
-            </row>
-            <row>
-                <entry>
-                    <ulink url="http://framework.zend.com/manual/en/zend.wildfire.html">
-                        <classname>Zend_Wildfire</classname>
-                    </ulink>
-                </entry>
-            </row>
-            <row>
-                <entry morerows="22" valign="middle">
+                <entry morerows="20" valign="middle">
                     <emphasis>
                         <ulink url="http://framework.zend.com/manual/en/zend.paginator.html">
                             <classname>Zend_Paginator</classname>
@@ -2566,7 +2254,7 @@
                 </entry>
             </row>
             <row>
-                <entry morerows="15" valign="middle">Sub</entry>
+                <entry morerows="13" valign="middle">Sub</entry>
                 <entry>
                     <ulink url="http://framework.zend.com/manual/en/zend.captcha.html">
                         <classname>Zend_Captcha</classname>
@@ -2638,13 +2326,6 @@
             </row>
             <row>
                 <entry>
-                    <ulink url="http://framework.zend.com/manual/en/zend.service.recaptcha.html">
-                        <classname>Zend_Service_ReCaptcha</classname>
-                    </ulink>
-                </entry>
-            </row>
-            <row>
-                <entry>
                     <ulink url="http://framework.zend.com/manual/en/zend.session.html">
                         <classname>Zend_Session</classname>
                     </ulink>
@@ -2672,14 +2353,7 @@
                 </entry>
             </row>
             <row>
-                <entry>
-                    <ulink url="http://framework.zend.com/manual/en/zend.wildfire.html">
-                        <classname>Zend_Wildfire</classname>
-                    </ulink>
-                </entry>
-            </row>
-            <row>
-                <entry morerows="25" valign="middle">
+                <entry morerows="23" valign="middle">
                     <emphasis>
                         <ulink url="http://framework.zend.com/manual/en/zend.pdf.html">
                             <classname>Zend_Pdf</classname>
@@ -2716,7 +2390,7 @@
                 </entry>
             </row>
             <row>
-                <entry morerows="21" valign="middle">Sub</entry>
+                <entry morerows="19" valign="middle">Sub</entry>
                 <entry>
                     <ulink url="http://framework.zend.com/manual/en/zend.captcha.html">
                         <classname>Zend_Captcha</classname>
@@ -2823,13 +2497,6 @@
             </row>
             <row>
                 <entry>
-                    <ulink url="http://framework.zend.com/manual/en/zend.service.recaptcha.html">
-                        <classname>Zend_Service_ReCaptcha</classname>
-                    </ulink>
-                </entry>
-            </row>
-            <row>
-                <entry>
                     <ulink url="http://framework.zend.com/manual/en/zend.session.html">
                         <classname>Zend_Session</classname>
                     </ulink>
@@ -2864,14 +2531,7 @@
                 </entry>
             </row>
             <row>
-                <entry>
-                    <ulink url="http://framework.zend.com/manual/en/zend.wildfire.html">
-                        <classname>Zend_Wildfire</classname>
-                    </ulink>
-                </entry>
-            </row>
-            <row>
-                <entry morerows="20" valign="middle">
+                <entry morerows="18" valign="middle">
                     <emphasis>
                         <ulink url="http://framework.zend.com/manual/en/zend.progressbar.html">
                             <classname>Zend_Progressbar</classname>
@@ -2930,7 +2590,7 @@
                 </entry>
             </row>
             <row>
-                <entry morerows="13" valign="middle">Sub</entry>
+                <entry morerows="11" valign="middle">Sub</entry>
                 <entry>
                     <ulink url="http://framework.zend.com/manual/en/zend.captcha.html">
                         <classname>Zend_Captcha</classname>
@@ -2988,13 +2648,6 @@
             </row>
             <row>
                 <entry>
-                    <ulink url="http://framework.zend.com/manual/en/zend.service.recaptcha.html">
-                        <classname>Zend_Service_ReCaptcha</classname>
-                    </ulink>
-                </entry>
-            </row>
-            <row>
-                <entry>
                     <ulink url="http://framework.zend.com/manual/en/zend.text.html">
                         <classname>Zend_Text</classname>
                     </ulink>
@@ -3018,13 +2671,6 @@
                 <entry>
                     <ulink url="http://framework.zend.com/manual/en/zend.view.html">
                         <classname>Zend_View</classname>
-                    </ulink>
-                </entry>
-            </row>
-            <row>
-                <entry>
-                    <ulink url="http://framework.zend.com/manual/en/zend.wildfire.html">
-                        <classname>Zend_Wildfire</classname>
                     </ulink>
                 </entry>
             </row>
@@ -3260,100 +2906,6 @@
                 </entry>
             </row>
             <row>
-                <entry morerows="11" valign="middle">
-                    <emphasis>
-                        <ulink url="http://framework.zend.com/manual/en/zend.service.amazon.html">
-                            <classname>Zend_Service_Amazon</classname>
-                        </ulink>
-                    </emphasis>
-                </entry>
-                <entry morerows="2" valign="middle">Hard</entry>
-                <entry>
-                    <ulink url="http://framework.zend.com/manual/en/zend.exception.html">
-                        <classname>Zend_Exception</classname>
-                    </ulink>
-                </entry>
-            </row>
-            <row>
-                <entry>
-                    <ulink url="http://framework.zend.com/manual/en/zend.http.html">
-                        <classname>Zend_Http</classname>
-                    </ulink>
-                </entry>
-            </row>
-            <row>
-                <entry>
-                    <ulink url="http://framework.zend.com/manual/en/zend.rest.html">
-                        <classname>Zend_Rest</classname>
-                    </ulink>
-                </entry>
-            </row>
-            <row>
-                <entry morerows="5" valign="middle">Fix</entry>
-                <entry>
-                    <ulink url="http://framework.zend.com/manual/en/zend.loader.html">
-                        <classname>Zend_Loader</classname>
-                    </ulink>
-                </entry>
-            </row>
-            <row>
-                <entry>
-                    <ulink url="http://framework.zend.com/manual/en/zend.locale.html">
-                        <classname>Zend_Locale</classname>
-                    </ulink>
-                </entry>
-            </row>
-            <row>
-                <entry>
-                    <ulink url="http://framework.zend.com/manual/en/zend.server.html">
-                        <classname>Zend_Server</classname>
-                    </ulink>
-                </entry>
-            </row>
-            <row>
-                <entry>
-                    <ulink url="http://framework.zend.com/manual/en/zend.service.html">
-                        <classname>Zend_Service</classname>
-                    </ulink>
-                </entry>
-            </row>
-            <row>
-                <entry>
-                    <ulink url="http://framework.zend.com/manual/en/zend.uri.html">
-                        <classname>Zend_Uri</classname>
-                    </ulink>
-                </entry>
-            </row>
-            <row>
-                <entry>
-                    <ulink url="http://framework.zend.com/manual/en/zend.validate.html">
-                        <classname>Zend_Validate</classname>
-                    </ulink>
-                </entry>
-            </row>
-            <row>
-                <entry morerows="2" valign="middle">Sub</entry>
-                <entry>
-                    <ulink url="http://framework.zend.com/manual/en/zend.date.html">
-                        <classname>Zend_Date</classname>
-                    </ulink>
-                </entry>
-            </row>
-            <row>
-                <entry>
-                    <ulink url="http://framework.zend.com/manual/en/zend.filter.html">
-                        <classname>Zend_Filter</classname>
-                    </ulink>
-                </entry>
-            </row>
-            <row>
-                <entry>
-                    <ulink url="http://framework.zend.com/manual/en/zend.registry.html">
-                        <classname>Zend_Registry</classname>
-                    </ulink>
-                </entry>
-            </row>
-            <row>
                 <entry morerows="8" valign="middle">
                     <emphasis>
                         <ulink
@@ -3524,94 +3076,7 @@
                 </entry>
             </row>
             <row>
-                <entry morerows="10" valign="middle">
-                    <emphasis>
-                        <ulink url="http://framework.zend.com/manual/en/zend.service.recapchta.html">
-                            <classname>Zend_Service_ReCaptcha</classname>
-                        </ulink>
-                    </emphasis>
-                </entry>
-                <entry morerows="2" valign="middle">Hard</entry>
-                <entry>
-                    <ulink url="http://framework.zend.com/manual/en/zend.exception.html">
-                        <classname>Zend_Exception</classname>
-                    </ulink>
-                </entry>
-            </row>
-            <row>
-                <entry>
-                    <ulink url="http://framework.zend.com/manual/en/zend.http.html">
-                        <classname>Zend_Http</classname>
-                    </ulink>
-                </entry>
-            </row>
-            <row>
-                <entry>
-                    <ulink url="http://framework.zend.com/manual/en/zend.json.html">
-                        <classname>Zend_Json</classname>
-                    </ulink>
-                </entry>
-            </row>
-            <row>
-                <entry morerows="4" valign="middle">Fix</entry>
-                <entry>
-                    <ulink url="http://framework.zend.com/manual/en/zend.loader.html">
-                        <classname>Zend_Loader</classname>
-                    </ulink>
-                </entry>
-            </row>
-            <row>
-                <entry>
-                    <ulink url="http://framework.zend.com/manual/en/zend.locale.html">
-                        <classname>Zend_Locale</classname>
-                    </ulink>
-                </entry>
-            </row>
-            <row>
-                <entry>
-                    <ulink url="http://framework.zend.com/manual/en/zend.server.html">
-                        <classname>Zend_Server</classname>
-                    </ulink>
-                </entry>
-            </row>
-            <row>
-                <entry>
-                    <ulink url="http://framework.zend.com/manual/en/zend.uri.html">
-                        <classname>Zend_Uri</classname>
-                    </ulink>
-                </entry>
-            </row>
-            <row>
-                <entry>
-                    <ulink url="http://framework.zend.com/manual/en/zend.validate.html">
-                        <classname>Zend_Validate</classname>
-                    </ulink>
-                </entry>
-            </row>
-            <row>
-                <entry morerows="2" valign="middle">Sub</entry>
-                <entry>
-                    <ulink url="http://framework.zend.com/manual/en/zend.date.html">
-                        <classname>Zend_Date</classname>
-                    </ulink>
-                </entry>
-            </row>
-            <row>
-                <entry>
-                    <ulink url="http://framework.zend.com/manual/en/zend.filter.html">
-                        <classname>Zend_Filter</classname>
-                    </ulink>
-                </entry>
-            </row>
-            <row>
-                <entry>
-                    <ulink url="http://framework.zend.com/manual/en/zend.registry.html">
-                        <classname>Zend_Registry</classname>
-                    </ulink>
-                </entry>
-            </row>
-            <row>
-                <entry morerows="20" valign="middle">
+                <entry morerows="18" valign="middle">
                     <emphasis>
                         <ulink url="http://framework.zend.com/manual/en/zend.session.html">
                             <classname>Zend_Session</classname>
@@ -3648,7 +3113,7 @@
                 </entry>
             </row>
             <row>
-                <entry morerows="16" valign="middle">Sub</entry>
+                <entry morerows="14" valign="middle">Sub</entry>
                 <entry>
                     <ulink url="http://framework.zend.com/manual/en/zend.captcha.html">
                         <classname>Zend_Captcha</classname>
@@ -3720,13 +3185,6 @@
             </row>
             <row>
                 <entry>
-                    <ulink url="http://framework.zend.com/manual/en/zend.service.recaptcha.html">
-                        <classname>Zend_Service_ReCaptcha</classname>
-                    </ulink>
-                </entry>
-            </row>
-            <row>
-                <entry>
                     <ulink url="http://framework.zend.com/manual/en/zend.session.html">
                         <classname>Zend_Session</classname>
                     </ulink>
@@ -3757,13 +3215,6 @@
                 <entry>
                     <ulink url="http://framework.zend.com/manual/en/zend.view.html">
                         <classname>Zend_View</classname>
-                    </ulink>
-                </entry>
-            </row>
-            <row>
-                <entry>
-                    <ulink url="http://framework.zend.com/manual/en/zend.wildfire.html">
-                        <classname>Zend_Wildfire</classname>
                     </ulink>
                 </entry>
             </row>
@@ -3841,7 +3292,7 @@
                 </entry>
             </row>
             <row>
-                <entry morerows="23" valign="middle">
+                <entry morerows="21" valign="middle">
                     <emphasis>
                         <ulink url="http://framework.zend.com/manual/en/zend.test.html">
                             <classname>Zend_Test</classname>
@@ -3935,7 +3386,7 @@
                 </entry>
             </row>
             <row>
-                <entry morerows="11" valign="middle">Sub</entry>
+                <entry morerows="9" valign="middle">Sub</entry>
                 <entry>
                     <ulink url="http://framework.zend.com/manual/en/zend.captcha.html">
                         <classname>Zend_Captcha</classname>
@@ -4000,22 +3451,8 @@
             </row>
             <row>
                 <entry>
-                    <ulink url="http://framework.zend.com/manual/en/zend.service.recaptcha.html">
-                        <classname>Zend_Service_ReCaptcha</classname>
-                    </ulink>
-                </entry>
-            </row>
-            <row>
-                <entry>
                     <ulink url="http://framework.zend.com/manual/en/zend.text.html">
                         <classname>Zend_Text</classname>
-                    </ulink>
-                </entry>
-            </row>
-            <row>
-                <entry>
-                    <ulink url="http://framework.zend.com/manual/en/zend.wildfire.html">
-                        <classname>Zend_Wildfire</classname>
                     </ulink>
                 </entry>
             </row>
@@ -4245,7 +3682,7 @@
                 <entry>---</entry>
             </row>
             <row>
-                <entry morerows="21" valign="middle">
+                <entry morerows="19" valign="middle">
                     <emphasis>
                         <ulink url="http://framework.zend.com/manual/en/zend.view.html">
                             <classname>Zend_View</classname>
@@ -4325,7 +3762,7 @@
                 </entry>
             </row>
             <row>
-                <entry morerows="11" valign="middle">Sub</entry>
+                <entry morerows="9" valign="middle">Sub</entry>
                 <entry>
                     <ulink url="http://framework.zend.com/manual/en/zend.captcha.html">
                         <classname>Zend_Captcha</classname>
@@ -4378,184 +3815,6 @@
                 <entry>
                     <ulink url="http://framework.zend.com/manual/en/zend.server.html">
                         <classname>Zend_Server</classname>
-                    </ulink>
-                </entry>
-            </row>
-            <row>
-                <entry>
-                    <ulink url="http://framework.zend.com/manual/en/zend.service.recaptcha.html">
-                        <classname>Zend_Service_ReCaptcha</classname>
-                    </ulink>
-                </entry>
-            </row>
-            <row>
-                <entry>
-                    <ulink url="http://framework.zend.com/manual/en/zend.session.html">
-                        <classname>Zend_Session</classname>
-                    </ulink>
-                </entry>
-            </row>
-            <row>
-                <entry>
-                    <ulink url="http://framework.zend.com/manual/en/zend.text.html">
-                        <classname>Zend_Text</classname>
-                    </ulink>
-                </entry>
-            </row>
-            <row>
-                <entry>
-                    <ulink url="http://framework.zend.com/manual/en/zend.wildfire.html">
-                        <classname>Zend_Wildfire</classname>
-                    </ulink>
-                </entry>
-            </row>
-            <row>
-                <entry morerows="21" valign="middle">
-                    <emphasis>
-                        <ulink url="http://framework.zend.com/manual/en/zend.wildfire.html">
-                            <classname>Zend_Wildfire</classname>
-                        </ulink>
-                    </emphasis>
-                </entry>
-                <entry morerows="3" valign="middle">Hard</entry>
-                <entry>
-                    <ulink url="http://framework.zend.com/manual/en/zend.controller.html">
-                        <classname>Zend_Controller</classname>
-                    </ulink>
-                </entry>
-            </row>
-            <row>
-                <entry>
-                    <ulink url="http://framework.zend.com/manual/en/zend.exception.html">
-                        <classname>Zend_Exception</classname>
-                    </ulink>
-                </entry>
-            </row>
-            <row>
-                <entry>
-                    <ulink url="http://framework.zend.com/manual/en/zend.json.html">
-                        <classname>Zend_Json</classname>
-                    </ulink>
-                </entry>
-            </row>
-            <row>
-                <entry>
-                    <ulink url="http://framework.zend.com/manual/en/zend.loader.html">
-                        <classname>Zend_Loader</classname>
-                    </ulink>
-                </entry>
-            </row>
-            <row>
-                <entry morerows="6" valign="middle">Fix</entry>
-                <entry>
-                    <ulink url="http://framework.zend.com/manual/en/zend.config.html">
-                        <classname>Zend_Config</classname>
-                    </ulink>
-                </entry>
-            </row>
-            <row>
-                <entry>
-                    <ulink url="http://framework.zend.com/manual/en/zend.layout.html">
-                        <classname>Zend_Layout</classname>
-                    </ulink>
-                </entry>
-            </row>
-            <row>
-                <entry>
-                    <ulink url="http://framework.zend.com/manual/en/zend.registry.html">
-                        <classname>Zend_Registry</classname>
-                    </ulink>
-                </entry>
-            </row>
-            <row>
-                <entry>
-                    <ulink url="http://framework.zend.com/manual/en/zend.server.html">
-                        <classname>Zend_Server</classname>
-                    </ulink>
-                </entry>
-            </row>
-            <row>
-                <entry>
-                    <ulink url="http://framework.zend.com/manual/en/zend.uri.html">
-                        <classname>Zend_Uri</classname>
-                    </ulink>
-                </entry>
-            </row>
-            <row>
-                <entry>
-                    <ulink url="http://framework.zend.com/manual/en/zend.validate.html">
-                        <classname>Zend_Validate</classname>
-                    </ulink>
-                </entry>
-            </row>
-            <row>
-                <entry>
-                    <ulink url="http://framework.zend.com/manual/en/zend.view.html">
-                        <classname>Zend_View</classname>
-                    </ulink>
-                </entry>
-            </row>
-            <row>
-                <entry morerows="10" valign="middle">Sub</entry>
-                <entry>
-                    <ulink url="http://framework.zend.com/manual/en/zend.captcha.html">
-                        <classname>Zend_Captcha</classname>
-                    </ulink>
-                </entry>
-            </row>
-            <row>
-                <entry>
-                    <ulink url="http://framework.zend.com/manual/en/zend.date.html">
-                        <classname>Zend_Date</classname>
-                    </ulink>
-                </entry>
-            </row>
-            <row>
-                <entry>
-                    <ulink url="http://framework.zend.com/manual/en/zend.db.html">
-                        <classname>Zend_Db</classname>
-                    </ulink>
-                </entry>
-            </row>
-            <row>
-                <entry>
-                    <ulink url="http://framework.zend.com/manual/en/zend.dojo.html">
-                        <classname>Zend_Dojo</classname>
-                    </ulink>
-                </entry>
-            </row>
-            <row>
-                <entry>
-                    <ulink url="http://framework.zend.com/manual/en/zend.filter.html">
-                        <classname>Zend_Filter</classname>
-                    </ulink>
-                </entry>
-            </row>
-            <row>
-                <entry>
-                    <ulink url="http://framework.zend.com/manual/en/zend.form.html">
-                        <classname>Zend_Form</classname>
-                    </ulink>
-                </entry>
-            </row>
-            <row>
-                <entry>
-                    <ulink url="http://framework.zend.com/manual/en/zend.http.html">
-                        <classname>Zend_Http</classname>
-                    </ulink>
-                </entry>
-            </row>
-            <row>
-                <entry>
-                    <ulink url="http://framework.zend.com/manual/en/zend.layout.html">
-                        <classname>Zend_Layout</classname>
-                    </ulink>
-                </entry>
-            </row>
-            <row>
-                <entry>
-                    <ulink url="http://framework.zend.com/manual/en/zend.service.recaptcha.html">
-                        <classname>Zend_Service_ReCaptcha</classname>
                     </ulink>
                 </entry>
             </row>

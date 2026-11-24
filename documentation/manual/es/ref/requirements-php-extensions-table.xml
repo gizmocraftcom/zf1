@@ -193,12 +193,12 @@
                 <entry>---</entry>
             </row>
             <row>
-                <entry morerows="10" valign="middle">
+                <entry morerows="9" valign="middle">
                     <emphasis>
                         <ulink url="http://www.php.net/manual/en/ref.dom.php">dom</ulink>
                     </emphasis>
                 </entry>
-                <entry morerows="10" valign="middle">Hard</entry>
+                <entry morerows="9" valign="middle">Hard</entry>
                 <entry>
                     <ulink url="http://framework.zend.com/manual/en/zend.amf.html">
                         <classname>Zend_Amf</classname>
@@ -244,13 +244,6 @@
                 <entry>
                     <ulink url="http://framework.zend.com/manual/en/zend.search.lucene.html">
                         <classname>Zend_Search_Lucene</classname>
-                    </ulink>
-                </entry>
-            </row>
-            <row>
-                <entry>
-                    <ulink url="http://framework.zend.com/manual/en/zend.service.amazon.html">
-                        <classname>Zend_Service_Amazon</classname>
                     </ulink>
                 </entry>
             </row>
@@ -513,19 +506,6 @@
                 <entry>
                     <ulink url="http://framework.zend.com/manual/en/zend.feed.html">
                         <classname>Zend_Feed</classname>
-                    </ulink>
-                </entry>
-            </row>
-            <row>
-                <entry>
-                    <emphasis>
-                        <ulink url="http://www.php.net/manual/en/ref.mcrypt.php">mcrypt</ulink>
-                    </emphasis>
-                </entry>
-                <entry>Fuerte</entry>
-                <entry>
-                    <ulink url="http://framework.zend.com/manual/en/zend.service.recaptcha.html">
-                        <classname>Zend_Service_ReCaptcha</classname>
                     </ulink>
                 </entry>
             </row>

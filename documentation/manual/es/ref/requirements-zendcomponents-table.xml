@@ -538,17 +538,6 @@
             <row>
                 <entry>
                     <emphasis>
-                        <ulink url="http://framework.zend.com/manual/en/zend.openid.html">
-                            <classname>Zend_OpenId</classname>
-                        </ulink>
-                    </emphasis>
-                </entry>
-                <entry>---</entry>
-                <entry>---</entry>
-            </row>
-            <row>
-                <entry>
-                    <emphasis>
                         <ulink url="http://framework.zend.com/manual/en/zend.paginator.html">
                             <classname>Zend_Paginator</classname>
                         </ulink>
@@ -710,24 +699,6 @@
                 <entry>---</entry>
             </row>
             <row>
-                <entry morerows="1" valign="middle">
-                    <emphasis>
-                        <ulink url="http://framework.zend.com/manual/en/zend.service.amazon.html">
-                            <classname>Zend_Service_Amazon</classname>
-                        </ulink>
-                    </emphasis>
-                </entry>
-                <entry morerows="1" valign="middle">Hard</entry>
-                <entry>
-                    <ulink url="http://www.php.net/manual/en/ref.dom.php">dom</ulink>
-                </entry>
-            </row>
-            <row>
-                <entry>
-                    <ulink url="http://www.php.net/manual/en/ref.libxml.php">libxml</ulink>
-                </entry>
-            </row>
-            <row>
                 <entry morerows="2" valign="middle">
                     <emphasis>
                         <ulink
@@ -773,21 +744,6 @@
             <row>
                 <entry>
                     <ulink url="http://www.php.net/manual/en/ref.libxml.php">libxml</ulink>
-                </entry>
-            </row>
-            <row>
-                <entry>
-                    <emphasis>
-                        <ulink url="http://framework.zend.com/manual/en/zend.service.recaptcha.html">
-                            <classname>Zend_Service_ReCaptcha</classname>
-                        </ulink>
-                    </emphasis>
-                </entry>
-                <entry>Fuerte</entry>
-                <entry>
-                    <emphasis>
-                        <ulink url="http://www.php.net/manual/en/ref.mcrypt.php">mcrypt</ulink>
-                    </emphasis>
                 </entry>
             </row>
             <row>
@@ -930,17 +886,6 @@
                 <entry>
                     <ulink url="http://www.php.net/manual/en/language.oop5.reflection.php">Reflection</ulink>
                 </entry>
-            </row>
-            <row>
-                <entry>
-                    <emphasis>
-                        <ulink url="http://framework.zend.com/manual/en/zend.wildfire.html">
-                            <classname>Zend_Wildfire</classname>
-                        </ulink>
-                    </emphasis>
-                </entry>
-                <entry>---</entry>
-                <entry>---</entry>
             </row>
             <row>
                 <entry morerows="4" valign="middle">

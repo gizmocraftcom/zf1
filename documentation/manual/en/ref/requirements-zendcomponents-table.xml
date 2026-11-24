@@ -622,18 +622,6 @@
                 <entry>
                     <emphasis>
                         <ulink
-                            url="&zf.manual.link;/zend.openid.html">
-                            <classname>Zend_OpenId</classname>
-                        </ulink>
-                    </emphasis>
-                </entry>
-                <entry>---</entry>
-                <entry>---</entry>
-            </row>
-            <row>
-                <entry>
-                    <emphasis>
-                        <ulink
                             url="&zf.manual.link;/zend.paginator.html">
                             <classname>Zend_Paginator</classname>
                         </ulink>
@@ -856,27 +844,6 @@
                 <entry>---</entry>
             </row>
             <row>
-                <entry morerows="1" valign="middle">
-                    <emphasis>
-                        <ulink
-                            url="&zf.manual.link;/zend.service.amazon.html">
-                            <classname>Zend_Service_Amazon</classname>
-                        </ulink>
-                    </emphasis>
-                </entry>
-                <entry morerows="1" valign="middle">&requirements.hard;</entry>
-                <entry>
-                    <ulink
-                        url="&php.manual.link;/ref.dom.php">dom</ulink>
-                </entry>
-            </row>
-            <row>
-                <entry>
-                    <ulink
-                        url="&php.manual.link;/ref.libxml.php">libxml</ulink>
-                </entry>
-            </row>
-            <row>
                 <entry morerows="2" valign="middle">
                     <emphasis>
                         <ulink
@@ -928,23 +895,6 @@
                 <entry>
                     <ulink
                         url="&php.manual.link;/ref.libxml.php">libxml</ulink>
-                </entry>
-            </row>
-            <row>
-                <entry>
-                    <emphasis>
-                        <ulink
-                            url="&zf.manual.link;/zend.service.recaptcha.html">
-                            <classname>Zend_Service_ReCaptcha</classname>
-                        </ulink>
-                    </emphasis>
-                </entry>
-                <entry>&requirements.soft;</entry>
-                <entry>
-                    <emphasis>
-                        <ulink
-                            url="&php.manual.link;/ref.mcrypt.php">mcrypt</ulink>
-                    </emphasis>
                 </entry>
             </row>
             <row>
@@ -1106,18 +1056,6 @@
                     <ulink
                         url="&php.manual.link;/book.reflection.php">Reflection</ulink>
                 </entry>
-            </row>
-            <row>
-                <entry>
-                    <emphasis>
-                        <ulink
-                            url="&zf.manual.link;/zend.wildfire.html">
-                            <classname>Zend_Wildfire</classname>
-                        </ulink>
-                    </emphasis>
-                </entry>
-                <entry>---</entry>
-                <entry>---</entry>
             </row>
             <row>
                 <entry morerows="4" valign="middle">

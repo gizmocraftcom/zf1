@@ -397,11 +397,6 @@
                     <xi:include href="../en/module_specs/Zend_Auth_Adapter_Ldap.xml" />
                 </xi:fallback>
             </xi:include>
-            <xi:include href="module_specs/Zend_Auth_Adapter_OpenId.xml">
-                <xi:fallback>
-                    <xi:include href="../en/module_specs/Zend_Auth_Adapter_OpenId.xml" />
-                </xi:fallback>
-            </xi:include>
         </chapter>
 
         <chapter id="zend.barcode">
@@ -1502,24 +1497,6 @@
             </xi:include>
         </chapter>
 
-        <chapter id="zend.openid">
-            <title>Zend_OpenId</title>
-            <xi:include href="module_specs/Zend_OpenId-Introduction.xml">
-                <xi:fallback>
-                    <xi:include href="../en/module_specs/Zend_OpenId-Introduction.xml" />
-                </xi:fallback>
-            </xi:include>
-            <xi:include href="module_specs/Zend_OpenId-Consumer.xml">
-                <xi:fallback>
-                    <xi:include href="../en/module_specs/Zend_OpenId-Consumer.xml" />
-                </xi:fallback>
-            </xi:include>
-            <xi:include href="module_specs/Zend_OpenId-Provider.xml">
-                <xi:fallback>
-                    <xi:include href="../en/module_specs/Zend_OpenId-Provider.xml" />
-                </xi:fallback>
-            </xi:include>
-        </chapter>
 
         <chapter id="zend.paginator">
             <title>Zend_Paginator</title>
@@ -1776,84 +1753,9 @@
                     <xi:include href="../en/module_specs/Zend_Service_Akismet.xml" />
                 </xi:fallback>
             </xi:include>
-            <xi:include href="module_specs/Zend_Service_Amazon.xml">
-                <xi:fallback>
-                    <xi:include href="../en/module_specs/Zend_Service_Amazon.xml" />
-                </xi:fallback>
-            </xi:include>
-            <xi:include href="module_specs/Zend_Service_Amazon_Ec2.xml">
-                <xi:fallback>
-                    <xi:include href="../en/module_specs/Zend_Service_Amazon_Ec2.xml" />
-                </xi:fallback>
-            </xi:include>
-            <xi:include href="module_specs/Zend_Service_Amazon_Ec2-Instance.xml">
-                <xi:fallback>
-                    <xi:include href="../en/module_specs/Zend_Service_Amazon_Ec2-Instance.xml" />
-                </xi:fallback>
-            </xi:include>
-            <xi:include href="module_specs/Zend_Service_Amazon_Ec2-WindowsInstance.xml">
-                <xi:fallback>
-                    <xi:include href="../en/module_specs/Zend_Service_Amazon_Ec2-WindowsInstance.xml" />
-                </xi:fallback>
-            </xi:include>
-            <xi:include href="module_specs/Zend_Service_Amazon_Ec2-ReservedInstance.xml">
-                <xi:fallback>
-                    <xi:include href="../en/module_specs/Zend_Service_Amazon_Ec2-ReservedInstance.xml" />
-                </xi:fallback>
-            </xi:include>
-            <xi:include href="module_specs/Zend_Service_Amazon_Ec2-CloudWatch.xml">
-                <xi:fallback>
-                    <xi:include href="../en/module_specs/Zend_Service_Amazon_Ec2-CloudWatch.xml" />
-                </xi:fallback>
-            </xi:include>
-            <xi:include href="module_specs/Zend_Service_Amazon_Ec2-Image.xml">
-                <xi:fallback>
-                    <xi:include href="../en/module_specs/Zend_Service_Amazon_Ec2-Image.xml" />
-                </xi:fallback>
-            </xi:include>
-            <xi:include href="module_specs/Zend_Service_Amazon_Ec2-Ebs.xml">
-                <xi:fallback>
-                    <xi:include href="../en/module_specs/Zend_Service_Amazon_Ec2-Ebs.xml" />
-                </xi:fallback>
-            </xi:include>
-            <xi:include href="module_specs/Zend_Service_Amazon_Ec2-Elasticip.xml">
-                <xi:fallback>
-                    <xi:include href="../en/module_specs/Zend_Service_Amazon_Ec2-Elasticip.xml" />
-                </xi:fallback>
-            </xi:include>
-            <xi:include href="module_specs/Zend_Service_Amazon_Ec2-Keypair.xml">
-                <xi:fallback>
-                    <xi:include href="../en/module_specs/Zend_Service_Amazon_Ec2-Keypair.xml" />
-                </xi:fallback>
-            </xi:include>
-            <xi:include href="module_specs/Zend_Service_Amazon_Ec2-RegionsAndAvalibilityZones.xml">
-                <xi:fallback>
-                    <xi:include href="../en/module_specs/Zend_Service_Amazon_Ec2-RegionsAndAvalibilityZones.xml" />
-                </xi:fallback>
-            </xi:include>
-            <xi:include href="module_specs/Zend_Service_Amazon_Ec2-Securitygroups.xml">
-                <xi:fallback>
-                    <xi:include href="../en/module_specs/Zend_Service_Amazon_Ec2-Securitygroups.xml" />
-                </xi:fallback>
-            </xi:include>
-            <xi:include href="module_specs/Zend_Service_Amazon_S3.xml">
-                <xi:fallback>
-                    <xi:include href="../en/module_specs/Zend_Service_Amazon_S3.xml" />
-                </xi:fallback>
-            </xi:include>
-            <xi:include href="module_specs/Zend_Service_Amazon_Sqs.xml">
-                <xi:fallback>
-                    <xi:include href="../en/module_specs/Zend_Service_Amazon_Sqs.xml" />
-                </xi:fallback>
-            </xi:include>
             <xi:include href="module_specs/Zend_Service_Audioscrobbler.xml">
                 <xi:fallback>
                     <xi:include href="../en/module_specs/Zend_Service_Audioscrobbler.xml" />
-                </xi:fallback>
-            </xi:include>
-            <xi:include href="module_specs/Zend_Service_Ebay.xml">
-                <xi:fallback>
-                    <xi:include href="../en/module_specs/Zend_Service_Ebay.xml" />
                 </xi:fallback>
             </xi:include>
             <xi:include href="module_specs/Zend_Service_Flickr.xml">
@@ -1874,11 +1776,6 @@
             <xi:include href="module_specs/Zend_Service_Rackspace_Servers.xml">
                 <xi:fallback>
                     <xi:include href="../en/module_specs/Zend_Service_Rackspace_Servers.xml" />
-                </xi:fallback>
-            </xi:include>
-            <xi:include href="module_specs/Zend_Service-ReCaptcha.xml">
-                <xi:fallback>
-                    <xi:include href="../en/module_specs/Zend_Service-ReCaptcha.xml" />
                 </xi:fallback>
             </xi:include>
             <xi:include href="module_specs/Zend_Service_ShortUrl.xml">
@@ -2209,14 +2106,6 @@
             </xi:include>
         </chapter>
 
-        <chapter id="zend.wildfire">
-            <title>Zend_Wildfire</title>
-            <xi:include href="module_specs/Zend_Wildfire.xml">
-                <xi:fallback>
-                    <xi:include href="../en/module_specs/Zend_Wildfire.xml" />
-                </xi:fallback>
-            </xi:include>
-        </chapter>
 
         <chapter id="zend.xmlrpc">
             <title>Zend_XmlRpc</title>

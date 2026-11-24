@@ -26,21 +26,11 @@
         </listitem>
         <listitem>
             <para>
-                <link linkend="zend.service.amazon">Amazon</link>
-            </para>
-        </listitem>
-        <listitem>
-            <para>
                 <link linkend="zend.service.audioscrobbler">Audioscrobbler</link>
             </para>
         </listitem>
 
  
-         <listitem>
-             <para>
-                <link linkend="zend.service.ebay">Ebay</link>
-            </para>
-        </listitem>
 
         <listitem>
             <para>
@@ -49,11 +39,6 @@
         </listitem>
 
 
-        <listitem>
-            <para>
-                <link linkend="zend.service.recaptcha">ReCaptcha</link>
-            </para>
-        </listitem>
 
          <listitem>
              <para>

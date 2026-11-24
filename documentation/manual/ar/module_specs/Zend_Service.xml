@@ -13,7 +13,6 @@
         <code>Zend_Service_Rest</code> للـ web services التى تعتمد على REST , توفر
         ZF توفر دعم ايضا لـ web services مشهورة مثل :
 
-        <link linkend="zend.service.amazon">Amazon</link>,
         <link linkend="zend.service.flickr">Flickr</link>.
         و ربما سيتم اضافة المزيد فى المستقبل.
     </para>

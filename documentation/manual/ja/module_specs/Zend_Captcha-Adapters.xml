@@ -237,8 +237,7 @@
         <title>Zend_Captcha_ReCaptcha</title>
 
         <para>
-            <classname>Zend_Captcha_ReCaptcha</classname> アダプタは、<link
-                linkend="zend.service.recaptcha">Zend_Service_ReCaptcha</link>
+            <classname>Zend_Captcha_ReCaptcha</classname> アダプタは、<classname>Zend_Service_ReCaptcha</classname>
             を使用して <acronym>CAPTCHA</acronym> の生成と検証を行います。
             次のメソッドを公開しています。
         </para>

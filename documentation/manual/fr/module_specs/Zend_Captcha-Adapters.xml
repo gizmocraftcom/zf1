@@ -260,7 +260,7 @@
 
         <para>
             L'adaptateur <classname>Zend_Captcha_ReCaptcha</classname> utilise
-            <link linkend="zend.service.recaptcha">Zend_Service_ReCaptcha</link> pour générer des
+            <classname>Zend_Service_ReCaptcha</classname> pour générer des
             <acronym>CAPTCHA</acronym>. Les méthodes suivantes lui sont propres&#160;:
         </para>
 

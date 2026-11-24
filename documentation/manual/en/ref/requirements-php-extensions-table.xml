@@ -226,13 +226,13 @@
                 <entry>---</entry>
             </row>
             <row>
-                <entry morerows="10" valign="middle">
+                <entry morerows="9" valign="middle">
                     <emphasis>
                         <ulink
                             url="&php.manual.link;/ref.dom.php">dom</ulink>
                     </emphasis>
                 </entry>
-                <entry morerows="10" valign="middle">&requirements.hard;</entry>
+                <entry morerows="9" valign="middle">&requirements.hard;</entry>
                 <entry>
                     <ulink
                         url="&zf.manual.link;/zend.amf.html">
@@ -285,14 +285,6 @@
                     <ulink
                         url="&zf.manual.link;/zend.search.lucene.html">
                         <classname>Zend_Search_Lucene</classname>
-                    </ulink>
-                </entry>
-            </row>
-            <row>
-                <entry>
-                    <ulink
-                        url="&zf.manual.link;/zend.service.amazon.html">
-                        <classname>Zend_Service_Amazon</classname>
                     </ulink>
                 </entry>
             </row>
@@ -615,21 +607,6 @@
                     <ulink
                         url="&zf.manual.link;/zend.feed.html">
                         <classname>Zend_Feed</classname>
-                    </ulink>
-                </entry>
-            </row>
-            <row>
-                <entry>
-                    <emphasis>
-                        <ulink
-                            url="&php.manual.link;/ref.mcrypt.php">mcrypt</ulink>
-                    </emphasis>
-                </entry>
-                <entry>&requirements.hard;</entry>
-                <entry>
-                    <ulink
-                        url="&zf.manual.link;/zend.service.recaptcha.html#zend.service.recaptcha.mailhide">
-                        <classname>Zend_Service_ReCaptcha_MailHide</classname>
                     </ulink>
                 </entry>
             </row>

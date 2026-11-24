@@ -72,7 +72,6 @@
         <xi:include href="module_specs/Zend_Auth_Adapter_Digest.xml" />
         <xi:include href="module_specs/Zend_Auth_Adapter_Http.xml" />
         <xi:include href="module_specs/Zend_Auth_Adapter_Ldap.xml" />
-        <xi:include href="module_specs/Zend_Auth_Adapter_OpenId.xml" />
     </chapter>
 
     <chapter id="zend.cache">

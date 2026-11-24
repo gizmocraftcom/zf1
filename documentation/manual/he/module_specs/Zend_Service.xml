@@ -19,11 +19,6 @@
         </listitem>
         <listitem>
             <para>
-                <link linkend="zend.service.amazon">Amazon</link>
-            </para>
-        </listitem>
-        <listitem>
-            <para>
                 <link linkend="zend.service.audioscrobbler">Audioscrobbler</link>
             </para>
         </listitem>

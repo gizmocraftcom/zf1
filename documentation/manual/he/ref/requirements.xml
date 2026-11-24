@@ -137,8 +137,8 @@
                             <entry>---</entry>
                         </row>
                         <row>
-                            <entry morerows="10" valign="middle"><emphasis role="strong"><ulink url="http://www.php.net/manual/en/ref.dom.php"><code>dom</code></ulink></emphasis></entry>
-                            <entry morerows="10" valign="middle">תלוי מאוד</entry>
+                            <entry morerows="9" valign="middle"><emphasis role="strong"><ulink url="http://www.php.net/manual/en/ref.dom.php"><code>dom</code></ulink></emphasis></entry>
+                            <entry morerows="9" valign="middle">תלוי מאוד</entry>
                             <entry><ulink url="http://framework.zend.com/manual/en/zend.amf.html"><code>Zend_Amf</code></ulink></entry>
                         </row>
                         <row>
@@ -158,9 +158,6 @@
                         </row>
                         <row>
                             <entry><ulink url="http://framework.zend.com/manual/en/zend.search.lucene.html"><code>Zend_Search_Lucene</code></ulink></entry>
-                        </row>
-                        <row>
-                            <entry><ulink url="http://framework.zend.com/manual/en/zend.service.amazon.html"><code>Zend_Service_Amazon</code></ulink></entry>
                         </row>
                         <row>
                             <entry><ulink url="http://framework.zend.com/manual/en/zend.service.flickr.html"><code>Zend_Service_Flickr</code></ulink></entry>
@@ -287,11 +284,6 @@
                             <entry><emphasis role="strong"><ulink url="http://www.php.net/manual/en/ref.mbstring.php"><code>mbstring</code></ulink></emphasis></entry>
                             <entry>תלוי מאוד</entry>
                             <entry><ulink url="http://framework.zend.com/manual/en/zend.feed.html"><code>Zend_Feed</code></ulink></entry>
-                        </row>
-                        <row>
-                            <entry><emphasis role="strong"><ulink url="http://www.php.net/manual/en/ref.mcrypt.php"><code>mcrypt</code></ulink></emphasis></entry>
-                            <entry>תלוי מאוד</entry>
-                            <entry><ulink url="http://framework.zend.com/manual/en/zend.service.recaptcha.html"><code>Zend_Service_ReCaptcha</code></ulink></entry>
                         </row>
                         <row>
                             <entry><emphasis role="strong"><ulink url="http://www.php.net/manual/en/ref.memcache.php"><code>memcache</code></ulink></emphasis></entry>
@@ -876,11 +868,6 @@
                             <entry><ulink url="http://www.php.net/manual/en/ref.iconv.php"><code>iconv</code></ulink></entry>
                         </row>
                         <row>
-                            <entry><emphasis role="strong"><ulink url="http://framework.zend.com/manual/en/zend.openid.html"><code>Zend_OpenId</code></ulink></emphasis></entry>
-                            <entry>---</entry>
-                            <entry>---</entry>
-                        </row>
-                        <row>
                             <entry><emphasis role="strong"><ulink url="http://framework.zend.com/manual/en/zend.paginator.html"><code>Zend_Paginator</code></ulink></emphasis></entry>
                             <entry>---</entry>
                             <entry>---</entry>
@@ -960,14 +947,6 @@
                             <entry>---</entry>
                         </row>
                         <row>
-                            <entry morerows="1" valign="middle"><emphasis role="strong"><ulink url="http://framework.zend.com/manual/en/zend.service.amazon.html"><code>Zend_Service_Amazon</code></ulink></emphasis></entry>
-                            <entry morerows="1" valign="middle">תלוי מאוד</entry>
-                            <entry><ulink url="http://www.php.net/manual/en/ref.dom.php"><code>dom</code></ulink></entry>
-                        </row>
-                        <row>
-                            <entry><ulink url="http://www.php.net/manual/en/ref.libxml.php"><code>libxml</code></ulink></entry>
-                        </row>
-                        <row>
                             <entry morerows="2" valign="middle"><emphasis role="strong"><ulink url="http://framework.zend.com/manual/en/zend.service.audioscrobbler.html"><code>Zend_Service_Audioscrobbler</code></ulink></emphasis></entry>
                             <entry morerows="2" valign="middle">תלוי מאוד</entry>
                             <entry><ulink url="http://www.php.net/manual/en/ref.iconv.php"><code>iconv</code></ulink></entry>
@@ -988,11 +967,6 @@
                         </row>
                         <row>
                             <entry><ulink url="http://www.php.net/manual/en/ref.libxml.php"><code>libxml</code></ulink></entry>
-                        </row>
-                        <row>
-                            <entry><emphasis role="strong"><ulink url="http://framework.zend.com/manual/en/zend.service.recaptcha.html"><code>Zend_Service_ReCaptcha</code></ulink></emphasis></entry>
-                            <entry>תלוי מאוד</entry>
-                            <entry><emphasis role="strong"><ulink url="http://www.php.net/manual/en/ref.mcrypt.php"><code>mcrypt</code></ulink></emphasis></entry>
                         </row>
                         <row>
                             <entry><emphasis role="strong"><ulink url="http://framework.zend.com/manual/en/zend.session.html"><code>Zend_Session</code></ulink></emphasis></entry>
@@ -1052,11 +1026,6 @@
                             <entry><emphasis role="strong"><ulink url="http://framework.zend.com/manual/en/zend.validate.html"><code>Zend_Validate</code></ulink></emphasis></entry>
                             <entry>תלוי מאוד</entry>
                             <entry><ulink url="http://www.php.net/manual/en/language.oop5.reflection.php"><code>Reflection</code></ulink></entry>
-                        </row>
-                        <row>
-                            <entry><emphasis role="strong"><ulink url="http://framework.zend.com/manual/en/zend.wildfire.html"><code>Zend_Wildfire</code></ulink></emphasis></entry>
-                            <entry>---</entry>
-                            <entry>---</entry>
                         </row>
                         <row>
                             <entry morerows="4" valign="middle"><emphasis role="strong"><ulink url="http://framework.zend.com/manual/en/zend.xmlrpc.html"><code>Zend_XmlRpc</code></ulink></emphasis></entry>
@@ -1144,19 +1113,16 @@
                             <entry><ulink url="http://framework.zend.com/manual/en/zend.registry.html"><code>Zend_Registry</code></ulink></entry>
                         </row>
                         <row>
-                            <entry morerows="25" valign="middle"><emphasis role="strong"><ulink url="http://framework.zend.com/manual/en/zend.auth.html"><code>Zend_Auth</code></ulink></emphasis></entry>
+                            <entry morerows="22" valign="middle"><emphasis role="strong"><ulink url="http://framework.zend.com/manual/en/zend.auth.html"><code>Zend_Auth</code></ulink></emphasis></entry>
                             <entry>תלוי מאוד</entry>
                             <entry><ulink url="http://framework.zend.com/manual/en/zend.exception.html"><code>Zend_Exception</code></ulink></entry>
                         </row>
                         <row>
-                            <entry morerows="4" valign="middle">לא תלוי</entry>
+                            <entry morerows="3" valign="middle">לא תלוי</entry>
                             <entry><ulink url="http://framework.zend.com/manual/en/zend.db.html"><code>Zend_Db</code></ulink></entry>
                         </row>
                         <row>
                             <entry><ulink url="http://framework.zend.com/manual/en/zend.ldap.html"><code>Zend_Ldap</code></ulink></entry>
-                        </row>
-                        <row>
-                            <entry><ulink url="http://framework.zend.com/manual/en/zend.openid.html"><code>Zend_OpenId</code></ulink></entry>
                         </row>
                         <row>
                             <entry><ulink url="http://framework.zend.com/manual/en/zend.session.html"><code>Zend_Session</code></ulink></entry>
@@ -1181,7 +1147,7 @@
                             <entry><ulink url="http://framework.zend.com/manual/en/zend.view.html"><code>Zend_View</code></ulink></entry>
                         </row>
                         <row>
-                            <entry morerows="13" valign="middle">תת</entry>
+                            <entry morerows="11" valign="middle">תת</entry>
                             <entry><ulink url="http://framework.zend.com/manual/en/zend.captcha.html"><code>Zend_Captcha</code></ulink></entry>
                         </row>
                         <row>
@@ -1212,19 +1178,13 @@
                             <entry><ulink url="http://framework.zend.com/manual/en/zend.server.html"><code>Zend_Server</code></ulink></entry>
                         </row>
                         <row>
-                            <entry><ulink url="http://framework.zend.com/manual/en/zend.service.recaptcha.html"><code>Zend_Service_ReCaptcha</code></ulink></entry>
-                        </row>
-                        <row>
                             <entry><ulink url="http://framework.zend.com/manual/en/zend.text.html"><code>Zend_Text</code></ulink></entry>
                         </row>
                         <row>
                             <entry><ulink url="http://framework.zend.com/manual/en/zend.validate.html"><code>Zend_Validate</code></ulink></entry>
                         </row>
                         <row>
-                            <entry><ulink url="http://framework.zend.com/manual/en/zend.wildfire.html"><code>Zend_Wildfire</code></ulink></entry>
-                        </row>
-                        <row>
-                            <entry morerows="23" valign="middle"><emphasis role="strong"><ulink url="http://framework.zend.com/manual/en/zend.cache.html"><code>Zend_Cache</code></ulink></emphasis></entry>
+                            <entry morerows="21" valign="middle"><emphasis role="strong"><ulink url="http://framework.zend.com/manual/en/zend.cache.html"><code>Zend_Cache</code></ulink></emphasis></entry>
                             <entry>תלוי מאוד</entry>
                             <entry><ulink url="http://framework.zend.com/manual/en/zend.exception.html"><code>Zend_Exception</code></ulink></entry>
                         </row>
@@ -1233,7 +1193,7 @@
                             <entry><ulink url="http://framework.zend.com/manual/en/zend.log.html"><code>Zend_Log</code></ulink></entry>
                         </row>
                         <row>
-                            <entry morerows="21" valign="middle">תת</entry>
+                            <entry morerows="19" valign="middle">תת</entry>
                             <entry><ulink url="http://framework.zend.com/manual/en/zend.captcha.html"><code>Zend_Captcha</code></ulink></entry>
                         </row>
                         <row>
@@ -1279,9 +1239,6 @@
                             <entry><ulink url="http://framework.zend.com/manual/en/zend.server.html"><code>Zend_Server</code></ulink></entry>
                         </row>
                         <row>
-                            <entry><ulink url="http://framework.zend.com/manual/en/zend.service.recaptcha.html"><code>Zend_Service_ReCaptcha</code></ulink></entry>
-                        </row>
-                        <row>
                             <entry><ulink url="http://framework.zend.com/manual/en/zend.session.html"><code>Zend_Session</code></ulink></entry>
                         </row>
                         <row>
@@ -1297,15 +1254,9 @@
                             <entry><ulink url="http://framework.zend.com/manual/en/zend.view.html"><code>Zend_View</code></ulink></entry>
                         </row>
                         <row>
-                            <entry><ulink url="http://framework.zend.com/manual/en/zend.wildfire.html"><code>Zend_Wildfire</code></ulink></entry>
-                        </row>
-                        <row>
-                            <entry morerows="12" valign="middle"><emphasis role="strong"><ulink url="http://framework.zend.com/manual/en/zend.captcha.html"><code>Zend_Captcha</code></ulink></emphasis></entry>
-                            <entry morerows="3" valign="middle">תלוי מאוד</entry>
+                            <entry morerows="11" valign="middle"><emphasis role="strong"><ulink url="http://framework.zend.com/manual/en/zend.captcha.html"><code>Zend_Captcha</code></ulink></emphasis></entry>
+                            <entry morerows="2" valign="middle">תלוי מאוד</entry>
                             <entry><ulink url="http://framework.zend.com/manual/en/zend.exception.html"><code>Zend_Exception</code></ulink></entry>
-                        </row>
-                        <row>
-                            <entry><ulink url="http://framework.zend.com/manual/en/zend.service.recaptcha.html"><code>Zend_Service_ReCaptcha</code></ulink></entry>
                         </row>
                         <row>
                             <entry><ulink url="http://framework.zend.com/manual/en/zend.text.html"><code>Zend_Text</code></ulink></entry>
@@ -1364,7 +1315,7 @@
                             <entry><ulink url="http://framework.zend.com/manual/en/zend.server.html"><code>Zend_Server</code></ulink></entry>
                         </row>
                         <row>
-                            <entry morerows="21" valign="middle"><emphasis role="strong"><ulink url="http://framework.zend.com/manual/en/zend.controller.html"><code>Zend_Controller</code></ulink></emphasis></entry>
+                            <entry morerows="19" valign="middle"><emphasis role="strong"><ulink url="http://framework.zend.com/manual/en/zend.controller.html"><code>Zend_Controller</code></ulink></emphasis></entry>
                             <entry morerows="5" valign="middle">תלוי מאוד</entry>
                             <entry><ulink url="http://framework.zend.com/manual/en/zend.config.html"><code>Zend_Config</code></ulink></entry>
                         </row>
@@ -1404,7 +1355,7 @@
                             <entry><ulink url="http://framework.zend.com/manual/en/zend.validate.html"><code>Zend_Validate</code></ulink></entry>
                         </row>
                         <row>
-                            <entry morerows="9" valign="middle">תת</entry>
+                            <entry morerows="7" valign="middle">תת</entry>
                             <entry><ulink url="http://framework.zend.com/manual/en/zend.captcha.html"><code>Zend_Captcha</code></ulink></entry>
                         </row>
                         <row>
@@ -1423,16 +1374,10 @@
                             <entry><ulink url="http://framework.zend.com/manual/en/zend.server.html"><code>Zend_Server</code></ulink></entry>
                         </row>
                         <row>
-                            <entry><ulink url="http://framework.zend.com/manual/en/zend.service.recaptcha.html"><code>Zend_Service_ReCaptcha</code></ulink></entry>
-                        </row>
-                        <row>
                             <entry><ulink url="http://framework.zend.com/manual/en/zend.session.html"><code>Zend_Session</code></ulink></entry>
                         </row>
                         <row>
                             <entry><ulink url="http://framework.zend.com/manual/en/zend.text.html"><code>Zend_Text</code></ulink></entry>
-                        </row>
-                        <row>
-                            <entry><ulink url="http://framework.zend.com/manual/en/zend.wildfire.html"><code>Zend_Wildfire</code></ulink></entry>
                         </row>
                         <row>
                             <entry morerows="3" valign="middle"><emphasis role="strong"><ulink url="http://framework.zend.com/manual/en/zend.currency.html"><code>Zend_Currency</code></ulink></emphasis></entry>
@@ -1465,7 +1410,7 @@
                             <entry><ulink url="http://framework.zend.com/manual/en/zend.registry.html"><code>Zend_Registry</code></ulink></entry>
                         </row>
                         <row>
-                            <entry morerows="21" valign="middle"><emphasis role="strong"><ulink url="http://framework.zend.com/manual/en/zend.db.html"><code>Zend_Db</code></ulink></emphasis></entry>
+                            <entry morerows="19" valign="middle"><emphasis role="strong"><ulink url="http://framework.zend.com/manual/en/zend.db.html"><code>Zend_Db</code></ulink></emphasis></entry>
                             <entry morerows="1" valign="middle">תלוי מאוד</entry>
                             <entry><ulink url="http://framework.zend.com/manual/en/zend.exception.html"><code>Zend_Exception</code></ulink></entry>
                         </row>
@@ -1473,14 +1418,11 @@
                             <entry><ulink url="http://framework.zend.com/manual/en/zend.loader.html"><code>Zend_Loader</code></ulink></entry>
                         </row>
                         <row>
-                            <entry morerows="1" valign="middle">לא תלוי</entry>
+                            <entry valign="middle">לא תלוי</entry>
                             <entry><ulink url="http://framework.zend.com/manual/en/zend.registry.html"><code>Zend_Registry</code></ulink></entry>
                         </row>
                         <row>
-                            <entry><ulink url="http://framework.zend.com/manual/en/zend.wildfire.html"><code>Zend_Wildfire</code></ulink></entry>
-                        </row>
-                        <row>
-                            <entry morerows="17" valign="middle">תת</entry>
+                            <entry morerows="16" valign="middle">תת</entry>
                             <entry><ulink url="http://framework.zend.com/manual/en/zend.captcha.html"><code>Zend_Captcha</code></ulink></entry>
                         </row>
                         <row>
@@ -1517,9 +1459,6 @@
                             <entry><ulink url="http://framework.zend.com/manual/en/zend.server.html"><code>Zend_Server</code></ulink></entry>
                         </row>
                         <row>
-                            <entry><ulink url="http://framework.zend.com/manual/en/zend.service.recaptcha.html"><code>Zend_Service_ReCaptcha</code></ulink></entry>
-                        </row>
-                        <row>
                             <entry><ulink url="http://framework.zend.com/manual/en/zend.session.html"><code>Zend_Session</code></ulink></entry>
                         </row>
                         <row>
@@ -1540,7 +1479,7 @@
                             <entry>---</entry>
                         </row>
                         <row>
-                            <entry morerows="22" valign="middle"><emphasis role="strong"><ulink url="http://framework.zend.com/manual/en/zend.dojo.html"><code>Zend_Dojo</code></ulink></emphasis></entry>
+                            <entry morerows="20" valign="middle"><emphasis role="strong"><ulink url="http://framework.zend.com/manual/en/zend.dojo.html"><code>Zend_Dojo</code></ulink></emphasis></entry>
                             <entry morerows="4" valign="middle">תלוי מאוד</entry>
                             <entry><ulink url="http://framework.zend.com/manual/en/zend.exception.html"><code>Zend_Exception</code></ulink></entry>
                         </row>
@@ -1577,7 +1516,7 @@
                             <entry><ulink url="http://framework.zend.com/manual/en/zend.validate.html"><code>Zend_Validate</code></ulink></entry>
                         </row>
                         <row>
-                            <entry morerows="11" valign="middle">תת</entry>
+                            <entry morerows="9" valign="middle">תת</entry>
                             <entry><ulink url="http://framework.zend.com/manual/en/zend.captcha.html"><code>Zend_Captcha</code></ulink></entry>
                         </row>
                         <row>
@@ -1602,16 +1541,10 @@
                             <entry><ulink url="http://framework.zend.com/manual/en/zend.server.html"><code>Zend_Server</code></ulink></entry>
                         </row>
                         <row>
-                            <entry><ulink url="http://framework.zend.com/manual/en/zend.service.recaptcha.html"><code>Zend_Service_ReCaptcha</code></ulink></entry>
-                        </row>
-                        <row>
                             <entry><ulink url="http://framework.zend.com/manual/en/zend.session.html"><code>Zend_Session</code></ulink></entry>
                         </row>
                         <row>
                             <entry><ulink url="http://framework.zend.com/manual/en/zend.text.html"><code>Zend_Text</code></ulink></entry>
-                        </row>
-                        <row>
-                            <entry><ulink url="http://framework.zend.com/manual/en/zend.wildfire.html"><code>Zend_Wildfire</code></ulink></entry>
                         </row>
                         <row>
                             <entry><emphasis role="strong"><ulink url="http://framework.zend.com/manual/en/zend.dom.html"><code>Zend_Dom</code></ulink></emphasis></entry>
@@ -1686,7 +1619,7 @@
                             <entry><ulink url="http://framework.zend.com/manual/en/zend.registry.html"><code>Zend_Registry</code></ulink></entry>
                         </row>
                         <row>
-                            <entry morerows="22" valign="middle"><emphasis role="strong"><ulink url="http://framework.zend.com/manual/en/zend.form.html"><code>Zend_Form</code></ulink></emphasis></entry>
+                            <entry morerows="20" valign="middle"><emphasis role="strong"><ulink url="http://framework.zend.com/manual/en/zend.form.html"><code>Zend_Form</code></ulink></emphasis></entry>
                             <entry morerows="2" valign="middle">תלוי מאוד</entry>
                             <entry><ulink url="http://framework.zend.com/manual/en/zend.exception.html"><code>Zend_Exception</code></ulink></entry>
                         </row>
@@ -1716,7 +1649,7 @@
                             <entry><ulink url="http://framework.zend.com/manual/en/zend.session.html"><code>Zend_Session</code></ulink></entry>
                         </row>
                         <row>
-                            <entry morerows="7" valign="middle">תיקון</entry>
+                            <entry morerows="6" valign="middle">תיקון</entry>
                             <entry><ulink url="http://framework.zend.com/manual/en/zend.config.html"><code>Zend_Config</code></ulink></entry>
                         </row>
                         <row>
@@ -1729,9 +1662,6 @@
                             <entry><ulink url="http://framework.zend.com/manual/en/zend.server.html"><code>Zend_Server</code></ulink></entry>
                         </row>
                         <row>
-                            <entry><ulink url="http://framework.zend.com/manual/en/zend.service.recaptcha.html"><code>Zend_Service_ReCaptcha</code></ulink></entry>
-                        </row>
-                        <row>
                             <entry><ulink url="http://framework.zend.com/manual/en/zend.text.html"><code>Zend_Text</code></ulink></entry>
                         </row>
                         <row>
@@ -1741,7 +1671,7 @@
                             <entry><ulink url="http://framework.zend.com/manual/en/zend.view.html"><code>Zend_View</code></ulink></entry>
                         </row>
                         <row>
-                            <entry morerows="5" valign="middle">תת</entry>
+                            <entry morerows="4" valign="middle">תת</entry>
                             <entry><ulink url="http://framework.zend.com/manual/en/zend.date.html"><code>Zend_Date</code></ulink></entry>
                         </row>
                         <row>
@@ -1755,9 +1685,6 @@
                         </row>
                         <row>
                             <entry><ulink url="http://framework.zend.com/manual/en/zend.layout.html"><code>Zend_Layout</code></ulink></entry>
-                        </row>
-                        <row>
-                            <entry><ulink url="http://framework.zend.com/manual/en/zend.wildfire.html"><code>Zend_Wildfire</code></ulink></entry>
                         </row>
                         <row>
                             <entry morerows="7" valign="middle"><emphasis role="strong"><ulink url="http://framework.zend.com/manual/en/zend.http.html"><code>Zend_Http</code></ulink></emphasis></entry>
@@ -1802,7 +1729,7 @@
                             <entry><ulink url="http://framework.zend.com/manual/en/zend.server.html"><code>Zend_Server</code></ulink></entry>
                         </row>
                         <row>
-                            <entry morerows="22" valign="middle"><emphasis role="strong"><ulink url="http://framework.zend.com/manual/en/zend.layout.html"><code>Zend_Layout</code></ulink></emphasis></entry>
+                            <entry morerows="20" valign="middle"><emphasis role="strong"><ulink url="http://framework.zend.com/manual/en/zend.layout.html"><code>Zend_Layout</code></ulink></emphasis></entry>
                             <entry>תלוי מאוד</entry>
                             <entry><ulink url="http://framework.zend.com/manual/en/zend.exception.html"><code>Zend_Exception</code></ulink></entry>
                         </row>
@@ -1836,7 +1763,7 @@
                             <entry><ulink url="http://framework.zend.com/manual/en/zend.validate.html"><code>Zend_Validate</code></ulink></entry>
                         </row>
                         <row>
-                            <entry morerows="12" valign="middle">תת</entry>
+                            <entry morerows="10" valign="middle">תת</entry>
                             <entry><ulink url="http://framework.zend.com/manual/en/zend.captcha.html"><code>Zend_Captcha</code></ulink></entry>
                         </row>
                         <row>
@@ -1864,16 +1791,10 @@
                             <entry><ulink url="http://framework.zend.com/manual/en/zend.server.html"><code>Zend_Server</code></ulink></entry>
                         </row>
                         <row>
-                            <entry><ulink url="http://framework.zend.com/manual/en/zend.service.recaptcha.html"><code>Zend_Service_ReCaptcha</code></ulink></entry>
-                        </row>
-                        <row>
                             <entry><ulink url="http://framework.zend.com/manual/en/zend.session.html"><code>Zend_Session</code></ulink></entry>
                         </row>
                         <row>
                             <entry><ulink url="http://framework.zend.com/manual/en/zend.text.html"><code>Zend_Text</code></ulink></entry>
-                        </row>
-                        <row>
-                            <entry><ulink url="http://framework.zend.com/manual/en/zend.wildfire.html"><code>Zend_Wildfire</code></ulink></entry>
                         </row>
                         <row>
                             <entry><emphasis role="strong"><ulink url="http://framework.zend.com/manual/en/zend.ldap.html"><code>Zend_Ldap</code></ulink></emphasis></entry>
@@ -1899,16 +1820,12 @@
                             <entry><ulink url="http://framework.zend.com/manual/en/zend.loader.html"><code>Zend_Loader</code></ulink></entry>
                         </row>
                         <row>
-                            <entry morerows="21" valign="middle"><emphasis role="strong"><ulink url="http://framework.zend.com/manual/en/zend.log.html"><code>Zend_Log</code></ulink></emphasis></entry>
+                            <entry morerows="19" valign="middle"><emphasis role="strong"><ulink url="http://framework.zend.com/manual/en/zend.log.html"><code>Zend_Log</code></ulink></emphasis></entry>
                             <entry>תלוי מאוד</entry>
                             <entry><ulink url="http://framework.zend.com/manual/en/zend.exception.html"><code>Zend_Exception</code></ulink></entry>
                         </row>
                         <row>
-                            <entry>לא תלוי</entry>
-                            <entry><ulink url="http://framework.zend.com/manual/en/zend.wildfire.html"><code>Zend_Wildfire</code></ulink></entry>
-                        </row>
-                        <row>
-                            <entry morerows="19" valign="middle">תת</entry>
+                            <entry morerows="18" valign="middle">תת</entry>
                             <entry><ulink url="http://framework.zend.com/manual/en/zend.captcha.html"><code>Zend_Captcha</code></ulink></entry>
                         </row>
                         <row>
@@ -1949,9 +1866,6 @@
                         </row>
                         <row>
                             <entry><ulink url="http://framework.zend.com/manual/en/zend.server.html"><code>Zend_Server</code></ulink></entry>
-                        </row>
-                        <row>
-                            <entry><ulink url="http://framework.zend.com/manual/en/zend.service.recaptcha.html"><code>Zend_Service_ReCaptcha</code></ulink></entry>
                         </row>
                         <row>
                             <entry><ulink url="http://framework.zend.com/manual/en/zend.session.html"><code>Zend_Session</code></ulink></entry>
@@ -2012,7 +1926,7 @@
                             <entry><ulink url="http://framework.zend.com/manual/en/zend.loader.html"><code>Zend_Loader</code></ulink></entry>
                         </row>
                         <row>
-                            <entry morerows="24" valign="middle"><emphasis role="strong"><ulink url="http://framework.zend.com/manual/en/zend.memory.html"><code>Zend_Memory</code></ulink></emphasis></entry>
+                            <entry morerows="22" valign="middle"><emphasis role="strong"><ulink url="http://framework.zend.com/manual/en/zend.memory.html"><code>Zend_Memory</code></ulink></emphasis></entry>
                             <entry morerows="1" valign="middle">תלוי מאוד</entry>
                             <entry><ulink url="http://framework.zend.com/manual/en/zend.cache.html"><code>Zend_Cache</code></ulink></entry>
                         </row>
@@ -2020,7 +1934,7 @@
                             <entry><ulink url="http://framework.zend.com/manual/en/zend.exception.html"><code>Zend_Exception</code></ulink></entry>
                         </row>
                         <row>
-                            <entry morerows="22" valign="middle">תת</entry>
+                            <entry morerows="20" valign="middle">תת</entry>
                             <entry><ulink url="http://framework.zend.com/manual/en/zend.captcha.html"><code>Zend_Captcha</code></ulink></entry>
                         </row>
                         <row>
@@ -2069,9 +1983,6 @@
                             <entry><ulink url="http://framework.zend.com/manual/en/zend.server.html"><code>Zend_Server</code></ulink></entry>
                         </row>
                         <row>
-                            <entry><ulink url="http://framework.zend.com/manual/en/zend.service.recaptcha.html"><code>Zend_Service_ReCaptcha</code></ulink></entry>
-                        </row>
-                        <row>
                             <entry><ulink url="http://framework.zend.com/manual/en/zend.session.html"><code>Zend_Session</code></ulink></entry>
                         </row>
                         <row>
@@ -2085,9 +1996,6 @@
                         </row>
                         <row>
                             <entry><ulink url="http://framework.zend.com/manual/en/zend.view.html"><code>Zend_View</code></ulink></entry>
-                        </row>
-                        <row>
-                            <entry><ulink url="http://framework.zend.com/manual/en/zend.wildfire.html"><code>Zend_Wildfire</code></ulink></entry>
                         </row>
                         <row>
                             <entry><emphasis role="strong"><ulink url="http://framework.zend.com/manual/en/zend.mime.html"><code>Zend_Mime</code></ulink></emphasis></entry>
@@ -2095,80 +2003,7 @@
                             <entry><ulink url="http://framework.zend.com/manual/en/zend.exception.html"><code>Zend_Exception</code></ulink></entry>
                         </row>
                         <row>
-                            <entry morerows="22" valign="middle"><emphasis role="strong"><ulink url="http://framework.zend.com/manual/en/zend.openid.html"><code>Zend_OpenId</code></ulink></emphasis></entry>
-                            <entry morerows="3" valign="middle">תלוי מאוד</entry>
-                            <entry><ulink url="http://framework.zend.com/manual/en/zend.controller.html"><code>Zend_Controller</code></ulink></entry>
-                        </row>
-                        <row>
-                            <entry><ulink url="http://framework.zend.com/manual/en/zend.exception.html"><code>Zend_Exception</code></ulink></entry>
-                        </row>
-                        <row>
-                            <entry><ulink url="http://framework.zend.com/manual/en/zend.http.html"><code>Zend_Http</code></ulink></entry>
-                        </row>
-                        <row>
-                            <entry><ulink url="http://framework.zend.com/manual/en/zend.session.html"><code>Zend_Session</code></ulink></entry>
-                        </row>
-                        <row>
-                            <entry morerows="7" valign="middle">תיקון</entry>
-                            <entry><ulink url="http://framework.zend.com/manual/en/zend.config.html"><code>Zend_Config</code></ulink></entry>
-                        </row>
-                        <row>
-                            <entry><ulink url="http://framework.zend.com/manual/en/zend.dojo.html"><code>Zend_Dojo</code></ulink></entry>
-                        </row>
-                        <row>
-                            <entry><ulink url="http://framework.zend.com/manual/en/zend.loader.html"><code>Zend_Loader</code></ulink></entry>
-                        </row>
-                        <row>
-                            <entry><ulink url="http://framework.zend.com/manual/en/zend.locale.html"><code>Zend_Locale</code></ulink></entry>
-                        </row>
-                        <row>
-                            <entry><ulink url="http://framework.zend.com/manual/en/zend.registry.html"><code>Zend_Registry</code></ulink></entry>
-                        </row>
-                        <row>
-                            <entry><ulink url="http://framework.zend.com/manual/en/zend.uri.html"><code>Zend_Uri</code></ulink></entry>
-                        </row>
-                        <row>
-                            <entry><ulink url="http://framework.zend.com/manual/en/zend.validate.html"><code>Zend_Validate</code></ulink></entry>
-                        </row>
-                        <row>
-                            <entry><ulink url="http://framework.zend.com/manual/en/zend.view.html"><code>Zend_View</code></ulink></entry>
-                        </row>
-                        <row>
-                            <entry morerows="10" valign="middle">תת</entry>
-                            <entry><ulink url="http://framework.zend.com/manual/en/zend.captcha.html"><code>Zend_Captcha</code></ulink></entry>
-                        </row>
-                        <row>
-                            <entry><ulink url="http://framework.zend.com/manual/en/zend.date.html"><code>Zend_Date</code></ulink></entry>
-                        </row>
-                        <row>
-                            <entry><ulink url="http://framework.zend.com/manual/en/zend.db.html"><code>Zend_Db</code></ulink></entry>
-                        </row>
-                        <row>
-                            <entry><ulink url="http://framework.zend.com/manual/en/zend.filter.html"><code>Zend_Filter</code></ulink></entry>
-                        </row>
-                        <row>
-                            <entry><ulink url="http://framework.zend.com/manual/en/zend.form.html"><code>Zend_Form</code></ulink></entry>
-                        </row>
-                        <row>
-                            <entry><ulink url="http://framework.zend.com/manual/en/zend.json.html"><code>Zend_Json</code></ulink></entry>
-                        </row>
-                        <row>
-                            <entry><ulink url="http://framework.zend.com/manual/en/zend.layout.html"><code>Zend_Layout</code></ulink></entry>
-                        </row>
-                        <row>
-                            <entry><ulink url="http://framework.zend.com/manual/en/zend.server.html"><code>Zend_Server</code></ulink></entry>
-                        </row>
-                        <row>
-                            <entry><ulink url="http://framework.zend.com/manual/en/zend.service.recaptcha.html"><code>Zend_Service_ReCaptcha</code></ulink></entry>
-                        </row>
-                        <row>
-                            <entry><ulink url="http://framework.zend.com/manual/en/zend.text.html"><code>Zend_Text</code></ulink></entry>
-                        </row>
-                        <row>
-                            <entry><ulink url="http://framework.zend.com/manual/en/zend.wildfire.html"><code>Zend_Wildfire</code></ulink></entry>
-                        </row>
-                        <row>
-                            <entry morerows="22" valign="middle"><emphasis role="strong"><ulink url="http://framework.zend.com/manual/en/zend.paginator.html"><code>Zend_Paginator</code></ulink></emphasis></entry>
+                            <entry morerows="20" valign="middle"><emphasis role="strong"><ulink url="http://framework.zend.com/manual/en/zend.paginator.html"><code>Zend_Paginator</code></ulink></emphasis></entry>
                             <entry morerows="2" valign="middle">תלוי מאוד</entry>
                             <entry><ulink url="http://framework.zend.com/manual/en/zend.exception.html"><code>Zend_Exception</code></ulink></entry>
                         </row>
@@ -2193,7 +2028,7 @@
                             <entry><ulink url="http://framework.zend.com/manual/en/zend.server.html"><code>Zend_Server</code></ulink></entry>
                         </row>
                         <row>
-                            <entry morerows="15" valign="middle">תת</entry>
+                            <entry morerows="13" valign="middle">תת</entry>
                             <entry><ulink url="http://framework.zend.com/manual/en/zend.captcha.html"><code>Zend_Captcha</code></ulink></entry>
                         </row>
                         <row>
@@ -2224,9 +2059,6 @@
                             <entry><ulink url="http://framework.zend.com/manual/en/zend.registry.html"><code>Zend_Registry</code></ulink></entry>
                         </row>
                         <row>
-                            <entry><ulink url="http://framework.zend.com/manual/en/zend.service.recaptcha.html"><code>Zend_Service_ReCaptcha</code></ulink></entry>
-                        </row>
-                        <row>
                             <entry><ulink url="http://framework.zend.com/manual/en/zend.session.html"><code>Zend_Session</code></ulink></entry>
                         </row>
                         <row>
@@ -2239,10 +2071,7 @@
                             <entry><ulink url="http://framework.zend.com/manual/en/zend.validate.html"><code>Zend_Validate</code></ulink></entry>
                         </row>
                         <row>
-                            <entry><ulink url="http://framework.zend.com/manual/en/zend.wildfire.html"><code>Zend_Wildfire</code></ulink></entry>
-                        </row>
-                        <row>
-                            <entry morerows="25" valign="middle"><emphasis role="strong"><ulink url="http://framework.zend.com/manual/en/zend.pdf.html"><code>Zend_Pdf</code></ulink></emphasis></entry>
+                            <entry morerows="23" valign="middle"><emphasis role="strong"><ulink url="http://framework.zend.com/manual/en/zend.pdf.html"><code>Zend_Pdf</code></ulink></emphasis></entry>
                             <entry morerows="2" valign="middle">תלוי מאוד</entry>
                             <entry><ulink url="http://framework.zend.com/manual/en/zend.exception.html"><code>Zend_Exception</code></ulink></entry>
                         </row>
@@ -2257,7 +2086,7 @@
                             <entry><ulink url="http://framework.zend.com/manual/en/zend.cache.html"><code>Zend_Cache</code></ulink></entry>
                         </row>
                         <row>
-                            <entry morerows="21" valign="middle">תת</entry>
+                            <entry morerows="19" valign="middle">תת</entry>
                             <entry><ulink url="http://framework.zend.com/manual/en/zend.captcha.html"><code>Zend_Captcha</code></ulink></entry>
                         </row>
                         <row>
@@ -2303,9 +2132,6 @@
                             <entry><ulink url="http://framework.zend.com/manual/en/zend.server.html"><code>Zend_Server</code></ulink></entry>
                         </row>
                         <row>
-                            <entry><ulink url="http://framework.zend.com/manual/en/zend.service.recaptcha.html"><code>Zend_Service_ReCaptcha</code></ulink></entry>
-                        </row>
-                        <row>
                             <entry><ulink url="http://framework.zend.com/manual/en/zend.session.html"><code>Zend_Session</code></ulink></entry>
                         </row>
                         <row>
@@ -2321,10 +2147,7 @@
                             <entry><ulink url="http://framework.zend.com/manual/en/zend.view.html"><code>Zend_View</code></ulink></entry>
                         </row>
                         <row>
-                            <entry><ulink url="http://framework.zend.com/manual/en/zend.wildfire.html"><code>Zend_Wildfire</code></ulink></entry>
-                        </row>
-                        <row>
-                            <entry morerows="20" valign="middle"><emphasis role="strong"><ulink url="http://framework.zend.com/manual/en/zend.progressbar.html"><code>Zend_Progressbar</code></ulink></emphasis></entry>
+                            <entry morerows="18" valign="middle"><emphasis role="strong"><ulink url="http://framework.zend.com/manual/en/zend.progressbar.html"><code>Zend_Progressbar</code></ulink></emphasis></entry>
                             <entry morerows="2" valign="middle">תלוי מאוד</entry>
                             <entry><ulink url="http://framework.zend.com/manual/en/zend.config.html"><code>Zend_Config</code></ulink></entry>
                         </row>
@@ -2349,7 +2172,7 @@
                             <entry><ulink url="http://framework.zend.com/manual/en/zend.server.html"><code>Zend_Server</code></ulink></entry>
                         </row>
                         <row>
-                            <entry morerows="13" valign="middle">תת</entry>
+                            <entry morerows="11" valign="middle">תת</entry>
                             <entry><ulink url="http://framework.zend.com/manual/en/zend.captcha.html"><code>Zend_Captcha</code></ulink></entry>
                         </row>
                         <row>
@@ -2374,9 +2197,6 @@
                             <entry><ulink url="http://framework.zend.com/manual/en/zend.registry.html"><code>Zend_Registry</code></ulink></entry>
                         </row>
                         <row>
-                            <entry><ulink url="http://framework.zend.com/manual/en/zend.service.recaptcha.html"><code>Zend_Service_ReCaptcha</code></ulink></entry>
-                        </row>
-                        <row>
                             <entry><ulink url="http://framework.zend.com/manual/en/zend.text.html"><code>Zend_Text</code></ulink></entry>
                         </row>
                         <row>
@@ -2387,9 +2207,6 @@
                         </row>
                         <row>
                             <entry><ulink url="http://framework.zend.com/manual/en/zend.view.html"><code>Zend_View</code></ulink></entry>
-                        </row>
-                        <row>
-                            <entry><ulink url="http://framework.zend.com/manual/en/zend.wildfire.html"><code>Zend_Wildfire</code></ulink></entry>
                         </row>
                         <row>
                             <entry morerows="1" valign="middle"><emphasis role="strong"><ulink url="http://framework.zend.com/manual/en/zend.registry.html"><code>Zend_Registry</code></ulink></emphasis></entry>
@@ -2487,46 +2304,6 @@
                             <entry><ulink url="http://framework.zend.com/manual/en/zend.registry.html"><code>Zend_Registry</code></ulink></entry>
                         </row>
                         <row>
-                            <entry morerows="11" valign="middle"><emphasis role="strong"><ulink url="http://framework.zend.com/manual/en/zend.service.amazon.html"><code>Zend_Service_Amazon</code></ulink></emphasis></entry>
-                            <entry morerows="2" valign="middle">תלוי מאוד</entry>
-                            <entry><ulink url="http://framework.zend.com/manual/en/zend.exception.html"><code>Zend_Exception</code></ulink></entry>
-                        </row>
-                        <row>
-                            <entry><ulink url="http://framework.zend.com/manual/en/zend.http.html"><code>Zend_Http</code></ulink></entry>
-                        </row>
-                        <row>
-                            <entry><ulink url="http://framework.zend.com/manual/en/zend.rest.html"><code>Zend_Rest</code></ulink></entry>
-                        </row>
-                        <row>
-                            <entry morerows="5" valign="middle">תיקון</entry>
-                            <entry><ulink url="http://framework.zend.com/manual/en/zend.loader.html"><code>Zend_Loader</code></ulink></entry>
-                        </row>
-                        <row>
-                            <entry><ulink url="http://framework.zend.com/manual/en/zend.locale.html"><code>Zend_Locale</code></ulink></entry>
-                        </row>
-                        <row>
-                            <entry><ulink url="http://framework.zend.com/manual/en/zend.server.html"><code>Zend_Server</code></ulink></entry>
-                        </row>
-                        <row>
-                            <entry><ulink url="http://framework.zend.com/manual/en/zend.service.html"><code>Zend_Service</code></ulink></entry>
-                        </row>
-                        <row>
-                            <entry><ulink url="http://framework.zend.com/manual/en/zend.uri.html"><code>Zend_Uri</code></ulink></entry>
-                        </row>
-                        <row>
-                            <entry><ulink url="http://framework.zend.com/manual/en/zend.validate.html"><code>Zend_Validate</code></ulink></entry>
-                        </row>
-                        <row>
-                            <entry morerows="2" valign="middle">תת</entry>
-                            <entry><ulink url="http://framework.zend.com/manual/en/zend.date.html"><code>Zend_Date</code></ulink></entry>
-                        </row>
-                        <row>
-                            <entry><ulink url="http://framework.zend.com/manual/en/zend.filter.html"><code>Zend_Filter</code></ulink></entry>
-                        </row>
-                        <row>
-                            <entry><ulink url="http://framework.zend.com/manual/en/zend.registry.html"><code>Zend_Registry</code></ulink></entry>
-                        </row>
-                        <row>
                             <entry morerows="8" valign="middle"><emphasis role="strong"><ulink url="http://framework.zend.com/manual/en/zend.service.audioscrobbler.html"><code>Zend_Service_Audioscrobbler</code></ulink></emphasis></entry>
                             <entry morerows="1" valign="middle">תלוי מאוד</entry>
                             <entry><ulink url="http://framework.zend.com/manual/en/zend.exception.html"><code>Zend_Exception</code></ulink></entry>
@@ -2599,44 +2376,7 @@
                             <entry><ulink url="http://framework.zend.com/manual/en/zend.registry.html"><code>Zend_Registry</code></ulink></entry>
                         </row>
                         <row>
-                            <entry morerows="10" valign="middle"><emphasis role="strong"><ulink url="http://framework.zend.com/manual/en/zend.service.recapchta.html"><code>Zend_Service_ReCaptcha</code></ulink></emphasis></entry>
-                            <entry morerows="2" valign="middle">תלוי מאוד</entry>
-                            <entry><ulink url="http://framework.zend.com/manual/en/zend.exception.html"><code>Zend_Exception</code></ulink></entry>
-                        </row>
-                        <row>
-                            <entry><ulink url="http://framework.zend.com/manual/en/zend.http.html"><code>Zend_Http</code></ulink></entry>
-                        </row>
-                        <row>
-                            <entry><ulink url="http://framework.zend.com/manual/en/zend.json.html"><code>Zend_Json</code></ulink></entry>
-                        </row>
-                        <row>
-                            <entry morerows="4" valign="middle">תיקון</entry>
-                            <entry><ulink url="http://framework.zend.com/manual/en/zend.loader.html"><code>Zend_Loader</code></ulink></entry>
-                        </row>
-                        <row>
-                            <entry><ulink url="http://framework.zend.com/manual/en/zend.locale.html"><code>Zend_Locale</code></ulink></entry>
-                        </row>
-                        <row>
-                            <entry><ulink url="http://framework.zend.com/manual/en/zend.server.html"><code>Zend_Server</code></ulink></entry>
-                        </row>
-                        <row>
-                            <entry><ulink url="http://framework.zend.com/manual/en/zend.uri.html"><code>Zend_Uri</code></ulink></entry>
-                        </row>
-                        <row>
-                            <entry><ulink url="http://framework.zend.com/manual/en/zend.validate.html"><code>Zend_Validate</code></ulink></entry>
-                        </row>
-                        <row>
-                            <entry morerows="2" valign="middle">תת</entry>
-                            <entry><ulink url="http://framework.zend.com/manual/en/zend.date.html"><code>Zend_Date</code></ulink></entry>
-                        </row>
-                        <row>
-                            <entry><ulink url="http://framework.zend.com/manual/en/zend.filter.html"><code>Zend_Filter</code></ulink></entry>
-                        </row>
-                        <row>
-                            <entry><ulink url="http://framework.zend.com/manual/en/zend.registry.html"><code>Zend_Registry</code></ulink></entry>
-                        </row>
-                        <row>
-                            <entry morerows="20" valign="middle"><emphasis role="strong"><ulink url="http://framework.zend.com/manual/en/zend.session.html"><code>Zend_Session</code></ulink></emphasis></entry>
+                            <entry morerows="18" valign="middle"><emphasis role="strong"><ulink url="http://framework.zend.com/manual/en/zend.session.html"><code>Zend_Session</code></ulink></emphasis></entry>
                             <entry>תלוי מאוד</entry>
                             <entry><ulink url="http://framework.zend.com/manual/en/zend.exception.html"><code>Zend_Exception</code></ulink></entry>
                         </row>
@@ -2651,7 +2391,7 @@
                             <entry><ulink url="http://framework.zend.com/manual/en/zend.loader.html"><code>Zend_Loader</code></ulink></entry>
                         </row>
                         <row>
-                            <entry morerows="16" valign="middle">תת</entry>
+                            <entry morerows="14" valign="middle">תת</entry>
                             <entry><ulink url="http://framework.zend.com/manual/en/zend.captcha.html"><code>Zend_Captcha</code></ulink></entry>
                         </row>
                         <row>
@@ -2682,9 +2422,6 @@
                             <entry><ulink url="http://framework.zend.com/manual/en/zend.server.html"><code>Zend_Server</code></ulink></entry>
                         </row>
                         <row>
-                            <entry><ulink url="http://framework.zend.com/manual/en/zend.service.recaptcha.html"><code>Zend_Service_ReCaptcha</code></ulink></entry>
-                        </row>
-                        <row>
                             <entry><ulink url="http://framework.zend.com/manual/en/zend.session.html"><code>Zend_Session</code></ulink></entry>
                         </row>
                         <row>
@@ -2698,9 +2435,6 @@
                         </row>
                         <row>
                             <entry><ulink url="http://framework.zend.com/manual/en/zend.view.html"><code>Zend_View</code></ulink></entry>
-                        </row>
-                        <row>
-                            <entry><ulink url="http://framework.zend.com/manual/en/zend.wildfire.html"><code>Zend_Wildfire</code></ulink></entry>
                         </row>
                         <row>
                             <entry morerows="8" valign="middle"><emphasis role="strong"><ulink url="http://framework.zend.com/manual/en/zend.soap.html"><code>Zend_Soap</code></ulink></emphasis></entry>
@@ -2734,7 +2468,7 @@
                             <entry><ulink url="http://framework.zend.com/manual/en/zend.registry.html"><code>Zend_Registry</code></ulink></entry>
                         </row>
                         <row>
-                            <entry morerows="23" valign="middle"><emphasis role="strong"><ulink url="http://framework.zend.com/manual/en/zend.test.html"><code>Zend_Test</code></ulink></emphasis></entry>
+                            <entry morerows="21" valign="middle"><emphasis role="strong"><ulink url="http://framework.zend.com/manual/en/zend.test.html"><code>Zend_Test</code></ulink></emphasis></entry>
                             <entry morerows="5" valign="middle">תלוי מאוד</entry>
                             <entry><ulink url="http://framework.zend.com/manual/en/zend.controller.html"><code>Zend_Controller</code></ulink></entry>
                         </row>
@@ -2774,7 +2508,7 @@
                             <entry><ulink url="http://framework.zend.com/manual/en/zend.view.html"><code>Zend_View</code></ulink></entry>
                         </row>
                         <row>
-                            <entry morerows="11" valign="middle">תת</entry>
+                            <entry morerows="9" valign="middle">תת</entry>
                             <entry><ulink url="http://framework.zend.com/manual/en/zend.captcha.html"><code>Zend_Captcha</code></ulink></entry>
                         </row>
                         <row>
@@ -2802,13 +2536,7 @@
                             <entry><ulink url="http://framework.zend.com/manual/en/zend.server.html"><code>Zend_Server</code></ulink></entry>
                         </row>
                         <row>
-                            <entry><ulink url="http://framework.zend.com/manual/en/zend.service.recaptcha.html"><code>Zend_Service_ReCaptcha</code></ulink></entry>
-                        </row>
-                        <row>
                             <entry><ulink url="http://framework.zend.com/manual/en/zend.text.html"><code>Zend_Text</code></ulink></entry>
-                        </row>
-                        <row>
-                            <entry><ulink url="http://framework.zend.com/manual/en/zend.wildfire.html"><code>Zend_Wildfire</code></ulink></entry>
                         </row>
                         <row>
                             <entry morerows="1" valign="middle"><emphasis role="strong"><ulink url="http://framework.zend.com/manual/en/zend.text.html"><code>Zend_Text</code></ulink></emphasis></entry>
@@ -2904,7 +2632,7 @@
                             <entry>---</entry>
                         </row>
                         <row>
-                            <entry morerows="21" valign="middle"><emphasis role="strong"><ulink url="http://framework.zend.com/manual/en/zend.view.html"><code>Zend_View</code></ulink></emphasis></entry>
+                            <entry morerows="19" valign="middle"><emphasis role="strong"><ulink url="http://framework.zend.com/manual/en/zend.view.html"><code>Zend_View</code></ulink></emphasis></entry>
                             <entry morerows="4" valign="middle">תלוי מאוד</entry>
                             <entry><ulink url="http://framework.zend.com/manual/en/zend.controller.html"><code>Zend_Controller</code></ulink></entry>
                         </row>
@@ -2938,7 +2666,7 @@
                             <entry><ulink url="http://framework.zend.com/manual/en/zend.validate.html"><code>Zend_Validate</code></ulink></entry>
                         </row>
                         <row>
-                            <entry morerows="11" valign="middle">תת</entry>
+                            <entry morerows="9" valign="middle">תת</entry>
                             <entry><ulink url="http://framework.zend.com/manual/en/zend.captcha.html"><code>Zend_Captcha</code></ulink></entry>
                         </row>
                         <row>
@@ -2961,82 +2689,6 @@
                         </row>
                         <row>
                             <entry><ulink url="http://framework.zend.com/manual/en/zend.server.html"><code>Zend_Server</code></ulink></entry>
-                        </row>
-                        <row>
-                            <entry><ulink url="http://framework.zend.com/manual/en/zend.service.recaptcha.html"><code>Zend_Service_ReCaptcha</code></ulink></entry>
-                        </row>
-                        <row>
-                            <entry><ulink url="http://framework.zend.com/manual/en/zend.session.html"><code>Zend_Session</code></ulink></entry>
-                        </row>
-                        <row>
-                            <entry><ulink url="http://framework.zend.com/manual/en/zend.text.html"><code>Zend_Text</code></ulink></entry>
-                        </row>
-                        <row>
-                            <entry><ulink url="http://framework.zend.com/manual/en/zend.wildfire.html"><code>Zend_Wildfire</code></ulink></entry>
-                        </row>
-                        <row>
-                            <entry morerows="21" valign="middle"><emphasis role="strong"><ulink url="http://framework.zend.com/manual/en/zend.wildfire.html"><code>Zend_Wildfire</code></ulink></emphasis></entry>
-                            <entry morerows="3" valign="middle">תלוי מאוד</entry>
-                            <entry><ulink url="http://framework.zend.com/manual/en/zend.controller.html"><code>Zend_Controller</code></ulink></entry>
-                        </row>
-                        <row>
-                            <entry><ulink url="http://framework.zend.com/manual/en/zend.exception.html"><code>Zend_Exception</code></ulink></entry>
-                        </row>
-                        <row>
-                            <entry><ulink url="http://framework.zend.com/manual/en/zend.json.html"><code>Zend_Json</code></ulink></entry>
-                        </row>
-                        <row>
-                            <entry><ulink url="http://framework.zend.com/manual/en/zend.loader.html"><code>Zend_Loader</code></ulink></entry>
-                        </row>
-                        <row>
-                            <entry morerows="6" valign="middle">תיקון</entry>
-                            <entry><ulink url="http://framework.zend.com/manual/en/zend.config.html"><code>Zend_Config</code></ulink></entry>
-                        </row>
-                        <row>
-                            <entry><ulink url="http://framework.zend.com/manual/en/zend.layout.html"><code>Zend_Layout</code></ulink></entry>
-                        </row>
-                        <row>
-                            <entry><ulink url="http://framework.zend.com/manual/en/zend.registry.html"><code>Zend_Registry</code></ulink></entry>
-                        </row>
-                        <row>
-                            <entry><ulink url="http://framework.zend.com/manual/en/zend.server.html"><code>Zend_Server</code></ulink></entry>
-                        </row>
-                        <row>
-                            <entry><ulink url="http://framework.zend.com/manual/en/zend.uri.html"><code>Zend_Uri</code></ulink></entry>
-                        </row>
-                        <row>
-                            <entry><ulink url="http://framework.zend.com/manual/en/zend.validate.html"><code>Zend_Validate</code></ulink></entry>
-                        </row>
-                        <row>
-                            <entry><ulink url="http://framework.zend.com/manual/en/zend.view.html"><code>Zend_View</code></ulink></entry>
-                        </row>
-                        <row>
-                            <entry morerows="10" valign="middle">תת</entry>
-                            <entry><ulink url="http://framework.zend.com/manual/en/zend.captcha.html"><code>Zend_Captcha</code></ulink></entry>
-                        </row>
-                        <row>
-                            <entry><ulink url="http://framework.zend.com/manual/en/zend.date.html"><code>Zend_Date</code></ulink></entry>
-                        </row>
-                        <row>
-                            <entry><ulink url="http://framework.zend.com/manual/en/zend.db.html"><code>Zend_Db</code></ulink></entry>
-                        </row>
-                        <row>
-                            <entry><ulink url="http://framework.zend.com/manual/en/zend.dojo.html"><code>Zend_Dojo</code></ulink></entry>
-                        </row>
-                        <row>
-                            <entry><ulink url="http://framework.zend.com/manual/en/zend.filter.html"><code>Zend_Filter</code></ulink></entry>
-                        </row>
-                        <row>
-                            <entry><ulink url="http://framework.zend.com/manual/en/zend.form.html"><code>Zend_Form</code></ulink></entry>
-                        </row>
-                        <row>
-                            <entry><ulink url="http://framework.zend.com/manual/en/zend.http.html"><code>Zend_Http</code></ulink></entry>
-                        </row>
-                        <row>
-                            <entry><ulink url="http://framework.zend.com/manual/en/zend.layout.html"><code>Zend_Layout</code></ulink></entry>
-                        </row>
-                        <row>
-                            <entry><ulink url="http://framework.zend.com/manual/en/zend.service.recaptcha.html"><code>Zend_Service_ReCaptcha</code></ulink></entry>
                         </row>
                         <row>
                             <entry><ulink url="http://framework.zend.com/manual/en/zend.session.html"><code>Zend_Session</code></ulink></entry>

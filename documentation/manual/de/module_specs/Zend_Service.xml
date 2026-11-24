@@ -24,13 +24,11 @@
 
     <itemizedlist>
         <listitem><para><link linkend="zend.service.akismet">Akismet</link></para></listitem>
-        <listitem><para><link linkend="zend.service.amazon">Amazon</link></para></listitem>
         <listitem>
             <para><link linkend="zend.service.audioscrobbler">Audioscrobbler</link></para>
         </listitem>
 
         <listitem><para><link linkend="zend.service.flickr">Flickr</link></para></listitem>
-        <listitem><para><link linkend="zend.service.recaptcha">ReCaptcha</link></para></listitem>
 
         <listitem>
             <para><link linkend="zend.service.windowsazure">Windows Azure</link></para>
