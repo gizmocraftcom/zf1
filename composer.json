@@ -1,5 +1,5 @@
 {
-    "name": "diablomedia/zendframework1",
+    "name": "gizmocraft/zendframework1",
     "description": "Zend Framework 1",
     "type": "library",
     "keywords": [
@@ -10,82 +10,350 @@
     "license": "BSD-3-Clause",
     "prefer-stable": true,
     "minimum-stability": "dev",
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "https://github.com/gizmocraftcom/zf1-acl"
+        },
+        {
+            "type": "vcs",
+            "url": "https://github.com/gizmocraftcom/zf1-application"
+        },
+        {
+            "type": "vcs",
+            "url": "https://github.com/gizmocraftcom/zf1-auth"
+        },
+        {
+            "type": "vcs",
+            "url": "https://github.com/gizmocraftcom/zf1-auth-adapter-dbtable"
+        },
+        {
+            "type": "vcs",
+            "url": "https://github.com/gizmocraftcom/zf1-auth-adapter-http"
+        },
+        {
+            "type": "vcs",
+            "url": "https://github.com/gizmocraftcom/zf1-auth-adapter-ldap"
+        },
+        {
+            "type": "vcs",
+            "url": "https://github.com/gizmocraftcom/zf1-cache"
+        },
+        {
+            "type": "vcs",
+            "url": "https://github.com/gizmocraftcom/zf1-captcha"
+        },
+        {
+            "type": "vcs",
+            "url": "https://github.com/gizmocraftcom/zf1-config"
+        },
+        {
+            "type": "vcs",
+            "url": "https://github.com/gizmocraftcom/zf1-controller"
+        },
+        {
+            "type": "vcs",
+            "url": "https://github.com/gizmocraftcom/zf1-controller-action-helper-ajaxcontext"
+        },
+        {
+            "type": "vcs",
+            "url": "https://github.com/gizmocraftcom/zf1-controller-action-helper-autocomplete"
+        },
+        {
+            "type": "vcs",
+            "url": "https://github.com/gizmocraftcom/zf1-controller-action-helper-contextswitch"
+        },
+        {
+            "type": "vcs",
+            "url": "https://github.com/gizmocraftcom/zf1-controller-action-helper-json"
+        },
+        {
+            "type": "vcs",
+            "url": "https://github.com/gizmocraftcom/zf1-crypt"
+        },
+        {
+            "type": "vcs",
+            "url": "https://github.com/gizmocraftcom/zf1-currency"
+        },
+        {
+            "type": "vcs",
+            "url": "https://github.com/gizmocraftcom/zf1-date"
+        },
+        {
+            "type": "vcs",
+            "url": "https://github.com/gizmocraftcom/zf1-db"
+        },
+        {
+            "type": "vcs",
+            "url": "https://github.com/gizmocraftcom/zf1-dojo"
+        },
+        {
+            "type": "vcs",
+            "url": "https://github.com/gizmocraftcom/zf1-dom"
+        },
+        {
+            "type": "vcs",
+            "url": "https://github.com/gizmocraftcom/zf1-eventmanager"
+        },
+        {
+            "type": "vcs",
+            "url": "https://github.com/gizmocraftcom/zf1-exception"
+        },
+        {
+            "type": "vcs",
+            "url": "https://github.com/gizmocraftcom/zf1-file"
+        },
+        {
+            "type": "vcs",
+            "url": "https://github.com/gizmocraftcom/zf1-filter"
+        },
+        {
+            "type": "vcs",
+            "url": "https://github.com/gizmocraftcom/zf1-filter-input"
+        },
+        {
+            "type": "vcs",
+            "url": "https://github.com/gizmocraftcom/zf1-form"
+        },
+        {
+            "type": "vcs",
+            "url": "https://github.com/gizmocraftcom/zf1-http"
+        },
+        {
+            "type": "vcs",
+            "url": "https://github.com/gizmocraftcom/zf1-json"
+        },
+        {
+            "type": "vcs",
+            "url": "https://github.com/gizmocraftcom/zf1-layout"
+        },
+        {
+            "type": "vcs",
+            "url": "https://github.com/gizmocraftcom/zf1-ldap"
+        },
+        {
+            "type": "vcs",
+            "url": "https://github.com/gizmocraftcom/zf1-loader"
+        },
+        {
+            "type": "vcs",
+            "url": "https://github.com/gizmocraftcom/zf1-locale"
+        },
+        {
+            "type": "vcs",
+            "url": "https://github.com/gizmocraftcom/zf1-log"
+        },
+        {
+            "type": "vcs",
+            "url": "https://github.com/gizmocraftcom/zf1-log-writer-db"
+        },
+        {
+            "type": "vcs",
+            "url": "https://github.com/gizmocraftcom/zf1-log-writer-mail"
+        },
+        {
+            "type": "vcs",
+            "url": "https://github.com/gizmocraftcom/zf1-mail"
+        },
+        {
+            "type": "vcs",
+            "url": "https://github.com/gizmocraftcom/zf1-mime"
+        },
+        {
+            "type": "vcs",
+            "url": "https://github.com/gizmocraftcom/zf1-navigation"
+        },
+        {
+            "type": "vcs",
+            "url": "https://github.com/gizmocraftcom/zf1-oauth"
+        },
+        {
+            "type": "vcs",
+            "url": "https://github.com/gizmocraftcom/zf1-paginator"
+        },
+        {
+            "type": "vcs",
+            "url": "https://github.com/gizmocraftcom/zf1-progressbar"
+        },
+        {
+            "type": "vcs",
+            "url": "https://github.com/gizmocraftcom/zf1-registry"
+        },
+        {
+            "type": "vcs",
+            "url": "https://github.com/gizmocraftcom/zf1-rest"
+        },
+        {
+            "type": "vcs",
+            "url": "https://github.com/gizmocraftcom/zf1-server"
+        },
+        {
+            "type": "vcs",
+            "url": "https://github.com/gizmocraftcom/zf1-service"
+        },
+        {
+            "type": "vcs",
+            "url": "https://github.com/gizmocraftcom/zf1-session"
+        },
+        {
+            "type": "vcs",
+            "url": "https://github.com/gizmocraftcom/zf1-session-savehandler-dbtable"
+        },
+        {
+            "type": "vcs",
+            "url": "https://github.com/gizmocraftcom/zf1-soap"
+        },
+        {
+            "type": "vcs",
+            "url": "https://github.com/gizmocraftcom/zf1-stdlib"
+        },
+        {
+            "type": "vcs",
+            "url": "https://github.com/gizmocraftcom/zf1-test"
+        },
+        {
+            "type": "vcs",
+            "url": "https://github.com/gizmocraftcom/zf1-text"
+        },
+        {
+            "type": "vcs",
+            "url": "https://github.com/gizmocraftcom/zf1-translate"
+        },
+        {
+            "type": "vcs",
+            "url": "https://github.com/gizmocraftcom/zf1-uri"
+        },
+        {
+            "type": "vcs",
+            "url": "https://github.com/gizmocraftcom/zf1-validate"
+        },
+        {
+            "type": "vcs",
+            "url": "https://github.com/gizmocraftcom/zf1-validate-db"
+        },
+        {
+            "type": "vcs",
+            "url": "https://github.com/gizmocraftcom/zf1-validate-file"
+        },
+        {
+            "type": "vcs",
+            "url": "https://github.com/gizmocraftcom/zf1-validate-ldap"
+        },
+        {
+            "type": "vcs",
+            "url": "https://github.com/gizmocraftcom/zf1-validate-sitemap"
+        },
+        {
+            "type": "vcs",
+            "url": "https://github.com/gizmocraftcom/zf1-view"
+        },
+        {
+            "type": "vcs",
+            "url": "https://github.com/gizmocraftcom/zf1-view-helper-action"
+        },
+        {
+            "type": "vcs",
+            "url": "https://github.com/gizmocraftcom/zf1-view-helper-baseurl"
+        },
+        {
+            "type": "vcs",
+            "url": "https://github.com/gizmocraftcom/zf1-view-helper-json"
+        },
+        {
+            "type": "vcs",
+            "url": "https://github.com/gizmocraftcom/zf1-view-helper-layout"
+        },
+        {
+            "type": "vcs",
+            "url": "https://github.com/gizmocraftcom/zf1-view-helper-navigation"
+        },
+        {
+            "type": "vcs",
+            "url": "https://github.com/gizmocraftcom/zf1-view-helper-pagination"
+        },
+        {
+            "type": "vcs",
+            "url": "https://github.com/gizmocraftcom/zf1-view-helper-partial"
+        },
+        {
+            "type": "vcs",
+            "url": "https://github.com/gizmocraftcom/zf1-view-helper-url"
+        },
+        {
+            "type": "vcs",
+            "url": "https://github.com/gizmocraftcom/zf1-xml"
+        }
+    ],
     "require": {
-        "diablomedia/zendframework1-acl": "^1.0.9",
-        "diablomedia/zendframework1-application": "^1.0.11",
-        "diablomedia/zendframework1-auth": "^1.0.9",
-        "diablomedia/zendframework1-auth-adapter-dbtable": "^1.0.10",
-        "diablomedia/zendframework1-auth-adapter-http": "^1.0.9",
-        "diablomedia/zendframework1-auth-adapter-ldap": "^1.0.9",
-        "diablomedia/zendframework1-auth-adapter-openid": "^1.0.9",
-        "diablomedia/zendframework1-cache": "^1.0.10",
-        "diablomedia/zendframework1-captcha": "^1.0.10",
-        "diablomedia/zendframework1-config": "^2.0.8",
-        "diablomedia/zendframework1-controller": "^1.0.11",
-        "diablomedia/zendframework1-controller-action-helper-ajaxcontext": "^1.0.9",
-        "diablomedia/zendframework1-controller-action-helper-autocomplete": "^1.0.9",
-        "diablomedia/zendframework1-controller-action-helper-contextswitch": "^1.0.10",
-        "diablomedia/zendframework1-controller-action-helper-json": "^1.0.9",
-        "diablomedia/zendframework1-crypt": "^1.0.9",
-        "diablomedia/zendframework1-currency": "^1.0.9",
-        "diablomedia/zendframework1-date": "^1.0.9",
-        "diablomedia/zendframework1-db": "^1.0.9",
-        "diablomedia/zendframework1-dojo": "^1.0.9",
-        "diablomedia/zendframework1-dom": "^1.0.9",
-        "diablomedia/zendframework1-eventmanager": "^1.0.9",
-        "diablomedia/zendframework1-exception": "^1.1.5",
-        "diablomedia/zendframework1-file": "^1.0.9",
-        "diablomedia/zendframework1-filter": "^1.0.10",
-        "diablomedia/zendframework1-filter-input": "^1.0.9",
-        "diablomedia/zendframework1-form": "^1.0.10",
-        "diablomedia/zendframework1-http": "^1.0.11",
-        "diablomedia/zendframework1-json": "^1.0.12",
-        "diablomedia/zendframework1-layout": "^1.0.10",
-        "diablomedia/zendframework1-ldap": "^1.0.9",
-        "diablomedia/zendframework1-loader": "^1.0.9",
-        "diablomedia/zendframework1-locale": "^1.0.10",
-        "diablomedia/zendframework1-log": "^1.0.9",
-        "diablomedia/zendframework1-log-writer-db": "^1.0.9",
-        "diablomedia/zendframework1-log-writer-firebug": "^1.0.9",
-        "diablomedia/zendframework1-log-writer-mail": "^1.0.9",
-        "diablomedia/zendframework1-mail": "^1.0.9",
-        "diablomedia/zendframework1-mime": "^1.0.9",
-        "diablomedia/zendframework1-navigation": "^1.0.9",
-        "diablomedia/zendframework1-oauth": "^1.0.8",
-        "diablomedia/zendframework1-openid": "^1.0.9",
-        "diablomedia/zendframework1-paginator": "^1.0.9",
-        "diablomedia/zendframework1-progressbar": "^1.0.9",
-        "diablomedia/zendframework1-registry": "^1.0.9",
-        "diablomedia/zendframework1-rest": "^1.0.9",
-        "diablomedia/zendframework1-server": "^1.0.9",
-        "diablomedia/zendframework1-service": "^1.0.9",
-        "diablomedia/zendframework1-service-amazon": "^1.0.9",
-        "diablomedia/zendframework1-service-recaptcha": "^1.0.8",
-        "diablomedia/zendframework1-session": "^2.0.1",
-        "diablomedia/zendframework1-session-savehandler-dbtable": "^2.0.1",
-        "diablomedia/zendframework1-soap": "^2.0.1",
-        "diablomedia/zendframework1-stdlib": "^1.0.9",
-        "diablomedia/zendframework1-test": "^4.0.1",
-        "diablomedia/zendframework1-text": "^1.0.9",
-        "diablomedia/zendframework1-translate": "^1.0.9",
-        "diablomedia/zendframework1-uri": "^1.0.9",
-        "diablomedia/zendframework1-validate": "^1.0.9",
-        "diablomedia/zendframework1-validate-db": "^1.0.9",
-        "diablomedia/zendframework1-validate-file": "^1.0.9",
-        "diablomedia/zendframework1-validate-ldap": "^1.0.9",
-        "diablomedia/zendframework1-validate-sitemap": "^1.0.9",
-        "diablomedia/zendframework1-view": "^1.0.10",
-        "diablomedia/zendframework1-view-helper-action": "^1.0.9",
-        "diablomedia/zendframework1-view-helper-baseurl": "^1.0.9",
-        "diablomedia/zendframework1-view-helper-json": "^1.0.9",
-        "diablomedia/zendframework1-view-helper-layout": "^1.0.9",
-        "diablomedia/zendframework1-view-helper-navigation": "^1.0.9",
-        "diablomedia/zendframework1-view-helper-paginationcontrol": "^1.0.9",
-        "diablomedia/zendframework1-view-helper-partial": "^1.0.9",
-        "diablomedia/zendframework1-view-helper-url": "^1.0.9",
-        "diablomedia/zendframework1-wildfire": "^1.0.9",
-        "diablomedia/zendframework1-xml": "^1.0.10",
-        "php": "~8.1.0 || ~8.2.0 || ~8.3.0 || ~8.4.0 || ~8.5.0"
+        "gizmocraft/zendframework1-acl": "^2.0.0",
+        "gizmocraft/zendframework1-application": "^2.0.0",
+        "gizmocraft/zendframework1-auth": "^2.0.0",
+        "gizmocraft/zendframework1-auth-adapter-dbtable": "^2.0.0",
+        "gizmocraft/zendframework1-auth-adapter-http": "^2.0.0",
+        "gizmocraft/zendframework1-auth-adapter-ldap": "^2.0.0",
+        "gizmocraft/zendframework1-cache": "^2.0.0",
+        "gizmocraft/zendframework1-captcha": "^2.0.0",
+        "gizmocraft/zendframework1-config": "^3.0.0",
+        "gizmocraft/zendframework1-controller": "^2.0.0",
+        "gizmocraft/zendframework1-controller-action-helper-ajaxcontext": "^2.0.0",
+        "gizmocraft/zendframework1-controller-action-helper-autocomplete": "^2.0.0",
+        "gizmocraft/zendframework1-controller-action-helper-contextswitch": "^2.0.0",
+        "gizmocraft/zendframework1-controller-action-helper-json": "^2.0.0",
+        "gizmocraft/zendframework1-crypt": "^2.0.0",
+        "gizmocraft/zendframework1-currency": "^2.0.0",
+        "gizmocraft/zendframework1-date": "^2.0.0",
+        "gizmocraft/zendframework1-db": "^2.0.0",
+        "gizmocraft/zendframework1-dojo": "^2.0.0",
+        "gizmocraft/zendframework1-dom": "^2.0.0",
+        "gizmocraft/zendframework1-eventmanager": "^2.0.0",
+        "gizmocraft/zendframework1-exception": "^2.0.0",
+        "gizmocraft/zendframework1-file": "^2.0.0",
+        "gizmocraft/zendframework1-filter": "^2.0.0",
+        "gizmocraft/zendframework1-filter-input": "^2.0.0",
+        "gizmocraft/zendframework1-form": "^2.0.0",
+        "gizmocraft/zendframework1-http": "^2.0.0",
+        "gizmocraft/zendframework1-json": "^2.0.0",
+        "gizmocraft/zendframework1-layout": "^2.0.0",
+        "gizmocraft/zendframework1-ldap": "^2.0.0",
+        "gizmocraft/zendframework1-loader": "^2.0.0",
+        "gizmocraft/zendframework1-locale": "^2.0.0",
+        "gizmocraft/zendframework1-log": "^2.0.0",
+        "gizmocraft/zendframework1-log-writer-db": "^2.0.0",
+        "gizmocraft/zendframework1-log-writer-mail": "^2.0.0",
+        "gizmocraft/zendframework1-mail": "^2.0.0",
+        "gizmocraft/zendframework1-mime": "^2.0.0",
+        "gizmocraft/zendframework1-navigation": "^2.0.0",
+        "gizmocraft/zendframework1-oauth": "^2.0.0",
+        "gizmocraft/zendframework1-paginator": "^2.0.0",
+        "gizmocraft/zendframework1-progressbar": "^2.0.0",
+        "gizmocraft/zendframework1-registry": "^2.0.0",
+        "gizmocraft/zendframework1-rest": "^2.0.0",
+        "gizmocraft/zendframework1-server": "^2.0.0",
+        "gizmocraft/zendframework1-service": "^2.0.0",
+        "gizmocraft/zendframework1-session": "^3.0.0",
+        "gizmocraft/zendframework1-session-savehandler-dbtable": "^3.0.0",
+        "gizmocraft/zendframework1-soap": "^3.0.0",
+        "gizmocraft/zendframework1-stdlib": "^2.0.0",
+        "gizmocraft/zendframework1-test": "^5.0.0",
+        "gizmocraft/zendframework1-text": "^2.0.0",
+        "gizmocraft/zendframework1-translate": "^2.0.0",
+        "gizmocraft/zendframework1-uri": "^2.0.0",
+        "gizmocraft/zendframework1-validate": "^2.0.1",
+        "gizmocraft/zendframework1-validate-db": "^2.0.0",
+        "gizmocraft/zendframework1-validate-file": "^2.0.0",
+        "gizmocraft/zendframework1-validate-ldap": "^2.0.0",
+        "gizmocraft/zendframework1-validate-sitemap": "^2.0.0",
+        "gizmocraft/zendframework1-view": "^2.0.0",
+        "gizmocraft/zendframework1-view-helper-action": "^2.0.0",
+        "gizmocraft/zendframework1-view-helper-baseurl": "^2.0.0",
+        "gizmocraft/zendframework1-view-helper-json": "^2.0.0",
+        "gizmocraft/zendframework1-view-helper-layout": "^2.0.0",
+        "gizmocraft/zendframework1-view-helper-navigation": "^2.0.0",
+        "gizmocraft/zendframework1-view-helper-paginationcontrol": "^2.0.0",
+        "gizmocraft/zendframework1-view-helper-partial": "^2.0.0",
+        "gizmocraft/zendframework1-view-helper-url": "^2.0.0",
+        "gizmocraft/zendframework1-xml": "^2.0.0",
+        "php": ">=8.5"
     },
     "autoload": {
         "psr-0": {
@@ -134,17 +402,16 @@
             "tests/TestHelper.php"
         ],
         "classmap": [
-            "vendor/diablomedia/zendframework1-xml/tests/",
-            "vendor/diablomedia/zendframework1-loader/tests/",
-            "vendor/diablomedia/zendframework1-cache/tests/",
-            "vendor/diablomedia/zendframework1-currency/tests/",
-            "vendor/diablomedia/zendframework1-db/tests/",
-            "vendor/diablomedia/zendframework1-eventmanager/tests/",
-            "vendor/diablomedia/zendframework1-http/tests/",
-            "vendor/diablomedia/zendframework1-openid/tests/",
-            "vendor/diablomedia/zendframework1-stdlib/tests/",
-            "vendor/diablomedia/zendframework1-test/tests/",
-            "vendor/diablomedia/zendframework1-session/tests/"
+            "vendor/gizmocraft/zendframework1-xml/tests/",
+            "vendor/gizmocraft/zendframework1-loader/tests/",
+            "vendor/gizmocraft/zendframework1-cache/tests/",
+            "vendor/gizmocraft/zendframework1-currency/tests/",
+            "vendor/gizmocraft/zendframework1-db/tests/",
+            "vendor/gizmocraft/zendframework1-eventmanager/tests/",
+            "vendor/gizmocraft/zendframework1-http/tests/",
+            "vendor/gizmocraft/zendframework1-stdlib/tests/",
+            "vendor/gizmocraft/zendframework1-test/tests/",
+            "vendor/gizmocraft/zendframework1-session/tests/"
         ]
     },
     "include-path": [
