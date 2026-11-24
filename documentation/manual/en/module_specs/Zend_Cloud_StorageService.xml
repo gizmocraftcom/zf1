@@ -19,12 +19,6 @@
         </para>
 
         <itemizedlist>
-            <listitem>
-                <para>
-                    <ulink
-                        url="http://aws.amazon.com/s3/"><classname>Zend_Cloud_StorageService_Adapter_S3</classname></ulink>
-                </para>
-            </listitem>
 
             <listitem>
                 <para>
@@ -53,9 +47,10 @@
 
             <programlisting language="php"><![CDATA[
 $storage = Zend_Cloud_StorageService_Factory::getAdapter(array(
-    Zend_Cloud_StorageService_Factory::STORAGE_ADAPTER_KEY => 'Zend_Cloud_StorageService_Adapter_S3',
-    Zend_Cloud_StorageService_Adapter_S3::AWS_ACCESS_KEY   => $amazonKey,
-    Zend_Cloud_StorageService_Adapter_S3::AWS_SECRET_KEY   => $amazonSecret,
+    Zend_Cloud_StorageService_Factory::STORAGE_ADAPTER_KEY      => 'Zend_Cloud_StorageService_Adapter_WindowsAzure',
+    Zend_Cloud_StorageService_Adapter_WindowsAzure::ACCOUNT_NAME => $accountName,
+    Zend_Cloud_StorageService_Adapter_WindowsAzure::ACCOUNT_KEY  => $accountKey,
+    Zend_Cloud_StorageService_Adapter_WindowsAzure::CONTAINER    => $container,
 ));
 ]]></programlisting>
         </example>
@@ -63,97 +58,6 @@ $storage = Zend_Cloud_StorageService_Factory::getAdapter(array(
         <sect3 id="zend.cloud.storageservice.adapters.options">
             <title>StorageService Adapter Options</title>
 
-            <table frame='all' id="zend.cloud.storageservice.options.s3">
-                <title>Zend_Cloud_StorageService_Adapter_S3 options</title>
-
-                <tgroup cols="5">
-                    <thead>
-                        <row>
-                            <entry>Option key</entry>
-                            <entry>Description</entry>
-                            <entry>Used in</entry>
-                            <entry>Required</entry>
-                            <entry>Default</entry>
-                        </row>
-                    </thead>
-
-                    <tbody>
-                        <row>
-                            <entry>aws_accesskey</entry>
-                            <entry>Amazon AWS access key</entry>
-                            <entry>Constructor</entry>
-                            <entry>Yes</entry>
-                            <entry>None</entry>
-                        </row>
-
-                        <row>
-                            <entry>aws_secretkey</entry>
-                            <entry>Amazon AWS secret key</entry>
-                            <entry>Constructor</entry>
-                            <entry>Yes</entry>
-                            <entry>None</entry>
-                        </row>
-
-                        <row>
-                            <entry>bucket_name</entry>
-                            <entry>The name of the S3 bucket for this item</entry>
-                            <entry>
-                                Used in the constructor to set the default bucket for the
-                                instantiated service. This option can also be specified in any of
-                                the item access operations.
-                            </entry>
-                            <entry>Yes</entry>
-                            <entry>None</entry>
-                        </row>
-
-                        <row>
-                            <entry>bucket_as_domain</entry>
-                            <entry>
-                                Indicates that the bucket name is part of the domain name
-                            </entry>
-                            <entry>
-                                Used in constructor to set the default behavior for the instantiated
-                                service. This option can also be specified in any of the item access
-                                operations.
-                            </entry>
-                            <entry>No</entry>
-                            <entry>False</entry>
-                        </row>
-
-                        <row>
-                            <entry>metadata</entry>
-                            <entry>Array of metadata to associate with the item</entry>
-                            <entry><methodname>storeItem()</methodname></entry>
-                            <entry>No</entry>
-                            <entry>None</entry>
-                        </row>
-
-                        <row>
-                            <entry>fetch_stream</entry>
-                            <entry>
-                                Indicates whether the response is stream, and not a string
-                                <note>
-                                    <para>
-                                        See the <classname>Zend_Service_Amazon_S3</classname>
-                                        documentation for more about handling streamed responses)
-                                    </para>
-                                </note>
-                            </entry>
-                            <entry><methodname>fetchItem()</methodname></entry>
-                            <entry>No</entry>
-                            <entry>False</entry>
-                        </row>
-
-                        <row>
-                            <entry>http_adapter</entry>
-                            <entry>HTTP adapter to use in all access operations</entry>
-                            <entry>Constructor</entry>
-                            <entry>No</entry>
-                            <entry><classname>Zend_Http_Client_Adapter_Socket</classname></entry>
-                        </row>
-                    </tbody>
-                </tgroup>
-            </table>
 
             <table frame='all' id="zend.cloud.storageservice.options.azure">
                 <title>Zend_Cloud_StorageService_Adapter_WindowsAzure options</title>
@@ -409,31 +313,6 @@ $storage = Zend_Cloud_StorageService_Factory::getAdapter(array(
             <programlisting language="php"><![CDATA[
 $data = file_get_contents('/my/local/dir/picture.jpg');
 $returnedData = $storage->storeItem('/my/remote/path/picture.jpg', $data);
-]]></programlisting>
-        </example>
-
-        <para>
-            An optional third parameter describes service-specific options.
-        </para>
-
-        <example id="zend.cloud.storageservice.store-options.example">
-            <title>Storing an item with options</title>
-
-            <programlisting language="php"><![CDATA[
-$data = file_get_contents("/my/local/dir/picture.jpg");
-
-// Use S3 bucket: myBucket
-// Make this item publicly readable
-$returnedData = $storage->storeItem(
-    '/my/remote/path/picture.jpg',
-    $data,
-    array(
-        Zend_Cloud_StorageService_Adapter_S3::BUCKET_NAME => "myBucket",
-        Zend_Cloud_StorageService_Adapter_S3::METADATA    => array(
-            Zend_Service_Amazon_S3::S3_ACL_HEADER => Zend_Service_Amazon_S3::S3_ACL_PUBLIC_READ,
-        )
-    )
-);
 ]]></programlisting>
         </example>
 

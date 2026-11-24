@@ -15,7 +15,7 @@
         Document databases and services are increasingly common in application development. These
         data sources are somewhat different from traditional relational data sources, as they eschew
         complex relationships for performance, scalability, and flexibility. Examples of
-        document-oriented services include Amazon SimpleDB and Azure Table Storage.
+        document-oriented services include Azure Table Storage.
     </para>
 
     <para>
@@ -44,11 +44,6 @@
         </para>
 
         <itemizedlist>
-            <listitem>
-                <para>
-                    <ulink url="http://aws.amazon.com/simpledb/"><classname>Zend_Cloud_DocumentService_Adapter_SimpleDb</classname></ulink>
-                </para>
-            </listitem>
 
             <listitem>
                 <para>
@@ -66,14 +61,14 @@
         </para>
 
         <example id="zend.cloud.documentservice.factory.example">
-            <title>Example: Using the SimpleDB adapter</title>
+            <title>Example: Using the Windows Azure adapter</title>
 
             <programlisting language="php"><![CDATA[
-$adapterClass = 'Zend_Cloud_DocumentService_Adapter_SimpleDb';
+$adapterClass = 'Zend_Cloud_DocumentService_Adapter_WindowsAzure';
 $documents = Zend_Cloud_DocumentService_Factory::getAdapter(array(
-    Zend_Cloud_DocumentService_Factory::DOCUMENT_ADAPTER_KEY    => $adapterClass,
-    Zend_Cloud_DocumentService_Adapter_SimpleDb::AWS_ACCESS_KEY => $amazonKey,
-    Zend_Cloud_DocumentService_Adapter_SimpleDb::AWS_SECRET_KEY => $amazonSecret
+    Zend_Cloud_DocumentService_Factory::DOCUMENT_ADAPTER_KEY         => $adapterClass,
+    Zend_Cloud_DocumentService_Adapter_WindowsAzure::ACCOUNT_NAME => $accountName,
+    Zend_Cloud_DocumentService_Adapter_WindowsAzure::ACCOUNT_KEY  => $accountKey
 ));
 ]]></programlisting>
         </example>
@@ -133,95 +128,7 @@ $documents = Zend_Cloud_DocumentService_Factory::getAdapter(array(
             </tgroup>
         </table>
 
-        <table frame="all" id="zend.cloud.documentservice.options.sdb">
-            <title>Zend_Cloud_DocumentService_Adapter_SimpleDb Options</title>
-
-            <tgroup cols="5">
-                <thead>
-                    <row>
-                        <entry>Option key</entry>
-                        <entry>Description</entry>
-                        <entry>Used in</entry>
-                        <entry>Required</entry>
-                        <entry>Default</entry>
-                    </row>
-                </thead>
-
-                <tbody>
-                    <row>
-                        <entry>query_class</entry>
-                        <entry>
-                            <para>
-                                Class to use for creating and assembling queries for this document
-                                service; <methodname>select()</methodname> will create objects of
-                                this class name, as will <methodname>listDocuments()</methodname>.
-                            </para>
-                        </entry>
-                        <entry>Constructor</entry>
-                        <entry>No</entry>
-                        <entry><classname>Zend_Cloud_DocumentService_Adapter_SimpleDb_Query</classname></entry>
-                    </row>
-
-                    <row>
-                        <entry>aws_accesskey</entry>
-                        <entry>Your Amazon AWS access key</entry>
-                        <entry>Constructor</entry>
-                        <entry>Yes</entry>
-                        <entry>None</entry>
-                    </row>
-
-                    <row>
-                        <entry>aws_secretkey</entry>
-                        <entry>Your Amazon AWS secret key</entry>
-                        <entry>Constructor</entry>
-                        <entry>Yes</entry>
-                        <entry>None</entry>
-                    </row>
-
-                    <row>
-                        <entry>http_adapter</entry>
-                        <entry>HTTP adapter to use in all access operations</entry>
-                        <entry>Constructor</entry>
-                        <entry>No</entry>
-                        <entry><classname>Zend_Http_Client_Adapter_Socket</classname></entry>
-                    </row>
-
-                    <row>
-                        <entry>merge</entry>
-                        <entry>
-                            <para>
-                                If a boolean true, all attribute values are merged.  You may also
-                                specify an array of key pairs, where the key is the attribute key to
-                                merge, and the value indicates whether or not to merge; a boolean
-                                true value will merge the given key. Any attributes not specified in
-                                this array will be replaced.
-                            </para>
-                        </entry>
-                        <entry><methodname>updateDocument()</methodname></entry>
-                        <entry>No</entry>
-                        <entry>True</entry>
-                    </row>
-
-                    <row>
-                        <entry>return_documents</entry>
-                        <entry>
-                            <para>
-                                If a boolean true, <methodname>query()</methodname> returns a
-                                <classname>Zend_Cloud_DocumentService_DocumentSet</classname> object
-                                containing
-                                <classname>Zend_Cloud_DocumentService_Document</classname> objects
-                                (default case); otherwise, it returns an array of arrays.
-                            </para>
-                        </entry>
-                        <entry><methodname>query()</methodname></entry>
-                        <entry>No</entry>
-                        <entry>True</entry>
-                    </row>
-                </tbody>
-            </tgroup>
-        </table>
-
-        <table frame='all' id="zend.cloud.documentservice.options.azure">
+<table frame='all' id="zend.cloud.documentservice.options.azure">
             <title>Zend_Cloud_DocumentService_Adapter_WindowsAzure Options</title>
 
             <tgroup cols="5">
@@ -632,8 +539,8 @@ foreach ($list as $collection) {
             <classname>Zend_Cloud_DocumentService_Document</classname>, you can specify this by
             passing the identifier to the constructor when you instantiate the object. If using an
             associative array, the key name will be adapter-specific locations; for example, on
-            Azure, the ID is made up of the PartitionKey and RowKey; on Amazon SimpleDB, the ID is
-            the ItemName; you may also specify the key in the <varname>_id</varname> field to be
+            Azure, the ID is made up of the PartitionKey and RowKey;
+            you may also specify the key in the <varname>_id</varname> field to be
             more portable.
         </para>
 
@@ -745,26 +652,6 @@ $documents->updateDocument("mydata", "AnotherDocumentID", $document);
 ]]></programlisting>
         </example>
 
-        <para>
-            Amazon SimpleDB supports multi-value fields, so data updates will be merged with the old key
-            value instead of replacing them. Option <property>merge</property> should contain an array
-            of field names to be merged. The array should be key/value pairs, with the key
-            corresponding to the field key, and the value a boolean value indicating merge status
-            (boolean true would merge; false would not). Any keys not specified in the
-            <property>merge</property> option will be replaced instead of merged.
-        </para>
-
-        <example id="zend.cloud.documentservice.update.merge.example">
-            <title>Merging document fields</title>
-
-            <programlisting language="php"><![CDATA[
-// key2 is overwritten, key3 is merged
-$documents->updateDocument('mydata', 'DocumentID',
-    array('key2' => 'new value', 'key3' => 'additional value'),
-    array('merge' => array('key3' => true))
-);
-]]></programlisting>
-        </example>
     </sect2>
 
     <sect2 id="zend.cloud.documentservice.delete">

@@ -19,12 +19,6 @@
     </para>
 
     <itemizedlist>
-        <listitem>
-            <para>
-                <ulink
-                    url="http://aws.amazon.com/sqs/"><classname>Zend_Cloud_QueueService_Adapter_Sqs</classname></ulink>
-            </para>
-        </listitem>
 
         <listitem>
             <para>
@@ -35,8 +29,7 @@
 
         <listitem>
             <para>
-                <ulink
-                    url="http://aws.amazon.com/sqs/"><classname>Zend_Cloud_QueueService_Adapter_ZendQueue</classname></ulink>
+                <classname>Zend_Cloud_QueueService_Adapter_ZendQueue</classname>
             </para>
         </listitem>
     </itemizedlist>
@@ -80,77 +73,19 @@
         </itemizedlist>
 
         <example id="zend.cloud.queueservice.factory.example">
-            <title>Instantiating an Amazon SQS adapter via the factory</title>
+            <title>Instantiating a Windows Azure adapter via the factory</title>
 
             <programlisting language="php"><![CDATA[
 $queues = Zend_Cloud_QueueService_Factory::getAdapter(array(
-    Zend_Cloud_QueueService_Factory::QUEUE_ADAPTER_KEY  => 'Zend_Cloud_QueueService_Adapter_Sqs',
-    Zend_Cloud_QueueService_Adapter_Sqs::AWS_ACCESS_KEY => $amazonKey,
-    Zend_Cloud_QueueService_Adapter_Sqs::AWS_SECRET_KEY => $amazonSecret,
+    Zend_Cloud_QueueService_Factory::QUEUE_ADAPTER_KEY           => 'Zend_Cloud_QueueService_Adapter_WindowsAzure',
+    Zend_Cloud_QueueService_Adapter_WindowsAzure::ACCOUNT_NAME => $accountName,
+    Zend_Cloud_QueueService_Adapter_WindowsAzure::ACCOUNT_KEY  => $accountKey,
 ));
 ]]></programlisting>
         </example>
 
         <sect3 id="zend.cloud.queueservice.adapters.options">
             <title>Service-Specific Options</title>
-
-            <table frame='all' id="zend.cloud.queueservice.adapters.options.sqs">
-                <title>Zend_Cloud_QueueService_Adapter_Sqs Options</title>
-
-                <tgroup cols="5">
-                    <thead>
-                        <row>
-                            <entry>Option key</entry>
-                            <entry>Description</entry>
-                            <entry>Used in</entry>
-                            <entry>Required</entry>
-                            <entry>Default</entry>
-                        </row>
-                    </thead>
-
-                    <tbody>
-                        <row>
-                            <entry>aws_accesskey</entry>
-                            <entry>Your Amazon AWS access key</entry>
-                            <entry>Constructor</entry>
-                            <entry>Yes</entry>
-                            <entry>None</entry>
-                        </row>
-
-                        <row>
-                            <entry>aws_secretkey</entry>
-                            <entry>Your Amazon AWS secret key</entry>
-                            <entry>Constructor</entry>
-                            <entry>Yes</entry>
-                            <entry>None</entry>
-                        </row>
-
-                        <row>
-                            <entry>http_adapter</entry>
-                            <entry>HTTP adapter to use in all access operations</entry>
-                            <entry>Constructor</entry>
-                            <entry>No</entry>
-                            <entry><classname>Zend_Http_Client_Adapter_Socket</classname></entry>
-                        </row>
-
-                        <row>
-                            <entry>http_adapter</entry>
-                            <entry>HTTP adapter to use in all access operations</entry>
-                            <entry>Constructor</entry>
-                            <entry>No</entry>
-                            <entry><classname>Zend_Http_Client_Adapter_Socket</classname></entry>
-                        </row>
-
-                        <row>
-                            <entry>visibility_timeout</entry>
-                            <entry>Message visibility timeout</entry>
-                            <entry><methodname>receiveMessages()</methodname></entry>
-                            <entry>No</entry>
-                            <entry>60</entry>
-                        </row>
-                    </tbody>
-                </tgroup>
-            </table>
 
             <table frame='all' id="zend.cloud.queueservice.adapters.options.azure">
                 <title>Zend_Cloud_QueueService_Adapter_WindowsAzure Options</title>
@@ -526,7 +461,7 @@ if (count($messages)) {
         <para>
             Sometimes it is necessary to retrieve the concrete adapter for the service that the
             Queue API is working with. This can be achieved by using the
-            <methodname>getAdapter()</methodname> method.
+            <methodname>getClient()</methodname> method.
         </para>
 
         <note>
@@ -540,9 +475,9 @@ if (count($messages)) {
             <title>Using a concrete adapter</title>
 
             <programlisting language="php"><![CDATA[
-// send the message directly with the SQS client library
-$sqs = $queues->getAdapter();
-$sqs->sendMessage("myQueue", "hello!");
+// send the message directly with the Windows Azure client library
+$azure = $queues->getClient();
+$azure->putMessage("myQueue", "hello!");
 ]]></programlisting>
         </example>
     </sect2>
