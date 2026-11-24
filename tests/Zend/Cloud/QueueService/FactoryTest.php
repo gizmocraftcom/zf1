@@ -45,11 +45,6 @@ class Zend_Cloud_QueueService_FactoryTest extends PHPUnit\Framework\TestCase
 
     public function testGetAdapterWithConfig()
     {
-        // SQS adapter
-        $sqsConfig = new Zend_Config_Ini(realpath(dirname(__FILE__) . '/_files/config/sqs.ini'));
-        $sqsAdapter = Zend_Cloud_QueueService_Factory::getAdapter($sqsConfig);
-        $this->assertEquals('Zend_Cloud_QueueService_Adapter_Sqs', get_class($sqsAdapter));
-
         // zend queue adapter
         $zqConfig = new Zend_Config_Ini(realpath(dirname(__FILE__) . '/_files/config/zendqueue.ini'));
         $zq = Zend_Cloud_QueueService_Factory::getAdapter($zqConfig);

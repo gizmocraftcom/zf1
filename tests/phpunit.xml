@@ -109,19 +109,15 @@
     </testsuite>
     <testsuite name="ZFTest_Zend_Cloud">
       <file>./Zend/Cloud/DocumentService/FactoryTest.php</file>
-      <file>./Zend/Cloud/DocumentService/Adapter/SimpleDbTest.php</file>
       <file>./Zend/Cloud/DocumentService/Adapter/WindowsAzureTest.php</file>
       <file>./Zend/Cloud/QueueService/FactoryTest.php</file>
-      <file>./Zend/Cloud/QueueService/Adapter/SqsTest.php</file>
       <file>./Zend/Cloud/QueueService/Adapter/WindowsAzureTest.php</file>
       <file>./Zend/Cloud/QueueService/Adapter/ZendQueueTest.php</file>
       <file>./Zend/Cloud/StorageService/FactoryTest.php</file>
       <file>./Zend/Cloud/StorageService/Adapter/WindowsAzureTest.php</file>
       <file>./Zend/Cloud/StorageService/Adapter/RackspaceTest.php</file>
       <file>./Zend/Cloud/StorageService/Adapter/FileSystemTest.php</file>
-      <file>./Zend/Cloud/StorageService/Adapter/S3Test.php</file>
       <file>./Zend/Cloud/Infrastructure/FactoryTest.php</file>
-      <file>./Zend/Cloud/Infrastructure/Adapter/Ec2Test.php</file>
       <file>./Zend/Cloud/Infrastructure/Adapter/RackspaceTest.php</file>
     </testsuite>
     <testsuite name="ZFTest_Zend_CodeGenerator">

@@ -24,10 +24,6 @@
  */
 require_once 'Zend/Cloud/Infrastructure/Factory.php';
 
-/**
- * @see Zend_Cloud_Infrastructure_Adapter_Ec2
- */
-require_once 'Zend/Cloud/Infrastructure/Adapter/Ec2.php';
 
 /**
  * Test class for Zend_Cloud_Infrastructure_Factory
@@ -47,13 +43,6 @@ class Zend_Cloud_Infrastructure_FactoryTest extends PHPUnit\Framework\TestCase
     }
 
     public function testGetAdapterWithConfig() {
-        // EC2 adapter
-        $Ec2Adapter = Zend_Cloud_Infrastructure_Factory::getAdapter(
-                                    new Zend_Config(Zend_Cloud_Infrastructure_Adapter_Ec2Test::getConfigArray())
-                                );
-
-        $this->assertEquals('Zend_Cloud_Infrastructure_Adapter_Ec2', get_class($Ec2Adapter));
-
         // Rackspace adapter
         $rackspaceAdapter = Zend_Cloud_Infrastructure_Factory::getAdapter(
                                     new Zend_Config(Zend_Cloud_Infrastructure_Adapter_RackspaceTest::getConfigArray())

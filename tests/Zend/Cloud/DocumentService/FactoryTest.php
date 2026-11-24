@@ -42,12 +42,6 @@ class Zend_Cloud_DocumentService_FactoryTest extends PHPUnit\Framework\TestCase
     }
 
     public function testGetAdapterWithConfig() {
-        // SimpleDB adapter
-        $simpleDbAdapter = Zend_Cloud_DocumentService_Factory::getAdapter(
-                                    new Zend_Config(Zend_Cloud_DocumentService_Adapter_SimpleDbTest::getConfigArray())
-                                );
-
-        $this->assertEquals('Zend_Cloud_DocumentService_Adapter_SimpleDb', get_class($simpleDbAdapter));
         // Azure adapter
         $azureAdapter = Zend_Cloud_DocumentService_Factory::getAdapter(
                                     new Zend_Config(Zend_Cloud_DocumentService_Adapter_WindowsAzureTest::getConfigArray())

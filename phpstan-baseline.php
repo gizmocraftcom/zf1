@@ -1250,90 +1250,6 @@ $ignoreErrors[] = [
 	'path' => __DIR__ . '/library/Zend/Cloud/DocumentService/Adapter.php',
 ];
 $ignoreErrors[] = [
-	'message' => '#^Argument of an invalid type array\\|null supplied for foreach, only iterables are supported\\.$#',
-	'identifier' => 'foreach.nonIterable',
-	'count' => 2,
-	'path' => __DIR__ . '/library/Zend/Cloud/DocumentService/Adapter/SimpleDb.php',
-];
-$ignoreErrors[] = [
-	'message' => '#^Method Zend_Cloud_DocumentService_Adapter_SimpleDb\\:\\:_getDocumentFromArray\\(\\) should return Zend_Cloud_DocumentService_Document but returns object\\.$#',
-	'identifier' => 'return.type',
-	'count' => 1,
-	'path' => __DIR__ . '/library/Zend/Cloud/DocumentService/Adapter/SimpleDb.php',
-];
-$ignoreErrors[] = [
-	'message' => '#^Method Zend_Cloud_DocumentService_Adapter_SimpleDb\\:\\:_getDocumentSetFromResultSet\\(\\) should return Zend_Cloud_DocumentService_DocumentSet but returns object\\.$#',
-	'identifier' => 'return.type',
-	'count' => 1,
-	'path' => __DIR__ . '/library/Zend/Cloud/DocumentService/Adapter/SimpleDb.php',
-];
-$ignoreErrors[] = [
-	'message' => '#^Method Zend_Cloud_DocumentService_Adapter_SimpleDb\\:\\:_resolveAttributes\\(\\) has parameter \\$returnDocument with no type specified\\.$#',
-	'identifier' => 'missingType.parameter',
-	'count' => 1,
-	'path' => __DIR__ . '/library/Zend/Cloud/DocumentService/Adapter/SimpleDb.php',
-];
-$ignoreErrors[] = [
-	'message' => '#^Method Zend_Cloud_DocumentService_Adapter_SimpleDb\\:\\:_resolveAttributes\\(\\) should return array but returns object\\.$#',
-	'identifier' => 'return.type',
-	'count' => 1,
-	'path' => __DIR__ . '/library/Zend/Cloud/DocumentService/Adapter/SimpleDb.php',
-];
-$ignoreErrors[] = [
-	'message' => '#^Method Zend_Cloud_DocumentService_Adapter_SimpleDb\\:\\:fetchDocument\\(\\) should return Zend_Cloud_DocumentService_Document\\|false but returns array\\.$#',
-	'identifier' => 'return.type',
-	'count' => 1,
-	'path' => __DIR__ . '/library/Zend/Cloud/DocumentService/Adapter/SimpleDb.php',
-];
-$ignoreErrors[] = [
-	'message' => '#^Parameter \\#2 \\$attributes of method Zend_Cloud_DocumentService_Adapter_SimpleDb\\:\\:_makeAttributes\\(\\) expects array, array\\|null given\\.$#',
-	'identifier' => 'argument.type',
-	'count' => 1,
-	'path' => __DIR__ . '/library/Zend/Cloud/DocumentService/Adapter/SimpleDb.php',
-];
-$ignoreErrors[] = [
-	'message' => '#^Parameter \\#2 \\$query of method Zend_Cloud_DocumentService_Adapter_SimpleDb\\:\\:query\\(\\) expects string\\|Zend_Cloud_DocumentService_Adapter_SimpleDb_Query, Zend_Cloud_DocumentService_Query given\\.$#',
-	'identifier' => 'argument.type',
-	'count' => 1,
-	'path' => __DIR__ . '/library/Zend/Cloud/DocumentService/Adapter/SimpleDb.php',
-];
-$ignoreErrors[] = [
-	'message' => '#^Return type \\(Zend_Cloud_DocumentService_DocumentSet\\) of method Zend_Cloud_DocumentService_Adapter_SimpleDb\\:\\:query\\(\\) should be compatible with return type \\(array\\) of method Zend_Cloud_DocumentService_Adapter\\:\\:query\\(\\)$#',
-	'identifier' => 'method.childReturnType',
-	'count' => 2,
-	'path' => __DIR__ . '/library/Zend/Cloud/DocumentService/Adapter/SimpleDb.php',
-];
-$ignoreErrors[] = [
-	'message' => '#^Return type \\(void\\) of method Zend_Cloud_DocumentService_Adapter_SimpleDb\\:\\:createCollection\\(\\) should be compatible with return type \\(array\\) of method Zend_Cloud_DocumentService_Adapter\\:\\:createCollection\\(\\)$#',
-	'identifier' => 'method.childReturnType',
-	'count' => 2,
-	'path' => __DIR__ . '/library/Zend/Cloud/DocumentService/Adapter/SimpleDb.php',
-];
-$ignoreErrors[] = [
-	'message' => '#^Return type \\(void\\) of method Zend_Cloud_DocumentService_Adapter_SimpleDb\\:\\:insertDocument\\(\\) should be compatible with return type \\(bool\\) of method Zend_Cloud_DocumentService_Adapter\\:\\:insertDocument\\(\\)$#',
-	'identifier' => 'method.childReturnType',
-	'count' => 2,
-	'path' => __DIR__ . '/library/Zend/Cloud/DocumentService/Adapter/SimpleDb.php',
-];
-$ignoreErrors[] = [
-	'message' => '#^Variable \\$attr might not be defined\\.$#',
-	'identifier' => 'variable.undefined',
-	'count' => 1,
-	'path' => __DIR__ . '/library/Zend/Cloud/DocumentService/Adapter/SimpleDb.php',
-];
-$ignoreErrors[] = [
-	'message' => '#^Variable \\$documentId in empty\\(\\) always exists and is not falsy\\.$#',
-	'identifier' => 'empty.variable',
-	'count' => 1,
-	'path' => __DIR__ . '/library/Zend/Cloud/DocumentService/Adapter/SimpleDb.php',
-];
-$ignoreErrors[] = [
-	'message' => '#^Return type \\(string\\) of method Zend_Cloud_DocumentService_Adapter_SimpleDb_Query\\:\\:assemble\\(\\) should be compatible with return type \\(array\\) of method Zend_Cloud_DocumentService_Query\\:\\:assemble\\(\\)$#',
-	'identifier' => 'method.childReturnType',
-	'count' => 1,
-	'path' => __DIR__ . '/library/Zend/Cloud/DocumentService/Adapter/SimpleDb/Query.php',
-];
-$ignoreErrors[] = [
 	'message' => '#^Call to preg_quote\\(\\) is missing delimiter @ to be effective\\.$#',
 	'identifier' => 'argument.invalidPregQuote',
 	'count' => 1,
@@ -1520,36 +1436,6 @@ $ignoreErrors[] = [
 	'path' => __DIR__ . '/library/Zend/Cloud/Infrastructure/Adapter/AbstractAdapter.php',
 ];
 $ignoreErrors[] = [
-	'message' => '#^Method Zend_Cloud_Infrastructure_Adapter_Ec2\\:\\:convertAttributes\\(\\) never returns bool so it can be removed from the return type\\.$#',
-	'identifier' => 'return.unusedType',
-	'count' => 1,
-	'path' => __DIR__ . '/library/Zend/Cloud/Infrastructure/Adapter/Ec2.php',
-];
-$ignoreErrors[] = [
-	'message' => '#^Parameter \\#2 \\$data of class Zend_Cloud_Infrastructure_Instance constructor expects array\\|object\\|null, array\\|bool given\\.$#',
-	'identifier' => 'argument.type',
-	'count' => 1,
-	'path' => __DIR__ . '/library/Zend/Cloud/Infrastructure/Adapter/Ec2.php',
-];
-$ignoreErrors[] = [
-	'message' => '#^Property Zend_Cloud_Infrastructure_Adapter_Ec2\\:\\:\\$ec2Image \\(Zend_Service_Amazon_Ec2_Image\\) in isset\\(\\) is not nullable\\.$#',
-	'identifier' => 'isset.property',
-	'count' => 1,
-	'path' => __DIR__ . '/library/Zend/Cloud/Infrastructure/Adapter/Ec2.php',
-];
-$ignoreErrors[] = [
-	'message' => '#^Property Zend_Cloud_Infrastructure_Adapter_Ec2\\:\\:\\$ec2Monitor \\(Zend_Service_Amazon_Ec2_CloudWatch\\) in isset\\(\\) is not nullable\\.$#',
-	'identifier' => 'isset.property',
-	'count' => 1,
-	'path' => __DIR__ . '/library/Zend/Cloud/Infrastructure/Adapter/Ec2.php',
-];
-$ignoreErrors[] = [
-	'message' => '#^Property Zend_Cloud_Infrastructure_Adapter_Ec2\\:\\:\\$ec2Zone \\(Zend_Service_Amazon_Ec2_Availabilityzones\\) in isset\\(\\) is not nullable\\.$#',
-	'identifier' => 'isset.property',
-	'count' => 1,
-	'path' => __DIR__ . '/library/Zend/Cloud/Infrastructure/Adapter/Ec2.php',
-];
-$ignoreErrors[] = [
 	'message' => '#^Cannot access offset 0 on non\\-empty\\-array\\|true\\.$#',
 	'identifier' => 'offsetAccess.nonOffsetAccessible',
 	'count' => 1,
@@ -1668,36 +1554,6 @@ $ignoreErrors[] = [
 	'identifier' => 'return.unresolvableType',
 	'count' => 2,
 	'path' => __DIR__ . '/library/Zend/Cloud/QueueService/Adapter.php',
-];
-$ignoreErrors[] = [
-	'message' => '#^Method Zend_Cloud_QueueService_Adapter_Sqs\\:\\:_makeMessages\\(\\) should return array\\<Zend_Cloud_QueueService_Message\\> but returns object\\.$#',
-	'identifier' => 'return.type',
-	'count' => 1,
-	'path' => __DIR__ . '/library/Zend/Cloud/QueueService/Adapter/Sqs.php',
-];
-$ignoreErrors[] = [
-	'message' => '#^Offset \'visibility_timeout\' might not exist on array\\|null\\.$#',
-	'identifier' => 'offsetAccess.notFound',
-	'count' => 1,
-	'path' => __DIR__ . '/library/Zend/Cloud/QueueService/Adapter/Sqs.php',
-];
-$ignoreErrors[] = [
-	'message' => '#^Offset 30 might not exist on string\\|null\\.$#',
-	'identifier' => 'offsetAccess.notFound',
-	'count' => 1,
-	'path' => __DIR__ . '/library/Zend/Cloud/QueueService/Adapter/Sqs.php',
-];
-$ignoreErrors[] = [
-	'message' => '#^Parameter \\#2 \\$options \\(string\\) of method Zend_Cloud_QueueService_Adapter_Sqs\\:\\:createQueue\\(\\) should be compatible with parameter \\$options \\(array\\) of method Zend_Cloud_QueueService_Adapter\\:\\:createQueue\\(\\)$#',
-	'identifier' => 'method.childParameterType',
-	'count' => 2,
-	'path' => __DIR__ . '/library/Zend/Cloud/QueueService/Adapter/Sqs.php',
-];
-$ignoreErrors[] = [
-	'message' => '#^Parameter \\#2 \\$timeout of method Zend_Service_Amazon_Sqs\\:\\:create\\(\\) expects int\\|null, string given\\.$#',
-	'identifier' => 'argument.type',
-	'count' => 1,
-	'path' => __DIR__ . '/library/Zend/Cloud/QueueService/Adapter/Sqs.php',
 ];
 $ignoreErrors[] = [
 	'message' => '#^Access to an undefined property object\\:\\:\\$Name\\.$#',
@@ -1926,30 +1782,6 @@ $ignoreErrors[] = [
 	'identifier' => 'variable.undefined',
 	'count' => 1,
 	'path' => __DIR__ . '/library/Zend/Cloud/StorageService/Adapter/Rackspace.php',
-];
-$ignoreErrors[] = [
-	'message' => '#^Method Zend_Cloud_StorageService_Adapter_S3\\:\\:deleteItem\\(\\) should return bool but return statement is missing\\.$#',
-	'identifier' => 'return.missing',
-	'count' => 1,
-	'path' => __DIR__ . '/library/Zend/Cloud/StorageService/Adapter/S3.php',
-];
-$ignoreErrors[] = [
-	'message' => '#^Method Zend_Cloud_StorageService_Adapter_S3\\:\\:storeMetadata\\(\\) has parameter \\$metadata with no type specified\\.$#',
-	'identifier' => 'missingType.parameter',
-	'count' => 1,
-	'path' => __DIR__ . '/library/Zend/Cloud/StorageService/Adapter/S3.php',
-];
-$ignoreErrors[] = [
-	'message' => '#^Property Zend_Cloud_StorageService_Adapter_S3\\:\\:\\$_defaultBucketAsDomain has no type specified\\.$#',
-	'identifier' => 'missingType.property',
-	'count' => 1,
-	'path' => __DIR__ . '/library/Zend/Cloud/StorageService/Adapter/S3.php',
-];
-$ignoreErrors[] = [
-	'message' => '#^Property Zend_Cloud_StorageService_Adapter_S3\\:\\:\\$_defaultBucketName has no type specified\\.$#',
-	'identifier' => 'missingType.property',
-	'count' => 1,
-	'path' => __DIR__ . '/library/Zend/Cloud/StorageService/Adapter/S3.php',
 ];
 $ignoreErrors[] = [
 	'message' => '#^Method Zend_Cloud_StorageService_Adapter_WindowsAzure\\:\\:renameItem\\(\\) with return type void returns null but should not return anything\\.$#',

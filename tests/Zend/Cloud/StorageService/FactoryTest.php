@@ -26,7 +26,6 @@ require_once 'Zend/Cloud/StorageService/Factory.php';
 
 require_once 'Zend/Cloud/StorageService/Adapter/FileSystem.php';
 
-require_once 'Zend/Cloud/StorageService/Adapter/S3.php';
 
 require_once 'Zend/Cloud/StorageService/Adapter/WindowsAzure.php';
 
@@ -50,11 +49,6 @@ class Zend_Cloud_StorageService_FactoryTest extends PHPUnit\Framework\TestCase
     public function testGetAdapterWithConfig()
     {
         $httptest = new Zend_Http_Client_Adapter_Test();
-
-        // S3 adapter
-        $s3Config = new Zend_Config_Ini(realpath(dirname(__FILE__) . '/_files/config/s3.ini'));
-        $s3Adapter = Zend_Cloud_StorageService_Factory::getAdapter($s3Config);
-        $this->assertEquals('Zend_Cloud_StorageService_Adapter_S3', get_class($s3Adapter));
 
         // file system adapter
         $fileSystemConfig = new Zend_Config_Ini(realpath(dirname(__FILE__) . '/_files/config/filesystem.ini'));
