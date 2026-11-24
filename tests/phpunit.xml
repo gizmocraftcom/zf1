@@ -523,137 +523,6 @@
       <file>../vendor/diablomedia/zendframework1-form/tests/Zend/Form/Element/TextareaTest.php</file>
       <file>../vendor/diablomedia/zendframework1-form/tests/Zend/Form/Element/TextTest.php</file>
     </testsuite>
-    <testsuite name="ZFTest_Zend_Gdata">
-      <file>./Zend/Gdata/Analytics/AccountFeedTest.php</file>
-      <file>./Zend/Gdata/Analytics/AccountQueryTest.php</file>
-      <file>./Zend/Gdata/Analytics/DataFeedTest.php</file>
-      <file>./Zend/Gdata/Analytics/DataQueryTest.php</file>
-      <file>./Zend/Gdata/AuthSubTest.php</file>
-      <file>./Zend/Gdata/AppTest.php</file>
-      <file>./Zend/Gdata/App/UtilTest.php</file>
-      <file>./Zend/Gdata/App/BaseTest.php</file>
-      <file>./Zend/Gdata/App/AuthorTest.php</file>
-      <file>./Zend/Gdata/App/CategoryTest.php</file>
-      <file>./Zend/Gdata/App/ContentTest.php</file>
-      <file>./Zend/Gdata/App/ControlTest.php</file>
-      <file>./Zend/Gdata/App/EntryTest.php</file>
-      <file>./Zend/Gdata/App/FeedTest.php</file>
-      <file>./Zend/Gdata/App/GeneratorTest.php</file>
-      <file>./Zend/Gdata/App/HttpExceptionTest.php</file>
-      <file>./Zend/Gdata/App/CaptchaRequiredExceptionTest.php</file>
-      <file>./Zend/Gdata/GdataTest.php</file>
-      <file>./Zend/Gdata/QueryTest.php</file>
-      <file>./Zend/Gdata/AttendeeStatusTest.php</file>
-      <file>./Zend/Gdata/AttendeeTypeTest.php</file>
-      <file>./Zend/Gdata/CommentsTest.php</file>
-      <file>./Zend/Gdata/EntryTest.php</file>
-      <file>./Zend/Gdata/FeedTest.php</file>
-      <file>./Zend/Gdata/EntryLinkTest.php</file>
-      <file>./Zend/Gdata/EventStatusTest.php</file>
-      <file>./Zend/Gdata/ExtendedPropertyTest.php</file>
-      <file>./Zend/Gdata/FeedLinkTest.php</file>
-      <file>./Zend/Gdata/OpenSearchItemsPerPageTest.php</file>
-      <file>./Zend/Gdata/OpenSearchStartIndexTest.php</file>
-      <file>./Zend/Gdata/OpenSearchTotalResultsTest.php</file>
-      <file>./Zend/Gdata/OriginalEventTest.php</file>
-      <file>./Zend/Gdata/RecurrenceTest.php</file>
-      <file>./Zend/Gdata/RecurrenceExceptionTest.php</file>
-      <file>./Zend/Gdata/ReminderTest.php</file>
-      <file>./Zend/Gdata/TransparencyTest.php</file>
-      <file>./Zend/Gdata/VisibilityTest.php</file>
-      <file>./Zend/Gdata/WhenTest.php</file>
-      <file>./Zend/Gdata/WhereTest.php</file>
-      <file>./Zend/Gdata/WhoTest.php</file>
-      <file>./Zend/Gdata/CalendarTest.php</file>
-      <file>./Zend/Gdata/CalendarFeedTest.php</file>
-      <file>./Zend/Gdata/CalendarEventTest.php</file>
-      <file>./Zend/Gdata/CalendarFeedCompositeTest.php</file>
-      <file>./Zend/Gdata/Calendar/EventQueryTest.php</file>
-      <file>./Zend/Gdata/Calendar/EventQueryExceptionTest.php</file>
-      <file>./Zend/Gdata/Calendar/EventEntryTest.php</file>
-      <file>./Zend/Gdata/Calendar/AccessLevelTest.php</file>
-      <file>./Zend/Gdata/Calendar/ColorTest.php</file>
-      <file>./Zend/Gdata/Calendar/HiddenTest.php</file>
-      <file>./Zend/Gdata/Calendar/LinkTest.php</file>
-      <file>./Zend/Gdata/Calendar/SelectedTest.php</file>
-      <file>./Zend/Gdata/Calendar/SendEventNotificationsTest.php</file>
-      <file>./Zend/Gdata/Calendar/TimezoneTest.php</file>
-      <file>./Zend/Gdata/Calendar/WebContentTest.php</file>
-      <file>./Zend/Gdata/Calendar/QuickAddTest.php</file>
-      <file>./Zend/Gdata/Spreadsheets/ColCountTest.php</file>
-      <file>./Zend/Gdata/Spreadsheets/RowCountTest.php</file>
-      <file>./Zend/Gdata/Spreadsheets/CellTest.php</file>
-      <file>./Zend/Gdata/Spreadsheets/CustomTest.php</file>
-      <file>./Zend/Gdata/Spreadsheets/WorksheetEntryTest.php</file>
-      <file>./Zend/Gdata/Spreadsheets/CellEntryTest.php</file>
-      <file>./Zend/Gdata/Spreadsheets/ListEntryTest.php</file>
-      <file>./Zend/Gdata/Spreadsheets/SpreadsheetFeedTest.php</file>
-      <file>./Zend/Gdata/Spreadsheets/WorksheetFeedTest.php</file>
-      <file>./Zend/Gdata/Spreadsheets/CellFeedTest.php</file>
-      <file>./Zend/Gdata/Spreadsheets/ListFeedTest.php</file>
-      <file>./Zend/Gdata/Spreadsheets/DocumentQueryTest.php</file>
-      <file>./Zend/Gdata/Spreadsheets/CellQueryTest.php</file>
-      <file>./Zend/Gdata/Spreadsheets/ListQueryTest.php</file>
-      <file>./Zend/Gdata/Docs/DocumentListFeedTest.php</file>
-      <file>./Zend/Gdata/Docs/DocumentListEntryTest.php</file>
-      <file>./Zend/Gdata/Docs/QueryTest.php</file>
-      <file>./Zend/Gdata/Photos/PhotosAlbumEntryTest.php</file>
-      <file>./Zend/Gdata/Photos/PhotosAlbumFeedTest.php</file>
-      <file>./Zend/Gdata/Photos/PhotosAlbumQueryTest.php</file>
-      <file>./Zend/Gdata/Photos/PhotosCommentEntryTest.php</file>
-      <file>./Zend/Gdata/Photos/PhotosPhotoEntryTest.php</file>
-      <file>./Zend/Gdata/Photos/PhotosPhotoFeedTest.php</file>
-      <file>./Zend/Gdata/Photos/PhotosPhotoQueryTest.php</file>
-      <file>./Zend/Gdata/Photos/PhotosTagEntryTest.php</file>
-      <file>./Zend/Gdata/Photos/PhotosUserEntryTest.php</file>
-      <file>./Zend/Gdata/Photos/PhotosUserFeedTest.php</file>
-      <file>./Zend/Gdata/Photos/PhotosUserQueryTest.php</file>
-      <file>./Zend/Gdata/GappsTest.php</file>
-      <file>./Zend/Gdata/Gapps/EmailListEntryTest.php</file>
-      <file>./Zend/Gdata/Gapps/EmailListFeedTest.php</file>
-      <file>./Zend/Gdata/Gapps/EmailListQueryTest.php</file>
-      <file>./Zend/Gdata/Gapps/EmailListRecipientEntryTest.php</file>
-      <file>./Zend/Gdata/Gapps/EmailListRecipientFeedTest.php</file>
-      <file>./Zend/Gdata/Gapps/EmailListRecipientQueryTest.php</file>
-      <file>./Zend/Gdata/Gapps/EmailListTest.php</file>
-      <file>./Zend/Gdata/Gapps/ErrorTest.php</file>
-      <file>./Zend/Gdata/Gapps/GroupEntryTest.php</file>
-      <file>./Zend/Gdata/Gapps/GroupFeedTest.php</file>
-      <file>./Zend/Gdata/Gapps/GroupQueryTest.php</file>
-      <file>./Zend/Gdata/Gapps/LoginTest.php</file>
-      <file>./Zend/Gdata/Gapps/MemberEntryTest.php</file>
-      <file>./Zend/Gdata/Gapps/MemberFeedTest.php</file>
-      <file>./Zend/Gdata/Gapps/MemberQueryTest.php</file>
-      <file>./Zend/Gdata/Gapps/NameTest.php</file>
-      <file>./Zend/Gdata/Gapps/NicknameEntryTest.php</file>
-      <file>./Zend/Gdata/Gapps/NicknameFeedTest.php</file>
-      <file>./Zend/Gdata/Gapps/NicknameQueryTest.php</file>
-      <file>./Zend/Gdata/Gapps/NicknameTest.php</file>
-      <file>./Zend/Gdata/Gapps/OwnerEntryTest.php</file>
-      <file>./Zend/Gdata/Gapps/OwnerFeedTest.php</file>
-      <file>./Zend/Gdata/Gapps/OwnerQueryTest.php</file>
-      <file>./Zend/Gdata/Gapps/PropertyTest.php</file>
-      <file>./Zend/Gdata/Gapps/QuotaTest.php</file>
-      <file>./Zend/Gdata/Gapps/ServiceExceptionTest.php</file>
-      <file>./Zend/Gdata/Gapps/UserEntryTest.php</file>
-      <file>./Zend/Gdata/Gapps/UserFeedTest.php</file>
-      <file>./Zend/Gdata/Gapps/UserQueryTest.php</file>
-      <file>./Zend/Gdata/Books/CollectionEntryTest.php</file>
-      <file>./Zend/Gdata/Books/CollectionFeedTest.php</file>
-      <file>./Zend/Gdata/Books/VolumeEntryTest.php</file>
-      <file>./Zend/Gdata/Books/VolumeFeedTest.php</file>
-      <file>./Zend/Gdata/GdataOnlineTest.php</file>
-      <file>./Zend/Gdata/MediaMimeStreamTest.php</file>
-      <file>./Zend/Gdata/CalendarOnlineTest.php</file>
-      <file>./Zend/Gdata/SpreadsheetsOnlineTest.php</file>
-      <file>./Zend/Gdata/SpreadsheetsTest.php</file>
-      <file>./Zend/Gdata/DocsOnlineTest.php</file>
-      <file>./Zend/Gdata/DocsTest.php</file>
-      <file>./Zend/Gdata/PhotosOnlineTest.php</file>
-      <file>./Zend/Gdata/BooksOnlineTest.php</file>
-      <file>./Zend/Gdata/BooksTest.php</file>
-      <file>./Zend/Gdata/GappsOnlineTest.php</file>
-    </testsuite>
     <testsuite name="ZFTest_Zend_Http">
       <file>../vendor/diablomedia/zendframework1-http/tests/Zend/Http/ResponseTest.php</file>
       <file>../vendor/diablomedia/zendframework1-http/tests/Zend/Http/CookieTest.php</file>
@@ -824,19 +693,6 @@
       <file>../vendor/diablomedia/zendframework1-mime/tests/Zend/Mime/PartTest.php</file>
       <file>../vendor/diablomedia/zendframework1-mime/tests/Zend/Mime/MessageTest.php</file>
       <file>../vendor/diablomedia/zendframework1-mime/tests/Zend/MimeTest.php</file>
-    </testsuite>
-    <testsuite name="ZFTest_Zend_Mobile">
-      <file>./Zend/Mobile/Push/Message/Mpns/RawTest.php</file>
-      <file>./Zend/Mobile/Push/Message/Mpns/TileTest.php</file>
-      <file>./Zend/Mobile/Push/Message/Mpns/ToastTest.php</file>
-      <file>./Zend/Mobile/Push/Message/AbstractTest.php</file>
-      <file>./Zend/Mobile/Push/Message/ApnsTest.php</file>
-      <file>./Zend/Mobile/Push/Message/GcmTest.php</file>
-      <file>./Zend/Mobile/Push/AbstractTest.php</file>
-      <file>./Zend/Mobile/Push/ApnsTest.php</file>
-      <file>./Zend/Mobile/Push/GcmTest.php</file>
-      <file>./Zend/Mobile/Push/MpnsTest.php</file>
-      <file>./Zend/Mobile/Push/Response/GcmTest.php</file>
     </testsuite>
     <testsuite name="ZFTest_Zend_Navigation">
       <file>../vendor/diablomedia/zendframework1-navigation/tests/Zend/Navigation/ContainerTest.php</file>
@@ -1040,17 +896,9 @@
       <file>./Zend/Service/Audioscrobbler/TrackDataTest.php</file>
       <file>./Zend/Service/Audioscrobbler/TagDataTest.php</file>
       <file>./Zend/Service/Audioscrobbler/GroupTest.php</file>
-      <file>./Zend/Service/Delicious/PublicDataTest.php</file>
-      <file>./Zend/Service/Delicious/PrivateDataTest.php</file>
-      <file>./Zend/Service/Delicious/SimplePostTest.php</file>
-      <file>./Zend/Service/Delicious/PostTest.php</file>
       <file>./Zend/Service/Ebay/AbstractTest.php</file>
-      <file>./Zend/Service/Ebay/Finding/OfflineTest.php</file>
-      <file>./Zend/Service/Ebay/Finding/OnlineTest.php</file>
       <file>./Zend/Service/Flickr/OfflineTest.php</file>
       <file>./Zend/Service/Flickr/OnlineTest.php</file>
-      <file>./Zend/Service/LiveDocx/LiveDocxTest.php</file>
-      <file>./Zend/Service/LiveDocx/MailMergeTest.php</file>
       <file>./Zend/Service/Rackspace/Files/OfflineTest.php</file>
       <file>./Zend/Service/Rackspace/Files/OnlineTest.php</file>
       <file>./Zend/Service/Rackspace/Servers/OfflineTest.php</file>
@@ -1065,16 +913,6 @@
       <file>./Zend/Service/ShortUrl/TinyUrlComTest.php</file>
       <file>./Zend/Service/ShortUrl/BitLyTest.php</file>
       <file>./Zend/Service/SqlAzure/Management/ManagementClientTest.php</file>
-      <file>./Zend/Service/SlideShareTest.php</file>
-      <file>./Zend/Service/StrikeIron/NoSoapTest.php</file>
-      <file>./Zend/Service/StrikeIron/StrikeIronTest.php</file>
-      <file>./Zend/Service/StrikeIron/DecoratorTest.php</file>
-      <file>./Zend/Service/StrikeIron/ExceptionTest.php</file>
-      <file>./Zend/Service/StrikeIron/BaseTest.php</file>
-      <file>./Zend/Service/StrikeIron/SalesUseTaxBasicTest.php</file>
-      <file>./Zend/Service/StrikeIron/USAddressVerificationTest.php</file>
-      <file>./Zend/Service/StrikeIron/ZipCodeInfoTest.php</file>
-      <file>./Zend/Service/Twitter/TwitterTest.php</file>
       <file>./Zend/Service/WindowsAzure/Credentials/SharedKeyTest.php</file>
       <file>./Zend/Service/WindowsAzure/Credentials/SharedKeyLiteTest.php</file>
       <file>./Zend/Service/WindowsAzure/Credentials/SharedAccessSignatureTest.php</file>
@@ -1092,8 +930,6 @@
       <file>./Zend/Service/WindowsAzure/QueueStorageTest.php</file>
       <file>./Zend/Service/WindowsAzure/TableSessionHandlerTest.php</file>
       <file>./Zend/Service/WindowsAzure/BlobSessionHandlerTest.php</file>
-      <file>./Zend/Service/Yahoo/OfflineTest.php</file>
-      <file>./Zend/Service/Yahoo/OnlineTest.php</file>
     </testsuite>
     <testsuite name="ZFTest_Zend_Soap">
       <file>../vendor/diablomedia/zendframework1-soap/tests/Zend/Soap/ClientTest.php</file>
