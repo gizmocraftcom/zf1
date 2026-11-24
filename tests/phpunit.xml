@@ -55,7 +55,6 @@
       <file>../vendor/diablomedia/zendframework1-auth-adapter-http/tests/Zend/Auth/Adapter/Http/Resolver/FileTest.php</file>
       <file>../vendor/diablomedia/zendframework1-auth-adapter-ldap/tests/Zend/Auth/Adapter/Ldap/OfflineTest.php</file>
       <file>../vendor/diablomedia/zendframework1-auth-adapter-ldap/tests/Zend/Auth/Adapter/Ldap/OnlineTest.php</file>
-      <file>../vendor/diablomedia/zendframework1-auth-adapter-openid/tests/Zend/Auth/Adapter/OpenId/OpenIdTest.php</file>
       <file>../vendor/diablomedia/zendframework1-auth/tests/Zend/AuthTest.php</file>
     </testsuite>
     <testsuite name="ZFTest_Zend_Barcode">
@@ -617,7 +616,6 @@
       <file>../vendor/diablomedia/zendframework1-log/tests/Zend/Log/Formatter/XmlTest.php</file>
       <file>../vendor/diablomedia/zendframework1-log/tests/Zend/Log/Writer/AbstractTest.php</file>
       <file>../vendor/diablomedia/zendframework1-log-writer-db/tests/Zend/Log/Writer/DbTest.php</file>
-      <file>../vendor/diablomedia/zendframework1-log-writer-firebug/tests/Zend/Log/Writer/FirebugTest.php</file>
       <file>../vendor/diablomedia/zendframework1-log-writer-mail/tests/Zend/Log/Writer/MailTest.php</file>
       <file>../vendor/diablomedia/zendframework1-log/tests/Zend/Log/Writer/MockTest.php</file>
       <file>../vendor/diablomedia/zendframework1-log/tests/Zend/Log/Writer/NullTest.php</file>
@@ -718,16 +716,6 @@
       <file>../vendor/diablomedia/zendframework1-oauth/tests/Zend/Oauth/Token/RequestTest.php</file>
       <file>../vendor/diablomedia/zendframework1-oauth/tests/Zend/Oauth/Token/AuthorizedRequestTest.php</file>
       <file>../vendor/diablomedia/zendframework1-oauth/tests/Zend/Oauth/Token/AccessTest.php</file>
-    </testsuite>
-    <testsuite name="ZFTest_Zend_OpenId">
-      <file>../vendor/diablomedia/zendframework1-openid/tests/Zend/OpenId/ConsumerTest.php</file>
-      <file>../vendor/diablomedia/zendframework1-openid/tests/Zend/OpenId/Consumer/Storage/FileTest.php</file>
-      <file>../vendor/diablomedia/zendframework1-openid/tests/Zend/OpenId/ProviderTest.php</file>
-      <file>../vendor/diablomedia/zendframework1-openid/tests/Zend/OpenId/Provider/Storage/FileTest.php</file>
-      <file>../vendor/diablomedia/zendframework1-openid/tests/Zend/OpenId/Provider/User/SessionTest.php</file>
-      <file>../vendor/diablomedia/zendframework1-openid/tests/Zend/OpenId/ExtensionTest.php</file>
-      <file>../vendor/diablomedia/zendframework1-openid/tests/Zend/OpenId/Extension/SregTest.php</file>
-      <file>../vendor/diablomedia/zendframework1-openid/tests/Zend/OpenIdTest.php</file>
     </testsuite>
     <testsuite name="ZFTest_Zend_Paginator">
       <file>../vendor/diablomedia/zendframework1-paginator/tests/Zend/PaginatorTest.php</file>
@@ -864,31 +852,6 @@
     </testsuite>
     <testsuite name="ZFTest_Zend_Service">
       <file>./Zend/Service/AkismetTest.php</file>
-      <file>../vendor/diablomedia/zendframework1-service-amazon/tests/Zend/Service/Amazon/AbstractTest.php</file>
-      <file>../vendor/diablomedia/zendframework1-service-amazon/tests/Zend/Service/Amazon/OnlineTest.php</file>
-      <file>../vendor/diablomedia/zendframework1-service-amazon/tests/Zend/Service/Amazon/OfflineTest.php</file>
-      <file>../vendor/diablomedia/zendframework1-service-amazon/tests/Zend/Service/Amazon/Authentication/S3Test.php</file>
-      <file>../vendor/diablomedia/zendframework1-service-amazon/tests/Zend/Service/Amazon/Authentication/V1Test.php</file>
-      <file>../vendor/diablomedia/zendframework1-service-amazon/tests/Zend/Service/Amazon/Authentication/V2Test.php</file>
-      <file>../vendor/diablomedia/zendframework1-service-amazon/tests/Zend/Service/Amazon/Ec2/AbstractTest.php</file>
-      <file>../vendor/diablomedia/zendframework1-service-amazon/tests/Zend/Service/Amazon/Ec2/AvailabilityzonesTest.php</file>
-      <file>../vendor/diablomedia/zendframework1-service-amazon/tests/Zend/Service/Amazon/Ec2/CloudWatchTest.php</file>
-      <file>../vendor/diablomedia/zendframework1-service-amazon/tests/Zend/Service/Amazon/Ec2/EbsTest.php</file>
-      <file>../vendor/diablomedia/zendframework1-service-amazon/tests/Zend/Service/Amazon/Ec2/Ec2Test.php</file>
-      <file>../vendor/diablomedia/zendframework1-service-amazon/tests/Zend/Service/Amazon/Ec2/ElasticipTest.php</file>
-      <file>../vendor/diablomedia/zendframework1-service-amazon/tests/Zend/Service/Amazon/Ec2/ImageTest.php</file>
-      <file>../vendor/diablomedia/zendframework1-service-amazon/tests/Zend/Service/Amazon/Ec2/InstanceTest.php</file>
-      <file>../vendor/diablomedia/zendframework1-service-amazon/tests/Zend/Service/Amazon/Ec2/InstanceReservedTest.php</file>
-      <file>../vendor/diablomedia/zendframework1-service-amazon/tests/Zend/Service/Amazon/Ec2/InstanceWindowsTest.php</file>
-      <file>../vendor/diablomedia/zendframework1-service-amazon/tests/Zend/Service/Amazon/Ec2/KeypairTest.php</file>
-      <file>../vendor/diablomedia/zendframework1-service-amazon/tests/Zend/Service/Amazon/Ec2/RegionTest.php</file>
-      <file>../vendor/diablomedia/zendframework1-service-amazon/tests/Zend/Service/Amazon/Ec2/SecuritygroupsTest.php</file>
-      <file>../vendor/diablomedia/zendframework1-service-amazon/tests/Zend/Service/Amazon/S3/OnlineTest.php</file>
-      <file>../vendor/diablomedia/zendframework1-service-amazon/tests/Zend/Service/Amazon/S3/StreamTest.php</file>
-      <file>../vendor/diablomedia/zendframework1-service-amazon/tests/Zend/Service/Amazon/SimpleDb/OnlineTest.php</file>
-      <file>../vendor/diablomedia/zendframework1-service-amazon/tests/Zend/Service/Amazon/SimpleDb/PageTest.php</file>
-      <file>../vendor/diablomedia/zendframework1-service-amazon/tests/Zend/Service/Amazon/Sqs/OfflineTest.php</file>
-      <file>../vendor/diablomedia/zendframework1-service-amazon/tests/Zend/Service/Amazon/Sqs/OnlineTest.php</file>
       <file>./Zend/Service/Audioscrobbler/AudioscrobblerTest.php</file>
       <file>./Zend/Service/Audioscrobbler/ProfileTest.php</file>
       <file>./Zend/Service/Audioscrobbler/ArtistTest.php</file>
@@ -903,9 +866,6 @@
       <file>./Zend/Service/Rackspace/Servers/OfflineTest.php</file>
       <file>./Zend/Service/Rackspace/Servers/OnlineTest.php</file>
       <file>./Zend/Service/Rackspace/OfflineTest.php</file>
-      <file>../vendor/diablomedia/zendframework1-service-recaptcha/tests/Zend/Service/ReCaptcha/ReCaptchaTest.php</file>
-      <file>../vendor/diablomedia/zendframework1-service-recaptcha/tests/Zend/Service/ReCaptcha/ResponseTest.php</file>
-      <file>../vendor/diablomedia/zendframework1-service-recaptcha/tests/Zend/Service/ReCaptcha/MailHideTest.php</file>
       <file>./Zend/Service/ShortUrl/IsGdTest.php</file>
       <file>./Zend/Service/ShortUrl/JdemCzTest.php</file>
       <file>./Zend/Service/ShortUrl/MetamarkNetTest.php</file>
@@ -1117,9 +1077,6 @@
       <file>../vendor/diablomedia/zendframework1-view-helper-url/tests/Zend/View/Helper/UrlTest.php</file>
       <file>../vendor/diablomedia/zendframework1-view/tests/Zend/View/Helper/UserAgentTest.php</file>
       <file>../vendor/diablomedia/zendframework1-view/tests/Zend/ViewTest.php</file>
-    </testsuite>
-    <testsuite name="ZFTest_Zend_Wildfire">
-      <file>../vendor/diablomedia/zendframework1-wildfire/tests/Zend/Wildfire/WildfireTest.php</file>
     </testsuite>
     <testsuite name="ZFTest_Zend_Xml">
       <file>../vendor/diablomedia/zendframework1-xml/tests/Zend/Xml/SecurityTest.php</file>
