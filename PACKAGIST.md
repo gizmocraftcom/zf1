@@ -94,11 +94,10 @@ The guide contains only the placeholders <packagist-user> and <packagist-api-tok
 Each package and the main package list `vcs` entries under `repositories` in their `composer.json` so they install before they exist on Packagist. Once all packages are on Packagist these entries are redundant but harmless. Removing them is a follow-up for a later release and is not part of this fork program.
 
 ## 6. Optional: bulk submission through the Packagist API
-Packagist has an endpoint that creates a package from a repository URL. You can script it yourself instead of using the submit form:
-
+Packagist has an endpoint that creates a package from a repository URL. It needs your main API token (Packagist profile, "Show API Token"), not the limited one, and Packagist marks it as unsafe. Send the credentials in the `Authorization` header, never in the URL:
 ```
-POST https://packagist.org/api/create-package?username=<packagist-user>&apiToken=<packagist-api-token>
-{"repository":{"url":"<repository URL from the list above>"}}
+curl -X POST -H 'Content-Type: application/json' -H 'Authorization: Bearer <packagist-user>:<packagist-api-token>' 'https://packagist.org/api/create-package' -d '{"repository":"<repository URL from the list above>"}'
 ```
+Use your own Packagist username and API token in place of the placeholders. Do not commit them and do not paste them into shared logs.
 
-Use your own Packagist username and API token in place of the placeholders. Do not commit them. This fork program did not call this endpoint and never contacted Packagist.
+The fork program keeps a script for this outside this repository (`fork-tools/scripts/submit-to-packagist.ts`). It submits the packages in the order of `PLAN.md`, components first and `gizmocraft/zendframework1` last, skips packages that are already on Packagist, and reads the credentials from the `PACKAGIST_USERNAME` and `PACKAGIST_API_TOKEN` environment variables of your own shell. Its default is a dry run.
