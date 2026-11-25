@@ -91,7 +91,7 @@ The organization webhook is preferred over per-repository webhooks and over the 
 
 The guide contains only the placeholders <packagist-user> and <packagist-api-token>. It never holds a real username or token.
 ## 5. After the packages are on Packagist
-Each package and the main package list `vcs` entries under `repositories` in their `composer.json` so they install before they exist on Packagist. Once all packages are on Packagist these entries are redundant but harmless. Removing them is a follow-up for a later release and is not part of this fork program.
+The `vcs` entries under `repositories` that every package and the main package used to list in their `composer.json` have been removed now that the packages are on Packagist. Consumers need no `repositories` entries. Tagged releases that still contain them are unaffected, because Composer ignores the `repositories` of dependencies.
 
 ## 6. Optional: bulk submission through the Packagist API
 Packagist has an endpoint that creates a package from a repository URL. It needs your main API token (Packagist profile, "Show API Token"), not the limited one, and Packagist marks it as unsafe. Send the credentials in the `Authorization` header, never in the URL:

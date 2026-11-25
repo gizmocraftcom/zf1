@@ -16,20 +16,6 @@ The components are separate packages (`gizmocraft/zendframework1-*`) that this p
 
 Some components were not carried over because the services they talk to no longer exist or the extensions they need are gone. See [EXCLUDED_PACKAGES.md](EXCLUDED_PACKAGES.md) for the list, the reasons and the evidence.
 
-## Installing before the packages are on Packagist
-Until the `gizmocraft/zendframework1*` packages are on Packagist, Composer finds them through VCS repositories on GitHub (`https://github.com/gizmocraftcom/zf1` for the main package, `https://github.com/gizmocraftcom/zf1-*` for the components). Composer does not read the `repositories` entries of a dependency's `composer.json`, so your project must list them itself. Either:
--   copy the `repositories` block from [composer-repositories.json](composer-repositories.json) (69 entries: the main repository `zf1` first, then one per component package) into the `composer.json` of your project, then run `composer require gizmocraft/zendframework1:^7.0`, or
--   wait until the packages are on Packagist, when no `repositories` entries are needed.
-The main repository entry is required. The first entries look like this:
-```json
-{
-    "repositories": [
-        { "type": "vcs", "url": "https://github.com/gizmocraftcom/zf1" },
-        { "type": "vcs", "url": "https://github.com/gizmocraftcom/zf1-acl" }
-    ]
-}
-```
-`composer-repositories.json` is generated from the `repositories` section of this repository's `composer.json`. Regenerate it whenever that section changes.
 ## Not carried over
 Six packages are not part of this fork: `zendframework1-openid`, `zendframework1-auth-adapter-openid`, `zendframework1-service-amazon`, `zendframework1-service-recaptcha`, `zendframework1-log-writer-firebug` and `zendframework1-wildfire`. These classes were removed from `library/` of this repository: `Zend_Gdata`, `Zend_Mobile` (push), `Zend_Service_Yahoo`, `Zend_Service_Delicious`, `Zend_Service_SlideShare`, `Zend_Service_Ebay`, `Zend_Service_Twitter`, `Zend_Service_LiveDocx`, `Zend_Service_StrikeIron`, and the Amazon adapters of `Zend_Cloud` (S3, SimpleDb, Sqs, Ec2). The reasons and evidence are in [EXCLUDED_PACKAGES.md](EXCLUDED_PACKAGES.md). Other breaking changes are in [CHANGELOG.md](CHANGELOG.md).
 ## Maintenance
