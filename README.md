@@ -17,13 +17,14 @@ The components are separate packages (`gizmocraft/zendframework1-*`) that this p
 Some components were not carried over because the services they talk to no longer exist or the extensions they need are gone. See [EXCLUDED_PACKAGES.md](EXCLUDED_PACKAGES.md) for the list, the reasons and the evidence.
 
 ## Installing before the packages are on Packagist
-Until the `gizmocraft/zendframework1*` packages are on Packagist, Composer finds them through VCS repositories on GitHub (`https://github.com/gizmocraftcom/zf1-*`). Composer does not read the `repositories` entries of a dependency's `composer.json`, so your project must list them itself. Either:
--   copy the `repositories` block from [composer-repositories.json](composer-repositories.json) (68 entries, one per package) into the `composer.json` of your project, then run `composer require gizmocraft/zendframework1`, or
+Until the `gizmocraft/zendframework1*` packages are on Packagist, Composer finds them through VCS repositories on GitHub (`https://github.com/gizmocraftcom/zf1` for the main package, `https://github.com/gizmocraftcom/zf1-*` for the components). Composer does not read the `repositories` entries of a dependency's `composer.json`, so your project must list them itself. Either:
+-   copy the `repositories` block from [composer-repositories.json](composer-repositories.json) (69 entries: the main repository `zf1` first, then one per component package) into the `composer.json` of your project, then run `composer require gizmocraft/zendframework1:^7.0`, or
 -   wait until the packages are on Packagist, when no `repositories` entries are needed.
-A single entry looks like this:
+The main repository entry is required. The first entries look like this:
 ```json
 {
     "repositories": [
+        { "type": "vcs", "url": "https://github.com/gizmocraftcom/zf1" },
         { "type": "vcs", "url": "https://github.com/gizmocraftcom/zf1-acl" }
     ]
 }

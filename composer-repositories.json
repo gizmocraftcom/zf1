@@ -2,6 +2,10 @@
     "repositories": [
         {
             "type": "vcs",
+            "url": "https://github.com/gizmocraftcom/zf1"
+        },
+        {
+            "type": "vcs",
             "url": "https://github.com/gizmocraftcom/zf1-acl"
         },
         {
